@@ -4,6 +4,20 @@ export const Form = styled.form`
   justify-self: center;
   position: relative;
   width: 100%;
+  z-index: 10;
+
+  &::after {
+    border-radius: 9px;
+    box-shadow: 0 0 0 3px var(--color-orange-1);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: ${({ isFocused }) => (isFocused ? '1' : '0')};
+    position: absolute;
+    transition: opacity 150ms ease-in-out;
+    width: 100%;
+    z-index: -10;
+  }
 `;
 
 export const Input = styled.input`

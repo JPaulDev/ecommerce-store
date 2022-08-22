@@ -1,19 +1,36 @@
-import React from 'react';
+import { useState, useRef, useId, useEffect } from 'react';
 import { ReactComponent as SearchIcon } from '../../../assets/svg/search.svg';
 import * as Styled from './styles';
 
 export default function SearchInput() {
-  const [query, setQuery] = React.useState('');
-  const id = React.useId();
+  const [query, setQuery] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+  const ref = useRef(null);
+  const id = useId();
 
   const handleChange = (e) => setQuery(e.target.value);
 
+  useEffect(() => {
+    const element = ref.current;
+    const handleFocus = () => setIsFocused(true);
+    const handleBlur = () => setIsFocused(false);
+
+    element.addEventListener('focus', handleFocus);
+    element.addEventListener('blur', handleBlur);
+
+    return () => {
+      element.removeEventListener('focus', handleFocus);
+      element.removeEventListener('blur', handleBlur);
+    };
+  }, []);
+
   return (
-    <Styled.Form action="/search" method="get">
+    <Styled.Form action="/search" method="get" isFocused={isFocused}>
       <label htmlFor={id} hidden>
         Search
       </label>
       <Styled.Input
+        ref={ref}
         id={id}
         value={query}
         name="searchQuery"
