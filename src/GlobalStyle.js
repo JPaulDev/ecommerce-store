@@ -2,7 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   :root {
+    --color-orange-1: #ff9110;
     --color-grey-1: #434343;
+    --color-grey-2: #333;
   }
 
   * {
