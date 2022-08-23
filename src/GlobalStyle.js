@@ -1,4 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+import openSansRegular from './assets/fonts/OpenSans-Regular.woff';
+import openSansMedium from './assets/fonts/OpenSans-Medium.ttf';
+import openSansSemiBold from './assets/fonts/OpenSans-SemiBold.woff';
+import openSansBold from './assets/fonts/OpenSans-Bold.woff';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -8,8 +12,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   * {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-      'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
       'Helvetica Neue', sans-serif;
     box-sizing: border-box;
     margin: 0;
@@ -24,6 +28,30 @@ const GlobalStyle = createGlobalStyle`
   #root {
     position: relative;
     min-height: 100vh;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url(${openSansRegular}) format('woff');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url(${openSansMedium}) format('truetype');
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url(${openSansSemiBold}) format('woff');
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    src: url(${openSansBold}) format('woff');
+    font-weight: 700;
   }
 `;
 
