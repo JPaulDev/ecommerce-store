@@ -25,7 +25,12 @@ export default function SearchInput() {
   }, []);
 
   return (
-    <Styled.Form action="/search" method="get" isFocused={isFocused}>
+    <Styled.Form
+      role="search"
+      action="/search"
+      method="get"
+      isFocused={isFocused}
+    >
       <label htmlFor={id} hidden>
         Search
       </label>
