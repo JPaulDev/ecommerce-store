@@ -40,7 +40,7 @@ export default function SearchInput() {
         value={query}
         name="searchQuery"
         placeholder="Search PC-Connect.co.uk..."
-        type="text"
+        type="search"
         autoComplete="off"
         maxLength="50"
         required
