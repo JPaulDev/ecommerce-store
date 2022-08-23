@@ -9,14 +9,27 @@ export const Header = styled.header`
 export const Container = styled.div`
   align-items: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   max-width: 1280px;
   padding: 20px 15px;
-  width: 97%;
+
+  @media screen and (min-width: 575px) {
+    grid-template-columns: 1fr minmax(330px, 1fr);
+    width: 97%;
+  }
+
+  @media screen and (min-width: 860px) {
+    grid-template-columns: 1fr minmax(270px, 1fr) minmax(330px, 1fr);
+  }
 `;
 
 export const HeaderLogo = styled.img`
-  height: 36px;
-  width: 170px;
+  height: 34px;
+  width: 160px;
+
+  @media screen and (min-width: 575px) {
+    height: 36px;
+    width: 170px;
+  }
 `;

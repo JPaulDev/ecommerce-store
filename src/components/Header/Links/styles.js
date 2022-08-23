@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  column-gap: 40px;
+  column-gap: 20px;
   display: flex;
   justify-content: flex-end;
+
+  @media screen and (min-width: 1190px) {
+    column-gap: 40px;
+  }
 `;
 
 export const Link = styled.a`

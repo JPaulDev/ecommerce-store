@@ -18,6 +18,16 @@ export const Form = styled.form`
     width: 100%;
     z-index: -10;
   }
+
+  @media screen and (min-width: 530px) {
+    max-width: 400px;
+  }
+
+  @media screen and (max-width: 859px) {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top: 15px;
+  }
 `;
 
 export const Input = styled.input`
