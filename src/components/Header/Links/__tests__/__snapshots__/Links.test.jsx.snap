@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Links component at a screen width of 574px and below hides links text leaving only icons visible 1`] = `
+<div
+  className="sc-bczRLJ ereDqo"
+>
+  <a
+    aria-label="Account"
+    className="sc-gsnTZi cVgHpq"
+    href=""
+  >
+    <svg
+      fill="var(--color-orange-1)"
+      height="30px"
+      width="32px"
+    >
+      account.svg
+    </svg>
+  </a>
+  <a
+    aria-label="Basket"
+    className="sc-gsnTZi cVgHpq"
+    href=""
+  >
+    <svg
+      fill="var(--color-orange-1)"
+      height="30px"
+      width="34px"
+    >
+      basket.svg
+    </svg>
+  </a>
+</div>
+`;
+
+exports[`Links component at a screen width of 575px and above shows links text and icons 1`] = `
+<div
+  className="sc-bczRLJ ereDqo"
+>
+  <a
+    aria-label="Account"
+    className="sc-gsnTZi cVgHpq"
+    href=""
+  >
+    <svg
+      fill="var(--color-orange-1)"
+      height="30px"
+      width="32px"
+    >
+      account.svg
+    </svg>
+    <div>
+      <span
+        className="sc-dkzDqf ghjqcX"
+      >
+        Account
+      </span>
+      <span
+        className="sc-hKMtZM hMHOua"
+      >
+        Sign in | Register
+      </span>
+    </div>
+  </a>
+  <a
+    aria-label="Basket"
+    className="sc-gsnTZi cVgHpq"
+    href=""
+  >
+    <svg
+      fill="var(--color-orange-1)"
+      height="30px"
+      width="34px"
+    >
+      basket.svg
+    </svg>
+    <div>
+      <span
+        className="sc-dkzDqf ghjqcX"
+      >
+        Basket
+      </span>
+      <span
+        className="sc-hKMtZM hMHOua"
+      >
+        Subtotal £0.00
+      </span>
+    </div>
+  </a>
+</div>
+`;
