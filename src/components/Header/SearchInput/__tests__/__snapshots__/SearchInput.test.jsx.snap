@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`search input renders correctly 1`] = `
+<form
+  action="/search"
+  className="sc-bczRLJ fuzZJZ"
+  method="get"
+  role="search"
+>
+  <label
+    hidden={true}
+    htmlFor=":r0:"
+  >
+    Search
+  </label>
+  <input
+    autoComplete="off"
+    className="sc-gsnTZi iltnbf"
+    id=":r0:"
+    maxLength="50"
+    name="searchQuery"
+    onChange={[Function]}
+    placeholder="Search PC-Connect.co.uk..."
+    required={true}
+    type="search"
+    value=""
+  />
+  <button
+    className="sc-dkzDqf gfrkhO"
+    title="Search"
+    type="submit"
+  >
+    <svg
+      fill="white"
+      height="30px"
+      width="30px"
+    >
+      search.svg
+    </svg>
+  </button>
+</form>
+`;
