@@ -41,3 +41,18 @@ export const Link = styled.a`
     text-decoration: underline;
   }
 `;
+
+export const AdvertsContainer = styled.div`
+  background-color: var(--color-grey-6);
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  row-gap: 15px;
+`;
+
+export const Image = styled.img`
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 40%);
+  height: auto;
+  width: 300px;
+`;

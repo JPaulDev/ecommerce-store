@@ -1,4 +1,10 @@
 import { Fragment } from 'react';
+import useMediaQuery from '../../../../hooks/useMediaQuery';
+import componentsAd1 from '../../../../assets/images/dropdown-ads/components-ad1.webp';
+import componentsAd2 from '../../../../assets/images/dropdown-ads/components-ad2.webp';
+import componentsAd3 from '../../../../assets/images/dropdown-ads/components-ad3.webp';
+import accessoriesAd1 from '../../../../assets/images/dropdown-ads/accessories-ad1.webp';
+import accessoriesAd2 from '../../../../assets/images/dropdown-ads/accessories-ad2.webp';
 import * as Styled from './styles';
 
 const dropdowns = {
@@ -99,7 +105,13 @@ const dropdowns = {
   ],
 };
 
+const adverts = {
+  components: [componentsAd1, componentsAd2, componentsAd3],
+  accessories: [accessoriesAd1, accessoriesAd2],
+};
+
 export default function Dropdown({ menu }) {
+  const isMatch = useMediaQuery('(min-width: 925px)');
   const openMenu = menu.toLowerCase().trim();
   const { [openMenu]: dropdown } = dropdowns;
 
@@ -121,6 +133,13 @@ export default function Dropdown({ menu }) {
           ))}
         </Styled.ColumnContainer>
       ))}
+      {isMatch && (
+        <Styled.AdvertsContainer>
+          {adverts[openMenu].map((image, index) => (
+            <Styled.Image key={index} src={image} alt="" />
+          ))}
+        </Styled.AdvertsContainer>
+      )}
     </Styled.Container>
   );
 }
