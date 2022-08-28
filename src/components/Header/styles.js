@@ -3,7 +3,9 @@ import styled from 'styled-components';
 export const Header = styled.header`
   background-color: var(--color-grey-1);
   box-shadow: 0 3px 2px 0 rgb(0 0 0 / 20%);
+  position: relative;
   width: 100%;
+  z-index: 100;
 `;
 
 export const Container = styled.div`
