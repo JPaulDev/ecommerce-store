@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly and all links are present 1`] = `
+<nav
+  className="sc-papXJ cVArCe"
+>
+  <ul
+    className="sc-jqUVSM hwrCfE"
+  >
+    <li>
+      <a
+        className="sc-ftvSup gxTRkz"
+        href=""
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <button
+        className="sc-ftvSup gxTRkz"
+        onClick={[Function]}
+        type="button"
+      >
+        Components
+      </button>
+    </li>
+    <li>
+      <button
+        className="sc-ftvSup gxTRkz"
+        onClick={[Function]}
+        type="button"
+      >
+        Accessories
+      </button>
+    </li>
+    <li>
+      <a
+        className="sc-ftvSup gxTRkz"
+        href=""
+      >
+        About
+      </a>
+    </li>
+    <li>
+      <a
+        className="sc-ftvSup gxTRkz"
+        href=""
+      >
+        Contact
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

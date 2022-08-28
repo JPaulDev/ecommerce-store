@@ -116,7 +116,7 @@ export default function Dropdown({ menu }) {
   const { [openMenu]: dropdown } = dropdowns;
 
   return (
-    <Styled.Container>
+    <Styled.Container data-testid="dropdown-menu">
       {dropdown.map((column, index) => (
         <Styled.ColumnContainer key={index}>
           {column.map((item) => (
