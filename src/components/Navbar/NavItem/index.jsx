@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import useOnClickOutside from '../../../hooks/useOnClickOutside';
+import Dropdown from './Dropdown';
 import * as Styled from './styles';
 
 export default function NavItem({ item }) {
@@ -23,6 +24,7 @@ export default function NavItem({ item }) {
       ) : (
         <Styled.Link href={item.url}>{item.title}</Styled.Link>
       )}
+      {isOpen && <Dropdown menu={item.title} />}
     </li>
   );
 }
