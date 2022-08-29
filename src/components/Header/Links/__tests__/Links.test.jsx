@@ -1,10 +1,6 @@
 import renderer from 'react-test-renderer';
 import Links from '../index';
 
-afterAll(() => {
-  window.resizeTo(1024, 768); // Jest default window size
-});
-
 describe('Links component at a screen width of 575px and above', () => {
   beforeAll(() => {
     window.resizeTo(575, 768);

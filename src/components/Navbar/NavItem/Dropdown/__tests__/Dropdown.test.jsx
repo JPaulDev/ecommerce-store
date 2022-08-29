@@ -2,10 +2,6 @@ import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import Dropdown from '../index';
 
-afterAll(() => {
-  window.resizeTo(1024, 768); // Jest default window size
-});
-
 describe('components dropdown menu', () => {
   it('It renders correctly and all links/advertisements are present', () => {
     const tree = renderer.create(<Dropdown menu="Components" />).toJSON();
