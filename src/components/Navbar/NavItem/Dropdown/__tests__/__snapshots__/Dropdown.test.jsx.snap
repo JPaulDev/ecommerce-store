@@ -1,0 +1,433 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`accessories dropdown menu It renders correctly and all links/advertisements are present 1`] = `
+<div
+  className="sc-bczRLJ biqjvw"
+  data-testid="dropdown-menu"
+>
+  <div
+    className="sc-gsnTZi jnOCYi"
+  >
+    <h4
+      className="sc-dkzDqf cqfqVJ"
+    >
+      Keyboards
+    </h4>
+    <ul
+      className="sc-hKMtZM cpFXDr"
+    >
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Wired Keyboards
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Wireless Keyboards
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Gaming Keyboards
+        </a>
+      </li>
+    </ul>
+    <h4
+      className="sc-dkzDqf cqfqVJ"
+    >
+      Mice
+    </h4>
+    <ul
+      className="sc-hKMtZM cpFXDr"
+    >
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Wired Mice
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Wireless Mice
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-gsnTZi jnOCYi"
+  >
+    <h4
+      className="sc-dkzDqf cqfqVJ"
+    >
+      Audio
+    </h4>
+    <ul
+      className="sc-hKMtZM cpFXDr"
+    >
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Microphones
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Speakers
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-gsnTZi jnOCYi"
+  >
+    <h4
+      className="sc-dkzDqf cqfqVJ"
+    >
+      Monitors
+    </h4>
+    <ul
+      className="sc-hKMtZM cpFXDr"
+    >
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Gaming Monitors
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Ultrawide Monitors
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          OLED Monitors
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-gKXOVf hmlONc"
+  >
+    <img
+      alt=""
+      className="sc-iBkjds exDCZC"
+      src="accessories-ad1.webp"
+    />
+    <img
+      alt=""
+      className="sc-iBkjds exDCZC"
+      src="accessories-ad2.webp"
+    />
+  </div>
+</div>
+`;
+
+exports[`components dropdown menu It renders correctly and all links/advertisements are present 1`] = `
+<div
+  className="sc-bczRLJ biqjvw"
+  data-testid="dropdown-menu"
+>
+  <div
+    className="sc-gsnTZi jnOCYi"
+  >
+    <h4
+      className="sc-dkzDqf cqfqVJ"
+    >
+      Processors
+    </h4>
+    <ul
+      className="sc-hKMtZM cpFXDr"
+    >
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          AMD
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Intel
+        </a>
+      </li>
+    </ul>
+    <h4
+      className="sc-dkzDqf cqfqVJ"
+    >
+      Memory
+    </h4>
+    <ul
+      className="sc-hKMtZM cpFXDr"
+    >
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          DDR5
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          DDR4
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          DDR3
+        </a>
+      </li>
+    </ul>
+    <h4
+      className="sc-dkzDqf cqfqVJ"
+    >
+      Motherboards
+    </h4>
+    <ul
+      className="sc-hKMtZM cpFXDr"
+    >
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          AMD Motherboards
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Intel Motherboards
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-gsnTZi jnOCYi"
+  >
+    <h4
+      className="sc-dkzDqf cqfqVJ"
+    >
+      Graphics Cards
+    </h4>
+    <ul
+      className="sc-hKMtZM cpFXDr"
+    >
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          NVIDIA Graphics Cards
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          AMD Graphics Cards
+        </a>
+      </li>
+    </ul>
+    <h4
+      className="sc-dkzDqf cqfqVJ"
+    >
+      Power Supplies
+    </h4>
+    <ul
+      className="sc-hKMtZM cpFXDr"
+    >
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          All PSUs
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Fully Wired
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Fully Modular
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-gsnTZi jnOCYi"
+  >
+    <h4
+      className="sc-dkzDqf cqfqVJ"
+    >
+      Cases
+    </h4>
+    <ul
+      className="sc-hKMtZM cpFXDr"
+    >
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Full Tower
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Midi Tower
+        </a>
+      </li>
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          ITX
+        </a>
+      </li>
+    </ul>
+    <h4
+      className="sc-dkzDqf cqfqVJ"
+    >
+      Storage
+    </h4>
+    <ul
+      className="sc-hKMtZM cpFXDr"
+    >
+      <li
+        className="sc-eCYdqJ rlOug"
+      >
+        <a
+          className="sc-jSMfEi dQnMk"
+          href=""
+        >
+          Solid State Drives
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-gKXOVf hmlONc"
+  >
+    <img
+      alt=""
+      className="sc-iBkjds exDCZC"
+      src="components-ad1.webp"
+    />
+    <img
+      alt=""
+      className="sc-iBkjds exDCZC"
+      src="components-ad2.webp"
+    />
+    <img
+      alt=""
+      className="sc-iBkjds exDCZC"
+      src="components-ad3.webp"
+    />
+  </div>
+</div>
+`;
