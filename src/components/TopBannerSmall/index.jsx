@@ -49,7 +49,11 @@ export default function TopBannerSmall() {
   return (
     <Styled.Container>
       {content.map((item, index) => (
-        <Styled.InnerContainer key={item.text} isActive={index === slideIndex}>
+        <Styled.InnerContainer
+          key={item.text}
+          isActive={index === slideIndex}
+          data-testid={index}
+        >
           <img
             src={item.image}
             width={item.width}

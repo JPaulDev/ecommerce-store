@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBannerSmall component renders correctly 1`] = `
+<div
+  className="sc-bczRLJ cKrcLx"
+>
+  <div
+    className="sc-gsnTZi ehuJPo"
+    data-testid={0}
+  >
+    <img
+      alt=""
+      height="28px"
+      src="trophy-logo.webp"
+      width="60px"
+    />
+    <span
+      className="sc-dkzDqf eDHhsi"
+    >
+      <strong
+        className="sc-hKMtZM hPKlJ"
+      >
+        Award winning
+      </strong>
+      Systems and customer services
+    </span>
+  </div>
+  <div
+    className="sc-gsnTZi hdgHuI"
+    data-testid={1}
+  >
+    <img
+      alt=""
+      height="34px"
+      src="trustpilot-logo.webp"
+      width="73px"
+    />
+    <span
+      className="sc-dkzDqf eDHhsi"
+    >
+      <strong
+        className="sc-hKMtZM hPKlJ"
+      >
+        4.8 stars on Trustpilot
+      </strong>
+      From over 30,000 customer reviews
+    </span>
+  </div>
+  <div
+    className="sc-gsnTZi ehuJPo"
+    data-testid={2}
+  >
+    <img
+      alt=""
+      height="27px"
+      src="paypal-logo.webp"
+      width="80px"
+    />
+    <span
+      className="sc-dkzDqf eDHhsi"
+    >
+      <strong
+        className="sc-hKMtZM hPKlJ"
+      >
+        0% interest up to 4 months
+      </strong>
+      Minimum spend applies from £99
+    </span>
+  </div>
+</div>
+`;
