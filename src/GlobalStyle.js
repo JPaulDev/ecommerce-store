@@ -3,6 +3,10 @@ import openSansRegular from './assets/fonts/OpenSans-Regular.woff';
 import openSansMedium from './assets/fonts/OpenSans-Medium.ttf';
 import openSansSemiBold from './assets/fonts/OpenSans-SemiBold.woff';
 import openSansBold from './assets/fonts/OpenSans-Bold.woff';
+import uniSansBook from './assets/fonts/UniSans-Book.woff2';
+import uniSansRegular from './assets/fonts/UniSans-Regular.woff2';
+import uniSansSemiBold from './assets/fonts/UniSans-SemiBold.woff2';
+import uniSansBold from './assets/fonts/UniSans-Bold.woff';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -55,6 +59,29 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Open Sans';
     src: url(${openSansBold}) format('woff');
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: 'Uni Sans Book';
+    src: url(${uniSansBook}) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Uni Sans';
+    src: url(${uniSansRegular}) format('woff2');
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Uni Sans';
+    src: url(${uniSansSemiBold}) format('woff2');
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: 'Uni Sans';
+    src: url(${uniSansBold}) format('woff');
     font-weight: 700;
   }
 `;
