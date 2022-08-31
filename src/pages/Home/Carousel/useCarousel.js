@@ -1,4 +1,4 @@
-import { useReducer, useEffect, useRef } from 'react';
+import { useReducer, useEffect, useRef, useState } from 'react';
 
 const initialState = {
   slideIndex: 0,
@@ -34,12 +34,24 @@ function reducer(state, action) {
 
 export default function useCarousel({ length, interval, transitionTime }) {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [isMinimized, setIsMinimized] = useState(false);
   const transitioning = useRef(false);
 
   const handleChangeSlide = (type, index) => {
     if (transitioning.current) return;
     dispatch({ type, payload: { index, length } });
   };
+
+  // Stops the carousel whilst the browser window is minimized to prevent
+  // animation playing incorrectly when the browser is maximized
+  useEffect(() => {
+    const handleWindowMinimized = () => setIsMinimized(!isMinimized);
+    document.addEventListener('visibilitychange', handleWindowMinimized);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleWindowMinimized);
+    };
+  }, [isMinimized]);
 
   useEffect(() => {
     transitioning.current = true;
@@ -49,6 +61,7 @@ export default function useCarousel({ length, interval, transitionTime }) {
     }, transitionTime);
 
     const nextSlideTimeout = setTimeout(() => {
+      if (isMinimized) return;
       dispatch({ type: 'NEXT', payload: { length } });
     }, interval);
 
