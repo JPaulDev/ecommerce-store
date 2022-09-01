@@ -9,6 +9,7 @@ export default function NavBottom({ length, slideIndex, onChangeSlide }) {
             <Styled.Button
               type="button"
               isActive={index === slideIndex}
+              aria-label={`Slide ${index + 1} of ${length}`}
               onClick={() => onChangeSlide('JUMP', index)}
             />
           </li>
