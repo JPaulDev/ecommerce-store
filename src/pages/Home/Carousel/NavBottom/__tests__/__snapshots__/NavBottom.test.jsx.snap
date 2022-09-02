@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBottom component renders a button for each slide in the slides array 1`] = `
+<div
+  className="sc-bczRLJ daBuPX"
+  data-testid="nav-bottom"
+>
+  <ul
+    className="sc-gsnTZi emOVAI"
+  >
+    <li>
+      <button
+        aria-label="Slide 1 of 2"
+        className="sc-dkzDqf klJSdk"
+        onClick={[Function]}
+        type="button"
+      />
+    </li>
+    <li>
+      <button
+        aria-label="Slide 2 of 2"
+        className="sc-dkzDqf klJSdk"
+        onClick={[Function]}
+        type="button"
+      />
+    </li>
+  </ul>
+</div>
+`;

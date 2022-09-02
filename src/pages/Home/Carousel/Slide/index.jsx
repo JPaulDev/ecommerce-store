@@ -2,11 +2,15 @@ import { forwardRef } from 'react';
 import useMediaQuery from '../../../../hooks/useMediaQuery';
 import * as Styled from './styles';
 
-const Slide = forwardRef(({ slide }, ref) => {
+const Slide = forwardRef(({ slideIndex, slide }, ref) => {
   const isMatch = useMediaQuery('(min-width: 1000px)');
 
   return (
-    <Styled.Container background={slide.background} ref={ref}>
+    <Styled.Container
+      ref={ref}
+      background={slide.background}
+      data-testid={`slide-${slideIndex + 1}`}
+    >
       <Styled.LeftContainer>
         <Styled.LeftLogo src={slide.leftLogo} alt={slide.leftLogoAlt} />
         <Styled.LeftHeading>{slide.leftHeading}</Styled.LeftHeading>

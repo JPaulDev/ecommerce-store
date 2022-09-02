@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavArrows component renders two buttons with left and right arrows 1`] = `
+Array [
+  <button
+    aria-label="Previous Slide"
+    className="sc-gsnTZi jxroVI"
+    onClick={[Function]}
+    title="Previous"
+    type="button"
+  >
+    <i
+      className="sc-bczRLJ jpxzac material-icons"
+    >
+      chevron_left
+    </i>
+  </button>,
+  <button
+    aria-label="Next Slide"
+    className="sc-gsnTZi sc-dkzDqf jxroVI gFkErQ"
+    onClick={[Function]}
+    title="Next"
+    type="button"
+  >
+    <i
+      className="sc-bczRLJ jpxzac material-icons"
+    >
+      chevron_right
+    </i>
+  </button>,
+]
+`;

@@ -2,7 +2,7 @@ import * as Styled from './styles';
 
 export default function NavTop({ slides, slideIndex, onChangeSlide }) {
   return (
-    <Styled.Container>
+    <Styled.Container data-testid="nav-top">
       <Styled.List>
         {slides.map((slide, index) => (
           <li key={slide.topNavText}>

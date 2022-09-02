@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavTop component renders a button with text for each slide in the slides array 1`] = `
+<div
+  className="sc-bczRLJ ldEQiT"
+  data-testid="nav-top"
+>
+  <ul
+    className="sc-gsnTZi kPFAvu"
+  >
+    <li>
+      <button
+        className="sc-dkzDqf kvZhko"
+        onClick={[Function]}
+        type="button"
+      >
+        30 SERIES 3XS PCs
+      </button>
+    </li>
+    <li>
+      <button
+        className="sc-dkzDqf kvZhko"
+        onClick={[Function]}
+        type="button"
+      >
+        INTEL 3XS PCs
+      </button>
+    </li>
+  </ul>
+</div>
+`;

@@ -56,6 +56,7 @@ export default function Carousel() {
           animate="center"
           exit="exit"
           transition={{ ease: 'easeInOut', duration: 1 }}
+          slideIndex={slideIndex}
           slide={slides[slideIndex]}
         />
       </AnimatePresence>

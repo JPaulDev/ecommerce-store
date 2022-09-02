@@ -2,7 +2,7 @@ import * as Styled from './styles';
 
 export default function NavBottom({ length, slideIndex, onChangeSlide }) {
   return (
-    <Styled.Container>
+    <Styled.Container data-testid="nav-bottom">
       <Styled.List>
         {Array.from({ length }).map((_, index) => (
           <li key={index}>
