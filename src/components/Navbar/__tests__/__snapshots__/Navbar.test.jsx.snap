@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navbar renders correctly and all links are present 1`] = `
+exports[`Navbar component renders all links and buttons 1`] = `
 <nav
   className="sc-papXJ cVArCe"
 >

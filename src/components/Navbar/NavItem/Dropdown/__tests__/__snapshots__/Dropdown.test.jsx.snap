@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`accessories dropdown menu It renders correctly and all links/advertisements are present 1`] = `
+exports[`Dropdown component renders the accessories menu with all links/advertisements present 1`] = `
 <div
   className="sc-bczRLJ biqjvw"
   data-testid="dropdown-menu"
@@ -170,7 +170,7 @@ exports[`accessories dropdown menu It renders correctly and all links/advertisem
 </div>
 `;
 
-exports[`components dropdown menu It renders correctly and all links/advertisements are present 1`] = `
+exports[`Dropdown component renders the components menu with all links/advertisements present 1`] = `
 <div
   className="sc-bczRLJ biqjvw"
   data-testid="dropdown-menu"
