@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`search input renders correctly 1`] = `
+exports[`SearchInput component renders a search input with a button and a search icon 1`] = `
 <form
   action="/search"
   className="sc-bczRLJ fuzZJZ"

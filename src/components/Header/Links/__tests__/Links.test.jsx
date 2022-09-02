@@ -2,23 +2,19 @@ import renderer from 'react-test-renderer';
 import Links from '../index';
 
 describe('Links component at a screen width of 575px and above', () => {
-  beforeAll(() => {
+  it('renders links with their icons and text visible', () => {
     window.resizeTo(575, 768);
-  });
-
-  it('shows links text and icons', () => {
     const tree = renderer.create(<Links />).toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 });
 
 describe('Links component at a screen width of 574px and below', () => {
-  beforeAll(() => {
+  it('renders links with no text and only their icons visible', () => {
     window.resizeTo(574, 768);
-  });
-
-  it('hides links text leaving only icons visible', () => {
     const tree = renderer.create(<Links />).toJSON();
+
     expect(tree).toMatchSnapshot();
   });
 });

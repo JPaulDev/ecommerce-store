@@ -3,15 +3,17 @@ import renderer from 'react-test-renderer';
 import userEvent from '@testing-library/user-event';
 import SearchInput from '../index';
 
-it('search input correctly registers user input', () => {
-  render(<SearchInput />);
-  const input = screen.getByRole('searchbox');
-  userEvent.type(input, 'processors');
+describe('SearchInput component', () => {
+  it('correctly registers user input', () => {
+    render(<SearchInput />);
+    const input = screen.getByRole('searchbox');
+    userEvent.type(input, 'processors');
 
-  expect(input.value).toBe('processors');
-});
+    expect(input.value).toBe('processors');
+  });
 
-it('search input renders correctly', () => {
-  const tree = renderer.create(<SearchInput />).toJSON();
-  expect(tree).toMatchSnapshot();
+  it('renders a search input with a button and a search icon', () => {
+    const tree = renderer.create(<SearchInput />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
