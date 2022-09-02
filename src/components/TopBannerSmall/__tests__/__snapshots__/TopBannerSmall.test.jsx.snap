@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TopBannerSmall component renders correctly 1`] = `
+exports[`TopBannerSmall component renders a banner with 3 icons and text next to each one 1`] = `
 <div
   className="sc-bczRLJ cKrcLx"
 >

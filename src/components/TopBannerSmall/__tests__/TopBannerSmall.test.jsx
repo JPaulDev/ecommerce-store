@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import TopBannerSmall from '../index';
 
 describe('TopBannerSmall component', () => {
-  it('renders correctly', () => {
+  it('renders a banner with 3 icons and text next to each one', () => {
     const tree = renderer.create(<TopBannerSmall />).toJSON();
     expect(tree).toMatchSnapshot();
   });
