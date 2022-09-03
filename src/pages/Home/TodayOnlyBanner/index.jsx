@@ -18,7 +18,7 @@ export default function TodayOnlyBanner() {
       {isMatch ? (
         <LinkWithChevron url="" text={linkText} fontSize="0.8rem" />
       ) : (
-        <LinkButtonGrey href="" padding="12px 25px">
+        <LinkButtonGrey href="" padding="12px 25px" data-testid="link-button">
           {linkText}
         </LinkButtonGrey>
       )}

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
+<div
+  className="sc-eCYdqJ kNJaQB"
+>
+  <div
+    className="sc-jSMfEi gjSltE"
+  />
+  <h3
+    className="sc-gKXOVf iEZpuB"
+  >
+    TODAY ONLY
+  </h3>
+  <h3
+    className="sc-iBkjds ldFaZk"
+  >
+    Fantastic offers, updated every weekday
+  </h3>
+  <a
+    className="sc-gsnTZi dqElFX"
+    data-testid="link-chevron"
+    href=""
+  >
+    View All Offers
+    <div
+      className="sc-dkzDqf iNOEfq"
+    >
+      <i
+        className="sc-bczRLJ klUGFp material-icons"
+      >
+        chevron_right
+      </i>
+    </div>
+  </a>
+</div>
+`;
