@@ -3,6 +3,7 @@
 exports[`LinkWithChevron component renders a link with a chevron icon 1`] = `
 <a
   className="sc-gsnTZi FwZzn"
+  data-testid="link-chevron"
   href="test url"
 >
   test text

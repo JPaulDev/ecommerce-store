@@ -18,6 +18,7 @@ exports[`ProShopCards component renders 6 pro shop cards with links and descript
     </p>
     <a
       className="sc-gsnTZi uCbTy"
+      data-testid="link-chevron"
       href=""
     >
       Visit Gaming Store
@@ -46,6 +47,7 @@ exports[`ProShopCards component renders 6 pro shop cards with links and descript
     </p>
     <a
       className="sc-gsnTZi uCbTy"
+      data-testid="link-chevron"
       href=""
     >
       Visit Graphics Store
@@ -74,6 +76,7 @@ exports[`ProShopCards component renders 6 pro shop cards with links and descript
     </p>
     <a
       className="sc-gsnTZi uCbTy"
+      data-testid="link-chevron"
       href=""
     >
       Visit Audio Store
@@ -102,6 +105,7 @@ exports[`ProShopCards component renders 6 pro shop cards with links and descript
     </p>
     <a
       className="sc-gsnTZi uCbTy"
+      data-testid="link-chevron"
       href=""
     >
       Visit Video Store
@@ -132,6 +136,7 @@ exports[`ProShopCards component renders 6 pro shop cards with links and descript
     </p>
     <a
       className="sc-gsnTZi uCbTy"
+      data-testid="link-chevron"
       href=""
     >
       View Signage Solutions
@@ -162,6 +167,7 @@ exports[`ProShopCards component renders 6 pro shop cards with links and descript
     </p>
     <a
       className="sc-gsnTZi uCbTy"
+      data-testid="link-chevron"
       href=""
     >
       Find Out More

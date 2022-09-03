@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PromoBanner component renders a promotional banner about RTX studio 1`] = `
+<div
+  className="sc-eCYdqJ cDKfSV"
+>
+  <h4
+    className="sc-jSMfEi jEiboe"
+  >
+    RTX Studio
+  </h4>
+  <p
+    className="sc-gKXOVf krPcbR"
+  >
+    The best laptops and desktops for creating anywhere.
+  </p>
+  <a
+    className="sc-bczRLJ diqCvw"
+    data-testid="link-button"
+    href=""
+  >
+    Find Out More
+  </a>
+  <img
+    alt=""
+    className="sc-iBkjds ibOmqv"
+    data-testid="logo"
+    src="nvidia-logo.webp"
+  />
+  <img
+    alt=""
+    className="sc-ftvSup iSGTUF"
+    src="blue-detail.webp"
+  />
+</div>
+`;

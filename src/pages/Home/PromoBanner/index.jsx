@@ -18,7 +18,7 @@ export default function AdvertBanner() {
         The best laptops and desktops for creating anywhere.
       </Styled.Text>
       {isMatch530 ? (
-        <LinkButtonGrey href="" padding="12px 14px">
+        <LinkButtonGrey href="" padding="12px 14px" data-testid="link-button">
           {linkText}
         </LinkButtonGrey>
       ) : (
@@ -29,7 +29,7 @@ export default function AdvertBanner() {
           iconSize="18px"
         />
       )}
-      {isMatch850 && <Styled.Logo src={nvidiaLogo} alt="" />}
+      {isMatch850 && <Styled.Logo src={nvidiaLogo} alt="" data-testid="logo" />}
       <Styled.BlueDetail src={blueDetail} alt="" />
     </Styled.Container>
   );
