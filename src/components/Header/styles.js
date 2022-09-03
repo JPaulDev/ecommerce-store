@@ -21,7 +21,7 @@ export const Container = styled.div`
     width: 97%;
   }
 
-  @media screen and (min-width: 860px) {
+  @media screen and (min-width: 880px) {
     grid-template-columns: 1fr minmax(270px, 1fr) minmax(330px, 1fr);
   }
 `;
