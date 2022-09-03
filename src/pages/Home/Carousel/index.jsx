@@ -24,7 +24,7 @@ const variants = {
 };
 
 export default function Carousel() {
-  const isMatch = useMediaQuery('(min-width: 700px)');
+  const isMatch = useMediaQuery('(min-width: 715px)');
   const [slideIndex, direction, handleChangeSlide] = useCarousel({
     length: slides.length,
     interval: 8000,

@@ -2,19 +2,19 @@
 
 exports[`Slide component renders a slide with all content present 1`] = `
 <div
-  className="sc-bczRLJ bNyhDt"
+  className="sc-bczRLJ VHwUl"
   data-testid="slide-1"
 >
   <div
-    className="sc-gsnTZi foBxFG"
+    className="sc-gsnTZi fEEGJC"
   >
     <img
       alt="3XS Systems"
-      className="sc-dkzDqf ebNyCr"
+      className="sc-dkzDqf jPkBsn"
       src=""
     />
     <h4
-      className="sc-hKMtZM cvPLNH"
+      className="sc-hKMtZM hXCOMb"
     >
       RTX™ 30 Series PCs
     </h4>
@@ -27,7 +27,7 @@ exports[`Slide component renders a slide with all content present 1`] = `
   </div>
   <img
     alt="A PC with rainbow coloured LED case fans on the front"
-    className="sc-jSMfEi erQzkZ"
+    className="sc-jSMfEi hXysZZ"
     src=""
   />
   <div

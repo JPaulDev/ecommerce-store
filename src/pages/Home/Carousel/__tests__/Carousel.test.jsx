@@ -72,9 +72,9 @@ describe('Carousel component bottom navigation buttons', () => {
   });
 });
 
-describe('Carousel component at a screen width of 700px and above', () => {
+describe('Carousel component at a screen width of 715px and above', () => {
   beforeAll(() => {
-    window.resizeTo(700, 768);
+    window.resizeTo(715, 768);
   });
 
   beforeEach(() => {
@@ -90,9 +90,9 @@ describe('Carousel component at a screen width of 700px and above', () => {
   });
 });
 
-describe('Carousel component at a screen width of 699px and below', () => {
+describe('Carousel component at a screen width of 714px and below', () => {
   beforeAll(() => {
-    window.resizeTo(699, 768);
+    window.resizeTo(714, 768);
   });
 
   beforeEach(() => {

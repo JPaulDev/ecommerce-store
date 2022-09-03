@@ -15,7 +15,7 @@ export const Container = styled.div`
     padding: 10px 60px 0;
   }
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 715px) {
     padding: 90px 60px 0;
     min-height: 385px;
     background-image: url(${({ background }) => background});
@@ -33,7 +33,7 @@ export const LeftContainer = styled.div`
   color: white;
   text-align: center;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 715px) {
     width: 40%;
     text-align: left;
   }
@@ -48,7 +48,7 @@ export const LeftLogo = styled.img`
   margin-top: 10px;
   width: 125px;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 715px) {
     width: 158px;
     height: 19px;
   }
@@ -60,7 +60,7 @@ export const LeftHeading = styled.h4`
   margin-bottom: 10px;
   margin-top: 5px;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 715px) {
     margin-top: 15px;
   }
 `;
@@ -78,7 +78,7 @@ export const CenterImage = styled.img`
   transform: translateX(-50%);
   width: 325px;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 715px) {
     transform: translateX(-10%);
     top: 100px;
   }
