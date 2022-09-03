@@ -8,7 +8,7 @@ export default function Links() {
 
   return (
     <Styled.Container>
-      <Styled.Link href="" aria-label="Account">
+      <Styled.Link href="" aria-label="Account" title="Account">
         <AccountIcon width="32px" height="30px" fill="var(--color-orange-1)" />
         {isMatch && (
           <div>
@@ -17,7 +17,7 @@ export default function Links() {
           </div>
         )}
       </Styled.Link>
-      <Styled.Link href="" aria-label="Basket">
+      <Styled.Link href="" aria-label="Basket" title="Basket">
         <BasketIcon width="34px" height="30px" fill="var(--color-orange-1)" />
         {isMatch && (
           <div>
