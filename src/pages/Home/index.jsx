@@ -5,6 +5,7 @@ import Carousel from './Carousel';
 import ProShopCards from './ProShopCards';
 import PromoBanner from './PromoBanner';
 import TodayOnlyBanner from './TodayOnlyBanner';
+import TodayOnlyOffers from './TodayOnlyOffers';
 import * as Styled from './styles';
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <ProShopCards />
         <PromoBanner />
         <TodayOnlyBanner />
+        <TodayOnlyOffers />
       </Styled.Container>
     </Styled.Main>
   );
