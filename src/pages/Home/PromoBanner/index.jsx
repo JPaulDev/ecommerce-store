@@ -6,7 +6,7 @@ import LinkButtonGrey from '../../../components/LinkButtonGrey';
 import LinkWithChevron from '../../../components/LinkWithChevron';
 import * as Styled from './styles';
 
-export default function AdvertBanner() {
+export default function PromoBanner() {
   const isMatch530 = useMediaQuery('(min-width: 530px)');
   const isMatch850 = useMediaQuery('(min-width: 850px)');
   const linkText = 'Find Out More';
