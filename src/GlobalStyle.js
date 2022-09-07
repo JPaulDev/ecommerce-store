@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
     --color-grey-7: #9e9e9e;
     --color-grey-8: #5b5b5b;
     --color-grey-9: #e1e1e1;
+    --color-blue-1: #3d70b7;
   }
 
   * {
