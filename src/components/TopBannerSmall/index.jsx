@@ -8,22 +8,25 @@ import * as Styled from './styles';
 const content = [
   {
     image: trophy,
-    width: '60px',
-    height: '28px',
+    width: 119,
+    height: 55,
+    displayWidth: '60px',
     boldText: 'Award winning',
     text: 'Systems and customer services',
   },
   {
     image: trustpilot,
-    width: '73px',
-    height: '34px',
+    width: 121,
+    height: 56,
+    displayWidth: '73px',
     boldText: '4.8 stars on Trustpilot',
     text: 'From over 30,000 customer reviews',
   },
   {
     image: paypal,
-    width: '80px',
-    height: '27px',
+    width: 167,
+    height: 56,
+    displayWidth: '80px',
     boldText: '0% interest up to 4 months',
     text: 'Minimum spend applies from £99',
   },
@@ -54,10 +57,11 @@ export default function TopBannerSmall() {
           isActive={index === slideIndex}
           data-testid={index}
         >
-          <img
+          <Styled.Image
             src={item.image}
             width={item.width}
             height={item.height}
+            displayWidth={item.displayWidth}
             alt=""
           />
           <Styled.Text>

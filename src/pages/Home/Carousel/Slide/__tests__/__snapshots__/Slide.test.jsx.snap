@@ -10,8 +10,10 @@ exports[`Slide component renders a slide with all content present 1`] = `
   >
     <img
       alt="3XS Systems"
-      className="sc-dkzDqf jPkBsn"
+      className="sc-dkzDqf cYFFSu"
+      height={19}
       src=""
+      width={158}
     />
     <h4
       className="sc-hKMtZM hXCOMb"
@@ -27,8 +29,10 @@ exports[`Slide component renders a slide with all content present 1`] = `
   </div>
   <img
     alt="A PC with rainbow coloured LED case fans on the front"
-    className="sc-jSMfEi hXysZZ"
+    className="sc-jSMfEi hDQHpR"
+    height={317}
     src=""
+    width={375}
   />
   <div
     className="sc-gKXOVf fntncR"

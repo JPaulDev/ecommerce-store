@@ -106,8 +106,15 @@ const dropdowns = {
 };
 
 const adverts = {
-  components: [componentsAd1, componentsAd2, componentsAd3],
-  accessories: [accessoriesAd1, accessoriesAd2],
+  components: [
+    { image: componentsAd1, width: 300, height: 120 },
+    { image: componentsAd2, width: 300, height: 120 },
+    { image: componentsAd3, width: 300, height: 120 },
+  ],
+  accessories: [
+    { image: accessoriesAd1, width: 300, height: 176 },
+    { image: accessoriesAd2, width: 300, height: 120 },
+  ],
 };
 
 export default function Dropdown({ menu }) {
@@ -135,8 +142,14 @@ export default function Dropdown({ menu }) {
       ))}
       {isMatch && (
         <Styled.AdvertsContainer>
-          {adverts[openMenu].map((image, index) => (
-            <Styled.Image key={index} src={image} alt="" />
+          {adverts[openMenu].map((item, index) => (
+            <Styled.Image
+              key={index}
+              src={item.image}
+              width={item.width}
+              height={item.height}
+              alt=""
+            />
           ))}
         </Styled.AdvertsContainer>
       )}

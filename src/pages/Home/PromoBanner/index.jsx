@@ -29,8 +29,16 @@ export default function PromoBanner() {
           iconSize="18px"
         />
       )}
-      {isMatch850 && <Styled.Logo src={nvidiaLogo} alt="" data-testid="logo" />}
-      <Styled.BlueDetail src={blueDetail} alt="" />
+      {isMatch850 && (
+        <Styled.Logo
+          src={nvidiaLogo}
+          alt=""
+          width={93}
+          height={73}
+          data-testid="logo"
+        />
+      )}
+      <Styled.BlueDetail src={blueDetail} width={1279} height={124} alt="" />
     </Styled.Container>
   );
 }

@@ -10,15 +10,16 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
   >
     <img
       alt=""
-      height="28px"
+      className="sc-dkzDqf fKaELO"
+      height={55}
       src="trophy-logo.webp"
-      width="60px"
+      width={119}
     />
     <span
-      className="sc-dkzDqf eDHhsi"
+      className="sc-hKMtZM ljwLIZ"
     >
       <strong
-        className="sc-hKMtZM hPKlJ"
+        className="sc-eCYdqJ kcBPRM"
       >
         Award winning
       </strong>
@@ -31,15 +32,16 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
   >
     <img
       alt=""
-      height="34px"
+      className="sc-dkzDqf fJRwIM"
+      height={56}
       src="trustpilot-logo.webp"
-      width="73px"
+      width={121}
     />
     <span
-      className="sc-dkzDqf eDHhsi"
+      className="sc-hKMtZM ljwLIZ"
     >
       <strong
-        className="sc-hKMtZM hPKlJ"
+        className="sc-eCYdqJ kcBPRM"
       >
         4.8 stars on Trustpilot
       </strong>
@@ -52,15 +54,16 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
   >
     <img
       alt=""
-      height="27px"
+      className="sc-dkzDqf fJXcvE"
+      height={56}
       src="paypal-logo.webp"
-      width="80px"
+      width={167}
     />
     <span
-      className="sc-dkzDqf eDHhsi"
+      className="sc-hKMtZM ljwLIZ"
     >
       <strong
-        className="sc-hKMtZM hPKlJ"
+        className="sc-eCYdqJ kcBPRM"
       >
         0% interest up to 4 months
       </strong>

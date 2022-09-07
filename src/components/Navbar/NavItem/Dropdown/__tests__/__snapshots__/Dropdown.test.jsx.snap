@@ -159,12 +159,16 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
     <img
       alt=""
       className="sc-iBkjds exDCZC"
+      height={176}
       src="accessories-ad1.webp"
+      width={300}
     />
     <img
       alt=""
       className="sc-iBkjds exDCZC"
+      height={120}
       src="accessories-ad2.webp"
+      width={300}
     />
   </div>
 </div>
@@ -416,17 +420,23 @@ exports[`Dropdown component renders the components menu with all links/advertise
     <img
       alt=""
       className="sc-iBkjds exDCZC"
+      height={120}
       src="components-ad1.webp"
+      width={300}
     />
     <img
       alt=""
       className="sc-iBkjds exDCZC"
+      height={120}
       src="components-ad2.webp"
+      width={300}
     />
     <img
       alt=""
       className="sc-iBkjds exDCZC"
+      height={120}
       src="components-ad3.webp"
+      width={300}
     />
   </div>
 </div>

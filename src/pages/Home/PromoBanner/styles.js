@@ -52,11 +52,9 @@ export const Text = styled.p`
 `;
 
 export const Logo = styled.img`
-  height: 73px;
   position: absolute;
   right: 25px;
   top: 25px;
-  width: 93px;
 `;
 
 export const BlueDetail = styled.img`

@@ -47,7 +47,7 @@ export default function SearchInput() {
         onChange={handleChange}
       />
       <Styled.Button title="Search" type="submit">
-        <SearchIcon width="30px" height="30px" fill="white" />
+        <SearchIcon width={30} height={30} fill="white" />
       </Styled.Button>
     </Styled.Form>
   );

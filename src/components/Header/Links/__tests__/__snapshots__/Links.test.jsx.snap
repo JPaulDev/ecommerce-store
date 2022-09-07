@@ -12,8 +12,8 @@ exports[`Links component at a screen width of 574px and below renders links with
   >
     <svg
       fill="var(--color-orange-1)"
-      height="30px"
-      width="32px"
+      height={30}
+      width={32}
     >
       account.svg
     </svg>
@@ -26,8 +26,8 @@ exports[`Links component at a screen width of 574px and below renders links with
   >
     <svg
       fill="var(--color-orange-1)"
-      height="30px"
-      width="34px"
+      height={30}
+      width={34}
     >
       basket.svg
     </svg>
@@ -47,8 +47,8 @@ exports[`Links component at a screen width of 575px and above renders links with
   >
     <svg
       fill="var(--color-orange-1)"
-      height="30px"
-      width="32px"
+      height={30}
+      width={32}
     >
       account.svg
     </svg>
@@ -73,8 +73,8 @@ exports[`Links component at a screen width of 575px and above renders links with
   >
     <svg
       fill="var(--color-orange-1)"
-      height="30px"
-      width="34px"
+      height={30}
+      width={34}
     >
       basket.svg
     </svg>

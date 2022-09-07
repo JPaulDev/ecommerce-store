@@ -23,14 +23,18 @@ exports[`PromoBanner component renders a promotional banner about RTX studio 1`]
   </a>
   <img
     alt=""
-    className="sc-iBkjds ibOmqv"
+    className="sc-iBkjds ibwDFM"
     data-testid="logo"
+    height={73}
     src="nvidia-logo.webp"
+    width={93}
   />
   <img
     alt=""
     className="sc-ftvSup iSGTUF"
+    height={124}
     src="blue-detail.webp"
+    width={1279}
   />
 </div>
 `;

@@ -27,11 +27,11 @@ export const Container = styled.div`
 `;
 
 export const HeaderLogo = styled.img`
-  height: 34px;
+  height: auto;
   width: 160px;
 
   @media screen and (min-width: 575px) {
-    height: 36px;
+    height: auto;
     width: 170px;
   }
 `;

@@ -12,16 +12,31 @@ const Slide = forwardRef(({ slideIndex, slide }, ref) => {
       data-testid={`slide-${slideIndex + 1}`}
     >
       <Styled.LeftContainer>
-        <Styled.LeftLogo src={slide.leftLogo} alt={slide.leftLogoAlt} />
+        <Styled.LeftLogo
+          src={slide.leftLogo}
+          alt={slide.leftLogoAlt}
+          width={158}
+          height={19}
+        />
         <Styled.LeftHeading>{slide.leftHeading}</Styled.LeftHeading>
         <Styled.Text>{slide.leftText}</Styled.Text>
       </Styled.LeftContainer>
-      <Styled.CenterImage src={slide.centerImage} alt={slide.centerImageAlt} />
+      <Styled.CenterImage
+        src={slide.centerImage}
+        alt={slide.centerImageAlt}
+        width={375}
+        height={317}
+      />
       {isMatch && (
         <Styled.RightContainer textColor={slide.textColor}>
           <Styled.RightHeading>
             {slide.rightHeading}
-            <Styled.RightLogo src={slide.rightLogo} alt={slide.rightLogoAlt} />
+            <Styled.RightLogo
+              src={slide.rightLogo}
+              alt={slide.rightLogoAlt}
+              width={slide.rightLogoWidth}
+              height={slide.rightLogoHeight}
+            />
           </Styled.RightHeading>
           <Styled.List>
             {slide.rightText.map((text) => (

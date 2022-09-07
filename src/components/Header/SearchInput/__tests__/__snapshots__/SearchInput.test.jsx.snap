@@ -32,8 +32,8 @@ exports[`SearchInput component renders a search input with a button and a search
   >
     <svg
       fill="white"
-      height="30px"
-      width="30px"
+      height={30}
+      width={30}
     >
       search.svg
     </svg>

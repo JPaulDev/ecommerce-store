@@ -7,7 +7,12 @@ export default function Header() {
   return (
     <Styled.Header>
       <Styled.Container>
-        <Styled.HeaderLogo src={logo} alt="PC-Connect.co.uk" />
+        <Styled.HeaderLogo
+          src={logo}
+          alt="PC-Connect.co.uk"
+          width={153}
+          height={32}
+        />
         <SearchInput />
         <Links />
       </Styled.Container>

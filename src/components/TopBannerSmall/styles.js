@@ -29,6 +29,11 @@ export const InnerContainer = styled.div`
   }
 `;
 
+export const Image = styled.img`
+  height: auto;
+  width: ${({ displayWidth }) => displayWidth};
+`;
+
 export const Text = styled.span`
   color: var(--color-grey-2);
   font-size: 0.7rem;

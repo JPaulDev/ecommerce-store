@@ -25,6 +25,8 @@ const slides = [
       designed to deliver ultimate performance for gamers and creators.`,
     rightHeading: 'Powered by',
     rightLogo: nvidiaLogo,
+    rightLogoWidth: 100,
+    rightLogoHeight: 32,
     rightLogoAlt: 'Nvidia GeForce RTX',
     rightText: [
       'Premium built to order systems',
@@ -48,6 +50,8 @@ const slides = [
       and DDR5 memory.`,
     rightHeading: 'Powered by',
     rightLogo: intelLogo,
+    rightLogoWidth: 76,
+    rightLogoHeight: 30,
     rightLogoAlt: 'Intel',
     rightText: [
       'Premium built to order systems',
@@ -70,6 +74,8 @@ const slides = [
       with zero compromises.`,
     rightHeading: 'Powered by',
     rightLogo: amdLogo,
+    rightLogoWidth: 79,
+    rightLogoHeight: 32,
     rightLogoAlt: 'AMD Ryzen Radeon',
     textColor: 'white',
     rightText: [
@@ -93,6 +99,8 @@ const slides = [
       with the 3XS Gamer PBA powered by RTX 3060 Ti.`,
     rightHeading: 'Powered by',
     rightLogo: monthLogos,
+    rightLogoWidth: 131,
+    rightLogoHeight: 22,
     rightLogoAlt: 'Nvidia GeForce RTX paired with an AMD or Intel processor',
     rightText: [
       '8GB ASUS GeForce RTX 3060',

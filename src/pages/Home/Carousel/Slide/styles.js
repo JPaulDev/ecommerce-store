@@ -44,13 +44,11 @@ export const LeftContainer = styled.div`
 `;
 
 export const LeftLogo = styled.img`
-  height: 15px;
   margin-top: 10px;
-  width: 125px;
 
-  @media screen and (min-width: 715px) {
-    width: 158px;
-    height: 19px;
+  @media screen and (max-width: 714px) {
+    width: 125px;
+    height: auto;
   }
 `;
 
@@ -71,7 +69,7 @@ export const Text = styled.p`
 `;
 
 export const CenterImage = styled.img`
-  height: 275px;
+  height: auto;
   left: 50%;
   position: absolute;
   top: 180px;
@@ -85,7 +83,7 @@ export const CenterImage = styled.img`
 
   @media screen and (min-width: 850px) {
     width: 350px;
-    height: 296px;
+    height: auto;
     top: 90px;
     right: 110px;
     left: initial;
@@ -94,7 +92,7 @@ export const CenterImage = styled.img`
 
   @media screen and (min-width: 1000px) {
     width: 325px;
-    height: 275px;
+    height: auto;
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
@@ -102,7 +100,7 @@ export const CenterImage = styled.img`
 
   @media screen and (min-width: 1100px) {
     width: 375px;
-    height: 317px;
+    height: auto;
     top: 80px;
   }
 `;

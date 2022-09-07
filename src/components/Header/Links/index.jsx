@@ -9,7 +9,7 @@ export default function Links() {
   return (
     <Styled.Container>
       <Styled.Link href="" aria-label="Account" title="Account">
-        <AccountIcon width="32px" height="30px" fill="var(--color-orange-1)" />
+        <AccountIcon width={32} height={30} fill="var(--color-orange-1)" />
         {isMatch && (
           <div>
             <Styled.TopText>Account</Styled.TopText>
@@ -18,7 +18,7 @@ export default function Links() {
         )}
       </Styled.Link>
       <Styled.Link href="" aria-label="Basket" title="Basket">
-        <BasketIcon width="34px" height="30px" fill="var(--color-orange-1)" />
+        <BasketIcon width={34} height={30} fill="var(--color-orange-1)" />
         {isMatch && (
           <div>
             <Styled.TopText>Basket</Styled.TopText>
