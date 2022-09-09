@@ -68,6 +68,7 @@ export default function TodayOnlyOffers() {
   const isChangingCategory = useRef(false);
 
   const handleChangeCategory = (category) => {
+    // Formats category heading to camel case
     const formattedCategory = category
       .toLowerCase()
       .replace(/ ./g, (str) => str[1].toUpperCase());

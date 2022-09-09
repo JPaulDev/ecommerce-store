@@ -16,7 +16,7 @@ const categories = [
     icon: MemoryIcon,
   },
   {
-    heading: 'Hard Drives',
+    heading: 'Storage',
     icon: HddIcon,
   },
   {
