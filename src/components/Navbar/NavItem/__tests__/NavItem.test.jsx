@@ -48,13 +48,6 @@ describe('NavItem dropdown', () => {
 
     expect(screen.queryByTestId('dropdown-menu')).toBeNull();
   });
-
-  it('button has the correct styles applied when the dropdown is open', () => {
-    const button = getButton();
-    userEvent.click(button);
-
-    expect(button).toHaveStyle('background-color: white');
-  });
 });
 
 function getButton() {
