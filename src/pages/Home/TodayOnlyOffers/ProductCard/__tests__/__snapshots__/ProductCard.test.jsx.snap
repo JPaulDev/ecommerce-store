@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductCard component snapshot renders a product card with an image and all product information 1`] = `
+<div
+  className="sc-papXJ hCabH"
+  data-testid="product"
+>
+  <div
+    className="sc-jqUVSM ftwBFk"
+  >
+    <img
+      alt=""
+      className="sc-kDDrLX bIdWHc"
+      height={200}
+      src=""
+      width={200}
+    />
+    <p
+      className="sc-iqcoie dnToup"
+    >
+      Intel Core i5 10400F
+    </p>
+    <p
+      className="sc-crXcEl hTFuTH"
+    >
+      6 Cores, 12 Threads, S1200 Comet Lake, 2.9GHz, 4.3GHz Turbo, 12MB Cache
+    </p>
+    <div
+      className="sc-evZas edbvsQ"
+    >
+      <span
+        className="sc-eCYdqJ ejHRxl"
+      >
+        CPU-INT-10400F
+      </span>
+    </div>
+    <span
+      className="sc-bczRLJ eYpvHB"
+    >
+      <span
+        className="sc-gsnTZi iKSuxX"
+      >
+        £
+      </span>
+      114
+      <span
+        className="sc-gsnTZi iKSuxX"
+      >
+        .99
+      </span>
+    </span>
+    <span
+      className="sc-dkzDqf dAHzws"
+    >
+      <span
+        className="sc-hKMtZM ffHsYy"
+      >
+        Was: 
+      </span>
+      £129.99
+    </span>
+    <label
+      hidden={true}
+      htmlFor=":r0:"
+    >
+      Quantity
+    </label>
+    <select
+      className="sc-jSMfEi cheFUw"
+      disabled={false}
+      id=":r0:"
+      name="quantity"
+      onChange={[Function]}
+      value={1}
+    >
+      <option
+        value={1}
+      >
+        1
+      </option>
+      <option
+        value={2}
+      >
+        2
+      </option>
+      <option
+        value={3}
+      >
+        3
+      </option>
+      <option
+        value={4}
+      >
+        4
+      </option>
+      <option
+        value={5}
+      >
+        5
+      </option>
+    </select>
+    <div
+      className="sc-iBkjds fxdvqz"
+      title="Item is in stock"
+    >
+      <i
+        className="sc-gKXOVf clAfRf material-symbols-outlined"
+      >
+        inventory
+      </i>
+      In Stock
+    </div>
+    <button
+      className="sc-ftvSup fEYXZf"
+      disabled={false}
+      type="button"
+    >
+      Add To Basket
+    </button>
+  </div>
+</div>
+`;

@@ -15,7 +15,7 @@ const ProductCard = forwardRef(({ product }, ref) => {
   const handleChangeQuantity = (e) => setQuantity(parseInt(e.target.value, 10));
 
   return (
-    <Styled.Wrapper ref={ref}>
+    <Styled.Wrapper ref={ref} data-testid="product">
       <Styled.Container>
         <Styled.ProductImage
           src={product.image}

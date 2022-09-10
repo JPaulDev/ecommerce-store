@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Categories component snapshot renders 5 buttons representing each selectable component category 1`] = `
+<div
+  className="sc-hKMtZM ktgwFi"
+>
+  <ul
+    className="sc-eCYdqJ fbmEHF"
+  >
+    <li>
+      <button
+        className="sc-bczRLJ dVIgNB"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="sc-gsnTZi iJClTJ"
+        >
+          <svg>
+            gfx.svg
+          </svg>
+        </div>
+        <h3
+          className="sc-dkzDqf ildjWB"
+        >
+          Graphics Cards
+        </h3>
+      </button>
+    </li>
+    <li>
+      <button
+        className="sc-bczRLJ dVIgNB"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="sc-gsnTZi iJClTJ"
+        >
+          <svg>
+            memory.svg
+          </svg>
+        </div>
+        <h3
+          className="sc-dkzDqf ildjWB"
+        >
+          Memory
+        </h3>
+      </button>
+    </li>
+    <li>
+      <button
+        className="sc-bczRLJ dVIgNB"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="sc-gsnTZi iJClTJ"
+        >
+          <svg>
+            hdd.svg
+          </svg>
+        </div>
+        <h3
+          className="sc-dkzDqf ildjWB"
+        >
+          Storage
+        </h3>
+      </button>
+    </li>
+    <li>
+      <button
+        className="sc-bczRLJ dVIgNB"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="sc-gsnTZi iJClTJ"
+        >
+          <svg>
+            processor.svg
+          </svg>
+        </div>
+        <h3
+          className="sc-dkzDqf ildjWB"
+        >
+          Processors
+        </h3>
+      </button>
+    </li>
+    <li>
+      <button
+        className="sc-bczRLJ dVIgNB"
+        onClick={[Function]}
+        type="button"
+      >
+        <div
+          className="sc-gsnTZi iJClTJ"
+        >
+          <svg>
+            motherboard.svg
+          </svg>
+        </div>
+        <h3
+          className="sc-dkzDqf ildjWB"
+        >
+          Motherboards
+        </h3>
+      </button>
+    </li>
+  </ul>
+</div>
+`;

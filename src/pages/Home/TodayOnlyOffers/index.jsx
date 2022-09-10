@@ -96,7 +96,7 @@ export default function TodayOnlyOffers() {
     <section>
       <Categories onChangeCategory={handleChangeCategory} />
       {offers[displayCategory]?.map((row, index) => (
-        <Styled.Container key={index}>
+        <Styled.Container key={index} data-testid={displayCategory}>
           <AnimatePresence
             initial={false}
             custom={isChangingCategory.current}
