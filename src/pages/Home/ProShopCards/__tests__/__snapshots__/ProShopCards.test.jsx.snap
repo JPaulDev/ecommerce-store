@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProShopCards component renders 6 pro shop cards with links and descriptions 1`] = `
+exports[`ProShopCards component renders 6 pro shop cards with links and shop descriptions 1`] = `
 <section
   className="sc-hKMtZM emMgDn"
 >

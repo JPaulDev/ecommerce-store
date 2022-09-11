@@ -9,50 +9,34 @@ describe('PromoBanner component', () => {
   });
 });
 
-describe('PromoBanner component at a screen width of 850px and above', () => {
-  it('renders a logo image', () => {
+describe('PromoBanner component at different screen widths', () => {
+  it('renders a logo image at 850px and above', () => {
     window.resizeTo(850, 768);
     render(<PromoBanner />);
 
     expect(screen.getByTestId('logo')).toBeInTheDocument();
   });
-});
 
-describe('PromoBanner component at a screen width of 849px and below', () => {
-  it('does not render a logo image', () => {
+  it('does not render a logo image at 849px and below', () => {
     window.resizeTo(849, 768);
     render(<PromoBanner />);
 
     expect(screen.queryByTestId('logo')).toBeNull();
   });
-});
 
-describe('PromoBanner component at a screen width of 530px and above', () => {
-  beforeEach(() => {
+  it('renders a link button at 530px and above', () => {
     window.resizeTo(530, 768);
     render(<PromoBanner />);
-  });
 
-  it('renders a link button', () => {
+    expect(screen.queryByTestId('link-chevron')).toBeNull();
     expect(screen.getByTestId('link-button')).toBeInTheDocument();
   });
 
-  it('does not render a link with a chevron', () => {
-    expect(screen.queryByTestId('link-chevron')).toBeNull();
-  });
-});
-
-describe('PromoBanner component at a screen width of 529px and below', () => {
-  beforeEach(() => {
+  it('renders a link with a chevron at 529px and below', () => {
     window.resizeTo(529, 768);
     render(<PromoBanner />);
-  });
 
-  it('renders a link with a chevron', () => {
-    expect(screen.getByTestId('link-chevron')).toBeInTheDocument();
-  });
-
-  it('does not render a link button', () => {
     expect(screen.queryByTestId('link-button')).toBeNull();
+    expect(screen.getByTestId('link-chevron')).toBeInTheDocument();
   });
 });

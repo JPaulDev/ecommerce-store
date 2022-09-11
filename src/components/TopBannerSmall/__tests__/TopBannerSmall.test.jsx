@@ -9,20 +9,22 @@ describe('TopBannerSmall component', () => {
   });
 });
 
-describe('TopBannerSmall component at a screen width of 999px and below', () => {
-  it('cycles through and displays each slide', () => {
+describe('TopBannerSmall component at different screen widths', () => {
+  it('cycles through and displays each slide at 999px and below', () => {
     window.resizeTo(999, 769);
     jest.useFakeTimers();
     render(<TopBannerSmall />);
 
-    act(() => jest.runAllTimers());
+    expect(screen.getByTestId('0')).toHaveStyle('opacity: 0');
+    expect(screen.getByTestId('1')).toHaveStyle('opacity: 1');
+    expect(screen.getByTestId('2')).toHaveStyle('opacity: 0');
+
+    act(() => {
+      jest.runAllTimers();
+    });
+
     expect(screen.getByTestId('0')).toHaveStyle('opacity: 0');
     expect(screen.getByTestId('1')).toHaveStyle('opacity: 0');
     expect(screen.getByTestId('2')).toHaveStyle('opacity: 1');
-
-    act(() => jest.runAllTimers());
-    expect(screen.getByTestId('0')).toHaveStyle('opacity: 1');
-    expect(screen.getByTestId('1')).toHaveStyle('opacity: 0');
-    expect(screen.getByTestId('2')).toHaveStyle('opacity: 0');
   });
 });

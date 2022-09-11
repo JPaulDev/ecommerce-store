@@ -1,20 +1,29 @@
-import renderer from 'react-test-renderer';
+import { screen, render } from '@testing-library/react';
 import Links from '../index';
 
-describe('Links component at a screen width of 575px and above', () => {
-  it('renders links with their icons and text visible', () => {
+const linkText = [
+  /account$/i,
+  /sign in | register/i,
+  /basket$/i,
+  /subtotal £0.00/i,
+];
+
+describe('Links component at different screen widths', () => {
+  it('renders links with their icons and text visible at 575px and above', () => {
     window.resizeTo(575, 768);
-    const tree = renderer.create(<Links />).toJSON();
+    render(<Links />);
 
-    expect(tree).toMatchSnapshot();
+    linkText.forEach((item) => {
+      expect(screen.getByText(item)).toBeInTheDocument();
+    });
   });
-});
 
-describe('Links component at a screen width of 574px and below', () => {
-  it('renders links with no text and only their icons visible', () => {
+  it('renders links with only their icons visible at 574px and below', () => {
     window.resizeTo(574, 768);
-    const tree = renderer.create(<Links />).toJSON();
+    render(<Links />);
 
-    expect(tree).toMatchSnapshot();
+    linkText.forEach((item) => {
+      expect(screen.queryByText(item)).toBeNull();
+    });
   });
 });

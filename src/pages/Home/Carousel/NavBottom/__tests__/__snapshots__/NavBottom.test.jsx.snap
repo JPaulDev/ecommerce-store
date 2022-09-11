@@ -10,7 +10,7 @@ exports[`NavBottom component renders a button for each slide in the slides array
   >
     <li>
       <button
-        aria-label="Slide 1 of 2"
+        aria-label="Slide 1 of 3"
         className="sc-dkzDqf klJSdk"
         onClick={[Function]}
         type="button"
@@ -18,7 +18,15 @@ exports[`NavBottom component renders a button for each slide in the slides array
     </li>
     <li>
       <button
-        aria-label="Slide 2 of 2"
+        aria-label="Slide 2 of 3"
+        className="sc-dkzDqf klJSdk"
+        onClick={[Function]}
+        type="button"
+      />
+    </li>
+    <li>
+      <button
+        aria-label="Slide 3 of 3"
         className="sc-dkzDqf klJSdk"
         onClick={[Function]}
         type="button"

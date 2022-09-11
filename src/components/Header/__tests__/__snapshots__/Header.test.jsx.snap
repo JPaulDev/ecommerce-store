@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders a header with an image, search input and links 1`] = `
+<header
+  className="sc-iBkjds bVIlMM"
+>
+  <div
+    className="sc-ftvSup kuUWRL"
+  >
+    <img
+      alt="PC-Connect.co.uk"
+      className="sc-papXJ hdUloH"
+      height={32}
+      src="header-logo.webp"
+      width={153}
+    />
+    <form
+      action="/search"
+      className="sc-bczRLJ bDMbYN"
+      method="get"
+      role="search"
+    >
+      <label
+        hidden={true}
+        htmlFor=":r0:"
+      >
+        Search
+      </label>
+      <input
+        autoComplete="off"
+        className="sc-gsnTZi iltnbf"
+        id=":r0:"
+        maxLength="50"
+        name="searchQuery"
+        onChange={[Function]}
+        placeholder="Search PC-Connect.co.uk..."
+        required={true}
+        type="search"
+        value=""
+      />
+      <button
+        className="sc-dkzDqf gfrkhO"
+        title="Search"
+        type="submit"
+      >
+        <svg
+          fill="white"
+          height={30}
+          width={30}
+        >
+          search.svg
+        </svg>
+      </button>
+    </form>
+    <div
+      className="sc-hKMtZM hpnnDO"
+    >
+      <a
+        aria-label="Account"
+        className="sc-eCYdqJ edfFZL"
+        href=""
+        title="Account"
+      >
+        <svg
+          fill="var(--color-orange-1)"
+          height={30}
+          width={32}
+        >
+          account.svg
+        </svg>
+        <div>
+          <span
+            className="sc-jSMfEi cUKKKr"
+          >
+            Account
+          </span>
+          <span
+            className="sc-gKXOVf ddmUiw"
+          >
+            Sign in | Register
+          </span>
+        </div>
+      </a>
+      <a
+        aria-label="Basket"
+        className="sc-eCYdqJ edfFZL"
+        href=""
+        title="Basket"
+      >
+        <svg
+          fill="var(--color-orange-1)"
+          height={30}
+          width={34}
+        >
+          basket.svg
+        </svg>
+        <div>
+          <span
+            className="sc-jSMfEi cUKKKr"
+          >
+            Basket
+          </span>
+          <span
+            className="sc-gKXOVf ddmUiw"
+          >
+            Subtotal £0.00
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</header>
+`;

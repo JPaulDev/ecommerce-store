@@ -9,32 +9,20 @@ describe('TodayOnlyBanner component', () => {
   });
 });
 
-describe('TodayOnlyBanner component at a screen width of 935px and above', () => {
-  beforeEach(() => {
+describe('TodayOnlyBanner component at different screen widths', () => {
+  it('renders a link with a chevron at 935px and above', () => {
     window.resizeTo(935, 768);
     render(<TodayOnlyBanner />);
-  });
 
-  it('renders a link with a chevron', () => {
     expect(screen.getByTestId('link-chevron')).toBeInTheDocument();
-  });
-
-  it('does not render a link button', () => {
     expect(screen.queryByTestId('link-button')).toBeNull();
   });
-});
 
-describe('TodayOnlyBanner component at a screen width of 934px and below', () => {
-  beforeEach(() => {
+  it('renders a link button at 934px and below', () => {
     window.resizeTo(934, 768);
     render(<TodayOnlyBanner />);
-  });
 
-  it('renders a link button', () => {
-    expect(screen.getByTestId('link-button')).toBeInTheDocument();
-  });
-
-  it('does not render a link with a chevron', () => {
     expect(screen.queryByTestId('link-chevron')).toBeNull();
+    expect(screen.getByTestId('link-button')).toBeInTheDocument();
   });
 });

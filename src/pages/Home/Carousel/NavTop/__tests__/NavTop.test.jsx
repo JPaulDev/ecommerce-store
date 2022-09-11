@@ -3,10 +3,13 @@ import NavTop from '../index';
 
 const slides = [
   {
-    topNavText: '30 SERIES 3XS PCs',
+    topNavText: 'slide 1',
   },
   {
-    topNavText: 'INTEL 3XS PCs',
+    topNavText: 'slide 2',
+  },
+  {
+    topNavText: 'slide 3',
   },
 ];
 

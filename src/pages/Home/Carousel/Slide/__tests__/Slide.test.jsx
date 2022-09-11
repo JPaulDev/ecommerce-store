@@ -34,22 +34,18 @@ describe('Slide component', () => {
   });
 });
 
-describe('Slide component at a screen width of 1000px and above', () => {
-  it('renders the right text list', () => {
+describe('Slide component at different screen widths', () => {
+  it('renders the right text list at 1000px and above', () => {
     window.resizeTo(1000, 768);
     render(<Slide slide={slide} slideIndex={0} />);
-    const list = screen.getByRole('list');
 
-    expect(list).toBeInTheDocument();
+    expect(screen.getByRole('list')).toBeInTheDocument();
   });
-});
 
-describe('Slide component at a screen width of 999px and below', () => {
-  it('hides the right text list', () => {
+  it('hides the right text list at 999px and below', () => {
     window.resizeTo(999, 768);
     render(<Slide slide={slide} slideIndex={0} />);
-    const list = screen.queryByRole('list');
 
-    expect(list).toBeNull();
+    expect(screen.queryByRole('list')).toBeNull();
   });
 });

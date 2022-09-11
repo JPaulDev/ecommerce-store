@@ -91,8 +91,9 @@ describe('ProductCard component stock indicator', () => {
 
 describe('ProductCard component price display', () => {
   it('displays the products base price if no sale price is passed in', () => {
-    render(<ProductCard product={{ ...product, salePrice: '' }} />);
+    render(<ProductCard product={{ ...product, price: 100, salePrice: '' }} />);
 
+    expect(screen.getByText('100')).toBeInTheDocument();
     expect(screen.queryByText(/was/i)).toBeNull();
   });
 });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Categories component snapshot renders 5 buttons representing each selectable component category 1`] = `
+exports[`Categories component renders 5 buttons representing each selectable component category 1`] = `
 <div
   className="sc-hKMtZM ktgwFi"
 >

@@ -6,18 +6,16 @@ const linkItem = { title: 'Home', url: '' };
 const buttonItem = { title: 'Components', hasDropdown: true };
 
 describe('NavItem component', () => {
-  it('renders a link when no hasDropdown property is set', () => {
+  it('renders a link element when no hasDropdown property is set', () => {
     render(<NavItem item={linkItem} />);
-    const link = getLink();
 
-    expect(link).toBeInTheDocument();
+    expect(getLink()).toBeInTheDocument();
   });
 
-  it('renders a button when hasDropdown property is set to true', () => {
+  it('renders a button element when hasDropdown property is set to true', () => {
     render(<NavItem item={buttonItem} />);
-    const button = getButton();
 
-    expect(button).toBeInTheDocument();
+    expect(getButton()).toBeInTheDocument();
   });
 });
 
@@ -28,6 +26,7 @@ describe('NavItem dropdown', () => {
 
   it('opens when the button is clicked', () => {
     const button = getButton();
+
     userEvent.click(button);
 
     expect(screen.getByTestId('dropdown-menu')).toBeInTheDocument();
@@ -35,6 +34,7 @@ describe('NavItem dropdown', () => {
 
   it('closes when the button is clicked', () => {
     const button = getButton();
+
     userEvent.click(button);
     userEvent.click(button);
 
@@ -43,6 +43,7 @@ describe('NavItem dropdown', () => {
 
   it('closes on clicks outside of the dropdown menu', () => {
     const button = getButton();
+
     userEvent.click(button);
     userEvent.click(document.body);
 

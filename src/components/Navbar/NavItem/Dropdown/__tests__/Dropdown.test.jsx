@@ -14,17 +14,15 @@ describe('Dropdown component', () => {
   });
 });
 
-describe('Dropdown component at a screen width of 925px and above', () => {
-  it('shows advertisements in the dropdown menu', () => {
+describe('Dropdown component at different screen widths', () => {
+  it('renders advertisements in the dropdown menu at 925px and above', () => {
     window.resizeTo(925, 768);
     render(<Dropdown menu="Components" />);
 
     expect(screen.getAllByRole('img')).toHaveLength(3);
   });
-});
 
-describe('Dropdown component at a screen width of 924px and below', () => {
-  it('hides advertisements in the dropdown menu', () => {
+  it('does not render advertisements at 924px and below', () => {
     window.resizeTo(924, 768);
     render(<Dropdown menu="Components" />);
 

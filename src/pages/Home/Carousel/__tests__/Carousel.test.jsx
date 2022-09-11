@@ -1,4 +1,9 @@
-import { render, screen, act } from '@testing-library/react';
+import {
+  render,
+  screen,
+  act,
+  waitForElementToBeRemoved,
+} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Carousel from '../index';
 
@@ -7,13 +12,34 @@ beforeAll(() => {
 });
 
 describe('Carousel component', () => {
-  it('changes slide after 8 seconds', () => {
+  beforeEach(() => {
     render(<Carousel />);
+  });
+
+  it('displays the first slide on load', () => {
+    expect(screen.getByTestId('slide-1')).toBeInTheDocument();
+  });
+
+  it('renders only 1 slide', () => {
+    expect(screen.getAllByTestId(/slide/i)).toHaveLength(1);
+  });
+
+  it('changes to the next slide after 8 seconds', () => {
     act(() => {
       jest.advanceTimersByTime(8000);
     });
 
     expect(screen.getByTestId('slide-2')).toBeInTheDocument();
+  });
+
+  it('the previous slide is removed after transitioning out', async () => {
+    act(() => {
+      jest.advanceTimersByTime(8000);
+    });
+
+    await waitForElementToBeRemoved(() => screen.getByTestId('slide-1'), {
+      timeout: 1200,
+    });
   });
 });
 
@@ -28,6 +54,7 @@ describe('Carousel component side navigation arrows', () => {
     const button = screen.getByRole('button', {
       name: /next slide/i,
     });
+
     userEvent.click(button);
 
     expect(screen.getByTestId('slide-2')).toBeInTheDocument();
@@ -37,6 +64,7 @@ describe('Carousel component side navigation arrows', () => {
     const button = screen.getByRole('button', {
       name: /previous slide/i,
     });
+
     userEvent.click(button);
 
     expect(screen.getByTestId('slide-4')).toBeInTheDocument();
@@ -72,38 +100,20 @@ describe('Carousel component bottom navigation buttons', () => {
   });
 });
 
-describe('Carousel component at a screen width of 715px and above', () => {
-  beforeAll(() => {
+describe('Carousel component at different screen widths', () => {
+  it('Renders the top navigation at 715px and above', () => {
     window.resizeTo(715, 768);
-  });
-
-  beforeEach(() => {
     render(<Carousel />);
-  });
 
-  it('Renders the top navigation', () => {
+    expect(screen.queryByTestId('nav-bottom')).toBeNull();
     expect(screen.getByTestId('nav-top')).toBeInTheDocument();
   });
 
-  it('Hides the bottom navigation', () => {
-    expect(screen.queryByTestId('nav-bottom')).toBeNull();
-  });
-});
-
-describe('Carousel component at a screen width of 714px and below', () => {
-  beforeAll(() => {
+  it('Renders the bottom navigation at 714px and below', () => {
     window.resizeTo(714, 768);
-  });
-
-  beforeEach(() => {
     render(<Carousel />);
-  });
 
-  it('Renders the bottom navigation', () => {
-    expect(screen.getByTestId('nav-bottom')).toBeInTheDocument();
-  });
-
-  it('Hides the top navigation', () => {
     expect(screen.queryByTestId('nav-top')).toBeNull();
+    expect(screen.getByTestId('nav-bottom')).toBeInTheDocument();
   });
 });

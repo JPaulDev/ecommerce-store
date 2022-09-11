@@ -1,22 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import Header from '../index';
 
-beforeEach(() => {
-  render(<Header />);
-});
-
 describe('Header component', () => {
-  it('renders an image of the company logo', () => {
-    const image = getImage();
-    expect(image).toBeInTheDocument();
-  });
-
-  it('has the correct alt text', () => {
-    const image = getImage();
-    expect(image.alt).toMatch(/^pc-connect.co.uk$/i);
+  it('renders a header with an image, search input and links', () => {
+    const tree = renderer.create(<Header />).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
-
-function getImage() {
-  return screen.getByRole('img', { name: /pc-connect.co.uk/i });
-}

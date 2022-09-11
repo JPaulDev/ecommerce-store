@@ -14,7 +14,7 @@ exports[`NavTop component renders a button with text for each slide in the slide
         onClick={[Function]}
         type="button"
       >
-        30 SERIES 3XS PCs
+        slide 1
       </button>
     </li>
     <li>
@@ -23,7 +23,16 @@ exports[`NavTop component renders a button with text for each slide in the slide
         onClick={[Function]}
         type="button"
       >
-        INTEL 3XS PCs
+        slide 2
+      </button>
+    </li>
+    <li>
+      <button
+        className="sc-dkzDqf kvZhko"
+        onClick={[Function]}
+        type="button"
+      >
+        slide 3
       </button>
     </li>
   </ul>

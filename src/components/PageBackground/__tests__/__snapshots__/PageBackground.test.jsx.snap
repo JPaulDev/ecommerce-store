@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PageBackground component renders a page background image 1`] = `
+exports[`PageBackground component renders a container and a background image 1`] = `
 <div
   className="sc-bczRLJ yCwRa"
 >
