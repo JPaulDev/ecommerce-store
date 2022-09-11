@@ -239,16 +239,6 @@ exports[`Dropdown component renders the components menu with all links/advertise
           DDR4
         </a>
       </li>
-      <li
-        className="sc-eCYdqJ rlOug"
-      >
-        <a
-          className="sc-jSMfEi dQnMk"
-          href=""
-        >
-          DDR3
-        </a>
-      </li>
     </ul>
     <h4
       className="sc-dkzDqf cqfqVJ"

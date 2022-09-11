@@ -22,7 +22,6 @@ const dropdowns = {
         links: [
           { text: 'DDR5', url: '' },
           { text: 'DDR4', url: '' },
-          { text: 'DDR3', url: '' },
         ],
       },
       {
