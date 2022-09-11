@@ -2,36 +2,32 @@
 
 exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
 <div
-  className="sc-eCYdqJ kNJaQB"
+  className="sc-hKMtZM iuxvJc"
 >
   <div
-    className="sc-jSMfEi gjSltE"
+    className="sc-eCYdqJ fxIzfa"
   />
   <h3
-    className="sc-gKXOVf iEZpuB"
+    className="sc-jSMfEi gChssM"
   >
     TODAY ONLY
   </h3>
   <h3
-    className="sc-iBkjds ldFaZk"
+    className="sc-gKXOVf bMFknS"
   >
     Fantastic offers, updated every weekday
   </h3>
   <a
-    className="sc-gsnTZi dqElFX"
+    className="sc-gsnTZi iWfFcv"
     data-testid="link-chevron"
     href=""
   >
     View All Offers
-    <div
-      className="sc-dkzDqf iNOEfq"
+    <i
+      className="sc-bczRLJ klUGFp material-icons"
     >
-      <i
-        className="sc-bczRLJ klUGFp material-icons"
-      >
-        chevron_right
-      </i>
-    </div>
+      chevron_right
+    </i>
   </a>
 </div>
 `;

@@ -8,11 +8,10 @@ export const Link = styled.a`
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-`;
 
-export const Container = styled.div`
-  background-color: var(--color-grey-8);
-  border-radius: 50%;
-  display: flex;
-  margin-left: 10px;
+  i {
+    background-color: var(--color-grey-8);
+    border-radius: 50%;
+    margin-left: 10px;
+  }
 `;

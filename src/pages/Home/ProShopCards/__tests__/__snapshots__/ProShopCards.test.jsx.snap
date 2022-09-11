@@ -2,184 +2,160 @@
 
 exports[`ProShopCards component renders 6 pro shop cards with links and shop descriptions 1`] = `
 <section
-  className="sc-hKMtZM emMgDn"
+  className="sc-dkzDqf jVTzfg"
 >
   <div
-    className="sc-eCYdqJ bdNuOY"
+    className="sc-hKMtZM fUnrMx"
   >
     <div
-      className="sc-jSMfEi dcZuIl"
+      className="sc-eCYdqJ gEkVun"
     />
     <p
-      className="sc-iBkjds goUvbR"
+      className="sc-gKXOVf dVINDL"
     >
       The fastest gaming PCs - plus a huge range of peripherals for
       the ultimate gaming experience.
     </p>
     <a
-      className="sc-gsnTZi uCbTy"
+      className="sc-gsnTZi jILfrO"
       data-testid="link-chevron"
       href=""
     >
       Visit Gaming Store
-      <div
-        className="sc-dkzDqf iNOEfq"
+      <i
+        className="sc-bczRLJ dxnJQy material-icons"
       >
-        <i
-          className="sc-bczRLJ dxnJQy material-icons"
-        >
-          chevron_right
-        </i>
-      </div>
+        chevron_right
+      </i>
     </a>
   </div>
   <div
-    className="sc-eCYdqJ cGiOJq"
+    className="sc-hKMtZM hKGamX"
   >
     <div
-      className="sc-jSMfEi kGFXmX"
+      className="sc-eCYdqJ gDmJgN"
     />
     <p
-      className="sc-iBkjds goUvbR"
+      className="sc-gKXOVf dVINDL"
     >
       Workstations and servers for graphics-intensive workflows such
       as AEC & BIM, CAD & CAE and M & E.
     </p>
     <a
-      className="sc-gsnTZi uCbTy"
+      className="sc-gsnTZi jILfrO"
       data-testid="link-chevron"
       href=""
     >
       Visit Graphics Store
-      <div
-        className="sc-dkzDqf iNOEfq"
+      <i
+        className="sc-bczRLJ dxnJQy material-icons"
       >
-        <i
-          className="sc-bczRLJ dxnJQy material-icons"
-        >
-          chevron_right
-        </i>
-      </div>
+        chevron_right
+      </i>
     </a>
   </div>
   <div
-    className="sc-eCYdqJ cazMUx"
+    className="sc-hKMtZM gjqCEk"
   >
     <div
-      className="sc-jSMfEi imUCaq"
+      className="sc-eCYdqJ hXmfuo"
     />
     <p
-      className="sc-iBkjds goUvbR"
+      className="sc-gKXOVf dVINDL"
     >
       Computer based music and audio production - plus the best in
       music technology and instruments.
     </p>
     <a
-      className="sc-gsnTZi uCbTy"
+      className="sc-gsnTZi jILfrO"
       data-testid="link-chevron"
       href=""
     >
       Visit Audio Store
-      <div
-        className="sc-dkzDqf iNOEfq"
+      <i
+        className="sc-bczRLJ dxnJQy material-icons"
       >
-        <i
-          className="sc-bczRLJ dxnJQy material-icons"
-        >
-          chevron_right
-        </i>
-      </div>
+        chevron_right
+      </i>
     </a>
   </div>
   <div
-    className="sc-eCYdqJ hVfdrK"
+    className="sc-hKMtZM jJVDKf"
   >
     <div
-      className="sc-jSMfEi hsJuNg"
+      className="sc-eCYdqJ fTGXSm"
     />
     <p
-      className="sc-iBkjds goUvbR"
+      className="sc-gKXOVf dVINDL"
     >
       Film and broadcast equipment, workstations for professional
       video and media production workflows.
     </p>
     <a
-      className="sc-gsnTZi uCbTy"
+      className="sc-gsnTZi jILfrO"
       data-testid="link-chevron"
       href=""
     >
       Visit Video Store
-      <div
-        className="sc-dkzDqf iNOEfq"
+      <i
+        className="sc-bczRLJ dxnJQy material-icons"
       >
-        <i
-          className="sc-bczRLJ dxnJQy material-icons"
-        >
-          chevron_right
-        </i>
-      </div>
+        chevron_right
+      </i>
     </a>
   </div>
   <div
-    className="sc-eCYdqJ fZGyIH"
+    className="sc-hKMtZM eFjOwS"
   >
     <h4
-      className="sc-gKXOVf ZvYjb"
+      className="sc-jSMfEi fujPYO"
     >
       Digital Signage Solutions
     </h4>
     <p
-      className="sc-iBkjds goUvbR"
+      className="sc-gKXOVf dVINDL"
     >
       Reinvent the way you engage with customers with solutions that
       provide invaluable insights and customer data.
     </p>
     <a
-      className="sc-gsnTZi uCbTy"
+      className="sc-gsnTZi jILfrO"
       data-testid="link-chevron"
       href=""
     >
       View Signage Solutions
-      <div
-        className="sc-dkzDqf iNOEfq"
+      <i
+        className="sc-bczRLJ dxnJQy material-icons"
       >
-        <i
-          className="sc-bczRLJ dxnJQy material-icons"
-        >
-          chevron_right
-        </i>
-      </div>
+        chevron_right
+      </i>
     </a>
   </div>
   <div
-    className="sc-eCYdqJ ctBeWr"
+    className="sc-hKMtZM hBxOUe"
   >
     <h4
-      className="sc-gKXOVf ZvYjb"
+      className="sc-jSMfEi fujPYO"
     >
       Deep Learning & AI
     </h4>
     <p
-      className="sc-iBkjds goUvbR"
+      className="sc-gKXOVf dVINDL"
     >
       Desktop, datacentre and cloud solutions for developing and
       deploying deep learning and AI models.
     </p>
     <a
-      className="sc-gsnTZi uCbTy"
+      className="sc-gsnTZi jILfrO"
       data-testid="link-chevron"
       href=""
     >
       Find Out More
-      <div
-        className="sc-dkzDqf iNOEfq"
+      <i
+        className="sc-bczRLJ dxnJQy material-icons"
       >
-        <i
-          className="sc-bczRLJ dxnJQy material-icons"
-        >
-          chevron_right
-        </i>
-      </div>
+        chevron_right
+      </i>
     </a>
   </div>
 </section>

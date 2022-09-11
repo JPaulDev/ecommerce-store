@@ -2,15 +2,15 @@
 
 exports[`PromoBanner component renders a promotional banner about RTX studio 1`] = `
 <div
-  className="sc-eCYdqJ cDKfSV"
+  className="sc-hKMtZM jtYxoA"
 >
   <h4
-    className="sc-jSMfEi jEiboe"
+    className="sc-eCYdqJ jEmylw"
   >
     RTX Studio
   </h4>
   <p
-    className="sc-gKXOVf krPcbR"
+    className="sc-jSMfEi jROhEc"
   >
     The best laptops and desktops for creating anywhere.
   </p>
@@ -23,7 +23,7 @@ exports[`PromoBanner component renders a promotional banner about RTX studio 1`]
   </a>
   <img
     alt=""
-    className="sc-iBkjds ibwDFM"
+    className="sc-gKXOVf dbTtwS"
     data-testid="logo"
     height={73}
     src="nvidia-logo.webp"
@@ -31,7 +31,7 @@ exports[`PromoBanner component renders a promotional banner about RTX studio 1`]
   />
   <img
     alt=""
-    className="sc-ftvSup iSGTUF"
+    className="sc-iBkjds cUyuUW"
     height={124}
     src="blue-detail.webp"
     width={1279}
