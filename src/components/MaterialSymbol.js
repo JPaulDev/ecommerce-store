@@ -4,7 +4,7 @@ const MaterialSymbol = styled.i.attrs({
   className: 'material-symbols-outlined',
 })`
   font-size: ${({ iconSize }) => iconSize};
-  color: ${({ iconColor }) => iconColor || 'black'};
+  color: ${({ iconColor }) => iconColor};
 `;
 
 export default MaterialSymbol;

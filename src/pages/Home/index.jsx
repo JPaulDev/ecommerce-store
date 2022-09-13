@@ -11,17 +11,19 @@ import * as Styled from './styles';
 
 export default function Home() {
   return (
-    <Styled.Main>
+    <>
       <PageBackground background={background} />
-      <Styled.Container>
-        <TopBannerSmall />
-        <Carousel />
-        <ProShopCards />
-        <PromoBanner />
-        <TodayOnlyBanner />
-        <TodayOnlyOffers />
-        <NewsAndProducts />
-      </Styled.Container>
-    </Styled.Main>
+      <Styled.Main>
+        <Styled.Container>
+          <TopBannerSmall />
+          <Carousel />
+          <ProShopCards />
+          <PromoBanner />
+          <TodayOnlyBanner />
+          <TodayOnlyOffers />
+          <NewsAndProducts />
+        </Styled.Container>
+      </Styled.Main>
+    </>
   );
 }

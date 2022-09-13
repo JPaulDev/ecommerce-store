@@ -20,7 +20,10 @@ const GlobalStyle = createGlobalStyle`
     --color-grey-7: #9e9e9e;
     --color-grey-8: #5b5b5b;
     --color-grey-9: #e1e1e1;
+    --color-grey-10: #bcbec0;
+    --color-grey-11: #cfcfcf;
     --color-blue-1: #3d70b7;
+    --color-blue-2: #1766a6;
   }
 
   * {
@@ -40,6 +43,7 @@ const GlobalStyle = createGlobalStyle`
   #root {
     position: relative;
     min-height: 100vh;
+    overflow: clip;
   }
 
   @font-face {
