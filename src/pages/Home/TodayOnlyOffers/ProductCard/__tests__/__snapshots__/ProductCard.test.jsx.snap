@@ -2,31 +2,31 @@
 
 exports[`ProductCard component snapshot renders a product card with an image and all product information 1`] = `
 <div
-  className="sc-papXJ hCabH"
+  className="sc-kDDrLX leTUAJ"
   data-testid="product"
 >
   <div
-    className="sc-jqUVSM ftwBFk"
+    className="sc-iqcoie kriKnu"
   >
     <img
       alt=""
-      className="sc-kDDrLX bIdWHc"
+      className="sc-crXcEl brVwQW"
       height={200}
       src=""
       width={200}
     />
     <p
-      className="sc-iqcoie dnToup"
+      className="sc-evZas cDFuoe"
     >
       Intel Core i5 10400F
     </p>
     <p
-      className="sc-crXcEl hTFuTH"
+      className="sc-breuTD jmuFiM"
     >
       6 Cores, 12 Threads, S1200 Comet Lake, 2.9GHz, 4.3GHz Turbo, 12MB Cache
     </p>
     <div
-      className="sc-evZas edbvsQ"
+      className="sc-ksZaOG kJnygA"
     >
       <span
         className="sc-eCYdqJ ejHRxl"
@@ -59,59 +59,66 @@ exports[`ProductCard component snapshot renders a product card with an image and
       </span>
       £129.99
     </span>
-    <label
-      hidden={true}
-      htmlFor=":r0:"
+    <div
+      className="sc-jSMfEi eIqODg"
     >
-      Quantity
-    </label>
-    <select
-      className="sc-jSMfEi cheFUw"
-      disabled={false}
-      id=":r0:"
-      name="quantity"
-      onChange={[Function]}
-      value={1}
-    >
-      <option
+      <label
+        hidden={true}
+        htmlFor=":r0:"
+      >
+        Quantity
+      </label>
+      <select
+        className="sc-gKXOVf hegjUa"
+        disabled={false}
+        id=":r0:"
+        name="quantity"
+        onChange={[Function]}
         value={1}
       >
-        1
-      </option>
-      <option
-        value={2}
-      >
-        2
-      </option>
-      <option
-        value={3}
-      >
-        3
-      </option>
-      <option
-        value={4}
-      >
-        4
-      </option>
-      <option
-        value={5}
-      >
-        5
-      </option>
-    </select>
+        <option
+          value={1}
+        >
+          1
+        </option>
+        <option
+          value={2}
+        >
+          2
+        </option>
+        <option
+          value={3}
+        >
+          3
+        </option>
+        <option
+          value={4}
+        >
+          4
+        </option>
+        <option
+          value={5}
+        >
+          5
+        </option>
+      </select>
+      <span
+        className="sc-iBkjds hndTfr"
+      />
+    </div>
     <div
-      className="sc-iBkjds fxdvqz"
+      className="sc-papXJ eHmRKN"
       title="Item is in stock"
     >
       <i
-        className="sc-gKXOVf clAfRf material-symbols-outlined"
+        className="sc-ftvSup cWqIfK material-symbols-outlined"
       >
         inventory
       </i>
       In Stock
     </div>
     <button
-      className="sc-ftvSup fEYXZf"
+      className="sc-jqUVSM mvzBv"
       disabled={false}
       type="button"
     >

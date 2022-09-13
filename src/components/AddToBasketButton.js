@@ -14,7 +14,7 @@ const AddToBasketButton = styled.button`
   width: ${({ $width }) => $width};
 
   &:disabled {
-    background: #c7c7c7;
+    background: var(--color-grey-12);
     color: rgb(255 255 255 / 90%);
     cursor: initial;
   }

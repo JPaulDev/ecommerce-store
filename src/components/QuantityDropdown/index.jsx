@@ -9,7 +9,7 @@ export default function QuantityDropdown({
   const id = useId();
 
   return (
-    <>
+    <Styled.Container>
       <label htmlFor={id} hidden>
         Quantity
       </label>
@@ -26,6 +26,7 @@ export default function QuantityDropdown({
         <option value={4}>4</option>
         <option value={5}>5</option>
       </Styled.Select>
-    </>
+      <Styled.Arrows isDisabled={isDisabled} />
+    </Styled.Container>
   );
 }
