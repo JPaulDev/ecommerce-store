@@ -24,11 +24,6 @@ function setInitialProducts() {
 const duration = 0.5;
 const variants = {
   enter: (isChangingCategory) => ({
-    opacity: 0,
-    flex: isChangingCategory ? 1 : 0,
-    margin: isChangingCategory ? '0 4px' : 0,
-  }),
-  visible: (isChangingCategory) => ({
     opacity: 1,
     flex: 1,
     margin: '0 4px',
@@ -109,8 +104,8 @@ export default function TodayOnlyOffers() {
                     key={product.sku}
                     custom={isChangingCategory.current}
                     variants={variants}
-                    initial="enter"
-                    animate="visible"
+                    initial="exit"
+                    animate="enter"
                     exit="exit"
                     product={product}
                   />

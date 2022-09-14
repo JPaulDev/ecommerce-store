@@ -10,16 +10,16 @@ import * as Styled from './styles';
 
 const MotionSlide = motion(Slide);
 
-// Direction 1 moves slides to left, -1 moves slides to the right
+// Direction 1 moves slides in from the right, -1 moves slides in from the left
 const variants = {
   enter: (direction) => ({
-    translateX: direction > 0 ? '100%' : '-100%',
+    x: direction > 0 ? '100%' : '-100%',
   }),
   center: {
-    translateX: 0,
+    x: 0,
   },
   exit: (direction) => ({
-    translateX: direction < 0 ? '100%' : '-100%',
+    x: direction < 0 ? '100%' : '-100%',
   }),
 };
 
