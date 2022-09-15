@@ -15,14 +15,14 @@ describe('TodayOnlyBanner component at different screen widths', () => {
     render(<TodayOnlyBanner />);
 
     expect(screen.getByTestId('link-chevron')).toBeInTheDocument();
-    expect(screen.queryByTestId('link-button')).toBeNull();
+    expect(screen.queryByTestId('link-button')).not.toBeInTheDocument();
   });
 
   it('renders a link button at 934px and below', () => {
     window.resizeTo(934, 768);
     render(<TodayOnlyBanner />);
 
-    expect(screen.queryByTestId('link-chevron')).toBeNull();
+    expect(screen.queryByTestId('link-chevron')).not.toBeInTheDocument();
     expect(screen.getByTestId('link-button')).toBeInTheDocument();
   });
 });

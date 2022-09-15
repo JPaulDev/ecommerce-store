@@ -23,7 +23,7 @@ describe('Links component at different screen widths', () => {
     render(<Links />);
 
     linkText.forEach((item) => {
-      expect(screen.queryByText(item)).toBeNull();
+      expect(screen.queryByText(item)).not.toBeInTheDocument();
     });
   });
 });

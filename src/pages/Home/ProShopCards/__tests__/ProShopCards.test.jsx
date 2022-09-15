@@ -24,6 +24,6 @@ describe('ProShopCards component at different screen widths', () => {
     window.resizeTo(989, 768);
     render(<ProShopCards />);
 
-    expect(screen.queryByText(proGamingDescription)).toBeNull();
+    expect(screen.queryByText(proGamingDescription)).not.toBeInTheDocument();
   });
 });

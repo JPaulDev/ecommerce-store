@@ -21,7 +21,7 @@ describe('Carousel component', () => {
   });
 
   it('renders only 1 slide', () => {
-    expect(screen.getAllByTestId(/slide/i)).toHaveLength(1);
+    expect(screen.getByTestId(/slide/i)).toBeInTheDocument();
   });
 
   it('changes to the next slide after 8 seconds', () => {
@@ -37,8 +37,8 @@ describe('Carousel component', () => {
       jest.advanceTimersByTime(8000);
     });
 
-    await waitForElementToBeRemoved(() => screen.getByTestId('slide-1'), {
-      timeout: 1200,
+    await waitForElementToBeRemoved(screen.queryByTestId('slide-1'), {
+      timeout: 1500,
     });
   });
 });
@@ -105,7 +105,7 @@ describe('Carousel component at different screen widths', () => {
     window.resizeTo(715, 768);
     render(<Carousel />);
 
-    expect(screen.queryByTestId('nav-bottom')).toBeNull();
+    expect(screen.queryByTestId('nav-bottom')).not.toBeInTheDocument();
     expect(screen.getByTestId('nav-top')).toBeInTheDocument();
   });
 
@@ -113,7 +113,7 @@ describe('Carousel component at different screen widths', () => {
     window.resizeTo(714, 768);
     render(<Carousel />);
 
-    expect(screen.queryByTestId('nav-top')).toBeNull();
+    expect(screen.queryByTestId('nav-top')).not.toBeInTheDocument();
     expect(screen.getByTestId('nav-bottom')).toBeInTheDocument();
   });
 });

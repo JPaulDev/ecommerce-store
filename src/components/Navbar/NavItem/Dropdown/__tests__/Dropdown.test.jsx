@@ -26,6 +26,6 @@ describe('Dropdown component at different screen widths', () => {
     window.resizeTo(924, 768);
     render(<Dropdown menu="Components" />);
 
-    expect(screen.queryByRole('img')).toBeNull();
+    expect(screen.queryByRole('img')).not.toBeInTheDocument();
   });
 });

@@ -2,59 +2,54 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import NavItem from '../index';
 
-const linkItem = { title: 'Home', url: '' };
+const linkItem = { title: 'Home', url: 'Test url' };
 const buttonItem = { title: 'Components', hasDropdown: true };
 
 describe('NavItem component', () => {
-  it('renders a link element when no hasDropdown property is set', () => {
+  it('renders a link when no hasDropdown property is set', () => {
     render(<NavItem item={linkItem} />);
+    const link = screen.getByRole('link', {
+      name: /home/i,
+    });
 
-    expect(getLink()).toBeInTheDocument();
+    expect(link).toBeInTheDocument();
   });
 
-  it('renders a button element when hasDropdown property is set to true', () => {
+  it('renders a button when hasDropdown property is set to true', () => {
     render(<NavItem item={buttonItem} />);
+    const button = screen.getByRole('button', {
+      name: /components/i,
+    });
 
-    expect(getButton()).toBeInTheDocument();
+    expect(button).toBeInTheDocument();
   });
 });
 
 describe('NavItem dropdown', () => {
-  beforeEach(() => {
+  it('opens and closes when the button is clicked', () => {
     render(<NavItem item={buttonItem} />);
-  });
-
-  it('opens when the button is clicked', () => {
-    const button = getButton();
+    const button = screen.getByRole('button', {
+      name: /components/i,
+    });
 
     userEvent.click(button);
 
     expect(screen.getByTestId('dropdown-menu')).toBeInTheDocument();
-  });
-
-  it('closes when the button is clicked', () => {
-    const button = getButton();
 
     userEvent.click(button);
-    userEvent.click(button);
 
-    expect(screen.queryByTestId('dropdown-menu')).toBeNull();
+    expect(screen.queryByTestId('dropdown-menu')).not.toBeInTheDocument();
   });
 
   it('closes on clicks outside of the dropdown menu', () => {
-    const button = getButton();
+    render(<NavItem item={buttonItem} />);
+    const button = screen.getByRole('button', {
+      name: /components/i,
+    });
 
     userEvent.click(button);
     userEvent.click(document.body);
 
-    expect(screen.queryByTestId('dropdown-menu')).toBeNull();
+    expect(screen.queryByTestId('dropdown-menu')).not.toBeInTheDocument();
   });
 });
-
-function getButton() {
-  return screen.getByRole('button', { name: /components/i });
-}
-
-function getLink() {
-  return screen.getByRole('link', { name: /home/i });
-}

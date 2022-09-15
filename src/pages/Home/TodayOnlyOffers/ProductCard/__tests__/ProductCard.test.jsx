@@ -18,7 +18,7 @@ const product = {
   ],
 };
 
-describe('ProductCard component snapshot', () => {
+describe('ProductCard component', () => {
   it('renders a product card with an image and all product information', () => {
     const tree = renderer.create(<ProductCard product={product} />).toJSON();
     expect(tree).toMatchSnapshot();
@@ -94,6 +94,6 @@ describe('ProductCard component price display', () => {
     render(<ProductCard product={{ ...product, price: 100, salePrice: '' }} />);
 
     expect(screen.getByText('100')).toBeInTheDocument();
-    expect(screen.queryByText(/was/i)).toBeNull();
+    expect(screen.queryByText(/was/i)).not.toBeInTheDocument();
   });
 });

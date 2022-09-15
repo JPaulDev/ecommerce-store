@@ -21,14 +21,14 @@ describe('PromoBanner component at different screen widths', () => {
     window.resizeTo(849, 768);
     render(<PromoBanner />);
 
-    expect(screen.queryByTestId('logo')).toBeNull();
+    expect(screen.queryByTestId('logo')).not.toBeInTheDocument();
   });
 
   it('renders a link button at 530px and above', () => {
     window.resizeTo(530, 768);
     render(<PromoBanner />);
 
-    expect(screen.queryByTestId('link-chevron')).toBeNull();
+    expect(screen.queryByTestId('link-chevron')).not.toBeInTheDocument();
     expect(screen.getByTestId('link-button')).toBeInTheDocument();
   });
 
@@ -36,7 +36,7 @@ describe('PromoBanner component at different screen widths', () => {
     window.resizeTo(529, 768);
     render(<PromoBanner />);
 
-    expect(screen.queryByTestId('link-button')).toBeNull();
+    expect(screen.queryByTestId('link-button')).not.toBeInTheDocument();
     expect(screen.getByTestId('link-chevron')).toBeInTheDocument();
   });
 });

@@ -27,6 +27,6 @@ describe('NewsAndProducts component at different screen widths', () => {
       name: /hot & new products/i,
     });
 
-    expect(heading).toBeNull();
+    expect(heading).not.toBeInTheDocument();
   });
 });

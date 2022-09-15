@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductCard component snapshot renders a product card with an image and all product information 1`] = `
+exports[`ProductCard component renders a product card with an image and all product information 1`] = `
 <div
   className="sc-kDDrLX leTUAJ"
   data-testid="product"

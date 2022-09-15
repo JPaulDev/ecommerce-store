@@ -46,6 +46,6 @@ describe('Slide component at different screen widths', () => {
     window.resizeTo(999, 768);
     render(<Slide slide={slide} slideIndex={0} />);
 
-    expect(screen.queryByRole('list')).toBeNull();
+    expect(screen.queryByRole('list')).not.toBeInTheDocument();
   });
 });
