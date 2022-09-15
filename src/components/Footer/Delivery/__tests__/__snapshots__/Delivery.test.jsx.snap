@@ -1,0 +1,304 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delivery component renders a return tab where returns status can be tracked 1`] = `
+<div
+  className="sc-gKXOVf NsfSX"
+>
+  <h3
+    className="sc-eCYdqJ eSKKko"
+  >
+    Delivery / Tracking Information
+  </h3>
+  <div
+    id="delivery"
+    style={
+      Object {
+        "height": "auto",
+      }
+    }
+  >
+    <p
+      className="sc-iBkjds jgsQoG"
+    >
+      Order now to receive by tomorrow.
+    </p>
+    <div
+      className="sc-ftvSup ehGKsD"
+    >
+      <button
+        className="sc-papXJ hWBmUK"
+        onClick={[Function]}
+        type="button"
+      >
+        Order
+      </button>
+      <button
+        className="sc-papXJ fdnhZi"
+        onClick={[Function]}
+        type="button"
+      >
+        Return
+      </button>
+      <button
+        className="sc-papXJ hWBmUK"
+        onClick={[Function]}
+        type="button"
+      >
+        System
+      </button>
+    </div>
+    <form
+      action="https://pc-connect.co.uk/tracking/trackreturn"
+      className="sc-jqUVSM laBddG"
+      method="post"
+    >
+      <label
+        hidden={true}
+        htmlFor=":r3:-invoice"
+      >
+        Invoice Number
+      </label>
+      <input
+        autoComplete="off"
+        className="sc-kDDrLX bFbYeH"
+        id=":r3:-invoice"
+        maxLength="10"
+        name="invoiceNumber"
+        placeholder="Invoice No."
+        required={true}
+        type="text"
+      />
+      <label
+        hidden={true}
+        htmlFor=":r3:"
+      >
+        RMA Number
+      </label>
+      <input
+        autoComplete="off"
+        className="sc-kDDrLX bFbYeH"
+        id=":r3:"
+        maxLength="10"
+        name="rmaNumber"
+        placeholder="RMA No."
+        required={true}
+        type="text"
+      />
+      <button
+        aria-label="Submit"
+        className="sc-iqcoie cNpgvc"
+        title="Submit"
+        type="submit"
+      >
+        <i
+          className="sc-bczRLJ kVcBsA material-icons"
+        >
+          chevron_right
+        </i>
+      </button>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Delivery component renders a system build tab where build progress can be tracked 1`] = `
+<div
+  className="sc-gKXOVf NsfSX"
+>
+  <h3
+    className="sc-eCYdqJ eSKKko"
+  >
+    Delivery / Tracking Information
+  </h3>
+  <div
+    id="delivery"
+    style={
+      Object {
+        "height": "auto",
+      }
+    }
+  >
+    <p
+      className="sc-iBkjds jgsQoG"
+    >
+      Order now to receive by tomorrow.
+    </p>
+    <div
+      className="sc-ftvSup ehGKsD"
+    >
+      <button
+        className="sc-papXJ hWBmUK"
+        onClick={[Function]}
+        type="button"
+      >
+        Order
+      </button>
+      <button
+        className="sc-papXJ hWBmUK"
+        onClick={[Function]}
+        type="button"
+      >
+        Return
+      </button>
+      <button
+        className="sc-papXJ fdnhZi"
+        onClick={[Function]}
+        type="button"
+      >
+        System
+      </button>
+    </div>
+    <form
+      action="https://pc-connect.co.uk/tracking/trackbuild"
+      className="sc-jqUVSM laBddG"
+      method="post"
+    >
+      <label
+        hidden={true}
+        htmlFor=":r6:-invoice"
+      >
+        Invoice Number
+      </label>
+      <input
+        autoComplete="off"
+        className="sc-kDDrLX bFbYeH"
+        id=":r6:-invoice"
+        maxLength="10"
+        name="invoiceNumber"
+        placeholder="Invoice No."
+        required={true}
+        type="text"
+      />
+      <label
+        hidden={true}
+        htmlFor=":r6:"
+      >
+        Build Number
+      </label>
+      <input
+        autoComplete="off"
+        className="sc-kDDrLX bFbYeH"
+        id=":r6:"
+        maxLength="10"
+        name="buildNumber"
+        placeholder="Build No."
+        required={true}
+        type="text"
+      />
+      <button
+        aria-label="Submit"
+        className="sc-iqcoie cNpgvc"
+        title="Submit"
+        type="submit"
+      >
+        <i
+          className="sc-bczRLJ kVcBsA material-icons"
+        >
+          chevron_right
+        </i>
+      </button>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Delivery component renders an order tab where order tracking can be checked 1`] = `
+<div
+  className="sc-gKXOVf NsfSX"
+>
+  <h3
+    className="sc-eCYdqJ eSKKko"
+  >
+    Delivery / Tracking Information
+  </h3>
+  <div
+    id="delivery"
+    style={
+      Object {
+        "height": "auto",
+      }
+    }
+  >
+    <p
+      className="sc-iBkjds jgsQoG"
+    >
+      Order now to receive by tomorrow.
+    </p>
+    <div
+      className="sc-ftvSup ehGKsD"
+    >
+      <button
+        className="sc-papXJ fdnhZi"
+        onClick={[Function]}
+        type="button"
+      >
+        Order
+      </button>
+      <button
+        className="sc-papXJ hWBmUK"
+        onClick={[Function]}
+        type="button"
+      >
+        Return
+      </button>
+      <button
+        className="sc-papXJ hWBmUK"
+        onClick={[Function]}
+        type="button"
+      >
+        System
+      </button>
+    </div>
+    <form
+      action="https://pc-connect.co.uk/tracking/trackorder"
+      className="sc-jqUVSM laBddG"
+      method="post"
+    >
+      <label
+        hidden={true}
+        htmlFor=":r0:-invoice"
+      >
+        Invoice Number
+      </label>
+      <input
+        autoComplete="off"
+        className="sc-kDDrLX bFbYeH"
+        id=":r0:-invoice"
+        maxLength="10"
+        name="invoiceNumber"
+        placeholder="Invoice No."
+        required={true}
+        type="text"
+      />
+      <label
+        hidden={true}
+        htmlFor=":r0:"
+      >
+        Postcode
+      </label>
+      <input
+        autoComplete="off"
+        className="sc-kDDrLX bFbYeH"
+        id=":r0:"
+        maxLength="10"
+        name="postcode"
+        placeholder="Postcode"
+        required={true}
+        type="text"
+      />
+      <button
+        aria-label="Submit"
+        className="sc-iqcoie cNpgvc"
+        title="Submit"
+        type="submit"
+      >
+        <i
+          className="sc-bczRLJ kVcBsA material-icons"
+        >
+          chevron_right
+        </i>
+      </button>
+    </form>
+  </div>
+</div>
+`;

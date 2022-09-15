@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactBanner component renders a banner with a contact number and a live chat link 1`] = `
+<div
+  className="sc-gsnTZi bbSvLy"
+>
+  <a
+    className="sc-dkzDqf dcNrvB"
+    href=""
+  >
+    <i
+      className="sc-bczRLJ cdmASU material-symbols-outlined"
+    >
+      phone_iphone
+    </i>
+    01782-444455
+  </a>
+  <a
+    className="sc-dkzDqf dcNrvB"
+    href=""
+  >
+    <i
+      className="sc-bczRLJ cdmASU material-symbols-outlined"
+    >
+      support_agent
+    </i>
+    Live Chat
+  </a>
+</div>
+`;

@@ -1,6 +1,9 @@
 import '@testing-library/jest-dom';
 import mediaQuery from 'css-mediaquery';
 
+// Prevents scrollTo not implemented error caused by framer motion
+window.scrollTo = jest.fn();
+
 // Mock of window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
