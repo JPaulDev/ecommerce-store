@@ -16,13 +16,13 @@ export const Container = styled.div`
   max-width: 1280px;
   padding: 20px 15px;
 
-  @media screen and (min-width: 575px) {
-    grid-template-columns: 1fr minmax(330px, 1fr);
+  @media screen and (min-width: 590px) {
+    grid-template-columns: 1fr minmax(max-content, 1fr);
     width: 97%;
   }
 
-  @media screen and (min-width: 880px) {
-    grid-template-columns: 1fr minmax(270px, 1fr) minmax(330px, 1fr);
+  @media screen and (min-width: 930px) {
+    grid-template-columns: 1fr minmax(270px, 1fr) minmax(max-content, 1fr);
   }
 `;
 
@@ -30,8 +30,42 @@ export const HeaderLogo = styled.img`
   height: auto;
   width: 160px;
 
-  @media screen and (min-width: 575px) {
+  @media screen and (min-width: 590px) {
     height: auto;
     width: 170px;
   }
+`;
+
+export const LinksContainer = styled.div`
+  column-gap: 20px;
+  display: flex;
+  justify-content: flex-end;
+
+  @media screen and (min-width: 930px) {
+    margin-left: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    column-gap: 40px;
+  }
+`;
+
+export const Link = styled.a`
+  align-items: center;
+  color: var(--color-grey-3);
+  column-gap: 10px;
+  display: flex;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+
+  &:hover {
+    color: white;
+  }
+`;
+
+export const TopText = styled.div`
+  color: white !important;
+  font-size: 1.05rem;
+  margin-bottom: 2px;
 `;

@@ -120,6 +120,7 @@ exports[`ProductCard component renders a product card with an image and all prod
     <button
       className="sc-jqUVSM mvzBv"
       disabled={false}
+      onClick={[Function]}
       type="button"
     >
       Add To Basket

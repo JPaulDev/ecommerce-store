@@ -4,7 +4,6 @@ export const Form = styled.form`
   justify-self: center;
   position: relative;
   width: 100%;
-  z-index: 10;
 
   &::after {
     border-radius: 9px;
@@ -13,17 +12,17 @@ export const Form = styled.form`
     height: 100%;
     left: 0;
     opacity: ${({ isFocused }) => (isFocused ? '1' : '0')};
+    pointer-events: none;
     position: absolute;
     transition: opacity 150ms ease-in-out;
     width: 100%;
-    z-index: -10;
   }
 
   @media screen and (min-width: 545px) {
-    max-width: 400px;
+    max-width: 420px;
   }
 
-  @media screen and (max-width: 879px) {
+  @media screen and (max-width: 929px) {
     grid-column: 1/3;
     grid-row: 2/3;
     margin-top: 15px;

@@ -1,4 +1,6 @@
 import { useState, forwardRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { addProduct } from '../../../../features/basket/basketSlice';
 import usePrice from '../../../../hooks/usePrice';
 import Price from '../../../../components/Price';
 import PreviousPrice from '../../../../components/PreviousPrice';
@@ -11,8 +13,13 @@ import * as Styled from './styles';
 const ProductCard = forwardRef(({ product }, ref) => {
   const [quantity, setQuantity] = useState(1);
   const { price, salePrice } = usePrice(product);
+  const dispatch = useDispatch();
 
   const handleChangeQuantity = (e) => setQuantity(parseInt(e.target.value, 10));
+  const handleAddProduct = () => {
+    dispatch(addProduct(product, quantity));
+    setQuantity(1);
+  };
 
   return (
     <Styled.Wrapper ref={ref} data-testid="product">
@@ -43,6 +50,7 @@ const ProductCard = forwardRef(({ product }, ref) => {
           disabled={!product.stock}
           $width="160px"
           $fontSize="0.75rem"
+          onClick={handleAddProduct}
         >
           Add To Basket
         </AddToBasketButton>

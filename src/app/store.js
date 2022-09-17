@@ -1,8 +1,12 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import basketReducer from '../features/basket/basketSlice';
 
-export default configureStore({
-  reducer: {
-    basket: basketReducer,
-  },
+const rootReducer = combineReducers({
+  basket: basketReducer,
 });
+
+export const setupStore = (preloadedState) =>
+  configureStore({
+    reducer: rootReducer,
+    preloadedState,
+  });

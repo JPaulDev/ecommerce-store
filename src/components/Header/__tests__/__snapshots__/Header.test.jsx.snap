@@ -2,21 +2,21 @@
 
 exports[`Header component renders a header with an image, search input and links 1`] = `
 <header
-  className="sc-iBkjds bVIlMM"
+  className="sc-hKMtZM fQheMM"
 >
   <div
-    className="sc-ftvSup kuUWRL"
+    className="sc-eCYdqJ dyjULo"
   >
     <img
       alt="PC-Connect.co.uk"
-      className="sc-papXJ hdUloH"
+      className="sc-jSMfEi kkhLMN"
       height={32}
       src="header-logo.webp"
       width={153}
     />
     <form
       action="/search"
-      className="sc-bczRLJ bDMbYN"
+      className="sc-bczRLJ jsuHJq"
       method="get"
       role="search"
     >
@@ -53,11 +53,11 @@ exports[`Header component renders a header with an image, search input and links
       </button>
     </form>
     <div
-      className="sc-hKMtZM hpnnDO"
+      className="sc-gKXOVf ewsyxK"
     >
       <a
         aria-label="Account"
-        className="sc-eCYdqJ edfFZL"
+        className="sc-iBkjds cEWsDr"
         href=""
         title="Account"
       >
@@ -69,21 +69,19 @@ exports[`Header component renders a header with an image, search input and links
           account.svg
         </svg>
         <div>
-          <span
-            className="sc-jSMfEi cUKKKr"
+          <div
+            className="sc-ftvSup jpUecG"
           >
             Account
-          </span>
-          <span
-            className="sc-gKXOVf ddmUiw"
-          >
+          </div>
+          <span>
             Sign in | Register
           </span>
         </div>
       </a>
       <a
         aria-label="Basket"
-        className="sc-eCYdqJ edfFZL"
+        className="sc-iBkjds cEWsDr"
         href=""
         title="Basket"
       >
@@ -95,15 +93,14 @@ exports[`Header component renders a header with an image, search input and links
           basket.svg
         </svg>
         <div>
-          <span
-            className="sc-jSMfEi cUKKKr"
+          <div
+            className="sc-ftvSup jpUecG"
           >
             Basket
-          </span>
-          <span
-            className="sc-gKXOVf ddmUiw"
-          >
-            Subtotal £0.00
+          </div>
+          <span>
+            Subtotal 
+            £0.00
           </span>
         </div>
       </a>
