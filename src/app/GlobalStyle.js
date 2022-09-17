@@ -1,12 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
-import openSansRegular from './assets/fonts/OpenSans-Regular.woff';
-import openSansMedium from './assets/fonts/OpenSans-Medium.ttf';
-import openSansSemiBold from './assets/fonts/OpenSans-SemiBold.woff';
-import openSansBold from './assets/fonts/OpenSans-Bold.woff';
-import uniSansBook from './assets/fonts/UniSans-Book.woff2';
-import uniSansRegular from './assets/fonts/UniSans-Regular.woff2';
-import uniSansSemiBold from './assets/fonts/UniSans-SemiBold.woff2';
-import uniSansBold from './assets/fonts/UniSans-Bold.woff';
+import openSansRegular from '../assets/fonts/OpenSans-Regular.woff';
+import openSansMedium from '../assets/fonts/OpenSans-Medium.ttf';
+import openSansSemiBold from '../assets/fonts/OpenSans-SemiBold.woff';
+import openSansBold from '../assets/fonts/OpenSans-Bold.woff';
+import uniSansBook from '../assets/fonts/UniSans-Book.woff2';
+import uniSansRegular from '../assets/fonts/UniSans-Regular.woff2';
+import uniSansSemiBold from '../assets/fonts/UniSans-SemiBold.woff2';
+import uniSansBold from '../assets/fonts/UniSans-Bold.woff';
 
 const GlobalStyle = createGlobalStyle`
   :root {
