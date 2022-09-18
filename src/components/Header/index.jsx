@@ -2,6 +2,7 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 import logo from '../../assets/images/header/header-logo.webp';
 import { ReactComponent as AccountIcon } from '../../assets/svg/account.svg';
 import { ReactComponent as BasketIcon } from '../../assets/svg/basket.svg';
+import BasketQuantity from '../../features/basket/BasketQuantity';
 import BasketLinkSubtotal from '../../features/basket/BasketLinkSubtotal';
 import SearchInput from './SearchInput';
 import * as Styled from './styles';
@@ -30,6 +31,7 @@ export default function Header() {
             )}
           </Styled.Link>
           <Styled.Link href="" aria-label="Basket" title="Basket">
+            <BasketQuantity />
             <BasketIcon width={34} height={30} fill="var(--color-orange-1)" />
             {isMatch && (
               <div>

@@ -56,6 +56,7 @@ export const Link = styled.a`
   column-gap: 10px;
   display: flex;
   font-size: 0.85rem;
+  position: relative;
   text-decoration: none;
   transition: color 200ms ease-in-out;
 

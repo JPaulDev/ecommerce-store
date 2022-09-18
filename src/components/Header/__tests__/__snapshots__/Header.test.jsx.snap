@@ -2,21 +2,21 @@
 
 exports[`Header component renders a header with an image, search input and links 1`] = `
 <header
-  className="sc-hKMtZM fQheMM"
+  className="sc-eCYdqJ bBUtbp"
 >
   <div
-    className="sc-eCYdqJ dyjULo"
+    className="sc-jSMfEi ffDseC"
   >
     <img
       alt="PC-Connect.co.uk"
-      className="sc-jSMfEi kkhLMN"
+      className="sc-gKXOVf jZsqzM"
       height={32}
       src="header-logo.webp"
       width={153}
     />
     <form
       action="/search"
-      className="sc-bczRLJ jsuHJq"
+      className="sc-gsnTZi FDSDk"
       method="get"
       role="search"
     >
@@ -28,7 +28,7 @@ exports[`Header component renders a header with an image, search input and links
       </label>
       <input
         autoComplete="off"
-        className="sc-gsnTZi iltnbf"
+        className="sc-dkzDqf bCeKmI"
         id=":r0:"
         maxLength="50"
         name="searchQuery"
@@ -39,7 +39,7 @@ exports[`Header component renders a header with an image, search input and links
         value=""
       />
       <button
-        className="sc-dkzDqf gfrkhO"
+        className="sc-hKMtZM goFwfB"
         title="Search"
         type="submit"
       >
@@ -53,11 +53,11 @@ exports[`Header component renders a header with an image, search input and links
       </button>
     </form>
     <div
-      className="sc-gKXOVf ewsyxK"
+      className="sc-iBkjds imVKoU"
     >
       <a
         aria-label="Account"
-        className="sc-iBkjds cEWsDr"
+        className="sc-ftvSup bbrjke"
         href=""
         title="Account"
       >
@@ -70,7 +70,7 @@ exports[`Header component renders a header with an image, search input and links
         </svg>
         <div>
           <div
-            className="sc-ftvSup jpUecG"
+            className="sc-papXJ bhWgez"
           >
             Account
           </div>
@@ -81,7 +81,7 @@ exports[`Header component renders a header with an image, search input and links
       </a>
       <a
         aria-label="Basket"
-        className="sc-iBkjds cEWsDr"
+        className="sc-ftvSup bbrjke"
         href=""
         title="Basket"
       >
@@ -94,7 +94,7 @@ exports[`Header component renders a header with an image, search input and links
         </svg>
         <div>
           <div
-            className="sc-ftvSup jpUecG"
+            className="sc-papXJ bhWgez"
           >
             Basket
           </div>
