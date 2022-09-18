@@ -35,13 +35,14 @@ describe('ProductCard component', () => {
 });
 
 describe('ProductCard component quantity input', () => {
-  it('records user input changes quantity', () => {
+  it('records user changes to quantity', () => {
     renderWithProviders(<ProductCard product={product} />);
     const select = screen.getByLabelText(/quantity/i);
 
+    expect(select).toHaveValue('1');
+
     userEvent.selectOptions(select, '3');
 
-    expect(select).not.toHaveValue('1');
     expect(select).toHaveValue('3');
   });
 
@@ -55,6 +56,22 @@ describe('ProductCard component quantity input', () => {
     renderWithProviders(<ProductCard product={{ ...product, stock: 0 }} />);
 
     expect(screen.getByLabelText(/quantity/i)).toBeDisabled();
+  });
+
+  it('resets the quantity back to 1 after clicking add to basket', () => {
+    renderWithProviders(<ProductCard product={product} />);
+    const select = screen.getByLabelText(/quantity/i);
+    const button = screen.getByRole('button', {
+      name: /add to basket/i,
+    });
+
+    userEvent.selectOptions(select, '3');
+
+    expect(select).toHaveValue('3');
+
+    userEvent.click(button);
+
+    expect(select).toHaveValue('1');
   });
 });
 
@@ -75,6 +92,34 @@ describe('ProductCard component add to basket button', () => {
     });
 
     expect(button).toBeDisabled();
+  });
+
+  it('adds 1 of the product to the basket when clicked', () => {
+    const { store } = renderWithProviders(<ProductCard product={product} />);
+    const button = screen.getByRole('button', {
+      name: /add to basket/i,
+    });
+
+    expect(store.getState().basket).toEqual([]);
+
+    userEvent.click(button);
+
+    expect(store.getState().basket).toEqual([{ ...product, quantity: 1 }]);
+  });
+
+  it('adds the correct quantity of the product to the basket when clicked', () => {
+    const { store } = renderWithProviders(<ProductCard product={product} />);
+    const select = screen.getByLabelText(/quantity/i);
+    const button = screen.getByRole('button', {
+      name: /add to basket/i,
+    });
+
+    expect(store.getState().basket).toEqual([]);
+
+    userEvent.selectOptions(select, '3');
+    userEvent.click(button);
+
+    expect(store.getState().basket).toEqual([{ ...product, quantity: 3 }]);
   });
 });
 
