@@ -3,7 +3,7 @@ import logo from '../../assets/images/header/header-logo.webp';
 import { ReactComponent as AccountIcon } from '../../assets/svg/account.svg';
 import { ReactComponent as BasketIcon } from '../../assets/svg/basket.svg';
 import BasketQuantity from '../../features/basket/BasketQuantity';
-import BasketLinkSubtotal from '../../features/basket/BasketLinkSubtotal';
+import BasketSubtotal from '../../features/basket/BasketSubtotal';
 import SearchInput from './SearchInput';
 import * as Styled from './styles';
 
@@ -36,7 +36,7 @@ export default function Header() {
             {isMatch && (
               <div>
                 <Styled.TopText>Basket</Styled.TopText>
-                <BasketLinkSubtotal />
+                <BasketSubtotal />
               </div>
             )}
           </Styled.Link>
