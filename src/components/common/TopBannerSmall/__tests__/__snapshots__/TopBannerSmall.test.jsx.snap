@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBannerSmall component renders a banner with 3 icons and text next to each one 1`] = `
+<div
+  className="sc-a8ce1b99-0 eqxWUn"
+>
+  <div
+    className="sc-a8ce1b99-1 YGGBa"
+    data-testid={0}
+  >
+    <img
+      alt=""
+      data-nimg="future"
+      decoding="async"
+      height={24}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=48&q=100"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=100 1x, /_next/image?url=%2Fimg.jpg&w=48&q=100 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={24}
+    />
+    <div
+      className="sc-a8ce1b99-2 jtLOmz"
+    >
+      <strong>
+        Award winning
+      </strong>
+      Systems and customer services
+    </div>
+  </div>
+  <div
+    className="sc-a8ce1b99-1 iyqJuU"
+    data-testid={1}
+  >
+    <img
+      alt=""
+      data-nimg="future"
+      decoding="async"
+      height={24}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=48&q=100"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=100 1x, /_next/image?url=%2Fimg.jpg&w=48&q=100 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={24}
+    />
+    <div
+      className="sc-a8ce1b99-2 jtLOmz"
+    >
+      <strong>
+        4.8 stars on Trustpilot
+      </strong>
+      From over 30,000 customer reviews
+    </div>
+  </div>
+  <div
+    className="sc-a8ce1b99-1 YGGBa"
+    data-testid={2}
+  >
+    <img
+      alt=""
+      data-nimg="future"
+      decoding="async"
+      height={24}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=48&q=100"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=100 1x, /_next/image?url=%2Fimg.jpg&w=48&q=100 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={24}
+    />
+    <div
+      className="sc-a8ce1b99-2 jtLOmz"
+    >
+      <strong>
+        0% interest up to 4 months
+      </strong>
+      Minimum spend applies from £99
+    </div>
+  </div>
+</div>
+`;

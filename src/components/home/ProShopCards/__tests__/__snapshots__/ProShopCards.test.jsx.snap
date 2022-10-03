@@ -1,0 +1,210 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProShopCards component renders 6 pro shop cards with links and shop descriptions 1`] = `
+<section
+  className="sc-6ac5ca5a-0 ciZbqg"
+>
+  <div
+    className="sc-6ac5ca5a-1 dvtfYR"
+  >
+    <div
+      className="sc-6ac5ca5a-2 fxiEpa"
+    />
+    <p
+      className="sc-6ac5ca5a-4 ecTgta"
+    >
+      The fastest gaming PCs - plus a huge range of peripherals for
+      the ultimate gaming experience.
+    </p>
+    <a
+      className="sc-bb098475-0 jmQbMN"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Visit Gaming Store
+      <svg
+        fill="currentColor"
+        height={20}
+        viewBox="0 0 512 512"
+        width={20}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 256C0 397.4 114.6 512 256 512s256-114.6 256-256S397.4 0 256 0S0 114.6 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+        />
+      </svg>
+    </a>
+  </div>
+  <div
+    className="sc-6ac5ca5a-1 dvtfYR"
+  >
+    <div
+      className="sc-6ac5ca5a-2 gkYbA"
+    />
+    <p
+      className="sc-6ac5ca5a-4 ecTgta"
+    >
+      Workstations and servers for graphics-intensive workflows such
+      as AEC & BIM, CAD & CAE and M & E.
+    </p>
+    <a
+      className="sc-bb098475-0 jmQbMN"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Visit Graphics Store
+      <svg
+        fill="currentColor"
+        height={20}
+        viewBox="0 0 512 512"
+        width={20}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 256C0 397.4 114.6 512 256 512s256-114.6 256-256S397.4 0 256 0S0 114.6 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+        />
+      </svg>
+    </a>
+  </div>
+  <div
+    className="sc-6ac5ca5a-1 dvtfYR"
+  >
+    <div
+      className="sc-6ac5ca5a-2 sOFCp"
+    />
+    <p
+      className="sc-6ac5ca5a-4 ecTgta"
+    >
+      Computer based music and audio production - plus the best in
+      music technology and instruments.
+    </p>
+    <a
+      className="sc-bb098475-0 jmQbMN"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Visit Audio Store
+      <svg
+        fill="currentColor"
+        height={20}
+        viewBox="0 0 512 512"
+        width={20}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 256C0 397.4 114.6 512 256 512s256-114.6 256-256S397.4 0 256 0S0 114.6 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+        />
+      </svg>
+    </a>
+  </div>
+  <div
+    className="sc-6ac5ca5a-1 dvtfYR"
+  >
+    <div
+      className="sc-6ac5ca5a-2 duhABr"
+    />
+    <p
+      className="sc-6ac5ca5a-4 ecTgta"
+    >
+      Film and broadcast equipment, workstations for professional
+      video and media production workflows.
+    </p>
+    <a
+      className="sc-bb098475-0 jmQbMN"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Visit Video Store
+      <svg
+        fill="currentColor"
+        height={20}
+        viewBox="0 0 512 512"
+        width={20}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 256C0 397.4 114.6 512 256 512s256-114.6 256-256S397.4 0 256 0S0 114.6 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+        />
+      </svg>
+    </a>
+  </div>
+  <div
+    className="sc-6ac5ca5a-1 dvtfYR"
+  >
+    <h4
+      className="sc-6ac5ca5a-3 cnxACh"
+    >
+      Digital Signage Solutions
+    </h4>
+    <p
+      className="sc-6ac5ca5a-4 ecTgta"
+    >
+      Reinvent the way you engage with customers with solutions that
+      provide invaluable insights and customer data.
+    </p>
+    <a
+      className="sc-bb098475-0 jmQbMN"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      View Signage Solutions
+      <svg
+        fill="currentColor"
+        height={20}
+        viewBox="0 0 512 512"
+        width={20}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 256C0 397.4 114.6 512 256 512s256-114.6 256-256S397.4 0 256 0S0 114.6 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+        />
+      </svg>
+    </a>
+  </div>
+  <div
+    className="sc-6ac5ca5a-1 dvtfYR"
+  >
+    <h4
+      className="sc-6ac5ca5a-3 cnxACh"
+    >
+      Deep Learning & AI
+    </h4>
+    <p
+      className="sc-6ac5ca5a-4 ecTgta"
+    >
+      Desktop, datacentre and cloud solutions for developing and
+      deploying deep learning and AI models.
+    </p>
+    <a
+      className="sc-bb098475-0 jmQbMN"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Find Out More
+      <svg
+        fill="currentColor"
+        height={20}
+        viewBox="0 0 512 512"
+        width={20}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 256C0 397.4 114.6 512 256 512s256-114.6 256-256S397.4 0 256 0S0 114.6 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+        />
+      </svg>
+    </a>
+  </div>
+</section>
+`;

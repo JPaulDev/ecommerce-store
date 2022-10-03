@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slide component renders a slide with all content present 1`] = `
+<div
+  className="sc-51d2adaa-0 eRDcMN"
+  data-testid="slide-1"
+>
+  <div
+    className="sc-51d2adaa-1 leLRgv"
+  >
+    <img
+      alt=""
+      data-nimg="future"
+      decoding="async"
+      onError={[Function]}
+      onLoad={[Function]}
+      src=""
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+    />
+  </div>
+  <div
+    className="sc-51d2adaa-2 eruBKR"
+  >
+    <div
+      className="sc-51d2adaa-3 kXQAzC"
+    >
+      <img
+        alt="3XS Systems"
+        data-nimg="future"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src=""
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+      />
+    </div>
+    <h4
+      className="sc-51d2adaa-4 fYFSrg"
+    >
+      RTX™ 30 Series PCs
+    </h4>
+    <p
+      className="sc-51d2adaa-5 fwDVOe"
+    >
+      Custom built PCs built with NVIDIA's 2nd gen Ampere architecture,
+      designed to deliver ultimate performance for gamers and creators.
+    </p>
+  </div>
+  <div
+    className="sc-51d2adaa-6 gDRA-Dv"
+  >
+    <img
+      alt="A PC with rainbow coloured LED case fans on the front"
+      data-nimg="future"
+      decoding="async"
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src=""
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+    />
+  </div>
+  <div
+    className="sc-51d2adaa-7 irMhCf"
+  >
+    <h4
+      className="sc-51d2adaa-8 jWKpEH"
+    >
+      Powered by
+      <img
+        alt="Nvidia GeForce RTX"
+        data-nimg="future"
+        decoding="async"
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src=""
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+      />
+    </h4>
+    <ul
+      className="sc-51d2adaa-9 jjcSfp"
+    >
+      <li>
+        Premium built to order systems
+      </li>
+      <li>
+        Extensively tested
+      </li>
+      <li>
+        7 day evening and weekend support
+      </li>
+      <li>
+        Premium 3 year warranty
+      </li>
+      <li>
+        Best in-class components
+      </li>
+      <li>
+        Award-winning systems
+      </li>
+    </ul>
+  </div>
+</div>
+`;

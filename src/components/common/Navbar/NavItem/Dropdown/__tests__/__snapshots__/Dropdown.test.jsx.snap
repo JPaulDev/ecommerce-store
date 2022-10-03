@@ -1,0 +1,435 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown component renders the accessories menu with all links/advertisements present 1`] = `
+<div
+  className="sc-761e3646-0 dezeyQ"
+  data-testid="dropdown-menu"
+  id="Accessories"
+>
+  <div
+    className="sc-761e3646-1 dnHZgB"
+  >
+    <h4
+      className="sc-761e3646-2 jmPIqe"
+    >
+      Keyboards
+    </h4>
+    <ul
+      className="sc-761e3646-3 qKKzw"
+    >
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Wired Keyboards
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Wireless Keyboards
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Gaming Keyboards
+        </a>
+      </li>
+    </ul>
+    <h4
+      className="sc-761e3646-2 jmPIqe"
+    >
+      Mice
+    </h4>
+    <ul
+      className="sc-761e3646-3 qKKzw"
+    >
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Wired Mice
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Wireless Mice
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-761e3646-1 dnHZgB"
+  >
+    <h4
+      className="sc-761e3646-2 jmPIqe"
+    >
+      Audio
+    </h4>
+    <ul
+      className="sc-761e3646-3 qKKzw"
+    >
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Microphones
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Speakers
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-761e3646-1 dnHZgB"
+  >
+    <h4
+      className="sc-761e3646-2 jmPIqe"
+    >
+      Monitors
+    </h4>
+    <ul
+      className="sc-761e3646-3 qKKzw"
+    >
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Gaming Monitors
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Ultrawide Monitors
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          OLED Monitors
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-761e3646-5 glabts"
+  >
+    <img
+      alt=""
+      data-nimg="future"
+      decoding="async"
+      height={24}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={24}
+    />
+    <img
+      alt=""
+      data-nimg="future"
+      decoding="async"
+      height={24}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={24}
+    />
+  </div>
+</div>
+`;
+
+exports[`Dropdown component renders the components menu with all links/advertisements present 1`] = `
+<div
+  className="sc-761e3646-0 dezeyQ"
+  data-testid="dropdown-menu"
+  id="Components"
+>
+  <div
+    className="sc-761e3646-1 dnHZgB"
+  >
+    <h4
+      className="sc-761e3646-2 jmPIqe"
+    >
+      Processors
+    </h4>
+    <ul
+      className="sc-761e3646-3 qKKzw"
+    >
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          AMD
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Intel
+        </a>
+      </li>
+    </ul>
+    <h4
+      className="sc-761e3646-2 jmPIqe"
+    >
+      Memory
+    </h4>
+    <ul
+      className="sc-761e3646-3 qKKzw"
+    >
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          DDR5
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          DDR4
+        </a>
+      </li>
+    </ul>
+    <h4
+      className="sc-761e3646-2 jmPIqe"
+    >
+      Motherboards
+    </h4>
+    <ul
+      className="sc-761e3646-3 qKKzw"
+    >
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          AMD Motherboards
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Intel Motherboards
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-761e3646-1 dnHZgB"
+  >
+    <h4
+      className="sc-761e3646-2 jmPIqe"
+    >
+      Graphics Cards
+    </h4>
+    <ul
+      className="sc-761e3646-3 qKKzw"
+    >
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          NVIDIA Graphics Cards
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          AMD Graphics Cards
+        </a>
+      </li>
+    </ul>
+    <h4
+      className="sc-761e3646-2 jmPIqe"
+    >
+      Power Supplies
+    </h4>
+    <ul
+      className="sc-761e3646-3 qKKzw"
+    >
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          All PSUs
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Fully Wired
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Fully Modular
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-761e3646-1 dnHZgB"
+  >
+    <h4
+      className="sc-761e3646-2 jmPIqe"
+    >
+      Cases
+    </h4>
+    <ul
+      className="sc-761e3646-3 qKKzw"
+    >
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Full Tower
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Midi Tower
+        </a>
+      </li>
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          ITX
+        </a>
+      </li>
+    </ul>
+    <h4
+      className="sc-761e3646-2 jmPIqe"
+    >
+      Storage
+    </h4>
+    <ul
+      className="sc-761e3646-3 qKKzw"
+    >
+      <li>
+        <a
+          className="sc-761e3646-4 jELmN"
+          href=""
+        >
+          Solid State Drives
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="sc-761e3646-5 glabts"
+  >
+    <img
+      alt=""
+      data-nimg="future"
+      decoding="async"
+      height={24}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={24}
+    />
+    <img
+      alt=""
+      data-nimg="future"
+      decoding="async"
+      height={24}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={24}
+    />
+    <img
+      alt=""
+      data-nimg="future"
+      decoding="async"
+      height={24}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={24}
+    />
+  </div>
+</div>
+`;

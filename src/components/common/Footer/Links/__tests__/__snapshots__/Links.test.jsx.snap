@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Links component renders a heading along with related links 1`] = `
+<DocumentFragment>
+  <div>
+    <h3
+      class="sc-9bf04a45-3 jXmISH"
+    >
+      Information
+    </h3>
+    <ul
+      class="sc-e0091541-0 dhVZaa"
+      id="Information"
+      style="height: 0px;"
+    >
+      <li
+        style="opacity: 0; transform: translateX(-50px) translateZ(0);"
+      >
+        <a
+          class="sc-e0091541-1 dZPrIu"
+          href="/Link"
+        >
+          About Us
+        </a>
+      </li>
+      <li
+        style="opacity: 0; transform: translateX(-50px) translateZ(0);"
+      >
+        <a
+          class="sc-e0091541-1 dZPrIu"
+          href="/Link"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewsAndProducts component renders a news section with 3 articles and latest products links 1`] = `
+<section
+  className="sc-4fb710ed-0 gIzRyg"
+>
+  <div
+    className="sc-4fb710ed-1 gTUvdt"
+  >
+    <h2
+      className="sc-4fb710ed-2 dszDHg"
+    >
+      Tech news & articles
+    </h2>
+    <div
+      className="sc-4fb710ed-3 duRDLI"
+    >
+      <div
+        className="sc-4fb710ed-4 bZxLQc"
+      >
+        <h3
+          className="sc-4fb710ed-5 biXqlv"
+        >
+          NVIDIA 4000 Series Details Leaked
+        </h3>
+        <div
+          className="sc-4fb710ed-7 bCfsE"
+        >
+          29 Jun 2022
+        </div>
+        <div
+          className="sc-4fb710ed-8 hultKJ"
+        >
+          <img
+            alt=""
+            data-nimg="future"
+            decoding="async"
+            height={24}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+            srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={24}
+          />
+        </div>
+        <article
+          className="sc-4fb710ed-6 ddyhPY"
+        >
+          NVIDIA's next-generation GeForce RTX 4090 "Ada" flagship graphics
+    card allegedly scores over 19000 points in the 3DMark Time Spy Extreme
+    synthetic benchmark, according to kopite7kimi, a reliable source with NVIDIA
+    leaks. This would put its score around 66 percent above that of the current
+    RTX 3090 Ti flagship.
+        </article>
+        <a
+          className="sc-bb098475-0 irrRtc"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          Read Full Article
+          <svg
+            fill="currentColor"
+            height={21}
+            viewBox="0 0 512 512"
+            width={21}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 256C0 397.4 114.6 512 256 512s256-114.6 256-256S397.4 0 256 0S0 114.6 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        className="sc-4fb710ed-4 bZxLQc"
+      >
+        <h3
+          className="sc-4fb710ed-5 biXqlv"
+        >
+          Intel Misses Quarterly Targets
+        </h3>
+        <div
+          className="sc-4fb710ed-7 bCfsE"
+        >
+          14 Jun 2022
+        </div>
+        <div
+          className="sc-4fb710ed-8 hultKJ"
+        >
+          <img
+            alt=""
+            data-nimg="future"
+            decoding="async"
+            height={24}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+            srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={24}
+          />
+        </div>
+        <article
+          className="sc-4fb710ed-6 ddyhPY"
+        >
+          Intel Corporation today reported second-quarter 2022 financial
+      results. "This quarter's results were below the standards we have set for
+      the company and our shareholders. We must and will do better. The sudden
+      and rapid decline in economic activity was the largest driver, but the
+      shortfall also reflects our own execution issues," said Pat Gelsinger,
+      Intel CEO.
+        </article>
+        <a
+          className="sc-bb098475-0 irrRtc"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          Read Full Article
+          <svg
+            fill="currentColor"
+            height={21}
+            viewBox="0 0 512 512"
+            width={21}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 256C0 397.4 114.6 512 256 512s256-114.6 256-256S397.4 0 256 0S0 114.6 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+            />
+          </svg>
+        </a>
+      </div>
+      <div
+        className="sc-4fb710ed-4 bZxLQc"
+      >
+        <h3
+          className="sc-4fb710ed-5 biXqlv"
+        >
+          Alleged Ryzen 7000 Series Benchmarks
+        </h3>
+        <div
+          className="sc-4fb710ed-7 bCfsE"
+        >
+          23 Jun 2022
+        </div>
+        <div
+          className="sc-4fb710ed-8 hultKJ"
+        >
+          <img
+            alt=""
+            data-nimg="future"
+            decoding="async"
+            height={24}
+            loading="lazy"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+            srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+            style={
+              {
+                "color": "transparent",
+              }
+            }
+            width={24}
+          />
+        </div>
+        <article
+          className="sc-4fb710ed-6 ddyhPY"
+        >
+          An AMD engineering sample CPU with the model number
+      "100-000000593-20_Y" has appeared in a couple of graphics rendering tests,
+      paired with an NVIDIA RTX A4000 GPU. The CPU appears to be a 6-core Ryzen
+      7000-series chip that was fitted to a Gigabyte X670E Aorus Master
+      motherboard.
+        </article>
+        <a
+          className="sc-bb098475-0 irrRtc"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          Read Full Article
+          <svg
+            fill="currentColor"
+            height={21}
+            viewBox="0 0 512 512"
+            width={21}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 256C0 397.4 114.6 512 256 512s256-114.6 256-256S397.4 0 256 0S0 114.6 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+            />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="sc-4fb710ed-9 dJCjQQ"
+  >
+    <h2
+      className="sc-4fb710ed-2 kSAmTL"
+    >
+      Hot & New products
+    </h2>
+    <p
+      className="sc-4fb710ed-11 hXJdHu"
+    >
+      Check out our latest and greatest.
+    </p>
+    <div
+      className="sc-4fb710ed-12 iElSRE"
+    >
+      <img
+        alt="An xbox gaming controller and an iPad."
+        data-nimg="future"
+        decoding="async"
+        height={24}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={24}
+      />
+      <div>
+        <strong
+          className="sc-4fb710ed-10 eIVIjh"
+        >
+          Our Hot Sellers
+        </strong>
+        <p
+          className="sc-4fb710ed-11 hXJdHu"
+        >
+          See our most popular selling products.
+        </p>
+        <a
+          className="sc-92b13a9b-0 lbDDgw"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          View All
+        </a>
+      </div>
+    </div>
+    <div
+      className="sc-4fb710ed-12 iElSRE"
+    >
+      <img
+        alt="A widescreen computer monitor and virtual reality headset."
+        data-nimg="future"
+        decoding="async"
+        height={24}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+        style={
+          {
+            "color": "transparent",
+          }
+        }
+        width={24}
+      />
+      <div>
+        <strong
+          className="sc-4fb710ed-10 eIVIjh"
+        >
+          Our Latest Arrivals
+        </strong>
+        <p
+          className="sc-4fb710ed-11 hXJdHu"
+        >
+          When the competition wants to see what‘s new they check our website!
+        </p>
+        <a
+          className="sc-92b13a9b-0 lbDDgw"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
+        >
+          View All
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+`;

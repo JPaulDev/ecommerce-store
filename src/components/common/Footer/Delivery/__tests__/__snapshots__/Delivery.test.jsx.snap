@@ -1,0 +1,307 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delivery component renders a return tab where returns status can be checked 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-44f25114-0 egPNsa"
+  >
+    <h3
+      class="sc-9bf04a45-3 jXmISH"
+    >
+      Delivery / Tracking Information
+    </h3>
+    <div
+      id="delivery"
+      style="overflow: hidden; height: auto;"
+    >
+      <p
+        class="sc-44f25114-1 cwwZoe"
+      >
+        Order now to receive by tomorrow.
+      </p>
+      <div
+        class="sc-44f25114-2 WJnhb"
+      >
+        <button
+          class="sc-44f25114-3 lkgOrW"
+          type="button"
+        >
+          Order
+        </button>
+        <button
+          class="sc-44f25114-3 hXMIxa"
+          type="button"
+        >
+          Return
+        </button>
+        <button
+          class="sc-44f25114-3 lkgOrW"
+          type="button"
+        >
+          System
+        </button>
+      </div>
+      <form
+        action="https://pc-connect.co.uk/tracking/trackreturn"
+        class="sc-44f25114-4 iXxCCw"
+        method="post"
+      >
+        <label
+          for=":r3:-invoice"
+          hidden=""
+        >
+          Invoice Number
+        </label>
+        <input
+          autocomplete="off"
+          class="sc-44f25114-5 dtSDlf"
+          id=":r3:-invoice"
+          maxlength="10"
+          name="invoiceNumber"
+          placeholder="Invoice No."
+          required=""
+          type="text"
+        />
+        <label
+          for=":r3:"
+          hidden=""
+        >
+          RMA Number
+        </label>
+        <input
+          autocomplete="off"
+          class="sc-44f25114-5 dtSDlf"
+          id=":r3:"
+          maxlength="10"
+          name="rmaNumber"
+          placeholder="RMA No."
+          required=""
+          type="text"
+        />
+        <button
+          aria-label="Submit"
+          class="sc-44f25114-6 mIroD"
+          title="Submit"
+          type="submit"
+        >
+          <svg
+            fill="white"
+            height="19"
+            viewBox="0 0 384 512"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Delivery component renders a system build tab where build progress can be checked 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-44f25114-0 egPNsa"
+  >
+    <h3
+      class="sc-9bf04a45-3 jXmISH"
+    >
+      Delivery / Tracking Information
+    </h3>
+    <div
+      id="delivery"
+      style="overflow: hidden; height: auto;"
+    >
+      <p
+        class="sc-44f25114-1 cwwZoe"
+      >
+        Order now to receive by tomorrow.
+      </p>
+      <div
+        class="sc-44f25114-2 WJnhb"
+      >
+        <button
+          class="sc-44f25114-3 lkgOrW"
+          type="button"
+        >
+          Order
+        </button>
+        <button
+          class="sc-44f25114-3 lkgOrW"
+          type="button"
+        >
+          Return
+        </button>
+        <button
+          class="sc-44f25114-3 hXMIxa"
+          type="button"
+        >
+          System
+        </button>
+      </div>
+      <form
+        action="https://pc-connect.co.uk/tracking/trackbuild"
+        class="sc-44f25114-4 iXxCCw"
+        method="post"
+      >
+        <label
+          for=":r6:-invoice"
+          hidden=""
+        >
+          Invoice Number
+        </label>
+        <input
+          autocomplete="off"
+          class="sc-44f25114-5 dtSDlf"
+          id=":r6:-invoice"
+          maxlength="10"
+          name="invoiceNumber"
+          placeholder="Invoice No."
+          required=""
+          type="text"
+        />
+        <label
+          for=":r6:"
+          hidden=""
+        >
+          Build Number
+        </label>
+        <input
+          autocomplete="off"
+          class="sc-44f25114-5 dtSDlf"
+          id=":r6:"
+          maxlength="10"
+          name="buildNumber"
+          placeholder="Build No."
+          required=""
+          type="text"
+        />
+        <button
+          aria-label="Submit"
+          class="sc-44f25114-6 mIroD"
+          title="Submit"
+          type="submit"
+        >
+          <svg
+            fill="white"
+            height="19"
+            viewBox="0 0 384 512"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Delivery component renders an order tab where order tracking can be checked 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-44f25114-0 egPNsa"
+  >
+    <h3
+      class="sc-9bf04a45-3 jXmISH"
+    >
+      Delivery / Tracking Information
+    </h3>
+    <div
+      id="delivery"
+      style="overflow: hidden; height: auto;"
+    >
+      <p
+        class="sc-44f25114-1 cwwZoe"
+      >
+        Order now to receive by tomorrow.
+      </p>
+      <div
+        class="sc-44f25114-2 WJnhb"
+      >
+        <button
+          class="sc-44f25114-3 hXMIxa"
+          type="button"
+        >
+          Order
+        </button>
+        <button
+          class="sc-44f25114-3 lkgOrW"
+          type="button"
+        >
+          Return
+        </button>
+        <button
+          class="sc-44f25114-3 lkgOrW"
+          type="button"
+        >
+          System
+        </button>
+      </div>
+      <form
+        action="https://pc-connect.co.uk/tracking/trackorder"
+        class="sc-44f25114-4 iXxCCw"
+        method="post"
+      >
+        <label
+          for=":r0:-invoice"
+          hidden=""
+        >
+          Invoice Number
+        </label>
+        <input
+          autocomplete="off"
+          class="sc-44f25114-5 dtSDlf"
+          id=":r0:-invoice"
+          maxlength="10"
+          name="invoiceNumber"
+          placeholder="Invoice No."
+          required=""
+          type="text"
+        />
+        <label
+          for=":r0:"
+          hidden=""
+        >
+          Postcode
+        </label>
+        <input
+          autocomplete="off"
+          class="sc-44f25114-5 dtSDlf"
+          id=":r0:"
+          maxlength="10"
+          name="postcode"
+          placeholder="Postcode"
+          required=""
+          type="text"
+        />
+        <button
+          aria-label="Submit"
+          class="sc-44f25114-6 mIroD"
+          title="Submit"
+          type="submit"
+        >
+          <svg
+            fill="white"
+            height="19"
+            viewBox="0 0 384 512"
+            width="14"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+            />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

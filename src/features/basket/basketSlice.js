@@ -36,6 +36,10 @@ export const basketSlice = createSlice({
   },
 });
 
+export function selectBasket(state) {
+  return state.basket;
+}
+
 export const selectBasketSubtotal = createSelector(
   (state) => state.basket,
   (basket) =>

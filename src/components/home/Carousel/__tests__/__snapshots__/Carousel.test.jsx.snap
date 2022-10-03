@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel component renders a carousel and all of its navigation buttons 1`] = `
+<section
+  className="sc-9cd0cc62-0 ccasvf"
+>
+  <ul
+    className="sc-15ca5ccc-0 kWSxnT"
+  >
+    <li>
+      <button
+        className="sc-15ca5ccc-1 cmEtXX"
+        onClick={[Function]}
+        type="button"
+      >
+        slide-1
+      </button>
+    </li>
+    <li>
+      <button
+        className="sc-15ca5ccc-1 fNjzGC"
+        onClick={[Function]}
+        type="button"
+      >
+        slide-2
+      </button>
+    </li>
+    <li>
+      <button
+        className="sc-15ca5ccc-1 fNjzGC"
+        onClick={[Function]}
+        type="button"
+      >
+        slide-3
+      </button>
+    </li>
+  </ul>
+  <ul
+    className="sc-e55bb776-0 idkEgk"
+  >
+    <li>
+      <button
+        aria-label="Slide 1 of 3"
+        className="sc-e55bb776-1 itfoZw"
+        onClick={[Function]}
+        type="button"
+      />
+    </li>
+    <li>
+      <button
+        aria-label="Slide 2 of 3"
+        className="sc-e55bb776-1 ksVASF"
+        onClick={[Function]}
+        type="button"
+      />
+    </li>
+    <li>
+      <button
+        aria-label="Slide 3 of 3"
+        className="sc-e55bb776-1 ksVASF"
+        onClick={[Function]}
+        type="button"
+      />
+    </li>
+  </ul>
+  <ul
+    className="sc-4d662f42-0 dGkEYw"
+  >
+    <li>
+      <button
+        aria-label="Previous Slide"
+        className="sc-4d662f42-1 kmwcLY"
+        onClick={[Function]}
+        title="Previous"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height={19}
+          viewBox="0 0 384 512"
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"
+          />
+        </svg>
+      </button>
+    </li>
+    <li>
+      <button
+        aria-label="Next Slide"
+        className="sc-4d662f42-1 kmwcLY"
+        onClick={[Function]}
+        title="Next"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height={19}
+          viewBox="0 0 384 512"
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+          />
+        </svg>
+      </button>
+    </li>
+  </ul>
+  <div
+    className="sc-51d2adaa-0 eRDcMN"
+    data-testid="slide-1"
+  >
+    <div
+      className="sc-51d2adaa-1 leLRgv"
+    >
+      <img
+        alt=""
+        priority="true"
+        quality={90}
+      />
+    </div>
+    <div
+      className="sc-51d2adaa-2 eruBKR"
+    >
+      <div
+        className="sc-51d2adaa-3 kXQAzC"
+      >
+        <img />
+      </div>
+      <h4
+        className="sc-51d2adaa-4 fYFSrg"
+      />
+      <p
+        className="sc-51d2adaa-5 fwDVOe"
+      />
+    </div>
+    <div
+      className="sc-51d2adaa-6 gDRA-Dv"
+    >
+      <img
+        quality={90}
+      />
+    </div>
+    <div
+      className="sc-51d2adaa-7 irMhCf"
+    >
+      <h4
+        className="sc-51d2adaa-8 jWKpEH"
+      >
+        <img />
+      </h4>
+      <ul
+        className="sc-51d2adaa-9 jjcSfp"
+      />
+    </div>
+  </div>
+</section>
+`;

@@ -2,6 +2,15 @@
   "name": "ecommerce-store",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "lint:css": "stylelint \"./src/**/*.js\"",
+    "test": "jest --watch",
+    "test:ci": "jest --ci"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -20,19 +29,6 @@
     "react-test-renderer": "^18.2.0",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint:css": "stylelint \"./src/**/*.js\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [

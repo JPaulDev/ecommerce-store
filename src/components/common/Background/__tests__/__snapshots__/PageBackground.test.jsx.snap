@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageBackground component renders a container and a background image 1`] = `
+<div
+  className="sc-1c559bbe-0 jkdhoy"
+>
+  <div
+    className="sc-1c559bbe-1 gxrCbe"
+  >
+    <img
+      alt=""
+      data-nimg="future"
+      decoding="async"
+      onError={[Function]}
+      onLoad={[Function]}
+      src=""
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+    />
+  </div>
+</div>
+`;

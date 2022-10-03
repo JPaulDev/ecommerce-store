@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component renders all links and buttons 1`] = `
+<nav
+  className="sc-32045fd3-0 glgyrw"
+>
+  <ul
+    className="sc-32045fd3-1 cAfKXL"
+  >
+    <li>
+      <a
+        className="sc-571537e9-0 jvVTyW"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <button
+        aria-controls="Components"
+        aria-expanded={false}
+        className="sc-571537e9-0 jvVTyW"
+        onClick={[Function]}
+        type="button"
+      >
+        Components
+      </button>
+    </li>
+    <li>
+      <button
+        aria-controls="Accessories"
+        aria-expanded={false}
+        className="sc-571537e9-0 jvVTyW"
+        onClick={[Function]}
+        type="button"
+      >
+        Accessories
+      </button>
+    </li>
+    <li>
+      <a
+        className="sc-571537e9-0 jvVTyW"
+        href="/about"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        About
+      </a>
+    </li>
+    <li>
+      <a
+        className="sc-571537e9-0 jvVTyW"
+        href="/contact"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        Contact
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
