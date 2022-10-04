@@ -1,4 +1,4 @@
-import Clipboard from '../../icons/Clipboard';
+import { Clipboard } from '../../icons';
 import * as Styled from './styles';
 
 export default function StockIndicator({ stock = 0, marginTop }) {

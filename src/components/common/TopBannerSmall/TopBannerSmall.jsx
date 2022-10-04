@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
 import Image from 'next/future/image';
-import useMediaQuery from '../../../hooks/useMediaQuery';
+import { useState, useEffect } from 'react';
 import trophy from '../../../../public/images/top-banner-small/trophy-logo.webp';
 import trustpilot from '../../../../public/images/top-banner-small/trustpilot-logo.webp';
 import paypal from '../../../../public/images/top-banner-small/paypal-logo.webp';
+import useMediaQuery from '../../../hooks/useMediaQuery';
 import * as Styled from './styles';
 
 const slides = [

@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import { selectBasketSubtotal } from '../basketSlice';
 import usePrice from '../../../hooks/usePrice';
+import { selectBasketSubtotal } from '../basketSlice';
 
 export default function BasketSubtotal() {
   const subtotal = useSelector(selectBasketSubtotal);

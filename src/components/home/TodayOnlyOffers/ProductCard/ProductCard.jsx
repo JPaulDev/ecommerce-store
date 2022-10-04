@@ -1,14 +1,16 @@
+import Image from 'next/future/image';
 import { useState, forwardRef } from 'react';
 import { useDispatch } from 'react-redux';
-import Image from 'next/future/image';
 import { addProduct } from '../../../../features/basket/basketSlice';
 import usePrice from '../../../../hooks/usePrice';
-import Price from '../../../common/Price';
-import PreviousPrice from '../../../common/PreviousPrice';
-import PartNumber from '../../../common/PartNumber';
-import QuantityDropdown from '../../../common/QuantityDropdown';
-import StockIndicator from '../../../common/StockIndicator';
-import AddToBasket from '../../../common/AddToBasket';
+import {
+  Price,
+  PreviousPrice,
+  PartNumber,
+  QuantityDropdown,
+  StockIndicator,
+  AddToBasket,
+} from '../../../common';
 import * as Styled from './styles';
 
 function ProductCard({ product = {} }, ref) {

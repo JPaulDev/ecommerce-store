@@ -1,7 +1,7 @@
 import { useState, useEffect, useId } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import useMediaQuery from '../../../../hooks/useMediaQuery';
-import ChevronRight from '../../../icons/ChevronRight';
+import { ChevronRight } from '../../../icons';
 import { Heading, DropdownButton } from '../styles';
 import * as Styled from './styles';
 

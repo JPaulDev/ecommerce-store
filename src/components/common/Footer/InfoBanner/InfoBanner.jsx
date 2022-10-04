@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/future/image';
 import logo from '../../../../../public/images/footer/pc-logo.webp';
-import Twitter from '../../../icons/Twitter';
-import Facebook from '../../../icons/Facebook';
-import Reddit from '../../../icons/Reddit';
-import Youtube from '../../../icons/Youtube';
-import Instagram from '../../../icons/Instagram';
-import Directions from '../../../icons/Directions';
-import Warehouse from '../../../icons/Warehouse';
+import {
+  Twitter,
+  Facebook,
+  Reddit,
+  Youtube,
+  Instagram,
+  Directions,
+  Warehouse,
+} from '../../../icons';
 import * as Styled from './styles';
 
 export default function InfoBanner() {

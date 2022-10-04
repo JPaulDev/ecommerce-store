@@ -1,5 +1,5 @@
 import { useState, useRef, useId, useEffect } from 'react';
-import Search from '../../../icons/Search';
+import { Search } from '../../../icons';
 import * as Styled from './styles';
 
 export default function SearchInput() {

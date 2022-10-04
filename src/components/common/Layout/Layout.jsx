@@ -1,8 +1,4 @@
-import Header from '../Header';
-import Navbar from '../Navbar';
-import Background from '../Background';
-import TopBannerSmall from '../TopBannerSmall';
-import Footer from '../Footer';
+import { Header, Navbar, Background, TopBannerSmall, Footer } from '../index';
 import * as Styled from './styles';
 
 export default function Layout({ children, pageProps }) {

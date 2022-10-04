@@ -1,5 +1,5 @@
-import { Fragment } from 'react';
 import Image from 'next/future/image';
+import { Fragment } from 'react';
 import componentsAd1 from '../../../../../../public/images/dropdown-ads/components-ad1.webp';
 import componentsAd2 from '../../../../../../public/images/dropdown-ads/components-ad2.webp';
 import componentsAd3 from '../../../../../../public/images/dropdown-ads/components-ad3.webp';

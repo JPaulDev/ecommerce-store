@@ -1,5 +1,5 @@
-import { forwardRef } from 'react';
 import Image from 'next/future/image';
+import { forwardRef } from 'react';
 import * as Styled from './styles';
 
 function Slide({ slideIndex, slide = {} }, ref) {

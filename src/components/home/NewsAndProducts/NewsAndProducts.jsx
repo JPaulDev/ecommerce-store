@@ -1,9 +1,8 @@
 import Image from 'next/future/image';
 import hotSellers from '../../../../public/images/news-and-products/hot-sellers.webp';
 import newArrivals from '../../../../public/images/news-and-products/new-arrivals.webp';
+import { LinkChevron, LinkButton } from '../../common';
 import articles from './articles';
-import LinkChevron from '../../common/LinkChevron';
-import LinkButton from '../../common/LinkButton';
 import * as Styled from './styles';
 
 export default function NewsAndProducts() {
@@ -36,7 +35,10 @@ export default function NewsAndProducts() {
         <Styled.Heading>Hot & New products</Styled.Heading>
         <Styled.Text>Check out our latest and greatest.</Styled.Text>
         <Styled.Container>
-          <Image src={hotSellers} alt="An xbox gaming controller and an iPad." />
+          <Image
+            src={hotSellers}
+            alt="An xbox gaming controller and an iPad."
+          />
           <div>
             <Styled.Title>Our Hot Sellers</Styled.Title>
             <Styled.Text>See our most popular selling products.</Styled.Text>

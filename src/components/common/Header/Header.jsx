@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/future/image';
 import logo from '../../../../public/images/header/header-logo.webp';
+import { BasketQuantity, BasketSubtotal } from '../../../features/basket';
+import { Account, Basket } from '../../icons';
 import SearchInput from './SearchInput';
-import Account from '../../icons/Account';
-import Basket from '../../icons/Basket';
-import BasketQuantity from '../../../features/basket/BasketQuantity';
-import BasketSubtotal from '../../../features/basket/BasketSubtotal/BasketSubtotal';
 import * as Styled from './styles';
 
 export default function Header() {

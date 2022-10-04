@@ -1,12 +1,14 @@
 import useMediaQuery from '../../../../hooks/useMediaQuery';
-import Visa from '../../../icons/Visa';
-import Mastercard from '../../../icons/Mastercard';
-import Electron from '../../../icons/Electron';
-import AmazonPay from '../../../icons/AmazonPay';
-import Maestro from '../../../icons/Maestro';
-import PayPal from '../../../icons/PayPal';
-import AmericanExpress from '../../../icons/AmericanExpress';
-import Bitcoin from '../../../icons/Bitcoin';
+import {
+  Visa,
+  Mastercard,
+  Electron,
+  AmazonPay,
+  Maestro,
+  PayPal,
+  AmericanExpress,
+  Bitcoin,
+} from '../../../icons';
 import { Heading } from '../styles';
 import * as Styled from './styles';
 

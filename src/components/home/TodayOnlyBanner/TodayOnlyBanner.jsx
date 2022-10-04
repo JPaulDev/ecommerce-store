@@ -1,7 +1,6 @@
-import useMediaQuery from '../../../hooks/useMediaQuery';
 import background from '../../../../public/images/today-only-banner/gaming-pc.webp';
-import LinkChevron from '../../common/LinkChevron';
-import LinkButton from '../../common/LinkButton';
+import useMediaQuery from '../../../hooks/useMediaQuery';
+import { LinkChevron, LinkButton } from '../../common';
 import * as Styled from './styles';
 
 export default function TodayOnlyBanner() {

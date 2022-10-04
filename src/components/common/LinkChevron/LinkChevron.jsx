@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import CircleChevronRight from '../../icons/CircleChevronRight';
+import { CircleChevronRight } from '../../icons';
 import * as Styled from './styles';
 
 export default function LinkChevron({ href, linkText, fontSize, iconSize }) {

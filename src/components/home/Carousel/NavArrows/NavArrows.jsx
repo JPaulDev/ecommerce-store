@@ -1,5 +1,4 @@
-import ChevronLeft from '../../../icons/ChevronLeft';
-import ChevronRight from '../../../icons/ChevronRight';
+import { ChevronLeft, ChevronRight } from '../../../icons';
 import * as Styled from './styles';
 
 export default function NavArrows({ onChangeSlide }) {

@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import MobilePhone from '../../../icons/MobilePhone';
-import Headset from '../../../icons/Headset';
+import { MobilePhone, Headset } from '../../../icons';
 import * as Styled from './styles';
 
 export default function ContactBanner() {

@@ -1,8 +1,10 @@
-import GraphicsCard from '../../../icons/GraphicsCard';
-import Memory from '../../../icons/Memory';
-import HardDrive from '../../../icons/HardDrive';
-import Processor from '../../../icons/Processor';
-import Motherboard from '../../../icons/Motherboard';
+import {
+  GraphicsCard,
+  Memory,
+  HardDrive,
+  Processor,
+  Motherboard,
+} from '../../../icons';
 import * as Styled from './styles';
 
 const categories = [

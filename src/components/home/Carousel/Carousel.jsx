@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import useCarousel from './useCarousel';
 import slides from './carousel-slides';
+import useCarousel from './useCarousel';
 import NavTop from './NavTop';
-import NavBottom from './NavBottom/NavBottom';
+import NavBottom from './NavBottom';
 import NavArrows from './NavArrows';
 import Slide from './Slide';
 import * as Styled from './styles';

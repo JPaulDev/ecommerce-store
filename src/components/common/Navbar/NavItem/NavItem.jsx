@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
 import Link from 'next/link';
+import { useState, useRef } from 'react';
 import useOnClickOutside from '../../../../hooks/useOnClickOutside';
 import Dropdown from './Dropdown';
 import * as Styled from './styles';

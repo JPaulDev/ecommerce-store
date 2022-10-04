@@ -1,10 +1,9 @@
 import Image from 'next/future/image';
-import useMediaQuery from '../../../hooks/useMediaQuery';
 import nvidiaImage from '../../../../public/images/promo-banner/rtx-studio.webp';
 import nvidiaLogo from '../../../../public/images/promo-banner/nvidia-logo.webp';
 import blueDetail from '../../../../public/images/promo-banner/blue-detail.webp';
-import LinkButton from '../../common/LinkButton';
-import LinkChevron from '../../common/LinkChevron';
+import useMediaQuery from '../../../hooks/useMediaQuery';
+import { LinkButton, LinkChevron } from '../../common';
 import * as Styled from './styles';
 
 export default function PromoBanner() {
