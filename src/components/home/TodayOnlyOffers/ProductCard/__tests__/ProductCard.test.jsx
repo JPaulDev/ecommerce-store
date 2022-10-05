@@ -28,7 +28,7 @@ describe('ProductCard component', () => {
     const tree = renderer
       .create(
         <Provider store={setupStore()}>
-          <ProductCard />
+          <ProductCard product={product} />
         </Provider>
       )
       .toJSON();

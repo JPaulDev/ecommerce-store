@@ -14,30 +14,52 @@ exports[`ProductCard component renders a product card with an image and all prod
       <img
         alt=""
         quality={85}
+        src=""
       />
     </div>
     <p
       className="sc-2ede0b7e-3 ebdJAx"
-    />
+    >
+      Intel Core i5 10400F
+    </p>
     <p
       className="sc-2ede0b7e-4 jlyFrL"
-    />
+    >
+      6 Cores, 12 Threads, S1200 Comet Lake, 2.9GHz, 4.3GHz Turbo, 12MB Cache
+    </p>
     <div
       className="sc-2ede0b7e-5 fRgVwp"
     >
       <span
         className="sc-bd55615-0 cxPlFY"
-      />
+      >
+        CPU-INT-10400F
+      </span>
     </div>
     <span
-      className="sc-b938e1f1-0 htgPxI"
+      className="sc-dded47fe-0 bVUSwy"
     >
       <span
-        className="sc-b938e1f1-1 dVqNWF"
-      />
+        className="sc-dded47fe-1 jIDwKn"
+      >
+        £
+      </span>
+      114
       <span
-        className="sc-b938e1f1-1 dVqNWF"
-      />
+        className="sc-dded47fe-1 jIDwKn"
+      >
+        .99
+      </span>
+    </span>
+    <span
+      className="sc-2cd02fbb-0 tfQIO"
+    >
+      <span
+        className="sc-2cd02fbb-1 dlirfm"
+      >
+        Was: 
+      </span>
+      £129.99
     </span>
     <div
       className="sc-4606141e-0 kNwOEK"
@@ -87,8 +109,8 @@ exports[`ProductCard component renders a product card with an image and all prod
       />
     </div>
     <div
-      className="sc-4ceb59c7-0 hHLdWE"
-      title="Item is out of stock"
+      className="sc-4ceb59c7-0 bqwgbT"
+      title="Item is in stock"
     >
       <svg
         enableBackground="new 0 0 24 24"
@@ -116,7 +138,7 @@ exports[`ProductCard component renders a product card with an image and all prod
           </g>
         </g>
       </svg>
-      Out of Stock
+      In Stock
     </div>
     <button
       className="sc-9dd3e78d-0 gRkVAM"
