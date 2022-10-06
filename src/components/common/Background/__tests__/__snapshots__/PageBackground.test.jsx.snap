@@ -11,14 +11,17 @@ exports[`PageBackground component renders a container and a background image 1`]
       alt=""
       data-nimg="future"
       decoding="async"
+      height={24}
       onError={[Function]}
       onLoad={[Function]}
-      src=""
+      src="/_next/image?url=%2Fimg.jpg&w=48&q=85"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=85 1x, /_next/image?url=%2Fimg.jpg&w=48&q=85 2x"
       style={
         {
           "color": "transparent",
         }
       }
+      width={24}
     />
   </div>
 </div>

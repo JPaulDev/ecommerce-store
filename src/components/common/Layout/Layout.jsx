@@ -6,7 +6,7 @@ export default function Layout({ children, pageProps }) {
     <>
       <Header />
       <Navbar />
-      <Background background={pageProps.background} />
+      <Background page={pageProps.page} />
       <Styled.Main>
         <TopBannerSmall />
         {children}

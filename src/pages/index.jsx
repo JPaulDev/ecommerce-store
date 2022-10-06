@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import background from '../../public/images/page-backgrounds/home.webp';
 import {
   Carousel,
   ProShopCards,
@@ -11,7 +10,7 @@ import {
 
 export async function getStaticProps() {
   return {
-    props: { background },
+    props: { page: 'home' },
   };
 }
 

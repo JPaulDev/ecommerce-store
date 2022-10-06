@@ -10,6 +10,12 @@ import {
 } from '../components/basket';
 import * as Styled from '../styles/basket';
 
+export async function getStaticProps() {
+  return {
+    props: { page: 'basket' },
+  };
+}
+
 export default function Basket() {
   const basket = useSelector(selectBasket);
   const isEmpty = basket.length <= 0;
