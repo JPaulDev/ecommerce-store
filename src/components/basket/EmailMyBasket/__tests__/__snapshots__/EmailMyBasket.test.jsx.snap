@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmailMyBasket component renders a widget that allows users to enter their email address 1`] = `
+<div
+  className="sc-5a0d9865-0 kEfspb"
+>
+  <h2
+    className="sc-5a0d9865-1 ixLccX"
+  >
+    Email my basket
+  </h2>
+  <form
+    action="https://pc-connect.co.uk/subscribe"
+    method="post"
+  >
+    <label
+      hidden={true}
+      htmlFor=":r0:-email"
+    >
+      Email
+    </label>
+    <input
+      autoComplete="email"
+      className="sc-5a0d9865-2 dJvgHH"
+      id=":r0:-email"
+      name="email"
+      onChange={[Function]}
+      placeholder="Email address"
+      required={true}
+      type="email"
+      value=""
+    />
+    <button
+      className="sc-5a0d9865-3 eSfolf"
+      type="submit"
+    >
+      Send
+    </button>
+    <div
+      className="sc-5a0d9865-4 egohsd"
+    >
+      <input
+        checked={false}
+        className="sc-5a0d9865-5 dxFPNl"
+        id=":r0:-checkbox"
+        name="subscribe"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        htmlFor=":r0:-checkbox"
+      >
+        Also send me the latest offers and tech info, you can unsubscribe at any time.
+      </label>
+    </div>
+    Read our
+    <a
+      className="sc-5a0d9865-6 gEDJtc"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      privacy policy
+    </a>
+  </form>
+</div>
+`;

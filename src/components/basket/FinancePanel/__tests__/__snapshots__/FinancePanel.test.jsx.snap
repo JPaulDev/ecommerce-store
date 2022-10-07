@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FinancePanel component renders a panel with finance information and relevant links 1`] = `
+[
+  <div
+    className="sc-cad3a378-0 eSLspp"
+  >
+    <img
+      alt="PayPal credit."
+      data-nimg="future"
+      decoding="async"
+      height={24}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={24}
+    />
+    <div>
+      <div
+        className="sc-cad3a378-1 hSHWKX"
+      >
+        Spread the cost for up to 48 months (9.9% p.a fixed) or 0% for 4 months.
+      </div>
+      <a
+        className="sc-cad3a378-2 kWtZGW"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height={20}
+          viewBox="0 0 512 512"
+          width={20}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-144c-17.7 0-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32z"
+          />
+        </svg>
+        More Info About PayPal Credit
+      </a>
+    </div>
+  </div>,
+  <div
+    className="sc-cad3a378-0 eSLspp"
+  >
+    <img
+      alt="Pay on finance."
+      data-nimg="future"
+      decoding="async"
+      height={24}
+      loading="lazy"
+      onError={[Function]}
+      onLoad={[Function]}
+      src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+      srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+      style={
+        {
+          "color": "transparent",
+        }
+      }
+      width={24}
+    />
+    <div>
+      <div
+        className="sc-cad3a378-1 hSHWKX"
+      >
+        Finance Classic Credit 48 Months 15.9%, Pay a deposit followed by 48 monthly payments.
+      </div>
+      <a
+        className="sc-cad3a378-2 kWtZGW"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        onTouchStart={[Function]}
+      >
+        <svg
+          fill="currentColor"
+          height={20}
+          viewBox="0 0 512 512"
+          width={20}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM216 336h24V272H216c-13.3 0-24-10.7-24-24s10.7-24 24-24h48c13.3 0 24 10.7 24 24v88h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H216c-13.3 0-24-10.7-24-24s10.7-24 24-24zm40-144c-17.7 0-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32s-14.3 32-32 32z"
+          />
+        </svg>
+        More Info About Finance Classic Credit
+      </a>
+    </div>
+  </div>,
+]
+`;

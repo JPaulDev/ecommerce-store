@@ -52,7 +52,9 @@ function BasketItem({ product = {} }) {
           >
             <Minus width={14} height={16} />
           </Styled.DecreaseButton>
-          <Styled.Quantity>{product.quantity}</Styled.Quantity>
+          <Styled.Quantity data-testid="quantity">
+            {product.quantity}
+          </Styled.Quantity>
           <Styled.IncreaseButton
             type="button"
             aria-label="Increase Quantity"
