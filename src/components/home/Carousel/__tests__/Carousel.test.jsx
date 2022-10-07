@@ -8,6 +8,7 @@ import userEvent from '@testing-library/user-event';
 import renderer from 'react-test-renderer';
 import Carousel from '../index';
 
+// Prevents errors caused by next image component
 jest.mock('next/future/image', () => 'img');
 jest.mock('../carousel-slides', () => [
   {
