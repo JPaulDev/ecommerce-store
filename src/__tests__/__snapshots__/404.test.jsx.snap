@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound component renders a 404 error page 1`] = `
+<div
+  className="sc-c15f3a29-0 cSEnwl"
+>
+  <img
+    alt=""
+    data-nimg="future"
+    decoding="async"
+    height={24}
+    onError={[Function]}
+    onLoad={[Function]}
+    src="/_next/image?url=%2Fimg.jpg&w=48&q=85"
+    srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=85 1x, /_next/image?url=%2Fimg.jpg&w=48&q=85 2x"
+    style={
+      {
+        "color": "transparent",
+      }
+    }
+    width={24}
+  />
+  <h1>
+    Not Found
+  </h1>
+  <p>
+    The requested page doesn‘t exist or you don‘t have access to it.
+  </p>
+</div>
+`;
