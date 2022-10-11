@@ -13,22 +13,28 @@ const dropdowns = {
       {
         category: 'Processors',
         links: [
-          { text: 'AMD', href: '' },
-          { text: 'Intel', href: '' },
+          { text: 'AMD', href: '/shop/components/processors-amd' },
+          { text: 'Intel', href: '/shop/components/processors-intel' },
         ],
       },
       {
         category: 'Memory',
         links: [
-          { text: 'DDR5', href: '' },
-          { text: 'DDR4', href: '' },
+          { text: 'DDR5', href: '/shop/components/memory-ddr5' },
+          { text: 'DDR4', href: '/shop/components/memory-ddr4' },
         ],
       },
       {
         category: 'Motherboards',
         links: [
-          { text: 'AMD Motherboards', href: '' },
-          { text: 'Intel Motherboards', href: '' },
+          {
+            text: 'AMD Motherboards',
+            href: '/shop/components/motherboards-amd',
+          },
+          {
+            text: 'Intel Motherboards',
+            href: '/shop/components/motherboards-intel',
+          },
         ],
       },
     ],
@@ -36,16 +42,28 @@ const dropdowns = {
       {
         category: 'Graphics Cards',
         links: [
-          { text: 'NVIDIA Graphics Cards', href: '' },
-          { text: 'AMD Graphics Cards', href: '' },
+          {
+            text: 'NVIDIA Graphics Cards',
+            href: '/shop/components/graphics-cards-nvidia',
+          },
+          {
+            text: 'AMD Graphics Cards',
+            href: '/shop/components/graphics-cards-amd',
+          },
         ],
       },
       {
         category: 'Power Supplies',
         links: [
-          { text: 'All PSUs', href: '' },
-          { text: 'Fully Wired', href: '' },
-          { text: 'Fully Modular', href: '' },
+          { text: 'All PSUs', href: '/shop/components/power-supplies-all' },
+          {
+            text: 'Fully Wired',
+            href: '/shop/components/power-supplies-wired',
+          },
+          {
+            text: 'Fully Modular',
+            href: '/shop/components/power-supplies-modular',
+          },
         ],
       },
     ],
@@ -53,14 +71,19 @@ const dropdowns = {
       {
         category: 'Cases',
         links: [
-          { text: 'Full Tower', href: '' },
-          { text: 'Midi Tower', href: '' },
-          { text: 'ITX', href: '' },
+          { text: 'Full Tower', href: '/shop/components/cases-full-tower' },
+          { text: 'Midi Tower', href: '/shop/components/cases-midi-tower' },
+          { text: 'ITX', href: '/shop/components/cases-itx' },
         ],
       },
       {
         category: 'Storage',
-        links: [{ text: 'Solid State Drives', href: '' }],
+        links: [
+          {
+            text: 'Solid State Drives',
+            href: '/shop/components/solid-state-drives',
+          },
+        ],
       },
     ],
   ],
