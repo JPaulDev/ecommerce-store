@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import ShopHeader from '../../../components/shop/ShopHeader';
 import * as Styled from '../../../styles/shop';
 
 export async function getStaticPaths() {
@@ -20,7 +21,9 @@ export default function Slug() {
       <Head>
         <title>Shop</title>
       </Head>
-      <Styled.Container>Shop</Styled.Container>
+      <Styled.Container>
+        <ShopHeader />
+      </Styled.Container>
     </>
   );
 }
