@@ -55,7 +55,6 @@ const dropdowns = {
       {
         category: 'Power Supplies',
         links: [
-          { text: 'All PSUs', href: '/shop/components/power-supplies-all' },
           {
             text: 'Fully Wired',
             href: '/shop/components/power-supplies-wired',

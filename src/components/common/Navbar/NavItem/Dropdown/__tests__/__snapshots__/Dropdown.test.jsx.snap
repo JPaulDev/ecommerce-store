@@ -299,14 +299,6 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/power-supplies-all"
-        >
-          All PSUs
-        </a>
-      </li>
-      <li>
-        <a
-          className="sc-761e3646-4 jELmN"
           href="/shop/components/power-supplies-wired"
         >
           Fully Wired

@@ -13,7 +13,6 @@ export async function getStaticPaths() {
       { params: { slug: 'motherboards-intel' } },
       { params: { slug: 'graphics-cards-nvidia' } },
       { params: { slug: 'graphics-cards-amd' } },
-      { params: { slug: 'power-supplies-all' } },
       { params: { slug: 'power-supplies-wired' } },
       { params: { slug: 'power-supplies-modular' } },
       { params: { slug: 'cases-full-tower' } },
