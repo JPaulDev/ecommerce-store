@@ -1,5 +1,5 @@
 import { motion, useCycle } from 'framer-motion';
-import Responsive from '../../common/Responsive';
+import ResponsiveBox from '../../common/ResponsiveBox';
 import { ChevronRight } from '../../icons';
 import * as Styled from './styles';
 
@@ -43,10 +43,10 @@ export default function ShopHeader() {
           <ChevronRight width={20} height={27} />
         </Styled.TopButton>
       </Styled.TopContainer>
-      <Responsive sx={{ display: { 0: 'none', 650: 'block' } }}>
+      <ResponsiveBox sx={{ display: { 0: 'none', 650: 'block' } }}>
         <Styled.Text>Placeholder</Styled.Text>
-      </Responsive>
-      <Responsive sx={{ display: { 0: 'block', 650: 'none' } }}>
+      </ResponsiveBox>
+      <ResponsiveBox sx={{ display: { 0: 'block', 650: 'none' } }}>
         <motion.div
           id="top-text"
           animate={isTopOpen ? 'open' : 'closed'}
@@ -54,7 +54,7 @@ export default function ShopHeader() {
         >
           <Styled.Text>Placeholder</Styled.Text>
         </motion.div>
-      </Responsive>
+      </ResponsiveBox>
       <Styled.BottomContainer>
         <Styled.SubHeading as="h2">Placeholder</Styled.SubHeading>
         <Styled.BottomButton
