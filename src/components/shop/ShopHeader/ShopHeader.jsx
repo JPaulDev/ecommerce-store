@@ -56,7 +56,7 @@ export default function ShopHeader() {
         </motion.div>
       </ResponsiveBox>
       <Styled.BottomContainer>
-        <Styled.SubHeading as="h2">Placeholder</Styled.SubHeading>
+        <Styled.Subheading as="h2">Placeholder</Styled.Subheading>
         <Styled.BottomButton
           type="button"
           isOpen={isBottomOpen}

@@ -48,7 +48,7 @@ export const BottomContainer = styled.div`
   }
 `;
 
-export const SubHeading = styled(Heading)`
+export const Subheading = styled(Heading)`
   display: inline-block;
   font-size: 1.44rem;
   font-weight: 600;
