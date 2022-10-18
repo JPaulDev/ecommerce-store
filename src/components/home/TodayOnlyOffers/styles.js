@@ -1,13 +1,19 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
-  margin-top: 8px;
+  display: grid;
+  gap: 10px;
 
-  @media screen and (max-width: 580px) {
-    flex-direction: column;
-    row-gap: 8px;
-    padding: 0 20px;
+  @media screen and (min-width: 570px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 840px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1110px) {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   @media screen and (max-width: 1310px) {

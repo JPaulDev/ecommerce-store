@@ -26,34 +26,30 @@ function ProductCard({ product = {} }, ref) {
   };
 
   return (
-    <Styled.Wrapper ref={ref} data-testid="product">
-      <Styled.Container>
-        <Styled.ImageWrapper>
-          <Image src={product.image} alt="" quality={85} />
-        </Styled.ImageWrapper>
-        <Styled.ProductName>{product.name}</Styled.ProductName>
-        <Styled.ProductDescription>
-          {product.description?.join(', ')}
-        </Styled.ProductDescription>
-        <Styled.PartNumberWrapper>
-          <PartNumber fontSize="0.75rem" sku={product.sku} />
-        </Styled.PartNumberWrapper>
-        <Price price={salePrice || price} fontSize="1.9rem" />
-        {salePrice && <PreviousPrice price={price} fontSize="0.93rem" />}
-        <QuantityDropdown
-          quantity={quantity}
-          isDisabled={isOutOfStock}
-          onChangeQuantity={handleChangeQuantity}
-        />
-        <StockIndicator stock={product.stock} marginTop="8px" />
-        <AddToBasket
-          isDisabled={isOutOfStock}
-          width="160px"
-          fontSize="0.75rem"
-          onAddProduct={handleAddProduct}
-        />
-      </Styled.Container>
-    </Styled.Wrapper>
+    <Styled.Container ref={ref}>
+      <Image src={product.image} alt="" quality={85} />
+      <Styled.ProductName>{product.name}</Styled.ProductName>
+      <Styled.ProductDescription>
+        {product.description?.join(', ')}
+      </Styled.ProductDescription>
+      <Styled.Wrapper>
+        <PartNumber fontSize="0.75rem" sku={product.sku} />
+      </Styled.Wrapper>
+      <Price price={salePrice || price} fontSize="1.9rem" />
+      {salePrice && <PreviousPrice price={price} fontSize="0.93rem" />}
+      <QuantityDropdown
+        quantity={quantity}
+        isDisabled={isOutOfStock}
+        onChangeQuantity={handleChangeQuantity}
+      />
+      <StockIndicator stock={product.stock} marginTop="8px" />
+      <AddToBasket
+        isDisabled={isOutOfStock}
+        width="180px"
+        fontSize="0.75rem"
+        onAddProduct={handleAddProduct}
+      />
+    </Styled.Container>
   );
 }
 

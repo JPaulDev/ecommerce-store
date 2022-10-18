@@ -1,48 +1,64 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div`
-  border: 1px solid var(--color-grey-9);
+const flexStyles = css`
+  align-items: center;
+  display: flex;
+  justify-content: center;
+`;
+
+const textStyles = css`
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
   overflow: hidden;
+  text-align: center;
 `;
 
 export const Container = styled.div`
-  align-items: center;
   background-color: white;
-  display: flex;
+  border: 1px solid var(--color-grey-9);
+  border-radius: 10px;
   flex-direction: column;
   height: 100%;
-  justify-content: center;
-  min-height: 510px;
-  min-width: 240px;
   padding: 20px;
-`;
+  ${flexStyles}
 
-export const ImageWrapper = styled.div`
   img {
-    display: block;
     height: auto;
     width: 150px;
+  }
+
+  @media screen and (min-width: 570px) {
+    min-height: 510px;
+  }
+
+  @media screen and (max-width: 1109.98px) {
+    :nth-child(4n) {
+      display: none;
+    }
   }
 `;
 
 export const ProductName = styled.p`
-  font-size: 0.94rem;
-  font-weight: 600;
+  -webkit-line-clamp: 2;
   margin: 5px 0 10px;
-  text-align: center;
+  ${textStyles}
+
+  @media screen and (min-width: 570px) {
+    margin: 5px 0 auto;
+  }
 `;
 
 export const ProductDescription = styled.p`
+  -webkit-line-clamp: 3;
   color: var(--color-grey-8);
   font-size: 0.88rem;
-  text-align: center;
+  ${textStyles}
 `;
 
-export const PartNumberWrapper = styled.div`
+export const Wrapper = styled.div`
   border-bottom: 2px solid #d2d6d6;
-  display: flex;
-  justify-content: center;
   margin: 5px 0;
-  padding-bottom: 13px;
+  padding-bottom: 10px;
   width: 100%;
+  ${flexStyles}
 `;
