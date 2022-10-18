@@ -47,20 +47,22 @@ function BasketItem({ product = {} }) {
         <Styled.QuantitySelector>
           <Styled.DecreaseButton
             type="button"
+            title="Decrease Quantity"
             aria-label="Decrease Quantity"
             onClick={handleDecrementQuantity}
           >
-            <Minus width={14} height={16} />
+            <Minus width={15} height={17} />
           </Styled.DecreaseButton>
           <Styled.Quantity data-testid="quantity">
             {product.quantity}
           </Styled.Quantity>
           <Styled.IncreaseButton
             type="button"
+            title="Increase Quantity"
             aria-label="Increase Quantity"
             onClick={handleIncrementQuantity}
           >
-            <Plus width={14} height={16} />
+            <Plus width={15} height={17} />
           </Styled.IncreaseButton>
         </Styled.QuantitySelector>
       </div>

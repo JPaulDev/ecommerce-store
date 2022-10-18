@@ -47,22 +47,28 @@ export const RemoveProduct = styled.button`
 
 export const QuantitySelector = styled.div`
   background-color: var(--color-grey-6);
+  border-radius: 5px;
   display: inline-flex;
+  justify-content: space-between;
   margin-top: 10px;
-  padding: 5px;
+  min-width: 105px;
+  padding: 6px;
 `;
 
 export const IncreaseButton = styled.button`
   background-image: linear-gradient(to top, #3b7739, #55a952);
+  border-radius: 4px;
+  box-shadow: var(--shadow-button);
   color: white;
   cursor: pointer;
   display: grid;
-  height: 22px;
+  height: 25px;
   place-items: center;
-  width: 22px;
+  width: 25px;
 
   &:hover {
     background-image: linear-gradient(to top, #326830, #4a9b47);
+    box-shadow: var(--shadow-button-hover);
   }
 `;
 
@@ -75,9 +81,11 @@ export const DecreaseButton = styled(IncreaseButton)`
 `;
 
 export const Quantity = styled.span`
+  align-items: center;
   color: #0c9444;
+  display: flex;
   font-weight: 600;
+  justify-content: center;
   min-width: 35px;
   padding: 0 5px;
-  text-align: center;
 `;

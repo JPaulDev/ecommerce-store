@@ -2,7 +2,7 @@
 
 exports[`BasketItem component renders a product card with an image and all product information 1`] = `
 <li
-  className="sc-edf40742-0 fNgFFL"
+  className="sc-13832a0-0 AhvBT"
 >
   <img
     alt=""
@@ -16,14 +16,14 @@ exports[`BasketItem component renders a product card with an image and all produ
       CPU-INT-10400F
     </span>
     <p
-      className="sc-edf40742-1 bFGElh"
+      className="sc-13832a0-1 hiFpEt"
     >
       Intel Core i5 10400F
       , 
       6 Cores, 12 Threads, S1200 Comet Lake, 2.9GHz, 4.3GHz Turbo, 12MB Cache
     </p>
     <div
-      className="sc-edf40742-2 UpoxW"
+      className="sc-13832a0-2 tqfkm"
     >
       <span
         className="sc-dded47fe-0 hFABLP"
@@ -41,7 +41,7 @@ exports[`BasketItem component renders a product card with an image and all produ
         </span>
       </span>
       <button
-        className="sc-edf40742-3 hFBGTd"
+        className="sc-13832a0-3 kcYllZ"
         onClick={[Function]}
         type="button"
       >
@@ -91,19 +91,20 @@ exports[`BasketItem component renders a product card with an image and all produ
       In Stock
     </div>
     <div
-      className="sc-edf40742-4 jBwGCM"
+      className="sc-13832a0-4 esMEko"
     >
       <button
         aria-label="Decrease Quantity"
-        className="sc-edf40742-5 sc-edf40742-6 bdSPaZ drBBIW"
+        className="sc-13832a0-5 sc-13832a0-6 gGkkzk cntabC"
         onClick={[Function]}
+        title="Decrease Quantity"
         type="button"
       >
         <svg
           fill="currentColor"
-          height={16}
+          height={17}
           viewBox="0 0 448 512"
-          width={14}
+          width={15}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -112,22 +113,23 @@ exports[`BasketItem component renders a product card with an image and all produ
         </svg>
       </button>
       <span
-        className="sc-edf40742-7 iWgndZ"
+        className="sc-13832a0-7 hEMsnS"
         data-testid="quantity"
       >
         1
       </span>
       <button
         aria-label="Increase Quantity"
-        className="sc-edf40742-5 bdSPaZ"
+        className="sc-13832a0-5 gGkkzk"
         onClick={[Function]}
+        title="Increase Quantity"
         type="button"
       >
         <svg
           fill="currentColor"
-          height={16}
+          height={17}
           viewBox="0 0 448 512"
-          width={14}
+          width={15}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
