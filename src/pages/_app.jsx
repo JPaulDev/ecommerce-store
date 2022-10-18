@@ -20,6 +20,10 @@ const GlobalStyles = createGlobalStyle`
     --color-grey-12: #c7c7c7;
     --color-blue-1: #3d70b7;
     --color-blue-2: #1766a6;
+    --shadow-button: rgb(0 0 0 / 20%) 0 3px 1px -2px,
+      rgb(0 0 0 / 14%) 0 2px 2px 0, rgb(0 0 0 / 12%) 0 1px 5px 0;
+    --shadow-button-hover: rgb(0 0 0 / 20%) 0px 2px 4px -1px,
+      rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
   }
 
   * {

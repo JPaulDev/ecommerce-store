@@ -23,7 +23,7 @@ export default function CheckoutPanel() {
         </Styled.Container>
         <Styled.Container>
           <span>
-            <Styled.BoldText>Total</Styled.BoldText>
+            <strong>Total</strong>
             (including VAT)
           </span>
           <Price price={price} fontSize="1.6rem" fontWeight={500} />
@@ -56,13 +56,11 @@ export default function CheckoutPanel() {
         <Styled.Text>Two easy ways to pay</Styled.Text>
         <Link href="https://www.amazon.co.uk" passHref>
           <a>
-            <Styled.Wrapper>
-              <Image
-                src={amazonPay}
-                title="Pay with Amazon Pay"
-                alt="Pay with Amazon Pay."
-              />
-            </Styled.Wrapper>
+            <Image
+              src={amazonPay}
+              title="Pay with Amazon Pay"
+              alt="Pay with Amazon Pay."
+            />
           </a>
         </Link>
       </Styled.BottomContainer>

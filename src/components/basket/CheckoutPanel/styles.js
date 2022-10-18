@@ -5,6 +5,8 @@ export const TopContainer = styled.div`
   border-left: 1px solid var(--color-grey-9);
   border-right: 1px solid var(--color-grey-9);
   border-top: 1px solid var(--color-grey-9);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   padding: 20px 30px;
 `;
 
@@ -28,11 +30,11 @@ export const Container = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 5px 0;
-`;
 
-export const BoldText = styled.strong`
-  font-size: 1.25rem;
-  margin-right: 5px;
+  strong {
+    font-size: 1.25rem;
+    margin-right: 5px;
+  }
 `;
 
 export const Text = styled.span`
@@ -48,7 +50,8 @@ export const InnerContainer = styled.div`
 export const CheckoutLink = styled.a`
   align-items: center;
   background-image: linear-gradient(to top, #009245, #02ab52);
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: var(--shadow-button);
   color: white;
   column-gap: 10px;
   display: flex;
@@ -62,6 +65,7 @@ export const CheckoutLink = styled.a`
 
   &:hover {
     background-image: linear-gradient(to top, #008631, #00a13f);
+    box-shadow: var(--shadow-button-hover);
   }
 `;
 
@@ -83,11 +87,17 @@ export const BottomContainer = styled.div`
   align-items: center;
   background-color: #cadfce;
   border-bottom: 1px solid var(--color-grey-9);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   border-left: 1px solid var(--color-grey-9);
   border-right: 1px solid var(--color-grey-9);
   display: flex;
   flex-direction: column;
   padding: 20px 30px 30px;
+
+  img {
+    margin-top: 5px;
+  }
 `;
 
 export const PaypalLink = styled.a`
@@ -100,8 +110,4 @@ export const PaypalLink = styled.a`
   &:hover {
     box-shadow: inset 0 0 100px 100px rgb(0 0 0 / 5%);
   }
-`;
-
-export const Wrapper = styled.div`
-  margin-top: 5px;
 `;

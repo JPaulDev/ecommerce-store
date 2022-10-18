@@ -3,18 +3,18 @@
 exports[`CheckoutPanel component renders a checkout panel with a checkout button and the basket total 1`] = `
 [
   <div
-    className="sc-2486dd95-0 kJqPxv"
+    className="sc-bcd69530-0 fcfoHE"
   >
     <h2
-      className="sc-2486dd95-1 OvsKV"
+      className="sc-bcd69530-1 gCqtZB"
     >
       Basket Summary
     </h2>
     <div
-      className="sc-2486dd95-2 kjrObz"
+      className="sc-bcd69530-2 llXxMv"
     >
       <span
-        className="sc-2486dd95-4 lhlAlg"
+        className="sc-bcd69530-3 hAzHWT"
       >
         Delivery to UK Mainland
       </span>
@@ -35,12 +35,10 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
       </span>
     </div>
     <div
-      className="sc-2486dd95-2 kjrObz"
+      className="sc-bcd69530-2 llXxMv"
     >
       <span>
-        <strong
-          className="sc-2486dd95-3 iTxqoe"
-        >
+        <strong>
           Total
         </strong>
         (including VAT)
@@ -62,15 +60,15 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
       </span>
     </div>
     <span
-      className="sc-2486dd95-4 jSkmIj"
+      className="sc-bcd69530-3 iLFZUg"
     >
       Finance options available at checkout
     </span>
     <div
-      className="sc-2486dd95-5 ldgtiF"
+      className="sc-bcd69530-4 jjERXY"
     >
       <a
-        className="sc-2486dd95-6 eHlbbX"
+        className="sc-bcd69530-5 jhLjbd"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -90,7 +88,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
         </svg>
       </a>
       <a
-        className="sc-2486dd95-7 gnYUzC"
+        className="sc-bcd69530-6 eQtxKP"
         href="/account"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -101,16 +99,16 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
     </div>
   </div>,
   <div
-    className="sc-2486dd95-8 fVuzzT"
+    className="sc-bcd69530-7 cagxRW"
   >
     <span
-      className="sc-2486dd95-4 jSkmIj"
+      className="sc-bcd69530-3 iLFZUg"
     >
       Alternatively
     </span>
     <a
       aria-label="Pay with PayPal"
-      className="sc-2486dd95-9 gcKTFa"
+      className="sc-bcd69530-8 ibUCxz"
       href="https://www.paypal.co.uk"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -150,7 +148,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
       </svg>
     </a>
     <span
-      className="sc-2486dd95-4 jSkmIj"
+      className="sc-bcd69530-3 iLFZUg"
     >
       Two easy ways to pay
     </span>
@@ -160,28 +158,24 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
       onMouseEnter={[Function]}
       onTouchStart={[Function]}
     >
-      <div
-        className="sc-2486dd95-10 iFrFDd"
-      >
-        <img
-          alt="Pay with Amazon Pay."
-          data-nimg="future"
-          decoding="async"
-          height={24}
-          loading="lazy"
-          onError={[Function]}
-          onLoad={[Function]}
-          src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
-          srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
-          style={
-            {
-              "color": "transparent",
-            }
+      <img
+        alt="Pay with Amazon Pay."
+        data-nimg="future"
+        decoding="async"
+        height={24}
+        loading="lazy"
+        onError={[Function]}
+        onLoad={[Function]}
+        src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+        srcSet="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+        style={
+          {
+            "color": "transparent",
           }
-          title="Pay with Amazon Pay"
-          width={24}
-        />
-      </div>
+        }
+        title="Pay with Amazon Pay"
+        width={24}
+      />
     </a>
   </div>,
 ]

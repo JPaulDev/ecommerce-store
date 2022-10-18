@@ -2,10 +2,10 @@
 
 exports[`EmailMyBasket component renders a widget that allows users to enter their email address 1`] = `
 <div
-  className="sc-5a0d9865-0 kEfspb"
+  className="sc-5fef8f85-0 fBlDyN"
 >
   <h2
-    className="sc-5a0d9865-1 ixLccX"
+    className="sc-5fef8f85-1 bvkqoa"
   >
     Email my basket
   </h2>
@@ -21,7 +21,7 @@ exports[`EmailMyBasket component renders a widget that allows users to enter the
     </label>
     <input
       autoComplete="email"
-      className="sc-5a0d9865-2 dJvgHH"
+      className="sc-5fef8f85-2 hXQaxO"
       id=":r0:-email"
       name="email"
       onChange={[Function]}
@@ -31,17 +31,17 @@ exports[`EmailMyBasket component renders a widget that allows users to enter the
       value=""
     />
     <button
-      className="sc-5a0d9865-3 eSfolf"
+      className="sc-5fef8f85-3 gMZuR"
       type="submit"
     >
       Send
     </button>
     <div
-      className="sc-5a0d9865-4 egohsd"
+      className="sc-5fef8f85-4 gercnw"
     >
       <input
         checked={false}
-        className="sc-5a0d9865-5 dxFPNl"
+        className="sc-5fef8f85-5 flElrc"
         id=":r0:-checkbox"
         name="subscribe"
         onChange={[Function]}
@@ -55,7 +55,7 @@ exports[`EmailMyBasket component renders a widget that allows users to enter the
     </div>
     Read our
     <a
-      className="sc-5a0d9865-6 gEDJtc"
+      className="sc-5fef8f85-6 fcIyYN"
       href="/"
       onClick={[Function]}
       onMouseEnter={[Function]}

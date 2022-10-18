@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background-color: var(--color-grey-6);
   border: 1px solid var(--color-grey-9);
+  border-radius: 10px;
   font-size: 0.75rem;
   margin-top: 25px;
   padding: 20px 30px 30px;
@@ -33,6 +34,7 @@ export const Button = styled.button`
   background: linear-gradient(to top, #1463a2, #3a7fbf);
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
+  box-shadow: var(--shadow-button);
   color: white;
   cursor: pointer;
   font-weight: 700;
@@ -42,6 +44,7 @@ export const Button = styled.button`
 
   &:hover {
     background: linear-gradient(to top, #105891, #1463a2);
+    box-shadow: var(--shadow-button-hover);
   }
 `;
 
