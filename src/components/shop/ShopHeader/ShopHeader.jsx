@@ -24,14 +24,19 @@ const motionProps = {
   },
 };
 
-export default function ShopHeader() {
+export default function ShopHeader({
+  heading,
+  description,
+  latestArrivals,
+  latestArrivalsDescription,
+}) {
   const [isTopOpen, toggleTopOpen] = useCycle(false, true);
   const [isBottomOpen, toggleBottomOpen] = useCycle(false, true);
 
   return (
     <>
       <Styled.TopContainer>
-        <Styled.Heading>Placeholder</Styled.Heading>
+        <Styled.Heading>{heading}</Styled.Heading>
         <Styled.TopButton
           type="button"
           isOpen={isTopOpen}
@@ -44,7 +49,7 @@ export default function ShopHeader() {
         </Styled.TopButton>
       </Styled.TopContainer>
       <ResponsiveBox sx={{ display: { 0: 'none', 650: 'block' } }}>
-        <Styled.Text>Placeholder</Styled.Text>
+        <Styled.Text>{description}</Styled.Text>
       </ResponsiveBox>
       <ResponsiveBox sx={{ display: { 0: 'block', 650: 'none' } }}>
         <motion.div
@@ -52,11 +57,13 @@ export default function ShopHeader() {
           animate={isTopOpen ? 'open' : 'closed'}
           {...motionProps}
         >
-          <Styled.Text>Placeholder</Styled.Text>
+          <Styled.Text>{description}</Styled.Text>
         </motion.div>
       </ResponsiveBox>
       <Styled.BottomContainer>
-        <Styled.Subheading as="h2">Placeholder</Styled.Subheading>
+        <Styled.Subheading as="h2">
+          Latest Arrivals - {latestArrivals}
+        </Styled.Subheading>
         <Styled.BottomButton
           type="button"
           isOpen={isBottomOpen}
@@ -73,7 +80,7 @@ export default function ShopHeader() {
         animate={isBottomOpen ? 'open' : 'closed'}
         {...motionProps}
       >
-        <Styled.Text>Placeholder</Styled.Text>
+        <Styled.Text>{latestArrivalsDescription}</Styled.Text>
       </motion.div>
     </>
   );

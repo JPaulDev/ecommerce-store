@@ -1,44 +1,47 @@
 import Head from 'next/head';
+import prisma from '../../lib/prisma';
 import ShopHeader from '../../components/shop/ShopHeader';
 import * as Styled from '../../styles/shop';
 
 export async function getStaticPaths() {
+  const categories = await prisma.category.findMany();
+  const paths = categories.map((category) => ({
+    params: {
+      slug: category.slug.split('/'),
+    },
+  }));
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
+  const data = await prisma.category.findUnique({
+    where: {
+      slug: params.slug.join('/'),
+    },
+    include: {
+      products: true,
+    },
+  });
+
   return {
-    paths: [
-      { params: { slug: ['components', 'processors', 'amd'] } },
-      { params: { slug: ['components', 'processors', 'intel'] } },
-      { params: { slug: ['components', 'memory', 'ddr5'] } },
-      { params: { slug: ['components', 'memory', 'ddr4'] } },
-      { params: { slug: ['components', 'motherboards', 'amd'] } },
-      { params: { slug: ['components', 'motherboards', 'intel'] } },
-      { params: { slug: ['components', 'graphics-cards', 'nvidia'] } },
-      { params: { slug: ['components', 'graphics-cards', 'amd'] } },
-      { params: { slug: ['components', 'graphics-cards'] } },
-      { params: { slug: ['components', 'power-supplies', 'wired'] } },
-      { params: { slug: ['components', 'power-supplies', 'modular'] } },
-      { params: { slug: ['components', 'cases', 'full-tower'] } },
-      { params: { slug: ['components', 'cases', 'midi-tower'] } },
-      { params: { slug: ['components', 'cases', 'itx'] } },
-      { params: { slug: ['components', 'storage', 'solid-state-drives'] } },
-    ],
-    fallback: false,
+    props: { data },
   };
 }
 
-export async function getStaticProps() {
-  return {
-    props: { products: [] },
-  };
-}
-
-export default function Slug() {
+export default function Slug({ data }) {
   return (
     <>
       <Head>
-        <title>Shop</title>
+        <title>{data.title}</title>
       </Head>
       <Styled.Container>
-        <ShopHeader />
+        <ShopHeader
+          heading={data.heading}
+          description={data.description}
+          latestArrivals={data.latestArrivals}
+          latestArrivalsDescription={data.latestArrivalsDescription}
+        />
       </Styled.Container>
     </>
   );
