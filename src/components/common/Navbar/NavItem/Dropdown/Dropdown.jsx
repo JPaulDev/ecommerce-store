@@ -13,15 +13,15 @@ const dropdowns = {
       {
         category: 'Processors',
         links: [
-          { text: 'AMD', href: '/shop/components/processors-amd' },
-          { text: 'Intel', href: '/shop/components/processors-intel' },
+          { text: 'AMD', href: '/shop/components/processors/amd' },
+          { text: 'Intel', href: '/shop/components/processors/intel' },
         ],
       },
       {
         category: 'Memory',
         links: [
-          { text: 'DDR5', href: '/shop/components/memory-ddr5' },
-          { text: 'DDR4', href: '/shop/components/memory-ddr4' },
+          { text: 'DDR5', href: '/shop/components/memory/ddr5' },
+          { text: 'DDR4', href: '/shop/components/memory/ddr4' },
         ],
       },
       {
@@ -29,11 +29,11 @@ const dropdowns = {
         links: [
           {
             text: 'AMD Motherboards',
-            href: '/shop/components/motherboards-amd',
+            href: '/shop/components/motherboards/amd',
           },
           {
             text: 'Intel Motherboards',
-            href: '/shop/components/motherboards-intel',
+            href: '/shop/components/motherboards/intel',
           },
         ],
       },
@@ -44,11 +44,11 @@ const dropdowns = {
         links: [
           {
             text: 'NVIDIA Graphics Cards',
-            href: '/shop/components/graphics-cards-nvidia',
+            href: '/shop/components/graphics-cards/nvidia',
           },
           {
             text: 'AMD Graphics Cards',
-            href: '/shop/components/graphics-cards-amd',
+            href: '/shop/components/graphics-cards/amd',
           },
         ],
       },
@@ -57,11 +57,11 @@ const dropdowns = {
         links: [
           {
             text: 'Fully Wired',
-            href: '/shop/components/power-supplies-wired',
+            href: '/shop/components/power-supplies/wired',
           },
           {
             text: 'Fully Modular',
-            href: '/shop/components/power-supplies-modular',
+            href: '/shop/components/power-supplies/modular',
           },
         ],
       },
@@ -70,9 +70,9 @@ const dropdowns = {
       {
         category: 'Cases',
         links: [
-          { text: 'Full Tower', href: '/shop/components/cases-full-tower' },
-          { text: 'Midi Tower', href: '/shop/components/cases-midi-tower' },
-          { text: 'ITX', href: '/shop/components/cases-itx' },
+          { text: 'Full Tower', href: '/shop/components/cases/full-tower' },
+          { text: 'Midi Tower', href: '/shop/components/cases/midi-tower' },
+          { text: 'ITX', href: '/shop/components/cases/itx' },
         ],
       },
       {
@@ -80,7 +80,7 @@ const dropdowns = {
         links: [
           {
             text: 'Solid State Drives',
-            href: '/shop/components/solid-state-drives',
+            href: '/shop/components/storage/solid-state-drives',
           },
         ],
       },

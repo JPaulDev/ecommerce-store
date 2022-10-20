@@ -195,7 +195,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/processors-amd"
+          href="/shop/components/processors/amd"
         >
           AMD
         </a>
@@ -203,7 +203,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/processors-intel"
+          href="/shop/components/processors/intel"
         >
           Intel
         </a>
@@ -220,7 +220,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/memory-ddr5"
+          href="/shop/components/memory/ddr5"
         >
           DDR5
         </a>
@@ -228,7 +228,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/memory-ddr4"
+          href="/shop/components/memory/ddr4"
         >
           DDR4
         </a>
@@ -245,7 +245,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/motherboards-amd"
+          href="/shop/components/motherboards/amd"
         >
           AMD Motherboards
         </a>
@@ -253,7 +253,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/motherboards-intel"
+          href="/shop/components/motherboards/intel"
         >
           Intel Motherboards
         </a>
@@ -274,7 +274,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/graphics-cards-nvidia"
+          href="/shop/components/graphics-cards/nvidia"
         >
           NVIDIA Graphics Cards
         </a>
@@ -282,7 +282,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/graphics-cards-amd"
+          href="/shop/components/graphics-cards/amd"
         >
           AMD Graphics Cards
         </a>
@@ -299,7 +299,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/power-supplies-wired"
+          href="/shop/components/power-supplies/wired"
         >
           Fully Wired
         </a>
@@ -307,7 +307,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/power-supplies-modular"
+          href="/shop/components/power-supplies/modular"
         >
           Fully Modular
         </a>
@@ -328,7 +328,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/cases-full-tower"
+          href="/shop/components/cases/full-tower"
         >
           Full Tower
         </a>
@@ -336,7 +336,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/cases-midi-tower"
+          href="/shop/components/cases/midi-tower"
         >
           Midi Tower
         </a>
@@ -344,7 +344,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/cases-itx"
+          href="/shop/components/cases/itx"
         >
           ITX
         </a>
@@ -361,7 +361,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       <li>
         <a
           className="sc-761e3646-4 jELmN"
-          href="/shop/components/solid-state-drives"
+          href="/shop/components/storage/solid-state-drives"
         >
           Solid State Drives
         </a>
