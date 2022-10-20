@@ -133,7 +133,7 @@ exports[`ProductCard component renders a product card with an image and all prod
     In Stock
   </div>
   <button
-    className="sc-9dd3e78d-0 heWMIi"
+    className="sc-c66e6586-0 dInGqR"
     disabled={false}
     onClick={[Function]}
     type="button"
