@@ -24,7 +24,7 @@ exports[`EmptyBasket component renders message that displays when the users bask
     Your basket is empty, please add some products.
   </p>
   <a
-    className="sc-92b13a9b-0 lbDDgw"
+    className="sc-fe62e3ad-0 jctuaY"
     href="/"
     onClick={[Function]}
     onMouseEnter={[Function]}

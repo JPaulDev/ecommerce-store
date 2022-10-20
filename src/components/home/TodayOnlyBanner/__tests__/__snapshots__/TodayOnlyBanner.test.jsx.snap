@@ -18,7 +18,7 @@ exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
     Fantastic offers, updated every weekday
   </h3>
   <a
-    className="sc-92b13a9b-0 jmgMGC"
+    className="sc-fe62e3ad-0 hthkZu"
     href="/"
     onClick={[Function]}
     onMouseEnter={[Function]}

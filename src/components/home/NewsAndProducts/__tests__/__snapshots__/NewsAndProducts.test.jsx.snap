@@ -255,7 +255,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
           See our most popular selling products.
         </p>
         <a
-          className="sc-92b13a9b-0 lbDDgw"
+          className="sc-fe62e3ad-0 jctuaY"
           href="/"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -297,7 +297,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
           When the competition wants to see what‘s new they check our website!
         </p>
         <a
-          className="sc-92b13a9b-0 lbDDgw"
+          className="sc-fe62e3ad-0 jctuaY"
           href="/"
           onClick={[Function]}
           onMouseEnter={[Function]}
