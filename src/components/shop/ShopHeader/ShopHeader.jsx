@@ -1,5 +1,5 @@
 import { motion, useCycle } from 'framer-motion';
-import ResponsiveBox from '../../common/ResponsiveBox';
+import { ResponsiveBox } from '../../common';
 import { ChevronRight } from '../../icons';
 import * as Styled from './styles';
 
