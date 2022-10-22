@@ -52,6 +52,7 @@ export const ProductDescription = styled.p`
   -webkit-line-clamp: 3;
   color: var(--color-grey-8);
   font-size: 0.88rem;
+  margin-top: 10px;
   ${textStyles}
 `;
 

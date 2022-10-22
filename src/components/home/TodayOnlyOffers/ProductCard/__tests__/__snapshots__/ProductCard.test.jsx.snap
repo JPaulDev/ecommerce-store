@@ -2,7 +2,7 @@
 
 exports[`ProductCard component should render a product card with with all the product information 1`] = `
 <div
-  className="sc-9945102f-0 bmrLZD"
+  className="sc-a290fc00-0 edZJjE"
 >
   <img
     alt=""
@@ -12,17 +12,17 @@ exports[`ProductCard component should render a product card with with all the pr
     width={200}
   />
   <p
-    className="sc-9945102f-1 hOjJoQ"
+    className="sc-a290fc00-1 gPQSzf"
   >
     ASUS ROG Strix GeForce RTX 3080 V2 OC
   </p>
   <p
-    className="sc-9945102f-2 fcjmIl"
+    className="sc-a290fc00-2 kNhnAk"
   >
     1440MHz, 1905MHz Boost, 8704 CUDA Cores, 10GB GDDR6X
   </p>
   <div
-    className="sc-9945102f-3 jAoQgD"
+    className="sc-a290fc00-3 hyaRYg"
   >
     <span
       className="sc-bd55615-0 cxPlFY"
