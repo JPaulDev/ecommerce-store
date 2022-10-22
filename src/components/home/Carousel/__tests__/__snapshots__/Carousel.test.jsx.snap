@@ -2,14 +2,14 @@
 
 exports[`Carousel component renders a carousel and all of its navigation buttons 1`] = `
 <section
-  className="sc-9cd0cc62-0 ccasvf"
+  className="sc-4189dd78-0 bOGdRC"
 >
   <ul
-    className="sc-15ca5ccc-0 kWSxnT"
+    className="sc-4189dd78-1 cLJozh"
   >
     <li>
       <button
-        className="sc-15ca5ccc-1 cmEtXX"
+        className="sc-4189dd78-2 kmTbjj"
         onClick={[Function]}
         type="button"
       >
@@ -18,7 +18,7 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
     </li>
     <li>
       <button
-        className="sc-15ca5ccc-1 fNjzGC"
+        className="sc-4189dd78-2 frVcQS"
         onClick={[Function]}
         type="button"
       >
@@ -27,7 +27,7 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
     </li>
     <li>
       <button
-        className="sc-15ca5ccc-1 fNjzGC"
+        className="sc-4189dd78-2 frVcQS"
         onClick={[Function]}
         type="button"
       >
@@ -36,40 +36,12 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
     </li>
   </ul>
   <ul
-    className="sc-e55bb776-0 idkEgk"
-  >
-    <li>
-      <button
-        aria-label="Slide 1 of 3"
-        className="sc-e55bb776-1 itfoZw"
-        onClick={[Function]}
-        type="button"
-      />
-    </li>
-    <li>
-      <button
-        aria-label="Slide 2 of 3"
-        className="sc-e55bb776-1 ksVASF"
-        onClick={[Function]}
-        type="button"
-      />
-    </li>
-    <li>
-      <button
-        aria-label="Slide 3 of 3"
-        className="sc-e55bb776-1 ksVASF"
-        onClick={[Function]}
-        type="button"
-      />
-    </li>
-  </ul>
-  <ul
-    className="sc-4d662f42-0 dGkEYw"
+    className="sc-4189dd78-5 kBLtjU"
   >
     <li>
       <button
         aria-label="Previous Slide"
-        className="sc-4d662f42-1 kmwcLY"
+        className="sc-4189dd78-6 kACgsW"
         onClick={[Function]}
         title="Previous"
         type="button"
@@ -90,7 +62,7 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
     <li>
       <button
         aria-label="Next Slide"
-        className="sc-4d662f42-1 kmwcLY"
+        className="sc-4189dd78-6 kACgsW"
         onClick={[Function]}
         title="Next"
         type="button"
@@ -157,5 +129,33 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
       />
     </div>
   </div>
+  <ul
+    className="sc-4189dd78-3 jmACwb"
+  >
+    <li>
+      <button
+        aria-label="Slide 1 of 3"
+        className="sc-4189dd78-4 hZA-Dgh"
+        onClick={[Function]}
+        type="button"
+      />
+    </li>
+    <li>
+      <button
+        aria-label="Slide 2 of 3"
+        className="sc-4189dd78-4 dBXqUA"
+        onClick={[Function]}
+        type="button"
+      />
+    </li>
+    <li>
+      <button
+        aria-label="Slide 3 of 3"
+        className="sc-4189dd78-4 dBXqUA"
+        onClick={[Function]}
+        type="button"
+      />
+    </li>
+  </ul>
 </section>
 `;

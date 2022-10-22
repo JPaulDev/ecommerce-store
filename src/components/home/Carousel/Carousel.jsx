@@ -1,25 +1,29 @@
 import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from '../../icons';
 import slides from './carousel-slides';
 import useCarousel from './useCarousel';
-import NavTop from './NavTop';
-import NavBottom from './NavBottom';
-import NavArrows from './NavArrows';
 import Slide from './Slide';
 import * as Styled from './styles';
 
-const MotionSlide = motion(Slide);
-
 // Direction 1 moves slides in from the right, -1 moves slides in from the left
-const variants = {
-  enter: (direction) => ({
-    x: direction > 0 ? '100%' : '-100%',
-  }),
-  center: {
-    x: 0,
+
+const MotionSlide = motion(Slide);
+const motionProps = {
+  variants: {
+    enter: (direction) => ({
+      x: direction > 0 ? '100%' : '-100%',
+    }),
+    center: {
+      x: 0,
+    },
+    exit: (direction) => ({
+      x: direction < 0 ? '100%' : '-100%',
+    }),
   },
-  exit: (direction) => ({
-    x: direction < 0 ? '100%' : '-100%',
-  }),
+  transition: {
+    ease: 'easeInOut',
+    duration: 1,
+  },
 };
 
 export default function Carousel() {
@@ -31,30 +35,65 @@ export default function Carousel() {
 
   return (
     <Styled.Section>
-      <NavTop
-        slides={slides}
-        slideIndex={slideIndex}
-        onChangeSlide={handleChangeSlide}
-      />
-      <NavBottom
-        length={slides.length}
-        slideIndex={slideIndex}
-        onChangeSlide={handleChangeSlide}
-      />
-      <NavArrows onChangeSlide={handleChangeSlide} />
+      <Styled.NavigationTop>
+        {slides.map((slide, index) => (
+          <li key={slide.topNavText}>
+            <Styled.ButtonTop
+              type="button"
+              isActive={index === slideIndex}
+              onClick={() => handleChangeSlide('JUMP', index)}
+            >
+              {slide.topNavText}
+            </Styled.ButtonTop>
+          </li>
+        ))}
+      </Styled.NavigationTop>
+      <Styled.Navigation>
+        <li>
+          <Styled.NavigationArrow
+            type="button"
+            title="Previous"
+            aria-label="Previous Slide"
+            onClick={() => handleChangeSlide('PREV')}
+          >
+            <ChevronLeft width={14} height={19} />
+          </Styled.NavigationArrow>
+        </li>
+        <li>
+          <Styled.NavigationArrow
+            type="button"
+            title="Next"
+            aria-label="Next Slide"
+            onClick={() => handleChangeSlide('NEXT')}
+          >
+            <ChevronRight width={14} height={19} />
+          </Styled.NavigationArrow>
+        </li>
+      </Styled.Navigation>
       <AnimatePresence initial={false} custom={direction}>
         <MotionSlide
           key={slideIndex}
           custom={direction}
-          variants={variants}
           initial="enter"
           animate="center"
           exit="exit"
-          transition={{ ease: 'easeInOut', duration: 1 }}
           slideIndex={slideIndex}
           slide={slides[slideIndex]}
+          {...motionProps}
         />
       </AnimatePresence>
+      <Styled.NavigationBottom>
+        {Array.from({ length: slides.length }).map((_, index) => (
+          <li key={index}>
+            <Styled.ButtonBottom
+              type="button"
+              isActive={index === slideIndex}
+              aria-label={`Slide ${index + 1} of ${slides.length}`}
+              onClick={() => handleChangeSlide('JUMP', index)}
+            />
+          </li>
+        ))}
+      </Styled.NavigationBottom>
     </Styled.Section>
   );
 }
