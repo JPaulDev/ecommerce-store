@@ -1,28 +1,14 @@
-import { useState, useRef, useId, useEffect } from 'react';
+import { useState, useId } from 'react';
 import { Search } from '../../../icons';
 import * as Styled from './styles';
 
 export default function SearchInput() {
   const [query, setQuery] = useState('');
   const [isFocused, setIsFocused] = useState(false);
-  const ref = useRef(null);
   const id = useId();
 
-  const handleChange = (e) => setQuery(e.target.value);
-
-  useEffect(() => {
-    const element = ref.current;
-    const handleFocus = () => setIsFocused(true);
-    const handleBlur = () => setIsFocused(false);
-
-    element.addEventListener('focus', handleFocus);
-    element.addEventListener('blur', handleBlur);
-
-    return () => {
-      element.removeEventListener('focus', handleFocus);
-      element.removeEventListener('blur', handleBlur);
-    };
-  }, []);
+  const handleChangeSearchQuery = (e) => setQuery(e.target.value);
+  const handleChangeFocus = () => setIsFocused(!isFocused);
 
   return (
     <Styled.Form
@@ -35,7 +21,6 @@ export default function SearchInput() {
         Search
       </label>
       <Styled.Input
-        ref={ref}
         id={id}
         value={query}
         name="searchQuery"
@@ -44,7 +29,9 @@ export default function SearchInput() {
         autoComplete="off"
         maxLength="50"
         required
-        onChange={handleChange}
+        onChange={handleChangeSearchQuery}
+        onFocus={handleChangeFocus}
+        onBlur={handleChangeFocus}
       />
       <Styled.Button title="Search" aria-label="Search" type="submit">
         <Search width={30} height={30} />

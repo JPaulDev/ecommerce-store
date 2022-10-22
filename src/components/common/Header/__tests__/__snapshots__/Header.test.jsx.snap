@@ -46,7 +46,9 @@ exports[`Header component renders a header with an image, search input and links
         id=":r0:"
         maxLength="50"
         name="searchQuery"
+        onBlur={[Function]}
         onChange={[Function]}
+        onFocus={[Function]}
         placeholder="Search PC-Connect.co.uk..."
         required={true}
         type="search"
