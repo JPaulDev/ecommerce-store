@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProductCard component should render a product card with with all the product information 1`] = `
-<div
-  className="sc-a290fc00-0 edZJjE"
+<li
+  className="sc-6e24aa3c-0 bqIXaO"
 >
   <img
     alt=""
@@ -12,17 +12,17 @@ exports[`ProductCard component should render a product card with with all the pr
     width={200}
   />
   <p
-    className="sc-a290fc00-1 gPQSzf"
+    className="sc-6e24aa3c-1 gFdkSZ"
   >
     ASUS ROG Strix GeForce RTX 3080 V2 OC
   </p>
   <p
-    className="sc-a290fc00-2 kNhnAk"
+    className="sc-6e24aa3c-2 kOizBS"
   >
     1440MHz, 1905MHz Boost, 8704 CUDA Cores, 10GB GDDR6X
   </p>
   <div
-    className="sc-a290fc00-3 hyaRYg"
+    className="sc-6e24aa3c-3 hnqpNO"
   >
     <span
       className="sc-bd55615-0 cxPlFY"
@@ -143,5 +143,5 @@ exports[`ProductCard component should render a product card with with all the pr
   >
     Add To Basket
   </button>
-</div>
+</li>
 `;

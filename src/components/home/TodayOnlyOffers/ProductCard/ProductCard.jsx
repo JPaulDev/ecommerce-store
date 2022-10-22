@@ -31,7 +31,7 @@ function ProductCard({ product }, ref) {
   };
 
   return (
-    <Styled.Container ref={ref}>
+    <Styled.ListItem ref={ref}>
       <Image
         src={product.imageUrl}
         width={200}
@@ -62,7 +62,7 @@ function ProductCard({ product }, ref) {
         fontSize="0.75rem"
         onAddProduct={handleAddProduct}
       />
-    </Styled.Container>
+    </Styled.ListItem>
   );
 }
 

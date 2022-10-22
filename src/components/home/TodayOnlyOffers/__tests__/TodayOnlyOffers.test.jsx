@@ -1,4 +1,5 @@
 import { screen } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import userEvent from '@testing-library/user-event';
 import { renderWithProviders } from '../../../../../test-utils';
 import TodayOnlyOffers from '../index';
@@ -17,6 +18,13 @@ const graphicsCardsData = Array.from({ length: 8 }).map((_, index) => ({
   name: 'graphics card',
   parentCategoryId: 4,
 }));
+
+describe('TodayOnlyOffers component', () => {
+  it('should render with a category selector', () => {
+    const tree = renderer.create(<TodayOnlyOffers />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
 
 describe('TodayOnlyOffers component selecting different categories', () => {
   beforeEach(() => {

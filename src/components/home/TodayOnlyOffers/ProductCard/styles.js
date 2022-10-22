@@ -13,7 +13,7 @@ const textStyles = css`
   text-align: center;
 `;
 
-export const Container = styled.div`
+export const ListItem = styled.li`
   background-color: white;
   border: 1px solid var(--color-grey-9);
   border-radius: 10px;
