@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import offers from '../../../data/today-only-offers';
 import Categories from './Categories';
 import ProductCard from './ProductCard';
 import * as Styled from './styles';
@@ -22,24 +21,21 @@ const motionProps = {
   },
 };
 
-export default function TodayOnlyOffers() {
-  const [displayCategory, setDisplayCategory] = useState('processors');
+export default function TodayOnlyOffers({ products = [] }) {
+  const [category, setCategory] = useState(1);
 
-  const handleChangeCategory = (category = '') => {
-    // Formats category heading to camel case
-    const formattedCategory = category
-      .toLowerCase()
-      .replace(/ ./g, (str) => str[1].toUpperCase());
+  const handleChangeCategory = (categoryId) => setCategory(categoryId);
 
-    setDisplayCategory(formattedCategory);
-  };
+  const filteredProducts = products.filter(
+    (product) => product.parentCategoryId === category
+  );
 
   return (
     <section>
       <Categories onChangeCategory={handleChangeCategory} />
       <Styled.Container>
         <AnimatePresence initial={false} mode="wait">
-          {offers[displayCategory]?.map((product) => (
+          {filteredProducts.map((product) => (
             <MotionProductCard
               key={product.sku}
               product={product}

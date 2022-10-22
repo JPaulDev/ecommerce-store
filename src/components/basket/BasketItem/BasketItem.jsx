@@ -11,12 +11,15 @@ import { Plus, Minus } from '../../icons';
 import { PartNumber, Price, PreviousPrice, StockIndicator } from '../../common';
 import * as Styled from './styles';
 
-function BasketItem({ product = {} }) {
-  const { price, salePrice } = usePrice({
-    price: product.price * product.quantity,
-    salePrice: product.salePrice * product.quantity,
-  });
+function BasketItem({ product }) {
   const dispatch = useDispatch();
+
+  const { price, previousPrice } = usePrice({
+    isOnSale: product.isOnSale,
+    discount: product.discount * product.quantity,
+    price: product.price * product.quantity,
+    currencyCode: product.currencyCode,
+  });
 
   const handleIncrementQuantity = () =>
     dispatch(incrementQuantity(product.sku));
@@ -26,24 +29,28 @@ function BasketItem({ product = {} }) {
 
   return (
     <Styled.ListItem>
-      <Image src={product.image} alt="" quality={85} />
+      <Image
+        src={product.imageUrl}
+        width={200}
+        height={200}
+        alt=""
+        quality={85}
+      />
       <div>
         <PartNumber fontSize="0.8rem" sku={product.sku} />
         <Styled.ProductDescription>
-          {product.name}, {product.description?.join(', ')}
+          {product.name}, {product.description}
         </Styled.ProductDescription>
         <Styled.Container>
-          <Price
-            price={salePrice || price}
-            fontSize="1.45rem"
-            fontWeight={500}
-          />
+          <Price price={price} fontSize="1.45rem" fontWeight={500} />
           <Styled.RemoveProduct type="button" onClick={handleRemoveProduct}>
             Remove Item
           </Styled.RemoveProduct>
         </Styled.Container>
-        {salePrice && <PreviousPrice price={price} fontSize="0.9rem" />}
-        <StockIndicator stock={product.stock} marginTop="5px" />
+        {product.isOnSale && (
+          <PreviousPrice price={previousPrice} fontSize="0.9rem" />
+        )}
+        <StockIndicator stockStatus={product.stockStatus} marginTop="5px" />
         <Styled.QuantitySelector>
           <Styled.DecreaseButton
             type="button"

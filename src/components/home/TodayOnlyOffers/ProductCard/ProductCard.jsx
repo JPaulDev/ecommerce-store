@@ -13,11 +13,16 @@ import {
 } from '../../../common';
 import * as Styled from './styles';
 
-function ProductCard({ product = {} }, ref) {
+function ProductCard({ product }, ref) {
   const [quantity, setQuantity] = useState(1);
-  const { price, salePrice } = usePrice(product);
   const dispatch = useDispatch();
-  const isOutOfStock = product.stock <= 0;
+
+  const { price, previousPrice } = usePrice({
+    isOnSale: product.isOnSale,
+    discount: product.discount,
+    price: product.price,
+    currencyCode: product.currencyCode,
+  });
 
   const handleChangeQuantity = (e) => setQuantity(parseInt(e.target.value, 10));
   const handleAddProduct = () => {
@@ -27,24 +32,32 @@ function ProductCard({ product = {} }, ref) {
 
   return (
     <Styled.Container ref={ref}>
-      <Image src={product.image} alt="" quality={85} />
+      <Image
+        src={product.imageUrl}
+        width={200}
+        height={200}
+        alt=""
+        quality={85}
+      />
       <Styled.ProductName>{product.name}</Styled.ProductName>
       <Styled.ProductDescription>
-        {product.description?.join(', ')}
+        {product.description}
       </Styled.ProductDescription>
       <Styled.Wrapper>
         <PartNumber fontSize="0.75rem" sku={product.sku} />
       </Styled.Wrapper>
-      <Price price={salePrice || price} fontSize="1.9rem" />
-      {salePrice && <PreviousPrice price={price} fontSize="0.93rem" />}
+      <Price price={price} fontSize="1.9rem" />
+      {product.isOnSale && (
+        <PreviousPrice price={previousPrice} fontSize="0.93rem" />
+      )}
       <QuantityDropdown
         quantity={quantity}
-        isDisabled={isOutOfStock}
+        isDisabled={product.stockStatus === 0}
         onChangeQuantity={handleChangeQuantity}
       />
-      <StockIndicator stock={product.stock} marginTop="8px" />
+      <StockIndicator stockStatus={product.stockStatus} marginTop="8px" />
       <AddToBasket
-        isDisabled={isOutOfStock}
+        isDisabled={product.stockStatus === 0}
         width="180px"
         fontSize="0.75rem"
         onAddProduct={handleAddProduct}

@@ -8,28 +8,26 @@ import BasketItem from '../index';
 // Prevents errors caused by next image component
 jest.mock('next/future/image', () => 'img');
 
-const product = {
-  sku: 'CPU-INT-10400F',
-  stock: 50,
-  name: 'Intel Core i5 10400F',
-  image: '',
-  price: 129.99,
-  salePrice: 114.99,
+const productData = {
+  sku: 'GPU-3PAQ-ASU',
+  name: 'ASUS ROG Strix GeForce RTX 3080 V2 OC',
+  imageUrl: '',
+  price: 99.99,
+  discount: 30,
+  description: '1440MHz, 1905MHz Boost, 8704 CUDA Cores, 10GB GDDR6X',
+  stockStatus: 2,
   quantity: 1,
-  description: [
-    '6 Cores, 12 Threads',
-    'S1200 Comet Lake',
-    '2.9GHz, 4.3GHz Turbo',
-    '12MB Cache',
-  ],
+  brand: 'asus',
+  currencyCode: 'GBP',
+  isOnSale: true,
 };
 
 describe('BasketItem component', () => {
-  it('renders a product card with an image and all product information', () => {
+  it('should render a product card with with all the product information', () => {
     const tree = renderer
       .create(
         <Provider store={setupStore()}>
-          <BasketItem product={product} />
+          <BasketItem product={productData} />
         </Provider>
       )
       .toJSON();
@@ -38,45 +36,60 @@ describe('BasketItem component', () => {
 });
 
 describe('BasketItem component stock indicator', () => {
-  it('product is displayed as in stock when 31 or more', () => {
-    renderWithProviders(<BasketItem product={{ ...product, stock: 31 }} />);
+  it('should display in stock', () => {
+    renderWithProviders(<BasketItem product={productData} />);
 
     expect(screen.getByText(/in stock/i)).toBeInTheDocument();
   });
 
-  it('product is displayed as low stock at 30 or fewer', () => {
-    renderWithProviders(<BasketItem product={{ ...product, stock: 30 }} />);
+  it('should display low stock', () => {
+    renderWithProviders(
+      <BasketItem product={{ ...productData, stockStatus: 1 }} />
+    );
 
     expect(screen.getByText(/low stock/i)).toBeInTheDocument();
   });
 
-  it('product is displayed as out of stock at 0', () => {
-    renderWithProviders(<BasketItem product={{ ...product, stock: 0 }} />);
+  it('should display out of stock', () => {
+    renderWithProviders(
+      <BasketItem product={{ ...productData, stockStatus: 0 }} />
+    );
 
     expect(screen.getByText(/out of stock/i)).toBeInTheDocument();
   });
 });
 
 describe('BasketItem component price display', () => {
-  it('should display only the base price if no sale price is present', () => {
+  it('should display the price and the previous price when on sale', () => {
+    renderWithProviders(<BasketItem product={productData} />);
+
+    expect(screen.getByText('99')).toHaveTextContent('£99.99');
+    expect(screen.getByText('£129.99')).toBeInTheDocument();
+  });
+
+  it('should only display the base price if not on sale', () => {
     renderWithProviders(
-      <BasketItem product={{ ...product, salePrice: undefined }} />
+      <BasketItem product={{ ...productData, isOnSale: false }} />
     );
 
-    expect(screen.getByText('129')).toHaveTextContent('£129.99');
-    expect(screen.queryByText(/was/i)).not.toBeInTheDocument();
+    expect(screen.getByText('99')).toHaveTextContent('£99.99');
+    expect(screen.queryByText(/was:/i)).not.toBeInTheDocument();
   });
 });
 
-describe('BasketItem component price totals', () => {
-  it('should display the correct sale price total', () => {
-    renderWithProviders(<BasketItem product={{ ...product, quantity: 2 }} />);
+describe('BasketItem component total price display', () => {
+  it('should display the correct item total', () => {
+    renderWithProviders(
+      <BasketItem product={{ ...productData, quantity: 2, isOnSale: false }} />
+    );
 
-    expect(screen.getByText('229')).toHaveTextContent('£229.98');
+    expect(screen.getByText('199')).toHaveTextContent('£199.98');
   });
 
-  it('should display the correct base price total', () => {
-    renderWithProviders(<BasketItem product={{ ...product, quantity: 2 }} />);
+  it('should display the correct previous price total', () => {
+    renderWithProviders(
+      <BasketItem product={{ ...productData, quantity: 2 }} />
+    );
 
     expect(screen.getByText('£259.98')).toBeInTheDocument();
   });

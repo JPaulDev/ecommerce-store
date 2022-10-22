@@ -6,25 +6,23 @@ import TodayOnlyOffers from '../index';
 // Prevents errors caused by next image component
 jest.mock('next/future/image', () => 'img');
 
-jest.mock('../../../../data/today-only-offers', () => {
-  const processors = Array.from({ length: 8 }).map((_, index) => ({
-    sku: index,
-    name: 'processor',
-    description: [],
-  }));
+const processorsData = Array.from({ length: 8 }).map((_, index) => ({
+  sku: index,
+  name: 'processor',
+  parentCategoryId: 1,
+}));
 
-  const graphicsCards = Array.from({ length: 8 }).map((_, index) => ({
-    sku: index,
-    name: 'graphics card',
-    description: [],
-  }));
+const graphicsCardsData = Array.from({ length: 8 }).map((_, index) => ({
+  sku: index,
+  name: 'graphics card',
+  parentCategoryId: 4,
+}));
 
-  return { processors, graphicsCards };
-});
-
-describe('TodayOnlyOffers component changing category', () => {
+describe('TodayOnlyOffers component selecting different categories', () => {
   beforeEach(() => {
-    renderWithProviders(<TodayOnlyOffers />);
+    renderWithProviders(
+      <TodayOnlyOffers products={[...processorsData, ...graphicsCardsData]} />
+    );
   });
 
   it('initially renders the processors category and 8 products', () => {

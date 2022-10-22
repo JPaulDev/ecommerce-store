@@ -1,23 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProductCard component renders a product card with an image and all product information 1`] = `
+exports[`ProductCard component should render a product card with with all the product information 1`] = `
 <div
   className="sc-9945102f-0 bmrLZD"
 >
   <img
     alt=""
+    height={200}
     quality={85}
     src=""
+    width={200}
   />
   <p
     className="sc-9945102f-1 hOjJoQ"
   >
-    Intel Core i5 10400F
+    ASUS ROG Strix GeForce RTX 3080 V2 OC
   </p>
   <p
     className="sc-9945102f-2 fcjmIl"
   >
-    6 Cores, 12 Threads, S1200 Comet Lake, 2.9GHz, 4.3GHz Turbo, 12MB Cache
+    1440MHz, 1905MHz Boost, 8704 CUDA Cores, 10GB GDDR6X
   </p>
   <div
     className="sc-9945102f-3 jAoQgD"
@@ -25,7 +27,8 @@ exports[`ProductCard component renders a product card with an image and all prod
     <span
       className="sc-bd55615-0 cxPlFY"
     >
-      CPU-INT-10400F
+      SKU: 
+      GPU-3PAQ-ASU
     </span>
   </div>
   <span
@@ -36,7 +39,7 @@ exports[`ProductCard component renders a product card with an image and all prod
     >
       £
     </span>
-    114
+    99
     <span
       className="sc-dded47fe-1 jIDwKn"
     >

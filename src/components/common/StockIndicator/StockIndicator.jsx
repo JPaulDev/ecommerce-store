@@ -1,19 +1,19 @@
 import { Clipboard } from '../../icons';
 import * as Styled from './styles';
 
-export default function StockIndicator({ stock = 0, marginTop }) {
-  let text = 'Out of Stock';
-  let title = 'Item is out of stock';
-  let color = '#ef4444';
+export default function StockIndicator({ stockStatus, marginTop }) {
+  let text = 'In Stock';
+  let title = 'Item is in stock';
+  let color = '#3ba936';
 
-  if (stock <= 30 && stock > 0) {
+  if (stockStatus === 1) {
     text = 'Low Stock';
     title = 'Item is nearly sold out';
     color = '#fb923c';
-  } else if (stock > 30) {
-    text = 'In Stock';
-    title = 'Item is in stock';
-    color = '#3ba936';
+  } else if (stockStatus === 0) {
+    text = 'Out of Stock';
+    title = 'Item is out of stock';
+    color = '#ef4444';
   }
 
   return (

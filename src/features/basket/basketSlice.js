@@ -16,7 +16,12 @@ export const basketSlice = createSlice({
         }
       },
       prepare(product, quantity) {
-        return { payload: { ...product, quantity } };
+        return {
+          payload: {
+            ...product,
+            quantity,
+          },
+        };
       },
     },
     removeProduct(state, action) {
@@ -47,8 +52,8 @@ export const selectBasketSubtotal = createSelector(
   (state) => state.basket,
   (basket) =>
     basket.reduce((subtotal, product) => {
-      const { price, salePrice, quantity } = product;
-      const itemTotal = salePrice ? salePrice * quantity : price * quantity;
+      const { price, quantity } = product;
+      const itemTotal = price * quantity;
 
       subtotal += itemTotal;
 

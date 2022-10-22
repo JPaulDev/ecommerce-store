@@ -1,26 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BasketItem component renders a product card with an image and all product information 1`] = `
+exports[`BasketItem component should render a product card with with all the product information 1`] = `
 <li
   className="sc-13832a0-0 AhvBT"
 >
   <img
     alt=""
+    height={200}
     quality={85}
     src=""
+    width={200}
   />
   <div>
     <span
       className="sc-bd55615-0 hWOyAS"
     >
-      CPU-INT-10400F
+      SKU: 
+      GPU-3PAQ-ASU
     </span>
     <p
       className="sc-13832a0-1 hiFpEt"
     >
-      Intel Core i5 10400F
+      ASUS ROG Strix GeForce RTX 3080 V2 OC
       , 
-      6 Cores, 12 Threads, S1200 Comet Lake, 2.9GHz, 4.3GHz Turbo, 12MB Cache
+      1440MHz, 1905MHz Boost, 8704 CUDA Cores, 10GB GDDR6X
     </p>
     <div
       className="sc-13832a0-2 tqfkm"
@@ -33,7 +36,7 @@ exports[`BasketItem component renders a product card with an image and all produ
         >
           £
         </span>
-        114
+        99
         <span
           className="sc-dded47fe-1 jIDwKn"
         >

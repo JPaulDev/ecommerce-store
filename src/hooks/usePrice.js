@@ -1,31 +1,30 @@
 import { useMemo } from 'react';
 
-function formatPrice({ locale, currencyCode, price, salePrice }) {
+function formatPrice({ locale, currencyCode, price, discount, isOnSale }) {
   const currency = new Intl.NumberFormat(locale, {
     style: 'currency',
     currency: currencyCode,
   });
 
-  if (salePrice) {
+  if (isOnSale) {
     return {
       price: currency.format(price),
-      salePrice: currency.format(salePrice),
+      previousPrice: currency.format(price + discount),
     };
   }
 
   return { price: currency.format(price) };
 }
 
-export default function usePrice(product) {
-  const { price, salePrice } = product ?? {};
+export default function usePrice(data) {
+  const { currencyCode, price, discount, isOnSale } = data ?? {};
   const locale = 'en-GB';
-  const currencyCode = 'GBP';
 
   const value = useMemo(() => {
     if (typeof price !== 'number') return '';
 
-    return formatPrice({ locale, currencyCode, price, salePrice });
-  }, [locale, currencyCode, price, salePrice]);
+    return formatPrice({ locale, currencyCode, price, discount, isOnSale });
+  }, [locale, currencyCode, price, discount, isOnSale]);
 
   return value;
 }

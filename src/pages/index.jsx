@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import prisma from '../lib/prisma';
 import {
   Carousel,
   ProShopCards,
@@ -9,12 +10,31 @@ import {
 } from '../components/home';
 
 export async function getStaticProps() {
+  // Recursive queries not yet supported by prisma
+  const products = await prisma.$queryRaw`
+    WITH RECURSIVE cat_cte AS (
+      SELECT id,
+          "parentCategoryId"
+      FROM "Category"
+      WHERE "parentCategoryId" IS NULL
+      UNION ALL
+      SELECT child.id,
+          child."parentCategoryId"
+      FROM "Category" child,
+          cat_cte parent
+      WHERE child."parentCategoryId" = parent.id
+    )
+    SELECT *
+    FROM cat_cte c
+      JOIN "Product" p ON c.id = p."categoryId"
+  `;
+
   return {
-    props: { page: 'home' },
+    props: { page: 'home', products },
   };
 }
 
-export default function Home() {
+export default function Home({ products }) {
   return (
     <>
       <Head>
@@ -24,7 +44,7 @@ export default function Home() {
       <ProShopCards />
       <PromoBanner />
       <TodayOnlyBanner />
-      <TodayOnlyOffers />
+      <TodayOnlyOffers products={products} />
       <NewsAndProducts />
     </>
   );

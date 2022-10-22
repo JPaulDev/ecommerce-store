@@ -9,9 +9,13 @@ import { Price } from '../../common';
 import * as Styled from './styles';
 
 export default function CheckoutPanel() {
+  const subtotal = useSelector(selectBasketSubtotal);
   const delivery = 4.99;
-  const total = useSelector(selectBasketSubtotal) + delivery;
-  const { price } = usePrice({ price: total });
+
+  const { price } = usePrice({
+    price: subtotal + delivery,
+    currencyCode: 'GBP',
+  });
 
   return (
     <>
