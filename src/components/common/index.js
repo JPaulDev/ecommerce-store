@@ -10,5 +10,6 @@ export { default as PartNumber } from './PartNumber';
 export { default as PreviousPrice } from './PreviousPrice';
 export { default as Price } from './Price';
 export { default as QuantityDropdown } from './QuantityDropdown';
+export { default as ResponsiveBox } from './ResponsiveBox';
 export { default as StockIndicator } from './StockIndicator';
 export { default as TopBannerSmall } from './TopBannerSmall';
