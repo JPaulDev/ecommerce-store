@@ -1,4 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const headingStyles = css`
+  font-family: 'Uni Sans Book', sans-serif;
+  text-align: center;
+`;
 
 export const Section = styled.section`
   background-color: white;
@@ -19,9 +24,8 @@ export const LeftContainer = styled.div`
 `;
 
 export const Heading = styled.h2`
-  font-family: 'Uni Sans', sans-serif;
   font-size: 1.88rem;
-  text-align: center;
+  ${headingStyles}
 
   @media screen and (min-width: 650px) {
     text-align: left;
@@ -62,10 +66,9 @@ export const ArticleBlock = styled.div`
 `;
 
 export const ArticleHeading = styled.h3`
-  font-family: 'Uni Sans Book', sans-serif;
   font-size: 1.13rem;
   margin-top: 15px;
-  text-align: center;
+  ${headingStyles}
 
   @media screen and (min-width: 650px) {
     min-height: 50px;

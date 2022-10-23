@@ -1,12 +1,16 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const flexStyles = css`
+  align-items: center;
+  display: flex;
+`;
 
 export const Container = styled.div`
-  align-items: center;
   background-color: white;
-  display: flex;
   flex-direction: column;
   padding: 20px 0;
   row-gap: 15px;
+  ${flexStyles}
 
   @media screen and (min-width: 910px) {
     padding-left: 30px;
@@ -31,10 +35,10 @@ export const Text = styled.p`
 `;
 
 export const InnerContainer = styled.div`
-  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 8px;
+  ${flexStyles}
 
   & :last-child {
     border: 0;
@@ -42,23 +46,21 @@ export const InnerContainer = styled.div`
 `;
 
 export const LinkContainer = styled.div`
-  align-items: center;
   border-right: 1px solid var(--color-grey-10);
   column-gap: 12px;
-  display: flex;
   font-family: 'Uni Sans', sans-serif;
   font-size: 1.15rem;
   font-weight: 600;
   padding: 0 15px;
+  ${flexStyles}
 `;
 
 export const Link = styled.a`
-  align-items: center;
   color: black;
   column-gap: 8px;
-  display: flex;
   font-family: inherit;
   text-decoration: none;
+  ${flexStyles}
 
   &:hover {
     color: var(--color-blue-2);

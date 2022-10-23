@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BasketItem component should render a product card with with all the product information 1`] = `
-.c1 {
+.c2 {
   color: var(--color-blue-1);
   font-size: 0.8rem;
   font-weight: 700;
@@ -53,38 +53,30 @@ exports[`BasketItem component should render a product card with with all the pro
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-9);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+.c1 {
+  border-bottom: 1px solid var(--color-grey-9);
   padding: 10px 0 30px;
 }
 
-.c0 img {
+.c1 img {
   height: auto;
   margin-right: 20px;
   width: 120px;
 }
 
-.c2 {
+.c3 {
   border-bottom: 3px solid var(--color-grey-9);
   font-family: 'Uni Sans',sans-serif;
   font-weight: 600;
   line-height: 1.4;
   margin: 3px 0 5px;
   padding-bottom: 10px;
-}
-
-.c3 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .c6 {
@@ -162,14 +154,14 @@ exports[`BasketItem component should render a product card with with all the pro
 }
 
 @media screen and (min-width:900px) {
-  .c0 img {
+  .c1 img {
     width: 140px;
     height: auto;
   }
 }
 
 <li
-  className="c0"
+  className="c0 c1"
 >
   <img
     alt=""
@@ -180,20 +172,20 @@ exports[`BasketItem component should render a product card with with all the pro
   />
   <div>
     <span
-      className="c1"
+      className="c2"
     >
       SKU: 
       GPU-3PAQ-ASU
     </span>
     <p
-      className="c2"
+      className="c3"
     >
       ASUS ROG Strix GeForce RTX 3080 V2 OC
       , 
       1440MHz, 1905MHz Boost, 8704 CUDA Cores, 10GB GDDR6X
     </p>
     <div
-      className="c3"
+      className="c0"
     >
       <span
         className="c4"
@@ -282,12 +274,12 @@ exports[`BasketItem component should render a product card with with all the pro
           />
         </svg>
       </button>
-      <span
-        className="c13"
+      <div
+        className="c0 c13"
         data-testid="quantity"
       >
         1
-      </span>
+      </div>
       <button
         aria-label="Increase Quantity"
         className="c11"

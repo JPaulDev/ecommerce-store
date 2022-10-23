@@ -44,19 +44,16 @@ export const Heading = styled.h3`
   text-transform: uppercase;
 `;
 
-export const DropdownButton = styled.button`
+export const DropdownButton = styled(Heading)`
   align-items: center;
   background: none;
   border-bottom: 1px solid var(--color-grey-10);
-  color: var(--color-grey-8);
   cursor: pointer;
   display: flex;
-  font-size: 0.95rem;
   font-weight: 700;
   justify-content: space-between;
   padding: 13px 20px;
   position: relative;
-  text-transform: uppercase;
   width: 100%;
 
   svg {

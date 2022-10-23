@@ -7,20 +7,20 @@ exports[`Payments component renders a list of accepted payment methods 1`] = `
 
 .c1 {
   background-color: var(--color-grey-11);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 10px;
+  list-style: none;
+  padding: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  list-style: none;
-  padding: 10px;
 }
 
 .c2 {
@@ -30,16 +30,16 @@ exports[`Payments component renders a list of accepted payment methods 1`] = `
   align-items: center;
   background-color: var(--color-grey-6);
   border-radius: 6px;
+  height: 37px;
+  width: 60px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 37px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 60px;
 }
 
 @media screen and (min-width:1050px) {

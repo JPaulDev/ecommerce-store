@@ -1,4 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const flexStyles = css`
+  align-items: center;
+  display: flex;
+`;
 
 export const Container = styled.div`
   background-color: white;
@@ -8,20 +13,19 @@ export const Container = styled.div`
 `;
 
 export const List = styled.ul`
-  display: flex;
   justify-content: space-around;
   list-style: none;
   margin: 0 auto;
   max-width: 1100px;
+  ${flexStyles}
 `;
 
 export const Button = styled.button`
-  align-items: center;
   background: none;
   cursor: pointer;
-  display: flex;
   flex-direction: column;
   min-width: 85px;
+  ${flexStyles}
 
   @media screen and (min-width: 640px) {
     min-width: 95px;
@@ -29,15 +33,14 @@ export const Button = styled.button`
 `;
 
 export const Wrapper = styled.div`
-  align-items: center;
   border-radius: 50%;
   box-shadow: 0 0 0 1px var(--color-orange-1);
-  display: flex;
   height: 65px;
   justify-content: center;
   margin-bottom: 5px;
   position: relative;
   width: 65px;
+  ${flexStyles}
 
   &::after {
     border-radius: inherit;

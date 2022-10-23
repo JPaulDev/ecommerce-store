@@ -43,18 +43,17 @@ exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
 
 .c2 {
   color: white;
-  font-family: 'Uni Sans',sans-serif;
   font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1;
   z-index: 10;
+  font-family: 'Uni Sans',sans-serif;
+  font-weight: 600;
 }
 
 .c3 {
-  font-family: 'Uni Sans',sans-serif;
   font-size: clamp(20px,3.48vw,25px);
-  font-weight: 600;
   margin-right: auto;
+  font-family: 'Uni Sans',sans-serif;
+  font-weight: 600;
 }
 
 @media screen and (min-width:935px) {
@@ -90,14 +89,13 @@ exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
 
 @media screen and (min-width:700px) {
   .c3 {
-    line-height: 1;
     font-size: 1.6rem;
   }
 }
 
 @media screen and (max-width:934px) {
   .c3 {
-    margin: 10px 0 15px;
+    margin: 5px 0 15px;
   }
 }
 

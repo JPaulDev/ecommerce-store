@@ -2,18 +2,18 @@
 
 exports[`FinancePanel component renders a panel with finance information and relevant links 1`] = `
 .c0 {
+  border-bottom: 1px solid var(--color-grey-9);
+  -webkit-column-gap: 25px;
+  column-gap: 25px;
+  padding: 30px 10px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-9);
-  -webkit-column-gap: 25px;
-  column-gap: 25px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 30px 10px;
 }
 
 .c0 img {
@@ -28,23 +28,23 @@ exports[`FinancePanel component renders a panel with finance information and rel
 }
 
 .c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   color: var(--color-blue-1);
   -webkit-column-gap: 5px;
   column-gap: 5px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 0.75rem;
   font-weight: 600;
   margin-top: 10px;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (min-width:600px) {

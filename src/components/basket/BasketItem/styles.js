@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
-export const ListItem = styled.li`
+export const Container = styled.div`
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-9);
   display: flex;
+`;
+
+export const ListItem = styled(Container)`
+  border-bottom: 1px solid var(--color-grey-9);
   padding: 10px 0 30px;
 
   img {
@@ -25,11 +28,6 @@ export const ProductDescription = styled.p`
   line-height: 1.4;
   margin: 3px 0 5px;
   padding-bottom: 10px;
-`;
-
-export const Container = styled.div`
-  align-items: center;
-  display: flex;
 `;
 
 export const RemoveProduct = styled.button`
@@ -80,7 +78,7 @@ export const DecreaseButton = styled(IncreaseButton)`
   }
 `;
 
-export const Quantity = styled.span`
+export const Quantity = styled(Container)`
   align-items: center;
   color: #0c9444;
   display: flex;

@@ -1,4 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const headingStyles = css`
+  font-family: 'Uni Sans', sans-serif;
+  font-weight: 600;
+`;
 
 export const Container = styled.div`
   background-color: #d72140;
@@ -36,11 +41,9 @@ export const RedOval = styled.div`
 
 export const LeftHeading = styled.h3`
   color: white;
-  font-family: 'Uni Sans', sans-serif;
   font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1;
   z-index: 10;
+  ${headingStyles}
 
   @media screen and (min-width: 575px) {
     font-size: 1.95rem;
@@ -49,17 +52,15 @@ export const LeftHeading = styled.h3`
 `;
 
 export const RightHeading = styled.h3`
-  font-family: 'Uni Sans', sans-serif;
   font-size: clamp(20px, 3.48vw, 25px);
-  font-weight: 600;
   margin-right: auto;
+  ${headingStyles}
 
   @media screen and (min-width: 700px) {
-    line-height: 1;
     font-size: 1.6rem;
   }
 
   @media screen and (max-width: 934px) {
-    margin: 10px 0 15px;
+    margin: 5px 0 15px;
   }
 `;

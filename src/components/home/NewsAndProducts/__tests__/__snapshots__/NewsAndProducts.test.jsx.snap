@@ -53,14 +53,14 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
 }
 
 .c2 {
-  font-family: 'Uni Sans',sans-serif;
   font-size: 1.88rem;
+  font-family: 'Uni Sans Book',sans-serif;
   text-align: center;
 }
 
 .c11 {
-  font-family: 'Uni Sans',sans-serif;
   font-size: 1.88rem;
+  font-family: 'Uni Sans Book',sans-serif;
   text-align: center;
 }
 
@@ -85,9 +85,9 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
 }
 
 .c5 {
-  font-family: 'Uni Sans Book',sans-serif;
   font-size: 1.13rem;
   margin-top: 15px;
+  font-family: 'Uni Sans Book',sans-serif;
   text-align: center;
 }
 

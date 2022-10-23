@@ -1,4 +1,16 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const navigationStyles = css`
+  display: flex;
+  list-style: none;
+  position: absolute;
+  z-index: 10;
+`;
+
+const buttonStyles = css`
+  cursor: pointer;
+  user-select: none;
+`;
 
 export const Section = styled.section`
   box-shadow: 0 3px 5px rgb(0 0 0 / 40%);
@@ -11,13 +23,10 @@ export const Section = styled.section`
 export const NavigationTop = styled.ul`
   background-color: rgb(83 83 83 / 80%);
   border-bottom: 1px solid var(--color-grey-7);
-  display: flex;
   justify-content: space-around;
-  list-style: none;
-  position: absolute;
   top: 0;
   width: 100%;
-  z-index: 10;
+  ${navigationStyles}
 
   @media screen and (max-width: 714px) {
     display: none;
@@ -29,15 +38,15 @@ export const ButtonTop = styled.button`
   border-bottom: ${({ isActive }) =>
     isActive && '3px solid var(--color-orange-1)'};
   color: #b9b9b9;
-  cursor: pointer;
   font-family: 'Uni Sans', sans-serif;
   font-size: 0.83rem;
   font-weight: 600;
   padding: 16px 20px 12px;
   transform: ${({ isActive }) => isActive && 'scale(1.06)'};
+  ${buttonStyles}
 
   &:hover {
-    color: #e5e7eb;
+    color: var(--color-grey-9);
   }
 
   && {
@@ -48,13 +57,9 @@ export const ButtonTop = styled.button`
 export const NavigationBottom = styled.ul`
   align-items: center;
   bottom: 15px;
-  display: flex;
   left: 50%;
-  list-style: none;
-  position: absolute;
   transform: translateX(-50%);
-  user-select: none;
-  z-index: 10;
+  ${navigationStyles}
 
   li {
     display: flex;
@@ -69,23 +74,20 @@ export const ButtonBottom = styled.button`
   background: ${({ isActive }) =>
     isActive ? 'var(--color-orange-1)' : 'white'};
   border-radius: 2px;
-  cursor: pointer;
   height: ${({ isActive }) => (isActive ? '7px' : '5px')};
   margin: 0 5px;
   transition: all 100ms ease-in-out;
   width: 33px;
+  ${buttonStyles}
 `;
 
 export const Navigation = styled.ul`
-  display: flex;
   justify-content: space-between;
-  list-style: none;
   padding: 0 15px;
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  z-index: 10;
+  ${navigationStyles}
 `;
 
 export const NavigationArrow = styled.button`
@@ -93,10 +95,9 @@ export const NavigationArrow = styled.button`
   background-color: white;
   border-radius: 50%;
   box-shadow: 1px 4px 4px rgb(0 0 0 / 50%);
-  cursor: pointer;
   display: flex;
   height: 32px;
   justify-content: center;
-  user-select: none;
   width: 32px;
+  ${buttonStyles}
 `;

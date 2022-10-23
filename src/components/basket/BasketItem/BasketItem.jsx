@@ -28,7 +28,7 @@ function BasketItem({ product }) {
   const handleRemoveProduct = () => dispatch(removeProduct(product.sku));
 
   return (
-    <Styled.ListItem>
+    <Styled.ListItem as="li">
       <Image
         src={product.imageUrl}
         width={200}

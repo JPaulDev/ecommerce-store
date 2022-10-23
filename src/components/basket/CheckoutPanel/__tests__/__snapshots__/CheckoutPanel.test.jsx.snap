@@ -19,12 +19,12 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
 
 .c0 {
   background-color: #d7f0db;
-  border-left: 1px solid var(--color-grey-9);
-  border-right: 1px solid var(--color-grey-9);
   border-top: 1px solid var(--color-grey-9);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 20px 30px;
+  border-left: 1px solid var(--color-grey-9);
+  border-right: 1px solid var(--color-grey-9);
 }
 
 .c1 {
@@ -37,16 +37,8 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
 }
 
 .c2 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-column-gap: 20px;
   column-gap: 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -55,6 +47,14 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 5px 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c2 strong {
@@ -77,28 +77,28 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
 }
 
 .c9 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   background-image: linear-gradient(to top,#009245,#02ab52);
   border-radius: 6px;
   box-shadow: var(--shadow-button);
   color: white;
   -webkit-column-gap: 10px;
   column-gap: 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 0.88rem;
-  font-weight: 700;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   margin: 0 auto 20px;
   padding: 15px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -113,8 +113,8 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   color: var(--color-blue-1);
   display: block;
   font-size: 0.7rem;
-  font-weight: 700;
   text-align: center;
+  font-weight: 700;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -126,24 +126,24 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
 }
 
 .c11 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   background-color: #cadfce;
   border-bottom: 1px solid var(--color-grey-9);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  border-left: 1px solid var(--color-grey-9);
-  border-right: 1px solid var(--color-grey-9);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 20px 30px 30px;
+  border-left: 1px solid var(--color-grey-9);
+  border-right: 1px solid var(--color-grey-9);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .c11 img {

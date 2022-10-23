@@ -63,6 +63,7 @@ export default function Delivery() {
         <Heading>{heading}</Heading>
       ) : (
         <DropdownButton
+          as="button"
           type="button"
           isOpen={isOpen}
           aria-expanded={isOpen}

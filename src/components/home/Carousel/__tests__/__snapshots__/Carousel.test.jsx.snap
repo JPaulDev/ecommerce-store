@@ -102,18 +102,18 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
 .c1 {
   background-color: rgb(83 83 83 / 80%);
   border-bottom: 1px solid var(--color-grey-7);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
   -ms-flex-pack: space-around;
   justify-content: space-around;
-  list-style: none;
-  position: absolute;
   top: 0;
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  position: absolute;
   z-index: 10;
 }
 
@@ -121,7 +121,6 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
   background: none;
   border-bottom: 3px solid var(--color-orange-1);
   color: #b9b9b9;
-  cursor: pointer;
   font-family: 'Uni Sans',sans-serif;
   font-size: 0.83rem;
   font-weight: 600;
@@ -129,10 +128,15 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
   -webkit-transform: scale(1.06);
   -ms-transform: scale(1.06);
   transform: scale(1.06);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c2:hover {
-  color: #e5e7eb;
+  color: var(--color-grey-9);
 }
 
 .c2.c2 {
@@ -142,15 +146,19 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
 .c3 {
   background: none;
   color: #b9b9b9;
-  cursor: pointer;
   font-family: 'Uni Sans',sans-serif;
   font-size: 0.83rem;
   font-weight: 600;
   padding: 16px 20px 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c3:hover {
-  color: #e5e7eb;
+  color: var(--color-grey-9);
 }
 
 .c16 {
@@ -159,20 +167,16 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
   -ms-flex-align: center;
   align-items: center;
   bottom: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  left: 50%;
   list-style: none;
   position: absolute;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   z-index: 10;
 }
 
@@ -186,42 +190,50 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
 .c17 {
   background: var(--color-orange-1);
   border-radius: 2px;
-  cursor: pointer;
   height: 7px;
   margin: 0 5px;
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
   width: 33px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c18 {
   background: white;
   border-radius: 2px;
-  cursor: pointer;
   height: 5px;
   margin: 0 5px;
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
   width: 33px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .c4 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  list-style: none;
   padding: 0 15px;
-  position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  position: absolute;
   z-index: 10;
 }
 
@@ -233,7 +245,6 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
   background-color: white;
   border-radius: 50%;
   box-shadow: 1px 4px 4px rgb(0 0 0 / 50%);
-  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -243,11 +254,12 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 32px;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: 32px;
 }
 
 @media screen and (min-width:550px) {

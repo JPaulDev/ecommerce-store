@@ -6,7 +6,6 @@ import Slide from './Slide';
 import * as Styled from './styles';
 
 // Direction 1 moves slides in from the right, -1 moves slides in from the left
-
 const MotionSlide = motion(Slide);
 const motionProps = {
   variants: {

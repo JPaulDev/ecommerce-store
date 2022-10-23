@@ -1,13 +1,28 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const borderStyles = css`
+  border-left: 1px solid var(--color-grey-9);
+  border-right: 1px solid var(--color-grey-9);
+`;
+
+const flexStyles = css`
+  align-items: center;
+  display: flex;
+`;
+
+const linkStyles = css`
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+`;
 
 export const TopContainer = styled.div`
   background-color: #d7f0db;
-  border-left: 1px solid var(--color-grey-9);
-  border-right: 1px solid var(--color-grey-9);
   border-top: 1px solid var(--color-grey-9);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 20px 30px;
+  ${borderStyles}
 `;
 
 export const Heading = styled.h2`
@@ -24,12 +39,11 @@ export const Heading = styled.h2`
 `;
 
 export const Container = styled.div`
-  align-items: center;
   column-gap: 20px;
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 5px 0;
+  ${flexStyles}
 
   strong {
     font-size: 1.25rem;
@@ -48,20 +62,17 @@ export const InnerContainer = styled.div`
 `;
 
 export const CheckoutLink = styled.a`
-  align-items: center;
   background-image: linear-gradient(to top, #009245, #02ab52);
   border-radius: 6px;
   box-shadow: var(--shadow-button);
   color: white;
   column-gap: 10px;
-  display: flex;
   font-size: 0.88rem;
-  font-weight: 700;
   justify-content: center;
   margin: 0 auto 20px;
   padding: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
+  ${flexStyles}
+  ${linkStyles}
 
   &:hover {
     background-image: linear-gradient(to top, #008631, #00a13f);
@@ -73,10 +84,8 @@ export const LoginLink = styled.a`
   color: var(--color-blue-1);
   display: block;
   font-size: 0.7rem;
-  font-weight: 700;
   text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
+  ${linkStyles}
 
   &:hover {
     text-decoration: underline;
@@ -84,16 +93,14 @@ export const LoginLink = styled.a`
 `;
 
 export const BottomContainer = styled.div`
-  align-items: center;
   background-color: #cadfce;
   border-bottom: 1px solid var(--color-grey-9);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  border-left: 1px solid var(--color-grey-9);
-  border-right: 1px solid var(--color-grey-9);
-  display: flex;
   flex-direction: column;
   padding: 20px 30px 30px;
+  ${borderStyles}
+  ${flexStyles}
 
   img {
     margin-top: 5px;
