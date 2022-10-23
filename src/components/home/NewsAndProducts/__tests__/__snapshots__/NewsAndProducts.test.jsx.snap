@@ -1,35 +1,253 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NewsAndProducts component renders a news section with 3 articles and latest products links 1`] = `
+.c15 {
+  background: linear-gradient(to top,#858484,#a0a0a0);
+  border-radius: 6px;
+  box-shadow: var(--shadow-button);
+  color: white;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 12px 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c15:hover {
+  background: linear-gradient(to top,#858484,#737373);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.c9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--color-grey-8);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c9 svg {
+  margin-left: 10px;
+}
+
+.c0 {
+  background-color: white;
+  border: 1px solid var(--color-grey-9);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+  padding: 15px 25px 20px;
+}
+
+.c2 {
+  font-family: 'Uni Sans',sans-serif;
+  font-size: 1.88rem;
+  text-align: center;
+}
+
+.c11 {
+  font-family: 'Uni Sans',sans-serif;
+  font-size: 1.88rem;
+  text-align: center;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c3 :last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+
+.c4 {
+  border-bottom: 1px solid #ddd;
+  -webkit-flex: 1 1 250px;
+  -ms-flex: 1 1 250px;
+  flex: 1 1 250px;
+  padding-bottom: 20px;
+}
+
+.c5 {
+  font-family: 'Uni Sans Book',sans-serif;
+  font-size: 1.13rem;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.c8 {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+.c6 {
+  color: var(--color-grey-8);
+  font-size: 0.81rem;
+  margin-bottom: 15px;
+}
+
+.c7 img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.c10 {
+  border-left: 1px solid var(--color-grey-9);
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0 25px;
+}
+
+.c14 {
+  font-family: 'Uni Sans Book',sans-serif;
+  font-size: 1.06rem;
+}
+
+.c12 {
+  font-size: 0.88rem;
+  margin: 6px 0 15px;
+}
+
+.c13 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 18px;
+  column-gap: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px 0;
+}
+
+@media screen and (min-width:650px) {
+  .c0 {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (min-width:1050px) {
+  .c1 {
+    width: 68%;
+  }
+}
+
+@media screen and (min-width:650px) {
+  .c2 {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 23px;
+  }
+}
+
+@media screen and (min-width:650px) {
+  .c11 {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width:649px) {
+  .c3 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:649px) {
+  .c4 a {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width:650px) {
+  .c4 {
+    border-right: 1px solid #ddd;
+    border-bottom: 0;
+    padding: 0 25px;
+  }
+}
+
+@media screen and (min-width:650px) {
+  .c5 {
+    min-height: 50px;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width:650px) {
+  .c8 {
+    text-align: left;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width:649px) {
+  .c6 {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:1049px) {
+  .c10 {
+    display: none;
+  }
+}
+
 <section
-  className="sc-4fb710ed-0 gIzRyg"
+  className="c0"
 >
   <div
-    className="sc-4fb710ed-1 gTUvdt"
+    className="c1"
   >
     <h2
-      className="sc-4fb710ed-2 dszDHg"
+      className="c2"
     >
       Tech news & articles
     </h2>
     <div
-      className="sc-4fb710ed-3 duRDLI"
+      className="c3"
     >
       <div
-        className="sc-4fb710ed-4 bZxLQc"
+        className="c4"
       >
         <h3
-          className="sc-4fb710ed-5 biXqlv"
+          className="c5"
         >
           NVIDIA 4000 Series Details Leaked
         </h3>
         <div
-          className="sc-4fb710ed-7 bCfsE"
+          className="c6"
         >
           29 Jun 2022
         </div>
         <div
-          className="sc-4fb710ed-8 hultKJ"
+          className="c7"
         >
           <img
             alt=""
@@ -50,7 +268,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
           />
         </div>
         <article
-          className="sc-4fb710ed-6 ddyhPY"
+          className="c8"
         >
           NVIDIA's next-generation GeForce RTX 4090 "Ada" flagship graphics
     card allegedly scores over 19000 points in the 3DMark Time Spy Extreme
@@ -59,7 +277,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
     RTX 3090 Ti flagship.
         </article>
         <a
-          className="sc-bb098475-0 irrRtc"
+          className="c9"
           href="/"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -80,20 +298,20 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
         </a>
       </div>
       <div
-        className="sc-4fb710ed-4 bZxLQc"
+        className="c4"
       >
         <h3
-          className="sc-4fb710ed-5 biXqlv"
+          className="c5"
         >
           Intel Misses Quarterly Targets
         </h3>
         <div
-          className="sc-4fb710ed-7 bCfsE"
+          className="c6"
         >
           14 Jun 2022
         </div>
         <div
-          className="sc-4fb710ed-8 hultKJ"
+          className="c7"
         >
           <img
             alt=""
@@ -114,7 +332,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
           />
         </div>
         <article
-          className="sc-4fb710ed-6 ddyhPY"
+          className="c8"
         >
           Intel Corporation today reported second-quarter 2022 financial
       results. "This quarter's results were below the standards we have set for
@@ -124,7 +342,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
       Intel CEO.
         </article>
         <a
-          className="sc-bb098475-0 irrRtc"
+          className="c9"
           href="/"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -145,20 +363,20 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
         </a>
       </div>
       <div
-        className="sc-4fb710ed-4 bZxLQc"
+        className="c4"
       >
         <h3
-          className="sc-4fb710ed-5 biXqlv"
+          className="c5"
         >
           Alleged Ryzen 7000 Series Benchmarks
         </h3>
         <div
-          className="sc-4fb710ed-7 bCfsE"
+          className="c6"
         >
           23 Jun 2022
         </div>
         <div
-          className="sc-4fb710ed-8 hultKJ"
+          className="c7"
         >
           <img
             alt=""
@@ -179,7 +397,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
           />
         </div>
         <article
-          className="sc-4fb710ed-6 ddyhPY"
+          className="c8"
         >
           An AMD engineering sample CPU with the model number
       "100-000000593-20_Y" has appeared in a couple of graphics rendering tests,
@@ -188,7 +406,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
       motherboard.
         </article>
         <a
-          className="sc-bb098475-0 irrRtc"
+          className="c9"
           href="/"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -211,20 +429,20 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
     </div>
   </div>
   <div
-    className="sc-4fb710ed-9 dJCjQQ"
+    className="c10"
   >
     <h2
-      className="sc-4fb710ed-2 kSAmTL"
+      className="c11"
     >
       Hot & New products
     </h2>
     <p
-      className="sc-4fb710ed-11 hXJdHu"
+      className="1 c12"
     >
       Check out our latest and greatest.
     </p>
     <div
-      className="sc-4fb710ed-12 iElSRE"
+      className="2 c13"
     >
       <img
         alt="An xbox gaming controller and an iPad."
@@ -245,17 +463,17 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
       />
       <div>
         <strong
-          className="sc-4fb710ed-10 eIVIjh"
+          className="0 c14"
         >
           Our Hot Sellers
         </strong>
         <p
-          className="sc-4fb710ed-11 hXJdHu"
+          className="1 c12"
         >
           See our most popular selling products.
         </p>
         <a
-          className="sc-fe62e3ad-0 jctuaY"
+          className="c15"
           href="/"
           onClick={[Function]}
           onMouseEnter={[Function]}
@@ -266,7 +484,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
       </div>
     </div>
     <div
-      className="sc-4fb710ed-12 iElSRE"
+      className="2 c13"
     >
       <img
         alt="A widescreen computer monitor and virtual reality headset."
@@ -287,17 +505,17 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
       />
       <div>
         <strong
-          className="sc-4fb710ed-10 eIVIjh"
+          className="0 c14"
         >
           Our Latest Arrivals
         </strong>
         <p
-          className="sc-4fb710ed-11 hXJdHu"
+          className="1 c12"
         >
           When the competition wants to see what‘s new they check our website!
         </p>
         <a
-          className="sc-fe62e3ad-0 jctuaY"
+          className="c15"
           href="/"
           onClick={[Function]}
           onMouseEnter={[Function]}

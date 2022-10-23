@@ -8,7 +8,7 @@ import * as Styled from './styles';
 
 function FinancePanel() {
   return (
-    <>
+    <div>
       <Styled.Container>
         <Image src={paypal} alt="PayPal credit." />
         <div>
@@ -39,7 +39,7 @@ function FinancePanel() {
           </Link>
         </div>
       </Styled.Container>
-    </>
+    </div>
   );
 }
 

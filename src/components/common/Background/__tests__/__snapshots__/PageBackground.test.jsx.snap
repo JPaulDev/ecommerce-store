@@ -1,11 +1,44 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PageBackground component renders a container and a background image 1`] = `
+.c0 {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -100;
+}
+
+.c1 {
+  background-color: var(--color-grey-9);
+  background-image: linear-gradient(var(--color-grey-6),var(--color-grey-6));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1294px 100%;
+  height: 100vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.c1 img {
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media screen and (max-width:1310px) {
+  .c1 img {
+    display: none;
+  }
+}
+
 <div
-  className="sc-1c559bbe-0 jkdhoy"
+  className="c0"
 >
   <div
-    className="sc-1c559bbe-1 gxrCbe"
+    className="c1"
   >
     <img
       alt=""

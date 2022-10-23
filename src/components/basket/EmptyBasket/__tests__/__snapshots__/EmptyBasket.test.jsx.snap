@@ -1,8 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EmptyBasket component renders message that displays when the users basket is empty 1`] = `
+.c2 {
+  background: linear-gradient(to top,#858484,#a0a0a0);
+  border-radius: 6px;
+  box-shadow: var(--shadow-button);
+  color: white;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 12px 14px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c2:hover {
+  background: linear-gradient(to top,#858484,#737373);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid var(--color-grey-9);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 150px 20px;
+}
+
+.c0 a {
+  box-shadow: 0 3px 3px 0 rgb(217 217 217 / 70%);
+  margin-top: 20px;
+}
+
+.c1 {
+  font-family: 'Uni Sans',sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 11px 30px;
+}
+
 <div
-  className="sc-498d4186-0 gMMHEM"
+  className="c0"
 >
   <svg
     fill="var(--color-orange-1)"
@@ -16,7 +64,7 @@ exports[`EmptyBasket component renders message that displays when the users bask
     />
   </svg>
   <h2
-    className="sc-498d4186-1 tCizJ"
+    className="c1"
   >
     Your Basket
   </h2>
@@ -24,7 +72,7 @@ exports[`EmptyBasket component renders message that displays when the users bask
     Your basket is empty, please add some products.
   </p>
   <a
-    className="sc-fe62e3ad-0 jctuaY"
+    className="c2"
     href="/"
     onClick={[Function]}
     onMouseEnter={[Function]}

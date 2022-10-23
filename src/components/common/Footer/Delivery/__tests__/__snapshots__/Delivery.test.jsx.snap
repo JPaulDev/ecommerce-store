@@ -2,11 +2,143 @@
 
 exports[`Delivery component renders a return tab where returns status can be checked 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-44f25114-0 egPNsa"
+  .c1 {
+  color: var(--color-grey-8);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.c2 {
+  color: var(--color-grey-8);
+  font-size: 0.82rem;
+  margin: 8px 0 8px 20px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  background-color: var(--color-grey-11);
+  border-bottom: 3px solid var(--color-orange-1);
+  cursor: pointer;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 600;
+  padding: 8px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.c4 {
+  background-color: #dedede;
+  border-bottom: 3px solid #dedede;
+  cursor: pointer;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 600;
+  padding: 8px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--color-grey-11);
+  border-bottom: 1px solid var(--color-grey-10);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 15px;
+}
+
+.c7 {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-right: 8px;
+  max-width: 175px;
+  padding: 8px 0 8px 10px;
+  width: 40%;
+}
+
+.c8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: var(--color-grey-1);
+  border-radius: 50%;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 32px;
+}
+
+.c8:active {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+@media screen and (min-width:650px) {
+
+}
+
+@media screen and (min-width:650px) {
+  .c0 {
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width:860px) {
+  .c0 {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width:1050px) {
+  .c0 {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width:650px) {
+  .c2 {
+    margin: 8px 0;
+  }
+}
+
+@media screen and (max-width:649px) {
+  .c6 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+<div
+    class="c0"
   >
     <h3
-      class="sc-9bf04a45-3 jXmISH"
+      class="c1"
     >
       Delivery / Tracking Information
     </h3>
@@ -15,27 +147,27 @@ exports[`Delivery component renders a return tab where returns status can be che
       style="overflow: hidden; height: auto;"
     >
       <p
-        class="sc-44f25114-1 cwwZoe"
+        class="c2"
       >
         Order now to receive by tomorrow.
       </p>
       <div
-        class="sc-44f25114-2 WJnhb"
+        class="c3"
       >
         <button
-          class="sc-44f25114-3 lkgOrW"
+          class="c4"
           type="button"
         >
           Order
         </button>
         <button
-          class="sc-44f25114-3 hXMIxa"
+          class="c5"
           type="button"
         >
           Return
         </button>
         <button
-          class="sc-44f25114-3 lkgOrW"
+          class="c4"
           type="button"
         >
           System
@@ -43,7 +175,7 @@ exports[`Delivery component renders a return tab where returns status can be che
       </div>
       <form
         action="https://pc-connect.co.uk/tracking/trackreturn"
-        class="sc-44f25114-4 iXxCCw"
+        class="c6"
         method="post"
       >
         <label
@@ -54,7 +186,7 @@ exports[`Delivery component renders a return tab where returns status can be che
         </label>
         <input
           autocomplete="off"
-          class="sc-44f25114-5 dtSDlf"
+          class="c7"
           id=":r3:-invoice"
           maxlength="10"
           name="invoiceNumber"
@@ -70,7 +202,7 @@ exports[`Delivery component renders a return tab where returns status can be che
         </label>
         <input
           autocomplete="off"
-          class="sc-44f25114-5 dtSDlf"
+          class="c7"
           id=":r3:"
           maxlength="10"
           name="rmaNumber"
@@ -80,7 +212,7 @@ exports[`Delivery component renders a return tab where returns status can be che
         />
         <button
           aria-label="Submit"
-          class="sc-44f25114-6 mIroD"
+          class="c8"
           title="Submit"
           type="submit"
         >
@@ -104,11 +236,143 @@ exports[`Delivery component renders a return tab where returns status can be che
 
 exports[`Delivery component renders a system build tab where build progress can be checked 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-44f25114-0 egPNsa"
+  .c1 {
+  color: var(--color-grey-8);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.c2 {
+  color: var(--color-grey-8);
+  font-size: 0.82rem;
+  margin: 8px 0 8px 20px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c5 {
+  background-color: var(--color-grey-11);
+  border-bottom: 3px solid var(--color-orange-1);
+  cursor: pointer;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 600;
+  padding: 8px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.c4 {
+  background-color: #dedede;
+  border-bottom: 3px solid #dedede;
+  cursor: pointer;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 600;
+  padding: 8px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--color-grey-11);
+  border-bottom: 1px solid var(--color-grey-10);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 15px;
+}
+
+.c7 {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-right: 8px;
+  max-width: 175px;
+  padding: 8px 0 8px 10px;
+  width: 40%;
+}
+
+.c8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: var(--color-grey-1);
+  border-radius: 50%;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 32px;
+}
+
+.c8:active {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+@media screen and (min-width:650px) {
+
+}
+
+@media screen and (min-width:650px) {
+  .c0 {
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width:860px) {
+  .c0 {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width:1050px) {
+  .c0 {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width:650px) {
+  .c2 {
+    margin: 8px 0;
+  }
+}
+
+@media screen and (max-width:649px) {
+  .c6 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+<div
+    class="c0"
   >
     <h3
-      class="sc-9bf04a45-3 jXmISH"
+      class="c1"
     >
       Delivery / Tracking Information
     </h3>
@@ -117,27 +381,27 @@ exports[`Delivery component renders a system build tab where build progress can 
       style="overflow: hidden; height: auto;"
     >
       <p
-        class="sc-44f25114-1 cwwZoe"
+        class="c2"
       >
         Order now to receive by tomorrow.
       </p>
       <div
-        class="sc-44f25114-2 WJnhb"
+        class="c3"
       >
         <button
-          class="sc-44f25114-3 lkgOrW"
+          class="c4"
           type="button"
         >
           Order
         </button>
         <button
-          class="sc-44f25114-3 lkgOrW"
+          class="c4"
           type="button"
         >
           Return
         </button>
         <button
-          class="sc-44f25114-3 hXMIxa"
+          class="c5"
           type="button"
         >
           System
@@ -145,7 +409,7 @@ exports[`Delivery component renders a system build tab where build progress can 
       </div>
       <form
         action="https://pc-connect.co.uk/tracking/trackbuild"
-        class="sc-44f25114-4 iXxCCw"
+        class="c6"
         method="post"
       >
         <label
@@ -156,7 +420,7 @@ exports[`Delivery component renders a system build tab where build progress can 
         </label>
         <input
           autocomplete="off"
-          class="sc-44f25114-5 dtSDlf"
+          class="c7"
           id=":r6:-invoice"
           maxlength="10"
           name="invoiceNumber"
@@ -172,7 +436,7 @@ exports[`Delivery component renders a system build tab where build progress can 
         </label>
         <input
           autocomplete="off"
-          class="sc-44f25114-5 dtSDlf"
+          class="c7"
           id=":r6:"
           maxlength="10"
           name="buildNumber"
@@ -182,7 +446,7 @@ exports[`Delivery component renders a system build tab where build progress can 
         />
         <button
           aria-label="Submit"
-          class="sc-44f25114-6 mIroD"
+          class="c8"
           title="Submit"
           type="submit"
         >
@@ -206,11 +470,143 @@ exports[`Delivery component renders a system build tab where build progress can 
 
 exports[`Delivery component renders an order tab where order tracking can be checked 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-44f25114-0 egPNsa"
+  .c1 {
+  color: var(--color-grey-8);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.c2 {
+  color: var(--color-grey-8);
+  font-size: 0.82rem;
+  margin: 8px 0 8px 20px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c4 {
+  background-color: var(--color-grey-11);
+  border-bottom: 3px solid var(--color-orange-1);
+  cursor: pointer;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 600;
+  padding: 8px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.c5 {
+  background-color: #dedede;
+  border-bottom: 3px solid #dedede;
+  cursor: pointer;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-weight: 600;
+  padding: 8px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--color-grey-11);
+  border-bottom: 1px solid var(--color-grey-10);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 15px;
+}
+
+.c7 {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-right: 8px;
+  max-width: 175px;
+  padding: 8px 0 8px 10px;
+  width: 40%;
+}
+
+.c8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: var(--color-grey-1);
+  border-radius: 50%;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 32px;
+}
+
+.c8:active {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+@media screen and (min-width:650px) {
+
+}
+
+@media screen and (min-width:650px) {
+  .c0 {
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width:860px) {
+  .c0 {
+    margin-right: 50px;
+  }
+}
+
+@media screen and (min-width:1050px) {
+  .c0 {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width:650px) {
+  .c2 {
+    margin: 8px 0;
+  }
+}
+
+@media screen and (max-width:649px) {
+  .c6 {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+<div
+    class="c0"
   >
     <h3
-      class="sc-9bf04a45-3 jXmISH"
+      class="c1"
     >
       Delivery / Tracking Information
     </h3>
@@ -219,27 +615,27 @@ exports[`Delivery component renders an order tab where order tracking can be che
       style="overflow: hidden; height: auto;"
     >
       <p
-        class="sc-44f25114-1 cwwZoe"
+        class="c2"
       >
         Order now to receive by tomorrow.
       </p>
       <div
-        class="sc-44f25114-2 WJnhb"
+        class="c3"
       >
         <button
-          class="sc-44f25114-3 hXMIxa"
+          class="c4"
           type="button"
         >
           Order
         </button>
         <button
-          class="sc-44f25114-3 lkgOrW"
+          class="c5"
           type="button"
         >
           Return
         </button>
         <button
-          class="sc-44f25114-3 lkgOrW"
+          class="c5"
           type="button"
         >
           System
@@ -247,7 +643,7 @@ exports[`Delivery component renders an order tab where order tracking can be che
       </div>
       <form
         action="https://pc-connect.co.uk/tracking/trackorder"
-        class="sc-44f25114-4 iXxCCw"
+        class="c6"
         method="post"
       >
         <label
@@ -258,7 +654,7 @@ exports[`Delivery component renders an order tab where order tracking can be che
         </label>
         <input
           autocomplete="off"
-          class="sc-44f25114-5 dtSDlf"
+          class="c7"
           id=":r0:-invoice"
           maxlength="10"
           name="invoiceNumber"
@@ -274,7 +670,7 @@ exports[`Delivery component renders an order tab where order tracking can be che
         </label>
         <input
           autocomplete="off"
-          class="sc-44f25114-5 dtSDlf"
+          class="c7"
           id=":r0:"
           maxlength="10"
           name="postcode"
@@ -284,7 +680,7 @@ exports[`Delivery component renders an order tab where order tracking can be che
         />
         <button
           aria-label="Submit"
-          class="sc-44f25114-6 mIroD"
+          class="c8"
           title="Submit"
           type="submit"
         >

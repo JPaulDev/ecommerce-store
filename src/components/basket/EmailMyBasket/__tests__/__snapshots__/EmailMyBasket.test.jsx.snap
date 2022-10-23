@@ -1,11 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EmailMyBasket component renders a widget that allows users to enter their email address 1`] = `
+.c0 {
+  background-color: var(--color-grey-6);
+  border: 1px solid var(--color-grey-9);
+  border-radius: 10px;
+  font-size: 0.75rem;
+  margin-top: 25px;
+  padding: 20px 30px 30px;
+}
+
+.c1 {
+  border-bottom: 1px solid var(--color-grey-10);
+  font-family: 'Uni Sans',sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding: 11px 0;
+}
+
+.c2 {
+  border: 1px solid #767676;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  padding: 10px;
+  width: 70%;
+}
+
+.c3 {
+  background: linear-gradient(to top,#1463a2,#3a7fbf);
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: var(--shadow-button);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 11px 15px;
+  text-transform: uppercase;
+  width: 30%;
+}
+
+.c3:hover {
+  background: linear-gradient(to top,#105891,#1463a2);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.82rem;
+  margin: 20px 0;
+}
+
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 20px;
+  margin-right: 10px;
+  width: 20px;
+}
+
+.c6 {
+  color: var(--color-blue-1);
+  font-weight: 700;
+  margin-left: 5px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c6:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media screen and (max-width:899px) {
+  .c1 {
+    text-align: center;
+  }
+}
+
 <div
-  className="sc-5fef8f85-0 fBlDyN"
+  className="c0"
 >
   <h2
-    className="sc-5fef8f85-1 bvkqoa"
+    className="c1"
   >
     Email my basket
   </h2>
@@ -21,7 +106,7 @@ exports[`EmailMyBasket component renders a widget that allows users to enter the
     </label>
     <input
       autoComplete="email"
-      className="sc-5fef8f85-2 hXQaxO"
+      className="c2"
       id=":r0:-email"
       name="email"
       onChange={[Function]}
@@ -31,17 +116,17 @@ exports[`EmailMyBasket component renders a widget that allows users to enter the
       value=""
     />
     <button
-      className="sc-5fef8f85-3 gMZuR"
+      className="c3"
       type="submit"
     >
       Send
     </button>
     <div
-      className="sc-5fef8f85-4 gercnw"
+      className="c4"
     >
       <input
         checked={false}
-        className="sc-5fef8f85-5 flElrc"
+        className="c5"
         id=":r0:-checkbox"
         name="subscribe"
         onChange={[Function]}
@@ -55,7 +140,7 @@ exports[`EmailMyBasket component renders a widget that allows users to enter the
     </div>
     Read our
     <a
-      className="sc-5fef8f85-6 fcIyYN"
+      className="c6"
       href="/"
       onClick={[Function]}
       onMouseEnter={[Function]}

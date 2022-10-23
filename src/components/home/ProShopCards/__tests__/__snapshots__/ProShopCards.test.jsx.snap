@@ -1,23 +1,139 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProShopCards component renders 6 pro shop cards with links and shop descriptions 1`] = `
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--color-grey-8);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.9rem;
+  font-weight: 700;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c4 svg {
+  margin-left: 10px;
+}
+
+.c0 {
+  background-color: white;
+  border: 1px solid var(--color-grey-9);
+  display: grid;
+  gap: 6px;
+  margin-top: 15px;
+  padding: 6px;
+}
+
+.c1 {
+  background-color: #f1f1f1;
+  background-image: url(/img.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  min-height: 125px;
+  padding-left: 25px;
+  padding-top: 25px;
+}
+
+.c2 {
+  background-image: url(/img.jpg);
+  background-position-x: -170px;
+  background-repeat: no-repeat;
+  height: 18px;
+  margin-bottom: 10px;
+  width: 170px;
+}
+
+.c5 {
+  background-image: url(/img.jpg);
+  background-position-x: -510px;
+  background-repeat: no-repeat;
+  height: 18px;
+  margin-bottom: 10px;
+  width: 170px;
+}
+
+.c6 {
+  background-image: url(/img.jpg);
+  background-position-x: 0;
+  background-repeat: no-repeat;
+  height: 18px;
+  margin-bottom: 10px;
+  width: 170px;
+}
+
+.c7 {
+  background-image: url(/img.jpg);
+  background-position-x: -340px;
+  background-repeat: no-repeat;
+  height: 18px;
+  margin-bottom: 10px;
+  width: 170px;
+}
+
+.c8 {
+  color: #0072bc;
+  font-family: 'Uni Sans Book',sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 0.8;
+  margin-bottom: 10px;
+}
+
+.c3 {
+  color: var(--color-grey-8);
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  width: 60%;
+}
+
+@media screen and (min-width:780px) {
+  .c0 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width:780px) {
+  .c1 {
+    min-height: 140px;
+  }
+}
+
+@media screen and (min-width:990px) {
+  .c1 {
+    min-height: 175px;
+  }
+}
+
+@media screen and (max-width:989px) {
+  .c3 {
+    display: none;
+  }
+}
+
 <section
-  className="sc-6ac5ca5a-0 ciZbqg"
+  className="c0"
 >
   <div
-    className="sc-6ac5ca5a-1 dvtfYR"
+    className="c1"
   >
     <div
-      className="sc-6ac5ca5a-2 fxiEpa"
+      className="c2"
     />
     <p
-      className="sc-6ac5ca5a-4 ecTgta"
+      className="c3"
     >
       The fastest gaming PCs - plus a huge range of peripherals for
       the ultimate gaming experience.
     </p>
     <a
-      className="sc-bb098475-0 jmQbMN"
+      className="c4"
       href="/"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -38,19 +154,19 @@ exports[`ProShopCards component renders 6 pro shop cards with links and shop des
     </a>
   </div>
   <div
-    className="sc-6ac5ca5a-1 dvtfYR"
+    className="c1"
   >
     <div
-      className="sc-6ac5ca5a-2 gkYbA"
+      className="c5"
     />
     <p
-      className="sc-6ac5ca5a-4 ecTgta"
+      className="c3"
     >
       Workstations and servers for graphics-intensive workflows such
       as AEC & BIM, CAD & CAE and M & E.
     </p>
     <a
-      className="sc-bb098475-0 jmQbMN"
+      className="c4"
       href="/"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -71,19 +187,19 @@ exports[`ProShopCards component renders 6 pro shop cards with links and shop des
     </a>
   </div>
   <div
-    className="sc-6ac5ca5a-1 dvtfYR"
+    className="c1"
   >
     <div
-      className="sc-6ac5ca5a-2 sOFCp"
+      className="c6"
     />
     <p
-      className="sc-6ac5ca5a-4 ecTgta"
+      className="c3"
     >
       Computer based music and audio production - plus the best in
       music technology and instruments.
     </p>
     <a
-      className="sc-bb098475-0 jmQbMN"
+      className="c4"
       href="/"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -104,19 +220,19 @@ exports[`ProShopCards component renders 6 pro shop cards with links and shop des
     </a>
   </div>
   <div
-    className="sc-6ac5ca5a-1 dvtfYR"
+    className="c1"
   >
     <div
-      className="sc-6ac5ca5a-2 duhABr"
+      className="c7"
     />
     <p
-      className="sc-6ac5ca5a-4 ecTgta"
+      className="c3"
     >
       Film and broadcast equipment, workstations for professional
       video and media production workflows.
     </p>
     <a
-      className="sc-bb098475-0 jmQbMN"
+      className="c4"
       href="/"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -137,21 +253,21 @@ exports[`ProShopCards component renders 6 pro shop cards with links and shop des
     </a>
   </div>
   <div
-    className="sc-6ac5ca5a-1 dvtfYR"
+    className="c1"
   >
     <h4
-      className="sc-6ac5ca5a-3 cnxACh"
+      className="c8"
     >
       Digital Signage Solutions
     </h4>
     <p
-      className="sc-6ac5ca5a-4 ecTgta"
+      className="c3"
     >
       Reinvent the way you engage with customers with solutions that
       provide invaluable insights and customer data.
     </p>
     <a
-      className="sc-bb098475-0 jmQbMN"
+      className="c4"
       href="/"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -172,21 +288,21 @@ exports[`ProShopCards component renders 6 pro shop cards with links and shop des
     </a>
   </div>
   <div
-    className="sc-6ac5ca5a-1 dvtfYR"
+    className="c1"
   >
     <h4
-      className="sc-6ac5ca5a-3 cnxACh"
+      className="c8"
     >
       Deep Learning & AI
     </h4>
     <p
-      className="sc-6ac5ca5a-4 ecTgta"
+      className="c3"
     >
       Desktop, datacentre and cloud solutions for developing and
       deploying deep learning and AI models.
     </p>
     <a
-      className="sc-bb098475-0 jmQbMN"
+      className="c4"
       href="/"
       onClick={[Function]}
       onMouseEnter={[Function]}

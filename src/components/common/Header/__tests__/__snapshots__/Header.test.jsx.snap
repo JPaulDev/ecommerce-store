@@ -1,14 +1,212 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component renders a header with an image, search input and links 1`] = `
+.c3 {
+  justify-self: center;
+  position: relative;
+  width: 100%;
+}
+
+.c3::after {
+  border-radius: 9px;
+  box-shadow: 0 0 0 3px var(--color-orange-1);
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+  width: 100%;
+}
+
+.c4 {
+  border-radius: 8px;
+  color: var(--color-grey-2);
+  font-size: 0.94rem;
+  font-weight: 500;
+  min-height: 44px;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 65px;
+  width: 100%;
+}
+
+.c4::-webkit-input-placeholder {
+  font-size: 0.94rem;
+}
+
+.c4::-moz-placeholder {
+  font-size: 0.94rem;
+}
+
+.c4:-ms-input-placeholder {
+  font-size: 0.94rem;
+}
+
+.c4::placeholder {
+  font-size: 0.94rem;
+}
+
+.c4::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--color-orange-1);
+  border-radius: 8px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 3px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55px;
+}
+
+.c0 {
+  background-color: var(--color-grey-1);
+  box-shadow: 0 3px 2px 0 rgb(0 0 0 / 20%);
+  position: relative;
+  width: 100%;
+  z-index: 100;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 20px 15px;
+}
+
+.c2 img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.c6 {
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--color-grey-3);
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.85rem;
+  position: relative;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+
+.c7:hover {
+  color: white;
+}
+
+.c9 {
+  color: white;
+  font-size: 1.05rem;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width:545px) {
+  .c3 {
+    max-width: 420px;
+  }
+}
+
+@media screen and (max-width:929px) {
+  .c3 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width:590px) {
+  .c1 {
+    grid-template-columns: 1fr minmax(max-content,1fr);
+    width: 97%;
+  }
+}
+
+@media screen and (min-width:930px) {
+  .c1 {
+    grid-template-columns: 1fr minmax(270px,1fr) minmax(max-content,1fr);
+  }
+}
+
+@media screen and (max-width:649px) {
+  .c2 {
+    width: 155px;
+  }
+}
+
+@media screen and (min-width:930px) {
+  .c6 {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .c6 {
+    -webkit-column-gap: 40px;
+    column-gap: 40px;
+  }
+}
+
+@media screen and (max-width:589px) {
+  .c8 {
+    display: none;
+  }
+}
+
 <header
-  className="sc-e48389aa-0 kbjOMD"
+  className="c0"
 >
   <div
-    className="sc-e48389aa-1 NRlXX"
+    className="c1"
   >
     <div
-      className="sc-e48389aa-2 eUGPYh"
+      className="c2"
     >
       <img
         alt="PC-Connect.co.uk"
@@ -30,7 +228,7 @@ exports[`Header component renders a header with an image, search input and links
     </div>
     <form
       action="/search"
-      className="sc-63ad6a3e-0 cozavl"
+      className="c3"
       method="get"
       role="search"
     >
@@ -42,7 +240,7 @@ exports[`Header component renders a header with an image, search input and links
       </label>
       <input
         autoComplete="off"
-        className="sc-63ad6a3e-1 jYAIgi"
+        className="c4"
         id=":r0:"
         maxLength="50"
         name="searchQuery"
@@ -56,7 +254,7 @@ exports[`Header component renders a header with an image, search input and links
       />
       <button
         aria-label="Search"
-        className="sc-63ad6a3e-2 hnlpPi"
+        className="c5"
         title="Search"
         type="submit"
       >
@@ -74,11 +272,11 @@ exports[`Header component renders a header with an image, search input and links
       </button>
     </form>
     <div
-      className="sc-e48389aa-3 kZzijk"
+      className="c6"
     >
       <a
         aria-label="Account"
-        className="sc-e48389aa-4 feYoSC"
+        className="c7"
         href="/account"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -102,10 +300,10 @@ exports[`Header component renders a header with an image, search input and links
           />
         </svg>
         <div
-          className="sc-e48389aa-5 iDTMiu"
+          className="c8"
         >
           <div
-            className="sc-e48389aa-6 gZFlqS"
+            className="c9"
           >
             Account
           </div>
@@ -116,7 +314,7 @@ exports[`Header component renders a header with an image, search input and links
       </a>
       <a
         aria-label="Basket"
-        className="sc-e48389aa-4 feYoSC"
+        className="c7"
         href="/basket"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -135,10 +333,10 @@ exports[`Header component renders a header with an image, search input and links
           />
         </svg>
         <div
-          className="sc-e48389aa-5 iDTMiu"
+          className="c8"
         >
           <div
-            className="sc-e48389aa-6 gZFlqS"
+            className="c9"
           >
             Basket
           </div>

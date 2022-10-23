@@ -1,9 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FinancePanel component renders a panel with finance information and relevant links 1`] = `
-[
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-9);
+  -webkit-column-gap: 25px;
+  column-gap: 25px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 10px;
+}
+
+.c0 img {
+  height: auto;
+  width: 100px;
+}
+
+.c1 {
+  font-family: 'Uni Sans',sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--color-blue-1);
+  -webkit-column-gap: 5px;
+  column-gap: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 10px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width:600px) {
+  .c0 img {
+    width: 120px;
+    height: auto;
+  }
+}
+
+<div>
   <div
-    className="sc-cad3a378-0 eSLspp"
+    className="c0"
   >
     <img
       alt="PayPal credit."
@@ -24,12 +77,12 @@ exports[`FinancePanel component renders a panel with finance information and rel
     />
     <div>
       <div
-        className="sc-cad3a378-1 hSHWKX"
+        className="c1"
       >
         Spread the cost for up to 48 months (9.9% p.a fixed) or 0% for 4 months.
       </div>
       <a
-        className="sc-cad3a378-2 kWtZGW"
+        className="c2"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -49,9 +102,9 @@ exports[`FinancePanel component renders a panel with finance information and rel
         More Info About PayPal Credit
       </a>
     </div>
-  </div>,
+  </div>
   <div
-    className="sc-cad3a378-0 eSLspp"
+    className="c0"
   >
     <img
       alt="Pay on finance."
@@ -72,12 +125,12 @@ exports[`FinancePanel component renders a panel with finance information and rel
     />
     <div>
       <div
-        className="sc-cad3a378-1 hSHWKX"
+        className="c1"
       >
         Finance Classic Credit 48 Months 15.9%, Pay a deposit followed by 48 monthly payments.
       </div>
       <a
-        className="sc-cad3a378-2 kWtZGW"
+        className="c2"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -97,6 +150,6 @@ exports[`FinancePanel component renders a panel with finance information and rel
         More Info About Finance Classic Credit
       </a>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;

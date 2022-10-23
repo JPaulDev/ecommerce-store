@@ -1,11 +1,109 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TopBannerSmall component renders a banner with 3 icons and text next to each one 1`] = `
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--color-grey-6);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  min-height: 55px;
+  position: relative;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--color-grey-6);
+  -webkit-column-gap: 15px;
+  column-gap: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: 0;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--color-grey-6);
+  -webkit-column-gap: 15px;
+  column-gap: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 1;
+  z-index: 10;
+}
+
+.c2 {
+  color: var(--color-grey-2);
+  font-size: 0.7rem;
+}
+
+.c2 strong {
+  display: block;
+  font-size: 0.87rem;
+}
+
+@media screen and (max-width:999px) {
+  .c1 {
+    min-width: 285px;
+    -webkit-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c1 {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .c3 {
+    min-width: 285px;
+    -webkit-transition: opacity 1s ease-in-out 1s;
+    transition: opacity 1s ease-in-out 1s;
+    position: absolute;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c3 {
+    opacity: 1;
+  }
+}
+
 <div
-  className="sc-a8ce1b99-0 eqxWUn"
+  className="c0"
 >
   <div
-    className="sc-a8ce1b99-1 YGGBa"
+    className="c1"
     data-testid={0}
   >
     <img
@@ -26,7 +124,7 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
       width={24}
     />
     <div
-      className="sc-a8ce1b99-2 jtLOmz"
+      className="c2"
     >
       <strong>
         Award winning
@@ -35,7 +133,7 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
     </div>
   </div>
   <div
-    className="sc-a8ce1b99-1 iyqJuU"
+    className="c3"
     data-testid={1}
   >
     <img
@@ -56,7 +154,7 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
       width={24}
     />
     <div
-      className="sc-a8ce1b99-2 jtLOmz"
+      className="c2"
     >
       <strong>
         4.8 stars on Trustpilot
@@ -65,7 +163,7 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
     </div>
   </div>
   <div
-    className="sc-a8ce1b99-1 YGGBa"
+    className="c1"
     data-testid={2}
   >
     <img
@@ -86,7 +184,7 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
       width={24}
     />
     <div
-      className="sc-a8ce1b99-2 jtLOmz"
+      className="c2"
     >
       <strong>
         0% interest up to 4 months

@@ -1,8 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NotFound component renders a 404 error page 1`] = `
+.c0 {
+  background-color: white;
+  border: 1px solid var(--color-grey-9);
+  padding: 50px;
+  text-align: center;
+}
+
+.c0 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.c0 h1 {
+  font-family: 'Uni Sans Book',sans-serif;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.c0 p {
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width:600px) {
+  .c0 {
+    padding: 100px;
+  }
+}
+
 <div
-  className="sc-c15f3a29-0 cSEnwl"
+  className="c0"
 >
   <img
     alt=""

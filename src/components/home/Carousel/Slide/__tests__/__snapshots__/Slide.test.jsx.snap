@@ -1,12 +1,216 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Slide component renders a slide with all content present 1`] = `
+.c0 {
+  background-color: black;
+  margin-right: -100%;
+  min-height: 450px;
+  overflow: hidden;
+  padding: 10px 20px 0;
+  position: relative;
+  width: 100%;
+}
+
+.c1 {
+  position: absolute;
+  right: -383px;
+  top: 0;
+}
+
+.c2 {
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.c3 {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.c3 img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.c4 {
+  font-family: 'Uni Sans',sans-serif;
+  font-size: 1.93rem;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.c5 {
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.c6 {
+  left: 50%;
+  position: absolute;
+  top: 180px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 325px;
+}
+
+.c6 img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.c7 {
+  position: relative;
+  width: 30%;
+}
+
+.c8 {
+  font-family: 'Uni Sans',sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-left: 10px;
+  text-indent: 10px;
+}
+
+.c8 img {
+  margin-left: 15px;
+}
+
+.c9 {
+  font-size: 0.9rem;
+  padding: 10px 0 0 18px;
+}
+
+.c9 li {
+  padding: 5px 0;
+}
+
+@media screen and (min-width:550px) {
+  .c0 {
+    padding: 10px 60px 0;
+  }
+}
+
+@media screen and (min-width:715px) {
+  .c0 {
+    padding: 90px 60px 0;
+    min-height: 385px;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width:714px) {
+  .c1::after {
+    background-image: linear-gradient( to right, rgb(0 0 0 / 40%), rgb(0 0 0 / 15%) );
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c1 {
+    right: initial;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width:715px) {
+  .c2 {
+    width: 40%;
+    text-align: left;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c2 {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width:714px) {
+  .c3 {
+    width: 125px;
+  }
+}
+
+@media screen and (min-width:715px) {
+  .c4 {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width:715px) {
+  .c6 {
+    -webkit-transform: translateX(-10%);
+    -ms-transform: translateX(-10%);
+    transform: translateX(-10%);
+    top: 100px;
+  }
+}
+
+@media screen and (min-width:850px) {
+  .c6 {
+    width: 350px;
+    top: 90px;
+    right: 110px;
+    left: initial;
+    -webkit-transform: initial;
+    -ms-transform: initial;
+    transform: initial;
+  }
+}
+
+@media screen and (min-width:1000px) {
+  .c6 {
+    width: 325px;
+    top: 100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width:1100px) {
+  .c6 {
+    width: 375px;
+    top: 80px;
+  }
+}
+
+@media screen and (max-width:999px) {
+  .c7 {
+    display: none;
+  }
+}
+
 <div
-  className="sc-51d2adaa-0 eRDcMN"
+  className="c0"
   data-testid="slide-1"
 >
   <div
-    className="sc-51d2adaa-1 leLRgv"
+    className="c1"
   >
     <img
       alt=""
@@ -23,10 +227,10 @@ exports[`Slide component renders a slide with all content present 1`] = `
     />
   </div>
   <div
-    className="sc-51d2adaa-2 eruBKR"
+    className="c2"
   >
     <div
-      className="sc-51d2adaa-3 kXQAzC"
+      className="c3"
     >
       <img
         alt="3XS Systems"
@@ -44,19 +248,19 @@ exports[`Slide component renders a slide with all content present 1`] = `
       />
     </div>
     <h4
-      className="sc-51d2adaa-4 fYFSrg"
+      className="c4"
     >
       RTX™ 30 Series PCs
     </h4>
     <p
-      className="sc-51d2adaa-5 fwDVOe"
+      className="c5"
     >
       Custom built PCs built with NVIDIA's 2nd gen Ampere architecture,
       designed to deliver ultimate performance for gamers and creators.
     </p>
   </div>
   <div
-    className="sc-51d2adaa-6 gDRA-Dv"
+    className="c6"
   >
     <img
       alt="A PC with rainbow coloured LED case fans on the front"
@@ -74,10 +278,10 @@ exports[`Slide component renders a slide with all content present 1`] = `
     />
   </div>
   <div
-    className="sc-51d2adaa-7 irMhCf"
+    className="c7"
   >
     <h4
-      className="sc-51d2adaa-8 jWKpEH"
+      className="c8"
     >
       Powered by
       <img
@@ -96,7 +300,7 @@ exports[`Slide component renders a slide with all content present 1`] = `
       />
     </h4>
     <ul
-      className="sc-51d2adaa-9 jjcSfp"
+      className="c9"
     >
       <li>
         Premium built to order systems

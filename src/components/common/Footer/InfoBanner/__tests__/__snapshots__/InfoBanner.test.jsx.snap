@@ -1,8 +1,112 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InfoBanner component renders a banner with the company address/information and social media links 1`] = `
+.c0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 20px 0;
+  row-gap: 15px;
+}
+
+.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 0.75rem;
+  margin: 0 15px;
+  text-align: center;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  row-gap: 8px;
+}
+
+.c2 :last-child {
+  border: 0;
+}
+
+.c3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-right: 1px solid var(--color-grey-10);
+  -webkit-column-gap: 12px;
+  column-gap: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Uni Sans',sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 0 15px;
+}
+
+.c4 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: black;
+  -webkit-column-gap: 8px;
+  column-gap: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover {
+  color: var(--color-blue-2);
+}
+
+@media screen and (min-width:910px) {
+  .c0 {
+    padding-left: 30px;
+    padding-right: 15px;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width:910px) {
+  .c1 {
+    text-align: left;
+    padding-right: 10px;
+    max-width: 350px;
+    margin-left: 20px;
+    margin-right: auto;
+  }
+}
+
 <div
-  className="sc-c50e9d42-0 iwrdSv"
+  className="c0"
 >
   <img
     alt=""
@@ -22,18 +126,18 @@ exports[`InfoBanner component renders a banner with the company address/informat
     width={24}
   />
   <p
-    className="sc-c50e9d42-1 jFSgvu"
+    className="c1"
   >
     PC Connect International Ltd, Unit 5, Lower Milehouse Ln, Newcastle-under-Lyme, Newcastle ST5 9EN
   </p>
   <div
-    className="sc-c50e9d42-2 dfboId"
+    className="c2"
   >
     <div
-      className="sc-c50e9d42-3 jAUXqA"
+      className="c3"
     >
       <a
-        className="sc-c50e9d42-4 iVA-drt"
+        className="c4"
         href="/about"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -54,10 +158,10 @@ exports[`InfoBanner component renders a banner with the company address/informat
       </a>
     </div>
     <div
-      className="sc-c50e9d42-3 jAUXqA"
+      className="c3"
     >
       <a
-        className="sc-c50e9d42-4 iVA-drt"
+        className="c4"
         href="/about"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -78,12 +182,12 @@ exports[`InfoBanner component renders a banner with the company address/informat
       </a>
     </div>
     <div
-      className="sc-c50e9d42-3 jAUXqA"
+      className="c3"
     >
       Follow Us
       <a
         aria-label="Twitter"
-        className="sc-c50e9d42-4 iVA-drt"
+        className="c4"
         href="https://www.twitter.com"
         title="Twitter"
       >
@@ -101,7 +205,7 @@ exports[`InfoBanner component renders a banner with the company address/informat
       </a>
       <a
         aria-label="Facebook"
-        className="sc-c50e9d42-4 iVA-drt"
+        className="c4"
         href="https://www.facebook.com"
         title="Facebook"
       >
@@ -119,7 +223,7 @@ exports[`InfoBanner component renders a banner with the company address/informat
       </a>
       <a
         aria-label="Instagram"
-        className="sc-c50e9d42-4 iVA-drt"
+        className="c4"
         href="https://www.instagram.com"
         title="Instagram"
       >
@@ -137,7 +241,7 @@ exports[`InfoBanner component renders a banner with the company address/informat
       </a>
       <a
         aria-label="Reddit"
-        className="sc-c50e9d42-4 iVA-drt"
+        className="c4"
         href="https://www.reddit.com"
         title="Reddit"
       >
@@ -155,7 +259,7 @@ exports[`InfoBanner component renders a banner with the company address/informat
       </a>
       <a
         aria-label="YouTube"
-        className="sc-c50e9d42-4 iVA-drt"
+        className="c4"
         href="https://www.youtube.com"
         title="YouTube"
       >

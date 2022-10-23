@@ -1,41 +1,211 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CheckoutPanel component renders a checkout panel with a checkout button and the basket total 1`] = `
-[
+.c4 {
+  color: var(--color-blue-1);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.c6 {
+  color: var(--color-blue-1);
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.c5 {
+  font-size: 0.7em;
+}
+
+.c0 {
+  background-color: #d7f0db;
+  border-left: 1px solid var(--color-grey-9);
+  border-right: 1px solid var(--color-grey-9);
+  border-top: 1px solid var(--color-grey-9);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px 30px;
+}
+
+.c1 {
+  border-bottom: 1px solid var(--color-grey-10);
+  font-family: 'Uni Sans',sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding: 11px 0;
+}
+
+.c2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 20px;
+  column-gap: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.c2 strong {
+  font-size: 1.25rem;
+  margin-right: 5px;
+}
+
+.c3 {
+  font-size: 0.9rem;
+}
+
+.c7 {
+  font-size: 0.82rem;
+}
+
+.c8 {
+  border-top: 1px solid var(--color-grey-10);
+  margin-top: 15px;
+  padding: 20px 0 10px;
+}
+
+.c9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: linear-gradient(to top,#009245,#02ab52);
+  border-radius: 6px;
+  box-shadow: var(--shadow-button);
+  color: white;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.88rem;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  padding: 15px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c9:hover {
+  background-image: linear-gradient(to top,#008631,#00a13f);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.c10 {
+  color: var(--color-blue-1);
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c10:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c11 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #cadfce;
+  border-bottom: 1px solid var(--color-grey-9);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-left: 1px solid var(--color-grey-9);
+  border-right: 1px solid var(--color-grey-9);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 20px 30px 30px;
+}
+
+.c11 img {
+  margin-top: 5px;
+}
+
+.c12 {
+  background-color: #ffc439;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px 0;
+  padding: 10px 25px;
+}
+
+.c12:hover {
+  box-shadow: inset 0 0 100px 100px rgb(0 0 0 / 5%);
+}
+
+@media screen and (max-width:899px) {
+  .c1 {
+    text-align: center;
+  }
+}
+
+<div>
   <div
-    className="sc-bcd69530-0 fcfoHE"
+    className="c0"
   >
     <h2
-      className="sc-bcd69530-1 gCqtZB"
+      className="c1"
     >
       Basket Summary
     </h2>
     <div
-      className="sc-bcd69530-2 llXxMv"
+      className="c2"
     >
       <span
-        className="sc-bcd69530-3 hAzHWT"
+        className="c3"
       >
         Delivery to UK Mainland
       </span>
       <span
-        className="sc-dded47fe-0 RkYsN"
+        className="c4"
       >
         <span
-          className="sc-dded47fe-1 jIDwKn"
+          className="c5"
         >
           £
         </span>
         4
         <span
-          className="sc-dded47fe-1 jIDwKn"
+          className="c5"
         >
           .99
         </span>
       </span>
     </div>
     <div
-      className="sc-bcd69530-2 llXxMv"
+      className="c2"
     >
       <span>
         <strong>
@@ -44,31 +214,31 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
         (including VAT)
       </span>
       <span
-        className="sc-dded47fe-0 epDKII"
+        className="c6"
       >
         <span
-          className="sc-dded47fe-1 jIDwKn"
+          className="c5"
         >
           £
         </span>
         4
         <span
-          className="sc-dded47fe-1 jIDwKn"
+          className="c5"
         >
           .99
         </span>
       </span>
     </div>
     <span
-      className="sc-bcd69530-3 iLFZUg"
+      className="c7"
     >
       Finance options available at checkout
     </span>
     <div
-      className="sc-bcd69530-4 jjERXY"
+      className="c8"
     >
       <a
-        className="sc-bcd69530-5 jhLjbd"
+        className="c9"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -88,7 +258,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
         </svg>
       </a>
       <a
-        className="sc-bcd69530-6 eQtxKP"
+        className="c10"
         href="/account"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -97,18 +267,18 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
         Have an account? Login and checkout now
       </a>
     </div>
-  </div>,
+  </div>
   <div
-    className="sc-bcd69530-7 cagxRW"
+    className="c11"
   >
     <span
-      className="sc-bcd69530-3 iLFZUg"
+      className="c7"
     >
       Alternatively
     </span>
     <a
       aria-label="Pay with PayPal"
-      className="sc-bcd69530-8 ibUCxz"
+      className="c12"
       href="https://www.paypal.co.uk"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -148,7 +318,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
       </svg>
     </a>
     <span
-      className="sc-bcd69530-3 iLFZUg"
+      className="c7"
     >
       Two easy ways to pay
     </span>
@@ -177,6 +347,6 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
         width={24}
       />
     </a>
-  </div>,
-]
+  </div>
+</div>
 `;

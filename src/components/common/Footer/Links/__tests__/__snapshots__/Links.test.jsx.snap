@@ -2,14 +2,57 @@
 
 exports[`Links component renders a heading along with related links 1`] = `
 <DocumentFragment>
-  <div>
+  .c0 {
+  color: var(--color-grey-8);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+
+.c1 {
+  list-style: none;
+  padding: 0 20px;
+}
+
+.c1 li {
+  padding: 7px 0;
+}
+
+.c2 {
+  color: var(--color-grey-8);
+  font-size: 0.84rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+@media screen and (min-width:650px) {
+
+}
+
+@media screen and (min-width:650px) {
+  .c1 {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (min-width:860px) {
+  .c1 {
+    padding: 0;
+  }
+}
+
+<div>
     <h3
-      class="sc-9bf04a45-3 jXmISH"
+      class="c0"
     >
       Information
     </h3>
     <ul
-      class="sc-e0091541-0 dhVZaa"
+      class="c1"
       id="Information"
       style="height: 0px;"
     >
@@ -17,7 +60,7 @@ exports[`Links component renders a heading along with related links 1`] = `
         style="opacity: 0; transform: translateX(-50px) translateZ(0);"
       >
         <a
-          class="sc-e0091541-1 dZPrIu"
+          class="c2"
           href="/Link"
         >
           About Us
@@ -27,7 +70,7 @@ exports[`Links component renders a heading along with related links 1`] = `
         style="opacity: 0; transform: translateX(-50px) translateZ(0);"
       >
         <a
-          class="sc-e0091541-1 dZPrIu"
+          class="c2"
           href="/Link"
         >
           Contact

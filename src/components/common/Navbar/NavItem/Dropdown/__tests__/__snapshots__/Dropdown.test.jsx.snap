@@ -1,25 +1,100 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown component renders the accessories menu with all links/advertisements present 1`] = `
+.c0 {
+  background-color: white;
+  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  max-width: 1100px;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 96%;
+}
+
+.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 30px;
+}
+
+.c2 {
+  border-bottom: 1px solid var(--color-orange-1);
+  color: var(--color-orange-1);
+  font-size: 1.03rem;
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+}
+
+.c3 {
+  list-style: none;
+}
+
+.c3 li {
+  padding-bottom: 7px;
+}
+
+.c4 {
+  color: var(--color-grey-2);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover {
+  color: var(--color-grey-5);
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c5 {
+  background-color: var(--color-grey-6);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 25px;
+  row-gap: 15px;
+}
+
+.c5 img {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 40%);
+}
+
+@media screen and (max-width:924px) {
+  .c5 {
+    display: none;
+  }
+}
+
 <div
-  className="sc-761e3646-0 dezeyQ"
+  className="c0"
   data-testid="dropdown-menu"
   id="Accessories"
 >
   <div
-    className="sc-761e3646-1 dnHZgB"
+    className="c1"
   >
     <h4
-      className="sc-761e3646-2 jmPIqe"
+      className="c2"
     >
       Keyboards
     </h4>
     <ul
-      className="sc-761e3646-3 qKKzw"
+      className="c3"
     >
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href=""
         >
           Wired Keyboards
@@ -27,7 +102,7 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href=""
         >
           Wireless Keyboards
@@ -35,7 +110,7 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href=""
         >
           Gaming Keyboards
@@ -43,16 +118,16 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       </li>
     </ul>
     <h4
-      className="sc-761e3646-2 jmPIqe"
+      className="c2"
     >
       Mice
     </h4>
     <ul
-      className="sc-761e3646-3 qKKzw"
+      className="c3"
     >
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href=""
         >
           Wired Mice
@@ -60,7 +135,7 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href=""
         >
           Wireless Mice
@@ -69,19 +144,19 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
     </ul>
   </div>
   <div
-    className="sc-761e3646-1 dnHZgB"
+    className="c1"
   >
     <h4
-      className="sc-761e3646-2 jmPIqe"
+      className="c2"
     >
       Audio
     </h4>
     <ul
-      className="sc-761e3646-3 qKKzw"
+      className="c3"
     >
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href=""
         >
           Microphones
@@ -89,7 +164,7 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href=""
         >
           Speakers
@@ -98,19 +173,19 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
     </ul>
   </div>
   <div
-    className="sc-761e3646-1 dnHZgB"
+    className="c1"
   >
     <h4
-      className="sc-761e3646-2 jmPIqe"
+      className="c2"
     >
       Monitors
     </h4>
     <ul
-      className="sc-761e3646-3 qKKzw"
+      className="c3"
     >
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href=""
         >
           Gaming Monitors
@@ -118,7 +193,7 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href=""
         >
           Ultrawide Monitors
@@ -126,7 +201,7 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href=""
         >
           OLED Monitors
@@ -135,7 +210,7 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
     </ul>
   </div>
   <div
-    className="sc-761e3646-5 glabts"
+    className="c5"
   >
     <img
       alt=""
@@ -176,25 +251,100 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
 `;
 
 exports[`Dropdown component renders the components menu with all links/advertisements present 1`] = `
+.c0 {
+  background-color: white;
+  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  max-width: 1100px;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 96%;
+}
+
+.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 30px;
+}
+
+.c2 {
+  border-bottom: 1px solid var(--color-orange-1);
+  color: var(--color-orange-1);
+  font-size: 1.03rem;
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+}
+
+.c3 {
+  list-style: none;
+}
+
+.c3 li {
+  padding-bottom: 7px;
+}
+
+.c4 {
+  color: var(--color-grey-2);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover {
+  color: var(--color-grey-5);
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.c5 {
+  background-color: var(--color-grey-6);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 25px;
+  row-gap: 15px;
+}
+
+.c5 img {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 40%);
+}
+
+@media screen and (max-width:924px) {
+  .c5 {
+    display: none;
+  }
+}
+
 <div
-  className="sc-761e3646-0 dezeyQ"
+  className="c0"
   data-testid="dropdown-menu"
   id="Components"
 >
   <div
-    className="sc-761e3646-1 dnHZgB"
+    className="c1"
   >
     <h4
-      className="sc-761e3646-2 jmPIqe"
+      className="c2"
     >
       Processors
     </h4>
     <ul
-      className="sc-761e3646-3 qKKzw"
+      className="c3"
     >
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/processors/amd"
         >
           AMD
@@ -202,7 +352,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/processors/intel"
         >
           Intel
@@ -210,16 +360,16 @@ exports[`Dropdown component renders the components menu with all links/advertise
       </li>
     </ul>
     <h4
-      className="sc-761e3646-2 jmPIqe"
+      className="c2"
     >
       Memory
     </h4>
     <ul
-      className="sc-761e3646-3 qKKzw"
+      className="c3"
     >
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/memory/ddr5"
         >
           DDR5
@@ -227,7 +377,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/memory/ddr4"
         >
           DDR4
@@ -235,16 +385,16 @@ exports[`Dropdown component renders the components menu with all links/advertise
       </li>
     </ul>
     <h4
-      className="sc-761e3646-2 jmPIqe"
+      className="c2"
     >
       Motherboards
     </h4>
     <ul
-      className="sc-761e3646-3 qKKzw"
+      className="c3"
     >
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/motherboards/amd"
         >
           AMD Motherboards
@@ -252,7 +402,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/motherboards/intel"
         >
           Intel Motherboards
@@ -261,19 +411,19 @@ exports[`Dropdown component renders the components menu with all links/advertise
     </ul>
   </div>
   <div
-    className="sc-761e3646-1 dnHZgB"
+    className="c1"
   >
     <h4
-      className="sc-761e3646-2 jmPIqe"
+      className="c2"
     >
       Graphics Cards
     </h4>
     <ul
-      className="sc-761e3646-3 qKKzw"
+      className="c3"
     >
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/graphics-cards/nvidia"
         >
           NVIDIA Graphics Cards
@@ -281,7 +431,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/graphics-cards/amd"
         >
           AMD Graphics Cards
@@ -289,16 +439,16 @@ exports[`Dropdown component renders the components menu with all links/advertise
       </li>
     </ul>
     <h4
-      className="sc-761e3646-2 jmPIqe"
+      className="c2"
     >
       Power Supplies
     </h4>
     <ul
-      className="sc-761e3646-3 qKKzw"
+      className="c3"
     >
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/power-supplies/wired"
         >
           Fully Wired
@@ -306,7 +456,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/power-supplies/modular"
         >
           Fully Modular
@@ -315,19 +465,19 @@ exports[`Dropdown component renders the components menu with all links/advertise
     </ul>
   </div>
   <div
-    className="sc-761e3646-1 dnHZgB"
+    className="c1"
   >
     <h4
-      className="sc-761e3646-2 jmPIqe"
+      className="c2"
     >
       Cases
     </h4>
     <ul
-      className="sc-761e3646-3 qKKzw"
+      className="c3"
     >
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/cases/full-tower"
         >
           Full Tower
@@ -335,7 +485,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/cases/midi-tower"
         >
           Midi Tower
@@ -343,7 +493,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
       </li>
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/cases/itx"
         >
           ITX
@@ -351,16 +501,16 @@ exports[`Dropdown component renders the components menu with all links/advertise
       </li>
     </ul>
     <h4
-      className="sc-761e3646-2 jmPIqe"
+      className="c2"
     >
       Storage
     </h4>
     <ul
-      className="sc-761e3646-3 qKKzw"
+      className="c3"
     >
       <li>
         <a
-          className="sc-761e3646-4 jELmN"
+          className="c4"
           href="/shop/components/storage/solid-state-drives"
         >
           Solid State Drives
@@ -369,7 +519,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
     </ul>
   </div>
   <div
-    className="sc-761e3646-5 glabts"
+    className="c5"
   >
     <img
       alt=""

@@ -1,15 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Navbar component renders all links and buttons 1`] = `
+.c2 {
+  background: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 0.85rem;
+  padding: 15px 20px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2:hover {
+  background-color: var(--color-grey-1);
+}
+
+.c0 {
+  background-color: var(--color-grey-4);
+  box-shadow: 0 3px 2px 0 rgb(0 0 0 / 30%);
+  position: relative;
+  z-index: 90;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+}
+
 <nav
-  className="sc-32045fd3-0 glgyrw"
+  className="c0"
 >
   <ul
-    className="sc-32045fd3-1 cAfKXL"
+    className="c1"
   >
     <li>
       <a
-        className="sc-571537e9-0 jvVTyW"
+        className="c2"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -22,7 +62,7 @@ exports[`Navbar component renders all links and buttons 1`] = `
       <button
         aria-controls="Components"
         aria-expanded={false}
-        className="sc-571537e9-0 jvVTyW"
+        className="c2"
         onClick={[Function]}
         type="button"
       >
@@ -33,7 +73,7 @@ exports[`Navbar component renders all links and buttons 1`] = `
       <button
         aria-controls="Accessories"
         aria-expanded={false}
-        className="sc-571537e9-0 jvVTyW"
+        className="c2"
         onClick={[Function]}
         type="button"
       >
@@ -42,7 +82,7 @@ exports[`Navbar component renders all links and buttons 1`] = `
     </li>
     <li>
       <a
-        className="sc-571537e9-0 jvVTyW"
+        className="c2"
         href="/about"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -53,7 +93,7 @@ exports[`Navbar component renders all links and buttons 1`] = `
     </li>
     <li>
       <a
-        className="sc-571537e9-0 jvVTyW"
+        className="c2"
         href="/contact"
         onClick={[Function]}
         onMouseEnter={[Function]}

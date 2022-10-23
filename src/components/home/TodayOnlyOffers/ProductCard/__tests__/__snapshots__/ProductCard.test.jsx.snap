@@ -1,8 +1,231 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProductCard component should render a product card with with all the product information 1`] = `
+.c13 {
+  background: linear-gradient(to top,#3b7739,#55a952);
+  border-radius: 6px;
+  box-shadow: var(--shadow-button);
+  color: white;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 8px;
+  padding: 12px 0;
+  text-transform: uppercase;
+  width: 180px;
+}
+
+.c13:disabled {
+  background: var(--color-grey-12);
+  color: rgb(255 255 255 / 90%);
+  cursor: initial;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.c13:not(:disabled):hover {
+  background: linear-gradient(to top,#326830,#4a9b47);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.c13:not(:disabled):active {
+  -webkit-transform: scale(0.96);
+  -ms-transform: scale(0.96);
+  transform: scale(0.96);
+}
+
+.c4 {
+  color: var(--color-blue-1);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.c7 {
+  color: var(--color-grey-7);
+  font-size: 0.93rem;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.c8 {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.c5 {
+  color: var(--color-blue-1);
+  font-size: 1.9rem;
+}
+
+.c6 {
+  font-size: 0.7em;
+}
+
+.c9 {
+  margin-top: 8px;
+  position: relative;
+}
+
+.c10 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #f2f2f2;
+  border: 1px solid var(--color-grey-12);
+  border-radius: 4px;
+  box-shadow: 0 2px 3px rgb(17 17 17 / 10%);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 5px 25px 5px 10px;
+  width: 55px;
+}
+
+.c10:not(:disabled) {
+  cursor: pointer;
+}
+
+.c10:not(:disabled):hover {
+  background-color: var(--color-grey-9);
+}
+
+.c11 {
+  --arrow-color: #545454;
+  --arrow-size: 5px;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  width: 25px;
+}
+
+.c11::before,
+.c11::after {
+  border-left: var(--arrow-size) solid transparent;
+  border-right: var(--arrow-size) solid transparent;
+  content: '';
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.c11::before {
+  border-bottom: var(--arrow-size) solid var(--arrow-color);
+  top: 9px;
+}
+
+.c11::after {
+  border-top: var(--arrow-size) solid var(--arrow-color);
+  bottom: 9px;
+}
+
+.c12 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #3ba936;
+  -webkit-column-gap: 5px;
+  column-gap: 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-top: 8px;
+  text-transform: uppercase;
+}
+
+.c0 {
+  background-color: white;
+  border: 1px solid var(--color-grey-9);
+  border-radius: 10px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 img {
+  height: auto;
+  width: 150px;
+}
+
+.c1 {
+  -webkit-line-clamp: 2;
+  margin: 5px 0 10px;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-align: center;
+}
+
+.c2 {
+  -webkit-line-clamp: 3;
+  color: var(--color-grey-8);
+  font-size: 0.88rem;
+  margin-top: 10px;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-align: center;
+}
+
+.c3 {
+  border-bottom: 2px solid #d2d6d6;
+  margin: 5px 0;
+  padding-bottom: 10px;
+  width: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@media screen and (min-width:570px) {
+  .c0 {
+    min-height: 510px;
+  }
+}
+
+@media screen and (max-width:1109.98px) {
+  .c0:nth-child(4n) {
+    display: none;
+  }
+}
+
+@media screen and (min-width:570px) {
+  .c1 {
+    margin: 5px 0 auto;
+  }
+}
+
 <li
-  className="sc-6e24aa3c-0 bqIXaO"
+  className="c0"
 >
   <img
     alt=""
@@ -12,52 +235,52 @@ exports[`ProductCard component should render a product card with with all the pr
     width={200}
   />
   <p
-    className="sc-6e24aa3c-1 gFdkSZ"
+    className="c1"
   >
     ASUS ROG Strix GeForce RTX 3080 V2 OC
   </p>
   <p
-    className="sc-6e24aa3c-2 kOizBS"
+    className="c2"
   >
     1440MHz, 1905MHz Boost, 8704 CUDA Cores, 10GB GDDR6X
   </p>
   <div
-    className="sc-6e24aa3c-3 hnqpNO"
+    className="c3"
   >
     <span
-      className="sc-bd55615-0 cxPlFY"
+      className="c4"
     >
       SKU: 
       GPU-3PAQ-ASU
     </span>
   </div>
   <span
-    className="sc-dded47fe-0 bVUSwy"
+    className="c5"
   >
     <span
-      className="sc-dded47fe-1 jIDwKn"
+      className="c6"
     >
       £
     </span>
     99
     <span
-      className="sc-dded47fe-1 jIDwKn"
+      className="c6"
     >
       .99
     </span>
   </span>
   <span
-    className="sc-2cd02fbb-0 tfQIO"
+    className="c7"
   >
     <span
-      className="sc-2cd02fbb-1 dlirfm"
+      className="c8"
     >
       Was: 
     </span>
     £129.99
   </span>
   <div
-    className="sc-4606141e-0 kNwOEK"
+    className="c9"
   >
     <label
       hidden={true}
@@ -66,7 +289,7 @@ exports[`ProductCard component should render a product card with with all the pr
       Quantity
     </label>
     <select
-      className="sc-4606141e-1 iFXLLw"
+      className="c10"
       disabled={false}
       id=":r0:"
       name="quantity"
@@ -100,11 +323,11 @@ exports[`ProductCard component should render a product card with with all the pr
       </option>
     </select>
     <span
-      className="sc-4606141e-2 xtdus"
+      className="c11"
     />
   </div>
   <div
-    className="sc-4ceb59c7-0 bqwgbT"
+    className="c12"
     title="Item is in stock"
   >
     <svg
@@ -136,7 +359,7 @@ exports[`ProductCard component should render a product card with with all the pr
     In Stock
   </div>
   <button
-    className="sc-c66e6586-0 dInGqR"
+    className="c13"
     disabled={false}
     onClick={[Function]}
     type="button"

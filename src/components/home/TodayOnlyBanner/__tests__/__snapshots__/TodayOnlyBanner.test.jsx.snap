@@ -1,24 +1,124 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
+.c4 {
+  background: linear-gradient(to top,#858484,#a0a0a0);
+  border-radius: 6px;
+  box-shadow: var(--shadow-button);
+  color: white;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 12px 25px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c4:hover {
+  background: linear-gradient(to top,#858484,#737373);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.c0 {
+  background-color: #d72140;
+  background-image: url(/img.jpg);
+  background-position: 96% 60%;
+  background-repeat: no-repeat;
+  border: 1px solid var(--color-grey-9);
+  margin: 15px 0;
+  overflow: hidden;
+  padding: 20px 220px 27px 20px;
+  position: relative;
+}
+
+.c1 {
+  background: linear-gradient(to right,#c12134,#da2141);
+  border-radius: 50%;
+  height: 170px;
+  left: -67px;
+  position: absolute;
+  width: 300px;
+}
+
+.c2 {
+  color: white;
+  font-family: 'Uni Sans',sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+  z-index: 10;
+}
+
+.c3 {
+  font-family: 'Uni Sans',sans-serif;
+  font-size: clamp(20px,3.48vw,25px);
+  font-weight: 600;
+  margin-right: auto;
+}
+
+@media screen and (min-width:935px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-column-gap: 30px;
+    column-gap: 30px;
+    background-image: none;
+    background-color: white;
+    padding: 25px 30px;
+  }
+}
+
+@media screen and (max-width:934px) {
+  .c1 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:575px) {
+  .c2 {
+    font-size: 1.95rem;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width:700px) {
+  .c3 {
+    line-height: 1;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width:934px) {
+  .c3 {
+    margin: 10px 0 15px;
+  }
+}
+
 <div
-  className="sc-d1900708-0 bUVuND"
+  className="c0"
 >
   <div
-    className="sc-d1900708-1 bJxOxV"
+    className="c1"
   />
   <h3
-    className="sc-d1900708-2 hfCPZM"
+    className="c2"
   >
     TODAY ONLY
   </h3>
   <h3
-    className="sc-d1900708-3 QtRJk"
+    className="c3"
   >
     Fantastic offers, updated every weekday
   </h3>
   <a
-    className="sc-fe62e3ad-0 hthkZu"
+    className="c4"
     href="/"
     onClick={[Function]}
     onMouseEnter={[Function]}

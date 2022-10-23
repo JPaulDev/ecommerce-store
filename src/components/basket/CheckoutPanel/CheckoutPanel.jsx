@@ -18,7 +18,7 @@ export default function CheckoutPanel() {
   });
 
   return (
-    <>
+    <div>
       <Styled.TopContainer>
         <Styled.Heading>Basket Summary</Styled.Heading>
         <Styled.Container>
@@ -68,6 +68,6 @@ export default function CheckoutPanel() {
           </a>
         </Link>
       </Styled.BottomContainer>
-    </>
+    </div>
   );
 }

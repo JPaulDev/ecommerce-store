@@ -80,7 +80,7 @@ describe('BasketItem component price display', () => {
 describe('BasketItem component total price display', () => {
   it('should display the correct item total', () => {
     renderWithProviders(
-      <BasketItem product={{ ...productData, quantity: 2, isOnSale: false }} />
+      <BasketItem product={{ ...productData, quantity: 2 }} />
     );
 
     expect(screen.getByText('199')).toHaveTextContent('£199.98');

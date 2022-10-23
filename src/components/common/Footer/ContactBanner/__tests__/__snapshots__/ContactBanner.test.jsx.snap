@@ -1,11 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContactBanner component renders a banner with a contact number and a live chat link 1`] = `
+.c0 {
+  background-color: var(--color-blue-2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.c0 :last-child {
+  border: 0;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-right: 2px solid white;
+  color: white;
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Uni Sans',sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 0 25px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:hover {
+  color: var(--color-grey-11);
+}
+
 <div
-  className="sc-364eb71d-0 aaEei"
+  className="c0"
 >
   <a
-    className="sc-364eb71d-1 dvIZFf"
+    className="c1"
     href="/contact"
     onClick={[Function]}
     onMouseEnter={[Function]}
@@ -25,7 +67,7 @@ exports[`ContactBanner component renders a banner with a contact number and a li
     01782-444455
   </a>
   <a
-    className="sc-364eb71d-1 dvIZFf"
+    className="c1"
     href="/contact"
     onClick={[Function]}
     onMouseEnter={[Function]}

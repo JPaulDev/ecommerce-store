@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom/extend-expect';
+import 'jest-styled-components';
 import mediaQuery from 'css-mediaquery';
 
 // Prevents scrollTo not implemented error caused by framer motion
