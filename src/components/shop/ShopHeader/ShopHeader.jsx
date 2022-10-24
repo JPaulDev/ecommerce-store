@@ -1,21 +1,21 @@
-import { motion, useCycle } from 'framer-motion';
+import { motion, useCycle, AnimatePresence } from 'framer-motion';
 import { ResponsiveBox } from '../../common';
 import { ChevronRight } from '../../icons';
 import * as Styled from './styles';
 
 const motionProps = {
-  style: { overflow: 'hidden' },
-  initial: false,
+  style: {
+    overflow: 'hidden',
+  },
+  initial: 'closed',
+  animate: 'open',
+  exit: 'closed',
   variants: {
     open: {
       height: 'auto',
-      display: 'block',
     },
     closed: {
       height: 0,
-      transitionEnd: {
-        display: 'none',
-      },
     },
   },
   transition: {
@@ -30,19 +30,20 @@ export default function ShopHeader({
   latestArrivals,
   latestArrivalsDescription,
 }) {
-  const [isTopOpen, toggleTopOpen] = useCycle(false, true);
-  const [isBottomOpen, toggleBottomOpen] = useCycle(false, true);
+  const [isDescriptionOpen, toggleDescriptionOpen] = useCycle(false, true);
+  const [isArrivalsOpen, toggleArrivalsOpen] = useCycle(false, true);
 
   return (
-    <>
+    <section>
       <Styled.TopContainer>
         <Styled.Heading>{heading}</Styled.Heading>
         <Styled.TopButton
           type="button"
-          isOpen={isTopOpen}
+          isOpen={isDescriptionOpen}
           aria-controls="top-text"
-          aria-expanded={isTopOpen}
-          onClick={toggleTopOpen}
+          aria-expanded={isDescriptionOpen}
+          onClick={toggleDescriptionOpen}
+          title="Read More"
         >
           Read More
           <ChevronRight width={20} height={27} />
@@ -52,13 +53,13 @@ export default function ShopHeader({
         <Styled.Text>{description}</Styled.Text>
       </ResponsiveBox>
       <ResponsiveBox sx={{ display: { 0: 'block', 650: 'none' } }}>
-        <motion.div
-          id="top-text"
-          animate={isTopOpen ? 'open' : 'closed'}
-          {...motionProps}
-        >
-          <Styled.Text>{description}</Styled.Text>
-        </motion.div>
+        <AnimatePresence initial={false}>
+          {isDescriptionOpen && (
+            <motion.div id="top-text" {...motionProps}>
+              <Styled.Text>{description}</Styled.Text>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </ResponsiveBox>
       <Styled.BottomContainer>
         <Styled.Subheading as="h2">
@@ -66,22 +67,23 @@ export default function ShopHeader({
         </Styled.Subheading>
         <Styled.BottomButton
           type="button"
-          isOpen={isBottomOpen}
+          isOpen={isArrivalsOpen}
           aria-controls="bottom-text"
-          aria-expanded={isBottomOpen}
-          onClick={toggleBottomOpen}
+          aria-expanded={isArrivalsOpen}
+          onClick={toggleArrivalsOpen}
+          title="Read More"
         >
           Read More
           <ChevronRight />
         </Styled.BottomButton>
       </Styled.BottomContainer>
-      <motion.div
-        id="bottom-text"
-        animate={isBottomOpen ? 'open' : 'closed'}
-        {...motionProps}
-      >
-        <Styled.Text>{latestArrivalsDescription}</Styled.Text>
-      </motion.div>
-    </>
+      <AnimatePresence initial={false}>
+        {isArrivalsOpen && (
+          <motion.div id="bottom-text" {...motionProps}>
+            <Styled.Text>{latestArrivalsDescription}</Styled.Text>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section>
   );
 }
