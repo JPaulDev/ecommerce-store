@@ -44,6 +44,7 @@ export default function ShopHeader({
           aria-expanded={isDescriptionOpen}
           onClick={toggleDescriptionOpen}
           title="Read More"
+          data-testid="description-button"
         >
           Read More
           <ChevronRight width={20} height={27} />
@@ -72,6 +73,7 @@ export default function ShopHeader({
           aria-expanded={isArrivalsOpen}
           onClick={toggleArrivalsOpen}
           title="Read More"
+          data-testid="latest-arrivals-button"
         >
           Read More
           <ChevronRight />
