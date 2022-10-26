@@ -101,7 +101,7 @@ const GlobalStyles = createGlobalStyle`
 
   @font-face {
     font-family: 'Uni Sans';
-    src: url('/fonts/uni-sans-bold.woff2') format('woff');
+    src: url('/fonts/uni-sans-bold.woff2') format('woff2');
     font-style: normal;
     font-weight: 700;
     font-display: swap;
