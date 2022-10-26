@@ -35,6 +35,7 @@ function BasketItem({ product }) {
         height={200}
         alt=""
         quality={85}
+        priority="true"
       />
       <div>
         <PartNumber fontSize="0.8rem" sku={product.sku} />

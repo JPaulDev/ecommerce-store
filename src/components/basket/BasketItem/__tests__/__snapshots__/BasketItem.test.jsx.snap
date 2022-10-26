@@ -166,6 +166,7 @@ exports[`BasketItem component should render a product card with with all the pro
   <img
     alt=""
     height={200}
+    priority="true"
     quality={85}
     src=""
     width={200}
