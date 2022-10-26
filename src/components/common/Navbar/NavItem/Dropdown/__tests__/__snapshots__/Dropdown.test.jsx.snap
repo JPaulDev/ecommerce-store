@@ -95,7 +95,10 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       <li>
         <a
           className="c4"
-          href=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Wired Keyboards
         </a>
@@ -103,7 +106,10 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       <li>
         <a
           className="c4"
-          href=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Wireless Keyboards
         </a>
@@ -111,7 +117,10 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       <li>
         <a
           className="c4"
-          href=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Gaming Keyboards
         </a>
@@ -128,7 +137,10 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       <li>
         <a
           className="c4"
-          href=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Wired Mice
         </a>
@@ -136,7 +148,10 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       <li>
         <a
           className="c4"
-          href=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Wireless Mice
         </a>
@@ -157,7 +172,10 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       <li>
         <a
           className="c4"
-          href=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Microphones
         </a>
@@ -165,7 +183,10 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       <li>
         <a
           className="c4"
-          href=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Speakers
         </a>
@@ -186,7 +207,10 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       <li>
         <a
           className="c4"
-          href=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Gaming Monitors
         </a>
@@ -194,7 +218,10 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       <li>
         <a
           className="c4"
-          href=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Ultrawide Monitors
         </a>
@@ -202,7 +229,10 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
       <li>
         <a
           className="c4"
-          href=""
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           OLED Monitors
         </a>
@@ -346,6 +376,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/processors/amd"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           AMD
         </a>
@@ -354,6 +387,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/processors/intel"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Intel
         </a>
@@ -371,6 +407,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/memory/ddr5"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           DDR5
         </a>
@@ -379,6 +418,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/memory/ddr4"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           DDR4
         </a>
@@ -396,6 +438,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/motherboards/amd"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           AMD Motherboards
         </a>
@@ -404,6 +449,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/motherboards/intel"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Intel Motherboards
         </a>
@@ -425,6 +473,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/graphics-cards/nvidia"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           NVIDIA Graphics Cards
         </a>
@@ -433,6 +484,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/graphics-cards/amd"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           AMD Graphics Cards
         </a>
@@ -450,6 +504,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/power-supplies/wired"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Fully Wired
         </a>
@@ -458,6 +515,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/power-supplies/modular"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Fully Modular
         </a>
@@ -479,6 +539,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/cases/full-tower"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Full Tower
         </a>
@@ -487,6 +550,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/cases/midi-tower"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Midi Tower
         </a>
@@ -495,6 +561,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/cases/itx"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           ITX
         </a>
@@ -512,6 +581,9 @@ exports[`Dropdown component renders the components menu with all links/advertise
         <a
           className="c4"
           href="/shop/components/storage/solid-state-drives"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onTouchStart={[Function]}
         >
           Solid State Drives
         </a>

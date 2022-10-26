@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Image from 'next/future/image';
 import { Fragment } from 'react';
 import componentsAd1 from '../../../../../../public/images/dropdown-ads/components-ad1.webp';
@@ -144,7 +145,9 @@ export default function Dropdown({ menu = '' }) {
               <Styled.List>
                 {item.links.map((link) => (
                   <li key={link.text}>
-                    <Styled.Link href={link.href}>{link.text}</Styled.Link>
+                    <Link href={link.href} passHref>
+                      <Styled.Link>{link.text}</Styled.Link>
+                    </Link>
                   </li>
                 ))}
               </Styled.List>
