@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: white;
-  border: 1px solid var(--color-grey-9);
+  border: 1px solid var(--color-grey-12);
   padding: 25px 15px;
 
   @media screen and (min-width: 600px) {
@@ -17,12 +17,12 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.h2`
-  background-color: var(--color-grey-6);
-  border-bottom: 1px solid var(--color-grey-9);
+  background-color: var(--color-grey-15);
+  border-bottom: 1px solid var(--color-grey-12);
   font-family: 'Uni Sans', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  padding: 11px 30px;
+  font-size: var(--font-size-22);
+  font-weight: var(--font-weight-semibold);
+  padding: 10px 30px;
 
   @media screen and (max-width: 899px) {
     text-align: center;

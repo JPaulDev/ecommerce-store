@@ -6,7 +6,7 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--color-grey-6);
+  background-color: var(--color-grey-15);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24,7 +24,7 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--color-grey-6);
+  background-color: var(--color-grey-15);
   -webkit-column-gap: 15px;
   column-gap: 15px;
   display: -webkit-box;
@@ -44,7 +44,7 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: var(--color-grey-6);
+  background-color: var(--color-grey-15);
   -webkit-column-gap: 15px;
   column-gap: 15px;
   display: -webkit-box;
@@ -61,12 +61,12 @@ exports[`TopBannerSmall component renders a banner with 3 icons and text next to
 
 .c2 {
   color: var(--color-grey-2);
-  font-size: 0.7rem;
+  font-size: var(--font-size-11);
 }
 
 .c2 strong {
   display: block;
-  font-size: 0.87rem;
+  font-size: var(--font-size-14);
 }
 
 @media screen and (max-width:999px) {

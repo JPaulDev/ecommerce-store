@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background-color: var(--color-blue-2);
+  background-color: var(--color-blue-3);
   display: flex;
   justify-content: center;
   padding: 15px 0;
@@ -18,8 +18,8 @@ export const Link = styled.a`
   column-gap: 10px;
   display: flex;
   font-family: 'Uni Sans', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-semibold);
   padding: 0 25px;
   text-decoration: none;
 

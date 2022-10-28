@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  background-color: var(--color-grey-1);
-  box-shadow: 0 3px 2px 0 rgb(0 0 0 / 20%);
+  background-color: var(--color-grey-3);
+  box-shadow: var(--box-shadow-lg);
   position: relative;
   width: 100%;
   z-index: 100;
@@ -21,7 +21,7 @@ export const Container = styled.div`
     width: 97%;
   }
 
-  @media screen and (min-width: 930px) {
+  @media screen and (min-width: 935px) {
     grid-template-columns: 1fr minmax(270px, 1fr) minmax(max-content, 1fr);
   }
 `;
@@ -43,7 +43,7 @@ export const LinksContainer = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  @media screen and (min-width: 930px) {
+  @media screen and (min-width: 935px) {
     margin-left: 40px;
   }
 
@@ -54,10 +54,10 @@ export const LinksContainer = styled.div`
 
 export const Link = styled.a`
   align-items: center;
-  color: var(--color-grey-3);
+  color: var(--color-grey-8);
   column-gap: 10px;
   display: flex;
-  font-size: 0.85rem;
+  font-size: var(--font-size-14);
   position: relative;
   text-decoration: none;
   transition: color 200ms ease-in-out;
@@ -75,7 +75,7 @@ export const TextContainer = styled.div`
 
 export const TopText = styled.div`
   color: white;
-  font-size: 1.05rem;
+  font-size: var(--font-size-16);
   line-height: 1;
   margin-bottom: 5px;
 `;

@@ -22,7 +22,7 @@ export const Form = styled.form`
     max-width: 420px;
   }
 
-  @media screen and (max-width: 929px) {
+  @media screen and (max-width: 934px) {
     grid-column: 1/3;
     grid-row: 2/3;
     margin-top: 15px;
@@ -32,17 +32,13 @@ export const Form = styled.form`
 export const Input = styled.input`
   border-radius: 8px;
   color: var(--color-grey-2);
-  font-size: 0.94rem;
-  font-weight: 500;
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
   min-height: 44px;
   outline: none;
   padding-left: 10px;
   padding-right: 65px;
   width: 100%;
-
-  &::placeholder {
-    font-size: 0.94rem;
-  }
 
   &::-webkit-search-cancel-button {
     display: none;

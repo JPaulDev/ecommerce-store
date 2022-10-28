@@ -7,12 +7,12 @@ export const Container = styled.div`
 
 export const Select = styled.select`
   appearance: none;
-  background-color: #f2f2f2;
-  border: 1px solid var(--color-grey-12);
+  background-color: var(--color-grey-14);
+  border: 1px solid var(--color-grey-10);
   border-radius: 4px;
   box-shadow: 0 2px 3px rgb(17 17 17 / 10%);
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
   padding: 5px 25px 5px 10px;
   width: 55px;
 
@@ -21,13 +21,13 @@ export const Select = styled.select`
   }
 
   &:not(:disabled):hover {
-    background-color: var(--color-grey-9);
+    background-color: var(--color-grey-12);
   }
 `;
 
 export const Arrows = styled.span`
   --arrow-color: ${({ isDisabled }) =>
-    isDisabled ? 'var(--color-grey-12)' : '#545454'};
+    isDisabled ? 'var(--color-grey-10)' : 'var(--color-grey-4)'};
   --arrow-size: 5px;
 
   height: 100%;

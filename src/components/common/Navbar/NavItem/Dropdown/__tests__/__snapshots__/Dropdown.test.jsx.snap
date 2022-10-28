@@ -3,7 +3,7 @@
 exports[`Dropdown component renders the accessories menu with all links/advertisements present 1`] = `
 .c0 {
   background-color: white;
-  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--box-shadow-xl);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -27,7 +27,6 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
 .c2 {
   border-bottom: 1px solid var(--color-orange-1);
   color: var(--color-orange-1);
-  font-size: 1.03rem;
   margin-bottom: 10px;
   padding-bottom: 7px;
 }
@@ -53,7 +52,7 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
 }
 
 .c5 {
-  background-color: var(--color-grey-6);
+  background-color: var(--color-grey-15);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -67,7 +66,7 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
 
 .c5 img {
   border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 40%);
+  box-shadow: var(--box-shadow-lg);
 }
 
 @media screen and (max-width:924px) {
@@ -283,7 +282,7 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
 exports[`Dropdown component renders the components menu with all links/advertisements present 1`] = `
 .c0 {
   background-color: white;
-  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--box-shadow-xl);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -307,7 +306,6 @@ exports[`Dropdown component renders the components menu with all links/advertise
 .c2 {
   border-bottom: 1px solid var(--color-orange-1);
   color: var(--color-orange-1);
-  font-size: 1.03rem;
   margin-bottom: 10px;
   padding-bottom: 7px;
 }
@@ -333,7 +331,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
 }
 
 .c5 {
-  background-color: var(--color-grey-6);
+  background-color: var(--color-grey-15);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -347,7 +345,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
 
 .c5 img {
   border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 40%);
+  box-shadow: var(--box-shadow-lg);
 }
 
 @media screen and (max-width:924px) {

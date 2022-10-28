@@ -2,7 +2,7 @@
 
 exports[`ShopHeader component should render a category heading and description 1`] = `
 .c0 {
-  border-bottom: 3px solid var(--color-grey-9);
+  border-bottom: 3px solid var(--color-grey-12);
   padding-bottom: 20px;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -20,7 +20,7 @@ exports[`ShopHeader component should render a category heading and description 1
 
 .c1 {
   font-family: 'Uni Sans',sans-serif;
-  font-size: 1.9rem;
+  font-size: var(--font-size-30);
   margin-right: 35px;
 }
 
@@ -37,7 +37,6 @@ exports[`ShopHeader component should render a category heading and description 1
   -webkit-transition-property: -webkit-transform;
   -webkit-transition-property: transform;
   transition-property: transform;
-  background: none;
   cursor: pointer;
   font-size: 0;
 }
@@ -48,8 +47,8 @@ exports[`ShopHeader component should render a category heading and description 1
 
 .c7 {
   display: inline-block;
-  font-size: 1.44rem;
-  font-weight: 600;
+  font-size: var(--font-size-22);
+  font-weight: var(--font-weight-semibold);
 }
 
 .c8 {
@@ -61,9 +60,8 @@ exports[`ShopHeader component should render a category heading and description 1
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  background: none;
   cursor: pointer;
   font-size: 0;
 }
@@ -82,8 +80,8 @@ exports[`ShopHeader component should render a category heading and description 1
 }
 
 .c4 {
-  color: var(--color-grey-8);
-  font-size: 0.88rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-14);
   line-height: 1.7;
   padding-top: 15px;
 }
@@ -145,8 +143,8 @@ exports[`ShopHeader component should render a category heading and description 1
   .c8 {
     -webkit-column-gap: 7px;
     column-gap: 7px;
-    color: var(--color-blue-1);
-    font-size: 0.8rem;
+    color: var(--color-blue-4);
+    font-size: var(--font-size-13);
   }
 
   .c8 svg {

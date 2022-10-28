@@ -19,7 +19,7 @@ export default function ProShopCards() {
           <LinkChevron
             href={item.href}
             linkText={item.linkText}
-            fontSize="0.9rem"
+            fontSize="var(--font-size-14)"
             iconSize={20}
           />
         </Styled.ProCard>

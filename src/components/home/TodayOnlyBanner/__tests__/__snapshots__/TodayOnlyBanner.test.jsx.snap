@@ -2,13 +2,13 @@
 
 exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
 .c4 {
-  background: linear-gradient(to top,#858484,#a0a0a0);
+  background: linear-gradient(to top,var(--color-grey-5),var(--color-grey-8));
   border-radius: 6px;
-  box-shadow: var(--shadow-button);
+  box-shadow: var(--box-shadow-md);
   color: white;
   display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-bold);
   padding: 12px 25px;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -16,16 +16,16 @@ exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
 }
 
 .c4:hover {
-  background: linear-gradient(to top,#858484,#737373);
-  box-shadow: var(--shadow-button-hover);
+  background: linear-gradient( to top, var(--color-grey-6), var(--color-grey-5) );
+  box-shadow: var(--box-shadow-hover);
 }
 
 .c0 {
-  background-color: #d72140;
+  background-color: var(--color-red-3);
   background-image: url(/img.jpg);
   background-position: 96% 60%;
   background-repeat: no-repeat;
-  border: 1px solid var(--color-grey-9);
+  border: 1px solid var(--color-grey-12);
   margin: 15px 0;
   overflow: hidden;
   padding: 20px 220px 27px 20px;
@@ -33,7 +33,7 @@ exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
 }
 
 .c1 {
-  background: linear-gradient(to right,#c12134,#da2141);
+  background: linear-gradient(to right,var(--color-red-4),var(--color-red-3));
   border-radius: 50%;
   height: 170px;
   left: -67px;
@@ -43,17 +43,17 @@ exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
 
 .c2 {
   color: white;
-  font-size: 1.6rem;
+  font-size: var(--font-size-26);
   z-index: 10;
   font-family: 'Uni Sans',sans-serif;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .c3 {
   font-size: clamp(20px,3.48vw,25px);
   margin-right: auto;
   font-family: 'Uni Sans',sans-serif;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 @media screen and (min-width:935px) {
@@ -82,14 +82,14 @@ exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
 
 @media screen and (min-width:575px) {
   .c2 {
-    font-size: 1.95rem;
-    margin-right: 30px;
+    font-size: var(--font-size-30);
+    margin-right: 35px;
   }
 }
 
 @media screen and (min-width:700px) {
   .c3 {
-    font-size: 1.6rem;
+    font-size: var(--font-size-26);
   }
 }
 

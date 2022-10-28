@@ -6,13 +6,13 @@ exports[`ProShopCards component renders 6 pro shop cards with links and shop des
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: var(--color-grey-8);
+  color: var(--color-grey-4);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-bold);
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -24,7 +24,7 @@ exports[`ProShopCards component renders 6 pro shop cards with links and shop des
 
 .c0 {
   background-color: white;
-  border: 1px solid var(--color-grey-9);
+  border: 1px solid var(--color-grey-12);
   display: grid;
   gap: 6px;
   margin-top: 15px;
@@ -32,7 +32,7 @@ exports[`ProShopCards component renders 6 pro shop cards with links and shop des
 }
 
 .c1 {
-  background-color: #f1f1f1;
+  background-color: var(--color-grey-14);
   background-image: url(/img.jpg);
   background-position: right;
   background-repeat: no-repeat;
@@ -78,17 +78,18 @@ exports[`ProShopCards component renders 6 pro shop cards with links and shop des
 }
 
 .c8 {
-  color: #0072bc;
+  color: var(--color-blue-4);
   font-family: 'Uni Sans Book',sans-serif;
-  font-size: 1.7rem;
-  font-weight: 400;
+  font-size: var(--font-size-26);
+  font-weight: var(--font-weight-regular);
   line-height: 0.8;
   margin-bottom: 10px;
 }
 
 .c3 {
-  color: var(--color-grey-8);
-  font-size: 0.9rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-14);
+  line-height: 1.5;
   margin-bottom: 10px;
   width: 60%;
 }

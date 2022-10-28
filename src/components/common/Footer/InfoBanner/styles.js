@@ -21,7 +21,7 @@ export const Container = styled.div`
 
 export const Text = styled.p`
   flex: 1;
-  font-size: 0.75rem;
+  font-size: var(--font-size-12);
   margin: 0 15px;
   text-align: center;
 
@@ -46,11 +46,11 @@ export const InnerContainer = styled.div`
 `;
 
 export const LinkContainer = styled.div`
-  border-right: 1px solid var(--color-grey-10);
+  border-right: 1px solid var(--color-grey-9);
   column-gap: 12px;
   font-family: 'Uni Sans', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 600;
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-semibold);
   padding: 0 15px;
   ${flexStyles}
 `;
@@ -63,6 +63,6 @@ export const Link = styled.a`
   ${flexStyles}
 
   &:hover {
-    color: var(--color-blue-2);
+    color: var(--color-blue-3);
   }
 `;

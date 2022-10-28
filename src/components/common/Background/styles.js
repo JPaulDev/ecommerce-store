@@ -8,22 +8,23 @@ export const Wrapper = styled.div`
 `;
 
 export const Background = styled.div`
-  background-color: var(--color-grey-9);
-  background-image: linear-gradient(var(--color-grey-6), var(--color-grey-6));
+  background-color: var(--color-grey-12);
+  background-image: linear-gradient(var(--color-grey-15), var(--color-grey-15));
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1294px 100%;
+  display: flex;
   height: 100vh;
+  justify-content: center;
+  overflow: hidden;
   position: sticky;
   top: 0;
 
   img {
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
+    display: none;
 
-    @media screen and (max-width: 1310px) {
-      display: none;
+    @media screen and (min-width: 1310px) {
+      display: initial;
     }
   }
 `;

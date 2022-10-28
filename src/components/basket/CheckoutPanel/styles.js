@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
 const borderStyles = css`
-  border-left: 1px solid var(--color-grey-9);
-  border-right: 1px solid var(--color-grey-9);
+  border-left: 1px solid var(--color-grey-12);
+  border-right: 1px solid var(--color-grey-12);
 `;
 
 const flexStyles = css`
@@ -11,14 +11,14 @@ const flexStyles = css`
 `;
 
 const linkStyles = css`
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-decoration: none;
   text-transform: uppercase;
 `;
 
 export const TopContainer = styled.div`
-  background-color: #d7f0db;
-  border-top: 1px solid var(--color-grey-9);
+  background-color: var(--color-green-7);
+  border-top: 1px solid var(--color-grey-12);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 20px 30px;
@@ -26,12 +26,12 @@ export const TopContainer = styled.div`
 `;
 
 export const Heading = styled.h2`
-  border-bottom: 1px solid var(--color-grey-10);
+  border-bottom: 1px solid var(--color-grey-9);
   font-family: 'Uni Sans', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: var(--font-size-22);
+  font-weight: var(--font-weight-semibold);
   margin-bottom: 15px;
-  padding: 11px 0;
+  padding: 10px 0;
 
   @media screen and (max-width: 899px) {
     text-align: center;
@@ -46,28 +46,32 @@ export const Container = styled.div`
   ${flexStyles}
 
   strong {
-    font-size: 1.25rem;
+    font-size: var(--font-size-20);
     margin-right: 5px;
   }
 `;
 
 export const Text = styled.span`
-  font-size: ${({ $fontSize }) => $fontSize || '0.82rem'};
+  font-size: var(--font-size-14);
 `;
 
 export const InnerContainer = styled.div`
-  border-top: 1px solid var(--color-grey-10);
+  border-top: 1px solid var(--color-grey-9);
   margin-top: 15px;
   padding: 20px 0 10px;
 `;
 
 export const CheckoutLink = styled.a`
-  background-image: linear-gradient(to top, #009245, #02ab52);
+  background-image: linear-gradient(
+    to top,
+    var(--color-green-2),
+    var(--color-green-5)
+  );
   border-radius: 6px;
-  box-shadow: var(--shadow-button);
+  box-shadow: var(--box-shadow-md);
   color: white;
   column-gap: 10px;
-  font-size: 0.88rem;
+  font-size: var(--font-size-14);
   justify-content: center;
   margin: 0 auto 20px;
   padding: 15px;
@@ -75,15 +79,19 @@ export const CheckoutLink = styled.a`
   ${linkStyles}
 
   &:hover {
-    background-image: linear-gradient(to top, #008631, #00a13f);
-    box-shadow: var(--shadow-button-hover);
+    background-image: linear-gradient(
+      to top,
+      var(--color-green-1),
+      var(--color-green-4)
+    );
+    box-shadow: var(--box-shadow-hover);
   }
 `;
 
 export const LoginLink = styled.a`
-  color: var(--color-blue-1);
+  color: var(--color-blue-4);
   display: block;
-  font-size: 0.7rem;
+  font-size: var(--font-size-11);
   text-align: center;
   ${linkStyles}
 
@@ -93,8 +101,8 @@ export const LoginLink = styled.a`
 `;
 
 export const BottomContainer = styled.div`
-  background-color: #cadfce;
-  border-bottom: 1px solid var(--color-grey-9);
+  background-color: var(--color-green-6);
+  border-bottom: 1px solid var(--color-grey-12);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   flex-direction: column;
@@ -108,7 +116,7 @@ export const BottomContainer = styled.div`
 `;
 
 export const PaypalLink = styled.a`
-  background-color: #ffc439;
+  background-color: var(--color-orange-2);
   border-radius: 100px;
   display: flex;
   margin: 5px 0;

@@ -3,14 +3,14 @@
 exports[`Delivery component renders a return tab where returns status can be checked 1`] = `
 <DocumentFragment>
   .c1 {
-  color: var(--color-grey-8);
-  font-size: 0.95rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-14);
   text-transform: uppercase;
 }
 
 .c2 {
-  color: var(--color-grey-8);
-  font-size: 0.82rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-13);
   margin: 8px 0 8px 20px;
 }
 
@@ -28,20 +28,20 @@ exports[`Delivery component renders a return tab where returns status can be che
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   padding: 8px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
 .c4 {
-  background-color: #dedede;
-  border-bottom: 3px solid #dedede;
+  background-color: var(--color-grey-12);
+  border-bottom: 3px solid var(--color-grey-12);
   cursor: pointer;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   padding: 8px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
@@ -53,7 +53,7 @@ exports[`Delivery component renders a return tab where returns status can be che
   -ms-flex-align: center;
   align-items: center;
   background-color: var(--color-grey-11);
-  border-bottom: 1px solid var(--color-grey-10);
+  border-bottom: 1px solid var(--color-grey-9);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -75,7 +75,7 @@ exports[`Delivery component renders a return tab where returns status can be che
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: var(--color-grey-1);
+  background: var(--color-grey-3);
   border-radius: 50%;
   cursor: pointer;
   display: -webkit-box;
@@ -237,14 +237,14 @@ exports[`Delivery component renders a return tab where returns status can be che
 exports[`Delivery component renders a system build tab where build progress can be checked 1`] = `
 <DocumentFragment>
   .c1 {
-  color: var(--color-grey-8);
-  font-size: 0.95rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-14);
   text-transform: uppercase;
 }
 
 .c2 {
-  color: var(--color-grey-8);
-  font-size: 0.82rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-13);
   margin: 8px 0 8px 20px;
 }
 
@@ -262,20 +262,20 @@ exports[`Delivery component renders a system build tab where build progress can 
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   padding: 8px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
 .c4 {
-  background-color: #dedede;
-  border-bottom: 3px solid #dedede;
+  background-color: var(--color-grey-12);
+  border-bottom: 3px solid var(--color-grey-12);
   cursor: pointer;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   padding: 8px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
@@ -287,7 +287,7 @@ exports[`Delivery component renders a system build tab where build progress can 
   -ms-flex-align: center;
   align-items: center;
   background-color: var(--color-grey-11);
-  border-bottom: 1px solid var(--color-grey-10);
+  border-bottom: 1px solid var(--color-grey-9);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -309,7 +309,7 @@ exports[`Delivery component renders a system build tab where build progress can 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: var(--color-grey-1);
+  background: var(--color-grey-3);
   border-radius: 50%;
   cursor: pointer;
   display: -webkit-box;
@@ -471,14 +471,14 @@ exports[`Delivery component renders a system build tab where build progress can 
 exports[`Delivery component renders an order tab where order tracking can be checked 1`] = `
 <DocumentFragment>
   .c1 {
-  color: var(--color-grey-8);
-  font-size: 0.95rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-14);
   text-transform: uppercase;
 }
 
 .c2 {
-  color: var(--color-grey-8);
-  font-size: 0.82rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-13);
   margin: 8px 0 8px 20px;
 }
 
@@ -496,20 +496,20 @@ exports[`Delivery component renders an order tab where order tracking can be che
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   padding: 8px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
 .c5 {
-  background-color: #dedede;
-  border-bottom: 3px solid #dedede;
+  background-color: var(--color-grey-12);
+  border-bottom: 3px solid var(--color-grey-12);
   cursor: pointer;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   padding: 8px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
@@ -521,7 +521,7 @@ exports[`Delivery component renders an order tab where order tracking can be che
   -ms-flex-align: center;
   align-items: center;
   background-color: var(--color-grey-11);
-  border-bottom: 1px solid var(--color-grey-10);
+  border-bottom: 1px solid var(--color-grey-9);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -543,7 +543,7 @@ exports[`Delivery component renders an order tab where order tracking can be che
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: var(--color-grey-1);
+  background: var(--color-grey-3);
   border-radius: 50%;
   cursor: pointer;
   display: -webkit-box;

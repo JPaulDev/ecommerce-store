@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   background-color: white;
-  border: 1px solid var(--color-grey-9);
+  border: 1px solid var(--color-grey-12);
   display: grid;
   gap: 6px;
   margin-top: 15px;
@@ -14,7 +14,7 @@ export const Section = styled.section`
 `;
 
 export const ProCard = styled.div`
-  background-color: #f1f1f1;
+  background-color: var(--color-grey-14);
   background-image: url(${({ image }) => image});
   background-position: right;
   background-repeat: no-repeat;
@@ -41,17 +41,18 @@ export const ProLogo = styled.div`
 `;
 
 export const Heading = styled.h4`
-  color: #0072bc;
+  color: var(--color-blue-4);
   font-family: 'Uni Sans Book', sans-serif;
-  font-size: 1.7rem;
-  font-weight: 400;
+  font-size: var(--font-size-26);
+  font-weight: var(--font-weight-regular);
   line-height: 0.8;
   margin-bottom: 10px;
 `;
 
 export const Text = styled.p`
-  color: var(--color-grey-8);
-  font-size: 0.9rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-14);
+  line-height: 1.5;
   margin-bottom: 10px;
   width: 60%;
 

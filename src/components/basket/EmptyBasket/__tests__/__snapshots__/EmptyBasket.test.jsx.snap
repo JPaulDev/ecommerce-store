@@ -2,13 +2,13 @@
 
 exports[`EmptyBasket component renders message that displays when the users basket is empty 1`] = `
 .c2 {
-  background: linear-gradient(to top,#858484,#a0a0a0);
+  background: linear-gradient(to top,var(--color-grey-5),var(--color-grey-8));
   border-radius: 6px;
-  box-shadow: var(--shadow-button);
+  box-shadow: var(--box-shadow-md);
   color: white;
   display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-bold);
   padding: 12px 14px;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -16,8 +16,8 @@ exports[`EmptyBasket component renders message that displays when the users bask
 }
 
 .c2:hover {
-  background: linear-gradient(to top,#858484,#737373);
-  box-shadow: var(--shadow-button-hover);
+  background: linear-gradient( to top, var(--color-grey-6), var(--color-grey-5) );
+  box-shadow: var(--box-shadow-hover);
 }
 
 .c0 {
@@ -26,7 +26,7 @@ exports[`EmptyBasket component renders message that displays when the users bask
   -ms-flex-align: center;
   align-items: center;
   background-color: white;
-  border: 1px solid var(--color-grey-9);
+  border: 1px solid var(--color-grey-12);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,15 +38,14 @@ exports[`EmptyBasket component renders message that displays when the users bask
 }
 
 .c0 a {
-  box-shadow: 0 3px 3px 0 rgb(217 217 217 / 70%);
   margin-top: 20px;
 }
 
 .c1 {
   font-family: 'Uni Sans',sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  padding: 11px 30px;
+  font-size: var(--font-size-22);
+  font-weight: var(--font-weight-semibold);
+  padding: 10px 30px;
 }
 
 <div

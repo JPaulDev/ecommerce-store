@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background-color: white;
-  box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%);
+  box-shadow: var(--box-shadow-xl);
   display: flex;
   left: 50%;
   max-width: 1100px;
@@ -19,7 +19,6 @@ export const ColumnContainer = styled.div`
 export const Heading = styled.h4`
   border-bottom: 1px solid var(--color-orange-1);
   color: var(--color-orange-1);
-  font-size: 1.03rem;
   margin-bottom: 10px;
   padding-bottom: 7px;
 `;
@@ -43,7 +42,7 @@ export const Link = styled.a`
 `;
 
 export const AdvertsContainer = styled.div`
-  background-color: var(--color-grey-6);
+  background-color: var(--color-grey-15);
   display: flex;
   flex-direction: column;
   padding: 25px;
@@ -51,7 +50,7 @@ export const AdvertsContainer = styled.div`
 
   img {
     border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 40%);
+    box-shadow: var(--box-shadow-lg);
   }
 
   @media screen and (max-width: 924px) {

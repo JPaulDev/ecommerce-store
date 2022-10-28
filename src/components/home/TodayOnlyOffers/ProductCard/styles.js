@@ -15,7 +15,7 @@ const textStyles = css`
 
 export const ListItem = styled.li`
   background-color: white;
-  border: 1px solid var(--color-grey-9);
+  border: 1px solid var(--color-grey-12);
   border-radius: 10px;
   flex-direction: column;
   height: 100%;
@@ -50,14 +50,15 @@ export const ProductName = styled.p`
 
 export const ProductDescription = styled.p`
   -webkit-line-clamp: 3;
-  color: var(--color-grey-8);
-  font-size: 0.88rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-14);
+  line-height: 1.5;
   margin-top: 10px;
   ${textStyles}
 `;
 
 export const Wrapper = styled.div`
-  border-bottom: 2px solid #d2d6d6;
+  border-bottom: 2px solid var(--color-grey-11);
   margin: 5px 0;
   padding-bottom: 10px;
   width: 100%;

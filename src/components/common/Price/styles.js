@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Text = styled.span`
-  color: var(--color-blue-1);
+  color: var(--color-blue-4);
   font-size: ${({ $fontSize }) => $fontSize};
   font-weight: ${({ $fontWeight }) => $fontWeight};
 `;

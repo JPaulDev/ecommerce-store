@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Footer = styled.footer`
-  background-color: #eaeaea;
+  background-color: var(--color-grey-13);
   margin: 15px auto 0;
   max-width: 1280px;
 `;
@@ -39,18 +39,17 @@ export const LinksContainer = styled.div`
 `;
 
 export const Heading = styled.h3`
-  color: var(--color-grey-8);
-  font-size: 0.95rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-14);
   text-transform: uppercase;
 `;
 
 export const DropdownButton = styled(Heading)`
   align-items: center;
-  background: none;
-  border-bottom: 1px solid var(--color-grey-10);
+  border-bottom: 1px solid var(--color-grey-9);
   cursor: pointer;
   display: flex;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   justify-content: space-between;
   padding: 13px 20px;
   position: relative;

@@ -22,15 +22,23 @@ export default function CheckoutPanel() {
       <Styled.TopContainer>
         <Styled.Heading>Basket Summary</Styled.Heading>
         <Styled.Container>
-          <Styled.Text $fontSize="0.9rem">Delivery to UK Mainland</Styled.Text>
-          <Price price="£4.99" fontSize="1.3rem" fontWeight={500} />
+          <Styled.Text>Delivery to UK Mainland</Styled.Text>
+          <Price
+            price="£4.99"
+            fontSize="var(--font-size-20)"
+            fontWeight="var(--font-weight-medium)"
+          />
         </Styled.Container>
         <Styled.Container>
           <span>
             <strong>Total</strong>
             (including VAT)
           </span>
-          <Price price={price} fontSize="1.6rem" fontWeight={500} />
+          <Price
+            price={price}
+            fontSize="var(--font-size-26)"
+            fontWeight="var(--font-weight-medium)"
+          />
         </Styled.Container>
         <Styled.Text>Finance options available at checkout</Styled.Text>
         <Styled.InnerContainer>

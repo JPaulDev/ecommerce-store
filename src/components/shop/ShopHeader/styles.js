@@ -13,20 +13,19 @@ const containerStyles = css`
 `;
 
 const buttonStyles = css`
-  background: none;
   cursor: pointer;
   font-size: 0;
 `;
 
 export const TopContainer = styled.div`
-  border-bottom: 3px solid var(--color-grey-9);
+  border-bottom: 3px solid var(--color-grey-12);
   padding-bottom: 20px;
   ${containerStyles}
 `;
 
 export const Heading = styled.h1`
   font-family: 'Uni Sans', sans-serif;
-  font-size: 1.9rem;
+  font-size: var(--font-size-30);
   margin-right: 35px;
 `;
 
@@ -50,8 +49,8 @@ export const BottomContainer = styled.div`
 
 export const Subheading = styled(Heading)`
   display: inline-block;
-  font-size: 1.44rem;
-  font-weight: 600;
+  font-size: var(--font-size-22);
+  font-weight: var(--font-weight-semibold);
 
   @media screen and (min-width: 700px) {
     margin-right: 20px;
@@ -61,7 +60,7 @@ export const Subheading = styled(Heading)`
 export const BottomButton = styled.button`
   align-items: center;
   display: inline-flex;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
   ${buttonStyles}
 
@@ -73,8 +72,8 @@ export const BottomButton = styled.button`
 
   @media screen and (min-width: 650px) {
     column-gap: 7px;
-    color: var(--color-blue-1);
-    font-size: 0.8rem;
+    color: var(--color-blue-4);
+    font-size: var(--font-size-13);
 
     svg {
       height: auto;
@@ -84,8 +83,8 @@ export const BottomButton = styled.button`
 `;
 
 export const Text = styled.p`
-  color: var(--color-grey-8);
-  font-size: 0.88rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-14);
   line-height: 1.7;
   padding-top: 15px;
 `;

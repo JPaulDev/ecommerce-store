@@ -24,7 +24,7 @@ export default function NewsAndProducts() {
               <LinkChevron
                 href={article.href}
                 linkText="Read Full Article"
-                fontSize="0.8rem"
+                fontSize="var(--font-size-13)"
                 iconSize={21}
               />
             </Styled.ArticleBlock>

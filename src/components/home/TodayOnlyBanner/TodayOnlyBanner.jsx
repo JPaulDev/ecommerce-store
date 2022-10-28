@@ -18,7 +18,7 @@ export default function TodayOnlyBanner() {
         <LinkChevron
           href="/"
           linkText={linkText}
-          fontSize="0.8rem"
+          fontSize="var(--font-size-13)"
           iconSize={18}
         />
       ) : (

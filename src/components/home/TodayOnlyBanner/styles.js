@@ -2,15 +2,15 @@ import styled, { css } from 'styled-components';
 
 const headingStyles = css`
   font-family: 'Uni Sans', sans-serif;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 `;
 
 export const Container = styled.div`
-  background-color: #d72140;
+  background-color: var(--color-red-3);
   background-image: url(${({ background }) => background});
   background-position: 96% 60%;
   background-repeat: no-repeat;
-  border: 1px solid var(--color-grey-9);
+  border: 1px solid var(--color-grey-12);
   margin: 15px 0;
   overflow: hidden;
   padding: 20px 220px 27px 20px;
@@ -27,7 +27,7 @@ export const Container = styled.div`
 `;
 
 export const RedOval = styled.div`
-  background: linear-gradient(to right, #c12134, #da2141);
+  background: linear-gradient(to right, var(--color-red-4), var(--color-red-3));
   border-radius: 50%;
   height: 170px;
   left: -67px;
@@ -41,13 +41,13 @@ export const RedOval = styled.div`
 
 export const LeftHeading = styled.h3`
   color: white;
-  font-size: 1.6rem;
+  font-size: var(--font-size-26);
   z-index: 10;
   ${headingStyles}
 
   @media screen and (min-width: 575px) {
-    font-size: 1.95rem;
-    margin-right: 30px;
+    font-size: var(--font-size-30);
+    margin-right: 35px;
   }
 `;
 
@@ -57,7 +57,7 @@ export const RightHeading = styled.h3`
   ${headingStyles}
 
   @media screen and (min-width: 700px) {
-    font-size: 1.6rem;
+    font-size: var(--font-size-26);
   }
 
   @media screen and (max-width: 934px) {

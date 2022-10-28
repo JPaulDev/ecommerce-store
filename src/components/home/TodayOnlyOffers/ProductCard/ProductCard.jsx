@@ -44,11 +44,11 @@ function ProductCard({ product }, ref) {
         {product.description}
       </Styled.ProductDescription>
       <Styled.Wrapper>
-        <PartNumber fontSize="0.75rem" sku={product.sku} />
+        <PartNumber fontSize="var(--font-size-12)" sku={product.sku} />
       </Styled.Wrapper>
-      <Price price={price} fontSize="1.9rem" />
+      <Price price={price} fontSize="var(--font-size-30)" />
       {product.isOnSale && (
-        <PreviousPrice price={previousPrice} fontSize="0.93rem" />
+        <PreviousPrice price={previousPrice} fontSize="var(--font-size-16)" />
       )}
       <QuantityDropdown
         quantity={quantity}
@@ -59,7 +59,7 @@ function ProductCard({ product }, ref) {
       <AddToBasket
         isDisabled={product.stockStatus === 0}
         width="180px"
-        fontSize="0.75rem"
+        fontSize="var(--font-size-12)"
         onAddProduct={handleAddProduct}
       />
     </Styled.ListItem>

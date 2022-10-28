@@ -38,18 +38,22 @@ function BasketItem({ product }) {
         priority="true"
       />
       <div>
-        <PartNumber fontSize="0.8rem" sku={product.sku} />
+        <PartNumber fontSize="var(--font-size-13)" sku={product.sku} />
         <Styled.ProductDescription>
           {product.name}, {product.description}
         </Styled.ProductDescription>
         <Styled.Container>
-          <Price price={price} fontSize="1.45rem" fontWeight={500} />
+          <Price
+            price={price}
+            fontSize="var(--font-size-24)"
+            fontWeight="var(--font-weight-medium)"
+          />
           <Styled.RemoveProduct type="button" onClick={handleRemoveProduct}>
             Remove Item
           </Styled.RemoveProduct>
         </Styled.Container>
         {product.isOnSale && (
-          <PreviousPrice price={previousPrice} fontSize="0.9rem" />
+          <PreviousPrice price={previousPrice} fontSize="var(--font-size-14)" />
         )}
         <StockIndicator stockStatus={product.stockStatus} marginTop="5px" />
         <Styled.QuantitySelector>

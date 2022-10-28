@@ -13,7 +13,7 @@ const buttonStyles = css`
 `;
 
 export const Section = styled.section`
-  box-shadow: 0 3px 5px rgb(0 0 0 / 40%);
+  box-shadow: var(--box-shadow-lg);
   display: flex;
   overflow: hidden;
   position: relative;
@@ -34,19 +34,18 @@ export const NavigationTop = styled.ul`
 `;
 
 export const ButtonTop = styled.button`
-  background: none;
   border-bottom: ${({ isActive }) =>
     isActive && '3px solid var(--color-orange-1)'};
-  color: #b9b9b9;
+  color: var(--color-grey-8);
   font-family: 'Uni Sans', sans-serif;
-  font-size: 0.83rem;
-  font-weight: 600;
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-semibold);
   padding: 16px 20px 12px;
   transform: ${({ isActive }) => isActive && 'scale(1.06)'};
   ${buttonStyles}
 
   &:hover {
-    color: var(--color-grey-9);
+    color: var(--color-grey-12);
   }
 
   && {
@@ -94,7 +93,7 @@ export const NavigationArrow = styled.button`
   align-items: center;
   background-color: white;
   border-radius: 50%;
-  box-shadow: 1px 4px 4px rgb(0 0 0 / 50%);
+  box-shadow: var(--box-shadow-xl);
   display: flex;
   height: 32px;
   justify-content: center;

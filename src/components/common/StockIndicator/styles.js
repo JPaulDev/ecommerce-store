@@ -5,8 +5,8 @@ export const StockIndicator = styled.div`
   color: ${({ $color }) => $color};
   column-gap: 5px;
   display: flex;
-  font-size: 0.7rem;
-  font-weight: 700;
+  font-size: var(--font-size-11);
+  font-weight: var(--font-weight-bold);
   margin-top: ${({ marginTop }) => marginTop};
   text-transform: uppercase;
 `;

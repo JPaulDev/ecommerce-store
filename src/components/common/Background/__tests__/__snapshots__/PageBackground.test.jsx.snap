@@ -9,28 +9,33 @@ exports[`PageBackground component renders a container and a background image 1`]
 }
 
 .c1 {
-  background-color: var(--color-grey-9);
-  background-image: linear-gradient(var(--color-grey-6),var(--color-grey-6));
+  background-color: var(--color-grey-12);
+  background-image: linear-gradient(var(--color-grey-15),var(--color-grey-15));
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1294px 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
 .c1 img {
-  left: 50%;
-  position: absolute;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
+  display: none;
 }
 
-@media screen and (max-width:1310px) {
+@media screen and (min-width:1310px) {
   .c1 img {
-    display: none;
+    display: initial;
   }
 }
 

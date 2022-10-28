@@ -7,6 +7,7 @@ const flexStyles = css`
 
 export const Container = styled.div`
   grid-column: 1 / 3;
+  text-align: center;
 
   @media screen and (min-width: 1050px) {
     grid-column: initial;
@@ -32,7 +33,7 @@ export const List = styled.ul`
 
 export const ListItem = styled.li`
   align-items: center;
-  background-color: var(--color-grey-6);
+  background-color: var(--color-grey-15);
   border-radius: 6px;
   height: 37px;
   width: 60px;

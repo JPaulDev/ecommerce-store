@@ -6,7 +6,7 @@ export const Container = styled.div`
   background-position: calc(100% + 220px) 50%;
   background-repeat: no-repeat;
   background-size: auto 186px;
-  border: 1px solid var(--color-grey-9);
+  border: 1px solid var(--color-grey-12);
   margin-top: 15px;
   min-height: 185px;
   overflow: hidden;
@@ -31,22 +31,21 @@ export const Container = styled.div`
 
 export const Title = styled.h4`
   font-family: 'Uni Sans', sans-serif;
-  font-size: 1.75rem;
+  font-size: var(--font-size-28);
 
   @media screen and (min-width: 750px) {
-    font-size: 2.6rem;
+    font-size: var(--font-size-38);
   }
 `;
 
 export const Text = styled.p`
   font-family: 'Uni Sans Book', sans-serif;
-  font-size: 1.06rem;
   line-height: 1.3;
   margin: 4px 0 10px;
   width: 45%;
 
   @media screen and (min-width: 750px) {
-    font-size: 1.2rem;
+    font-size: var(--font-size-20);
     width: 35%;
   }
 `;

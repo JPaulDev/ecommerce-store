@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   align-items: center;
-  background-color: var(--color-grey-6);
+  background-color: var(--color-grey-15);
   display: flex;
   justify-content: space-around;
   min-height: 55px;
@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const InnerContainer = styled.div`
   align-items: center;
-  background-color: var(--color-grey-6);
+  background-color: var(--color-grey-15);
   column-gap: 15px;
   display: flex;
   justify-content: center;
@@ -31,10 +31,10 @@ export const InnerContainer = styled.div`
 
 export const Text = styled.div`
   color: var(--color-grey-2);
-  font-size: 0.7rem;
+  font-size: var(--font-size-11);
 
   strong {
     display: block;
-    font-size: 0.87rem;
+    font-size: var(--font-size-14);
   }
 `;

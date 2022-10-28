@@ -6,7 +6,7 @@ const flexStyles = css`
 `;
 
 export const Container = styled.div`
-  border-bottom: 1px solid var(--color-grey-9);
+  border-bottom: 1px solid var(--color-grey-12);
   column-gap: 25px;
   padding: 30px 10px;
   ${flexStyles}
@@ -24,15 +24,15 @@ export const Container = styled.div`
 
 export const Text = styled.div`
   font-family: 'Uni Sans', sans-serif;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   line-height: 1.4;
 `;
 
 export const Link = styled.a`
-  color: var(--color-blue-1);
+  color: var(--color-blue-4);
   column-gap: 5px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
   margin-top: 10px;
   text-decoration: none;
   text-transform: uppercase;

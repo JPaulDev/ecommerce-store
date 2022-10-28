@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 export const ListItem = styled(Container)`
-  border-bottom: 1px solid var(--color-grey-9);
+  border-bottom: 1px solid var(--color-grey-12);
   padding: 10px 0 30px;
 
   img {
@@ -22,19 +22,18 @@ export const ListItem = styled(Container)`
 `;
 
 export const ProductDescription = styled.p`
-  border-bottom: 3px solid var(--color-grey-9);
+  border-bottom: 3px solid var(--color-grey-12);
   font-family: 'Uni Sans', sans-serif;
-  font-weight: 600;
-  line-height: 1.4;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
   margin: 3px 0 5px;
   padding-bottom: 10px;
 `;
 
 export const RemoveProduct = styled.button`
-  background: none;
-  border-left: 1px solid var(--color-grey-10);
+  border-left: 1px solid var(--color-grey-9);
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: var(--font-size-14);
   margin-left: 20px;
   padding-left: 20px;
 
@@ -44,7 +43,7 @@ export const RemoveProduct = styled.button`
 `;
 
 export const QuantitySelector = styled.div`
-  background-color: var(--color-grey-6);
+  background-color: var(--color-grey-15);
   border-radius: 5px;
   display: inline-flex;
   justify-content: space-between;
@@ -54,9 +53,13 @@ export const QuantitySelector = styled.div`
 `;
 
 export const IncreaseButton = styled.button`
-  background-image: linear-gradient(to top, #3b7739, #55a952);
+  background-image: linear-gradient(
+    to top,
+    var(--color-green-2),
+    var(--color-green-5)
+  );
   border-radius: 4px;
-  box-shadow: var(--shadow-button);
+  box-shadow: var(--box-shadow-md);
   color: white;
   cursor: pointer;
   display: grid;
@@ -65,24 +68,36 @@ export const IncreaseButton = styled.button`
   width: 25px;
 
   &:hover {
-    background-image: linear-gradient(to top, #326830, #4a9b47);
-    box-shadow: var(--shadow-button-hover);
+    background-image: linear-gradient(
+      to top,
+      var(--color-green-1),
+      var(--color-green-4)
+    );
+    box-shadow: var(--box-shadow-hover);
   }
 `;
 
 export const DecreaseButton = styled(IncreaseButton)`
-  background-image: linear-gradient(to top, #993b39, #cc5552);
+  background-image: linear-gradient(
+    to top,
+    var(--color-red-2),
+    var(--color-red-5)
+  );
 
   &:hover {
-    background-image: linear-gradient(to top, #901c30, #cf3747);
+    background-image: linear-gradient(
+      to top,
+      var(--color-red-1),
+      var(--color-red-4)
+    );
   }
 `;
 
 export const Quantity = styled(Container)`
   align-items: center;
-  color: #0c9444;
+  color: var(--color-green-3);
   display: flex;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   justify-content: center;
   min-width: 35px;
   padding: 0 5px;

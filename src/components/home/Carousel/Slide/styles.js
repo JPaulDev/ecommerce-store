@@ -83,7 +83,7 @@ export const LeftLogoWrapper = styled.div`
 
 export const LeftHeading = styled.h4`
   font-family: 'Uni Sans', sans-serif;
-  font-size: 1.93rem;
+  font-size: var(--font-size-30);
   margin-bottom: 10px;
   margin-top: 5px;
 
@@ -93,7 +93,7 @@ export const LeftHeading = styled.h4`
 `;
 
 export const Text = styled.p`
-  font-size: 0.88rem;
+  font-size: var(--font-size-14);
   line-height: 1.6;
 `;
 
@@ -148,8 +148,8 @@ export const RightContainer = styled.div`
 
 export const RightHeading = styled.h4`
   font-family: 'Uni Sans', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-semibold);
   margin-left: 10px;
   text-indent: 10px;
 
@@ -159,7 +159,7 @@ export const RightHeading = styled.h4`
 `;
 
 export const List = styled.ul`
-  font-size: 0.9rem;
+  font-size: var(--font-size-14);
   padding: 10px 0 0 18px;
 
   li {

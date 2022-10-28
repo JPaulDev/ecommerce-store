@@ -8,5 +8,5 @@ export const Text = styled.span`
 
 export const SmallText = styled.span`
   font-size: 0.9em;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 `;

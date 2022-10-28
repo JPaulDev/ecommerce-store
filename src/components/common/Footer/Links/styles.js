@@ -18,8 +18,8 @@ export const List = styled.ul`
 `;
 
 export const Link = styled.a`
-  color: var(--color-grey-8);
-  font-size: 0.84rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-13);
   text-decoration: none;
 
   &:hover {

@@ -2,7 +2,7 @@
 
 exports[`ContactBanner component renders a banner with a contact number and a live chat link 1`] = `
 .c0 {
-  background-color: var(--color-blue-2);
+  background-color: var(--color-blue-3);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -32,8 +32,8 @@ exports[`ContactBanner component renders a banner with a contact number and a li
   display: -ms-flexbox;
   display: flex;
   font-family: 'Uni Sans',sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-semibold);
   padding: 0 25px;
   -webkit-text-decoration: none;
   text-decoration: none;

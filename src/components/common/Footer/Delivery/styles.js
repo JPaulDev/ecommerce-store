@@ -16,8 +16,8 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.p`
-  color: var(--color-grey-8);
-  font-size: 0.82rem;
+  color: var(--color-grey-4);
+  font-size: var(--font-size-13);
   margin: 8px 0 8px 20px;
 
   @media screen and (min-width: 650px) {
@@ -31,12 +31,14 @@ export const ButtonContainer = styled.div`
 
 export const TabButton = styled.button`
   background-color: ${({ active }) =>
-    active ? 'var(--color-grey-11)' : '#dedede'};
+    active ? 'var(--color-grey-11)' : 'var(--color-grey-12)'};
   border-bottom: ${({ active }) =>
-    active ? '3px solid var(--color-orange-1)' : '3px solid #dedede'};
+    active
+      ? '3px solid var(--color-orange-1)'
+      : '3px solid var(--color-grey-12)'};
   cursor: pointer;
   flex: 1;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   padding: 8px;
   transition: all 200ms ease-in-out;
 `;
@@ -44,7 +46,7 @@ export const TabButton = styled.button`
 export const Form = styled.form`
   align-items: center;
   background-color: var(--color-grey-11);
-  border-bottom: 1px solid var(--color-grey-10);
+  border-bottom: 1px solid var(--color-grey-9);
   display: flex;
   padding: 20px 15px;
 
@@ -64,7 +66,7 @@ export const Input = styled.input`
 
 export const SubmitButton = styled.button`
   align-items: center;
-  background: var(--color-grey-1);
+  background: var(--color-grey-3);
   border-radius: 50%;
   cursor: pointer;
   display: flex;

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  background-color: var(--color-grey-4);
-  box-shadow: 0 3px 2px 0 rgb(0 0 0 / 30%);
+  background-color: var(--color-grey-1);
+  box-shadow: var(--box-shadow-xl);
   position: relative;
   z-index: 90;
 `;

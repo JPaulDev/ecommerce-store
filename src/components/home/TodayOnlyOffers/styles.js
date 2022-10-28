@@ -7,7 +7,7 @@ const flexStyles = css`
 
 export const Container = styled.div`
   background-color: white;
-  border: 1px solid var(--color-grey-9);
+  border: 1px solid var(--color-grey-12);
   margin-bottom: 15px;
   padding: 15px 5px;
 `;
@@ -21,7 +21,6 @@ export const List = styled.ul`
 `;
 
 export const Button = styled.button`
-  background: none;
   cursor: pointer;
   flex-direction: column;
   min-width: 85px;
@@ -70,8 +69,8 @@ export const Wrapper = styled.div`
 
 export const Heading = styled.h3`
   color: var(--color-grey-5);
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-semibold);
   transition: color 200ms ease-in-out;
 
   ${Button}:hover & {
@@ -79,7 +78,7 @@ export const Heading = styled.h3`
   }
 
   @media screen and (min-width: 640px) {
-    font-size: 0.84rem;
+    font-size: var(--font-size-14);
   }
 `;
 

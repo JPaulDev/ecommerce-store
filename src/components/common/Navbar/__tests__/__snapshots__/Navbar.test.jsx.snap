@@ -2,12 +2,12 @@
 
 exports[`Navbar component renders all links and buttons 1`] = `
 .c2 {
-  background: none;
   color: white;
   cursor: pointer;
   display: block;
-  font-size: 0.85rem;
+  font-size: var(--font-size-14);
   padding: 15px 20px;
+  position: relative;
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: all 200ms ease-in-out;
@@ -16,15 +16,16 @@ exports[`Navbar component renders all links and buttons 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  z-index: 10;
 }
 
 .c2:hover {
-  background-color: var(--color-grey-1);
+  background-color: var(--color-grey-3);
 }
 
 .c0 {
-  background-color: var(--color-grey-4);
-  box-shadow: 0 3px 2px 0 rgb(0 0 0 / 30%);
+  background-color: var(--color-grey-1);
+  box-shadow: var(--box-shadow-xl);
   position: relative;
   z-index: 90;
 }
