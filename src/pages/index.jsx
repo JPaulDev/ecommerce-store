@@ -14,19 +14,20 @@ export async function getStaticProps() {
   const products = await prisma.$queryRaw`
     WITH RECURSIVE cat_cte AS (
       SELECT id,
-          "parentCategoryId"
+        "parentCategoryId"
       FROM "Category"
       WHERE "parentCategoryId" IS NULL
       UNION ALL
       SELECT child.id,
-          child."parentCategoryId"
+        child."parentCategoryId"
       FROM "Category" child,
-          cat_cte parent
+        cat_cte parent
       WHERE child."parentCategoryId" = parent.id
     )
     SELECT *
     FROM cat_cte c
       JOIN "Product" p ON c.id = p."categoryId"
+    WHERE p."isTodayOnlyOffer" = true;
   `;
 
   return {
