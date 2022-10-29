@@ -20,18 +20,6 @@ const productData = {
   isOnSale: true,
 };
 
-describe('Basket component total display', () => {
-  it('should display the correct total including £4.99 delivery', () => {
-    renderWithProviders(<Basket />, {
-      preloadedState: {
-        basket: [productData],
-      },
-    });
-
-    expect(screen.getByText('104')).toHaveTextContent('£104.98');
-  });
-});
-
 describe('Basket component quantity buttons', () => {
   it('should increase the product quantity by 1 and display the correct total', () => {
     renderWithProviders(<Basket />, {

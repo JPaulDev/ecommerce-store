@@ -1,7 +1,7 @@
 import { screen, act } from '@testing-library/react';
 import { renderWithProviders } from '../../../../../test-utils';
 import { addProduct } from '../../basketSlice';
-import BasketQuantity from '..';
+import BasketQuantity from '../index';
 
 describe('BasketQuantity component', () => {
   it('displays the total quantity of products in the basket', () => {

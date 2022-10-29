@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { ProductCard } from '../../../features/basket';
 import {
   GraphicsCard,
   Memory,
@@ -7,7 +8,6 @@ import {
   Processor,
   Motherboard,
 } from '../../icons';
-import ProductCard from './ProductCard';
 import * as Styled from './styles';
 
 const categories = [

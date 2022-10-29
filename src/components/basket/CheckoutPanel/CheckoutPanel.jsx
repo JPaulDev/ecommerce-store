@@ -1,22 +1,13 @@
 import Image from 'next/future/image';
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
+import { memo } from 'react';
 import amazonPay from '../../../../public/images/basket/amazon-pay.webp';
-import { selectBasketSubtotal } from '../../../features/basket/basketSlice';
-import usePrice from '../../../lib/hooks/usePrice';
+import { BasketTotal } from '../../../features/basket';
 import { PayPal, Lock } from '../../icons';
 import { Price } from '../../common';
 import * as Styled from './styles';
 
-export default function CheckoutPanel() {
-  const subtotal = useSelector(selectBasketSubtotal);
-  const delivery = 4.99;
-
-  const { price } = usePrice({
-    price: subtotal + delivery,
-    currencyCode: 'GBP',
-  });
-
+function CheckoutPanel() {
   return (
     <div>
       <Styled.TopContainer>
@@ -30,15 +21,7 @@ export default function CheckoutPanel() {
           />
         </Styled.Container>
         <Styled.Container>
-          <span>
-            <strong>Total</strong>
-            (including VAT)
-          </span>
-          <Price
-            price={price}
-            fontSize="var(--font-size-26)"
-            fontWeight="var(--font-weight-medium)"
-          />
+          <BasketTotal />
         </Styled.Container>
         <Styled.Text>Finance options available at checkout</Styled.Text>
         <Styled.InnerContainer>
@@ -79,3 +62,5 @@ export default function CheckoutPanel() {
     </div>
   );
 }
+
+export default memo(CheckoutPanel);

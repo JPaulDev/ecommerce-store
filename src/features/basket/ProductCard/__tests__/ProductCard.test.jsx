@@ -2,8 +2,8 @@ import { screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
-import { renderWithProviders } from '../../../../../../test-utils';
-import { setupStore } from '../../../../../app/store';
+import { renderWithProviders } from '../../../../../test-utils';
+import { setupStore } from '../../../../app/store';
 import ProductCard from '../index';
 
 // Prevents errors caused by next image component

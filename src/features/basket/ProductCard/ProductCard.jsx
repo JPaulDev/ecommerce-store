@@ -1,8 +1,8 @@
 import Image from 'next/future/image';
 import { useState, forwardRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { addProduct } from '../../../../features/basket/basketSlice';
-import usePrice from '../../../../lib/hooks/usePrice';
+import { addProduct } from '../basketSlice';
+import usePrice from '../../../lib/hooks/usePrice';
 import {
   Price,
   PreviousPrice,
@@ -10,7 +10,7 @@ import {
   QuantityDropdown,
   StockIndicator,
   AddToBasket,
-} from '../../../common';
+} from '../../../components/common';
 import * as Styled from './styles';
 
 function ProductCard({ product }, ref) {

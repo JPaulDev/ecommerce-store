@@ -5,10 +5,15 @@ import {
   decrementQuantity,
   incrementQuantity,
   removeProduct,
-} from '../../../features/basket/basketSlice';
+} from '../basketSlice';
 import usePrice from '../../../lib/hooks/usePrice';
-import { Plus, Minus } from '../../icons';
-import { PartNumber, Price, PreviousPrice, StockIndicator } from '../../common';
+import { Plus, Minus } from '../../../components/icons';
+import {
+  PartNumber,
+  Price,
+  PreviousPrice,
+  StockIndicator,
+} from '../../../components/common';
 import * as Styled from './styles';
 
 function BasketItem({ product }) {

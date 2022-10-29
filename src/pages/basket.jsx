@@ -2,12 +2,12 @@ import Head from 'next/head';
 import { useSelector } from 'react-redux';
 import { selectBasket } from '../features/basket/basketSlice';
 import {
-  BasketItem,
   CheckoutPanel,
   EmailMyBasket,
   EmptyBasket,
   FinancePanel,
 } from '../components/basket';
+import { BasketItem } from '../features/basket';
 import * as Styled from '../styles/basket';
 
 export async function getStaticProps() {
