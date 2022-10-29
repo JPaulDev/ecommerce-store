@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import useMediaQuery from '../../../../hooks/useMediaQuery';
+import useMediaQuery from '../../../../lib/hooks/useMediaQuery';
 import { ChevronRight } from '../../../icons';
 import { Heading, DropdownButton } from '../styles';
 import * as Styled from './styles';

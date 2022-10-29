@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import amazonPay from '../../../../public/images/basket/amazon-pay.webp';
 import { selectBasketSubtotal } from '../../../features/basket/basketSlice';
-import usePrice from '../../../hooks/usePrice';
+import usePrice from '../../../lib/hooks/usePrice';
 import { PayPal, Lock } from '../../icons';
 import { Price } from '../../common';
 import * as Styled from './styles';

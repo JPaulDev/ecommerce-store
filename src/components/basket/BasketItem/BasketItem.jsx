@@ -6,7 +6,7 @@ import {
   incrementQuantity,
   removeProduct,
 } from '../../../features/basket/basketSlice';
-import usePrice from '../../../hooks/usePrice';
+import usePrice from '../../../lib/hooks/usePrice';
 import { Plus, Minus } from '../../icons';
 import { PartNumber, Price, PreviousPrice, StockIndicator } from '../../common';
 import * as Styled from './styles';

@@ -1,4 +1,4 @@
-import useMediaQuery from '../../../../hooks/useMediaQuery';
+import useMediaQuery from '../../../../lib/hooks/useMediaQuery';
 import {
   Visa,
   Mastercard,

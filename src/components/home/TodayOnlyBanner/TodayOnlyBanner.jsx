@@ -1,5 +1,5 @@
 import background from '../../../../public/images/today-only-banner/gaming-pc.webp';
-import useMediaQuery from '../../../hooks/useMediaQuery';
+import useMediaQuery from '../../../lib/hooks/useMediaQuery';
 import { LinkChevron, LinkButton } from '../../common';
 import * as Styled from './styles';
 
