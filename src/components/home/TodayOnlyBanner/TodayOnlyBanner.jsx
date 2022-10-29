@@ -1,10 +1,8 @@
 import background from '../../../../public/images/today-only-banner/gaming-pc.webp';
-import useMediaQuery from '../../../lib/hooks/useMediaQuery';
-import { LinkChevron, LinkButton } from '../../common';
+import { LinkChevron, LinkButton, ResponsiveBox } from '../../common';
 import * as Styled from './styles';
 
 export default function TodayOnlyBanner() {
-  const isMatch = useMediaQuery('(min-width: 935px)');
   const linkText = 'View All Offers';
 
   return (
@@ -14,16 +12,17 @@ export default function TodayOnlyBanner() {
       <Styled.RightHeading>
         Fantastic offers, updated every weekday
       </Styled.RightHeading>
-      {isMatch ? (
+      <ResponsiveBox sx={{ display: { 0: 'none', 935: 'block' } }}>
         <LinkChevron
           href="/"
           linkText={linkText}
           fontSize="var(--font-size-13)"
           iconSize={18}
         />
-      ) : (
+      </ResponsiveBox>
+      <ResponsiveBox sx={{ display: { 0: 'block', 935: 'none' } }}>
         <LinkButton href="/" linkText={linkText} padding="12px 25px" />
-      )}
+      </ResponsiveBox>
     </Styled.Container>
   );
 }

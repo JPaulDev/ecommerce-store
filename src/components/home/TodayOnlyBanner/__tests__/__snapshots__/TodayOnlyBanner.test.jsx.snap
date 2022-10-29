@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
-.c4 {
+.c7 {
   background: linear-gradient(to top,var(--color-grey-5),var(--color-grey-8));
   border-radius: 6px;
   box-shadow: var(--box-shadow-md);
@@ -15,9 +15,30 @@ exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
   text-transform: uppercase;
 }
 
-.c4:hover {
+.c7:hover {
   background: linear-gradient( to top, var(--color-grey-6), var(--color-grey-5) );
   box-shadow: var(--box-shadow-hover);
+}
+
+.c5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: var(--color-grey-4);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-bold);
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.c5 svg {
+  margin-left: 10px;
 }
 
 .c0 {
@@ -54,6 +75,30 @@ exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
   margin-right: auto;
   font-family: 'Uni Sans',sans-serif;
   font-weight: var(--font-weight-semibold);
+}
+
+@media screen and (min-width:0px) {
+  .c4 {
+    display: none;
+  }
+}
+
+@media screen and (min-width:935px) {
+  .c4 {
+    display: block;
+  }
+}
+
+@media screen and (min-width:0px) {
+  .c6 {
+    display: block;
+  }
+}
+
+@media screen and (min-width:935px) {
+  .c6 {
+    display: none;
+  }
 }
 
 @media screen and (min-width:935px) {
@@ -115,14 +160,42 @@ exports[`TodayOnlyBanner component renders a today only offers banner 1`] = `
   >
     Fantastic offers, updated every weekday
   </h3>
-  <a
+  <div
     className="c4"
-    href="/"
-    onClick={[Function]}
-    onMouseEnter={[Function]}
-    onTouchStart={[Function]}
   >
-    View All Offers
-  </a>
+    <a
+      className="c5"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      View All Offers
+      <svg
+        fill="currentColor"
+        height={18}
+        viewBox="0 0 512 512"
+        width={18}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 256C0 397.4 114.6 512 256 512s256-114.6 256-256S397.4 0 256 0S0 114.6 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"
+        />
+      </svg>
+    </a>
+  </div>
+  <div
+    className="c6"
+  >
+    <a
+      className="c7"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      View All Offers
+    </a>
+  </div>
 </div>
 `;
