@@ -8,7 +8,7 @@ function EmailMyBasket() {
   const id = useId();
 
   const handleChangeEmail = (e) => setEmail(e.target.value);
-  const handleChangeSubscribe = (e) => setIsSubscribed(e.target.checked);
+  const handleChangeSubscribed = (e) => setIsSubscribed(e.target.checked);
 
   return (
     <Styled.Container>
@@ -34,7 +34,7 @@ function EmailMyBasket() {
             type="checkbox"
             name="subscribe"
             checked={isSubscribed}
-            onChange={handleChangeSubscribe}
+            onChange={handleChangeSubscribed}
           />
           <label htmlFor={`${id}-checkbox`}>
             Also send me the latest offers and tech info, you can unsubscribe at

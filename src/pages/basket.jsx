@@ -8,7 +8,7 @@ import {
   FinancePanel,
 } from '../components/basket';
 import { BasketItem } from '../features/basket';
-import * as Styled from '../styles/basket';
+import * as Styled from '../styles/Basket';
 
 export async function getStaticProps() {
   return {

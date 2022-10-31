@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const flexStyles = css`
+const flexMixin = css`
   align-items: center;
   display: flex;
 `;
@@ -9,7 +9,7 @@ export const Container = styled.div`
   border-bottom: 1px solid var(--color-grey-12);
   column-gap: 25px;
   padding: 30px 10px;
-  ${flexStyles}
+  ${flexMixin}
 
   img {
     height: auto;
@@ -36,5 +36,5 @@ export const Link = styled.a`
   margin-top: 10px;
   text-decoration: none;
   text-transform: uppercase;
-  ${flexStyles}
+  ${flexMixin}
 `;

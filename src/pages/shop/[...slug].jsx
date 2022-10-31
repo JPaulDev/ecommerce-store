@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import prisma from '../../lib/utils/prisma';
+import prisma from '../../lib/utils/prisma-client';
 import ShopHeader from '../../components/shop/ShopHeader';
-import * as Styled from '../../styles/shop';
+import { ProductCard } from '../../features/basket';
+import * as Styled from '../../styles/Shop';
 
 export async function getStaticPaths() {
   const categories = await prisma.category.findMany();
@@ -42,6 +43,17 @@ export default function Slug({ data }) {
           latestArrivals={data.latestArrivals}
           latestArrivalsDescription={data.latestArrivalsDescription}
         />
+        <Styled.Section>
+          <ul>
+            {data.products?.map((product) => (
+              <ProductCard
+                key={product.sku}
+                variant="horizontal"
+                product={product}
+              />
+            ))}
+          </ul>
+        </Styled.Section>
       </Styled.Container>
     </>
   );

@@ -10,7 +10,7 @@ export default function Background({ page }) {
     <Styled.Wrapper>
       <Styled.Background>
         {page && (
-          <Image src={backgrounds[page]} alt="" priority="true" quality={85} />
+          <Image src={backgrounds[page]} alt="" quality={85} priority="true" />
         )}
       </Styled.Background>
     </Styled.Wrapper>

@@ -103,9 +103,22 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
   margin-bottom: 15px;
 }
 
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
 .c7 img {
-  max-width: 100%;
-  object-fit: cover;
+  position: absolute;
 }
 
 .c10 {

@@ -29,7 +29,7 @@ export const Container = styled.div`
   }
 `;
 
-export const Title = styled.h4`
+export const Heading = styled.h4`
   font-family: 'Uni Sans', sans-serif;
   font-size: var(--font-size-28);
 

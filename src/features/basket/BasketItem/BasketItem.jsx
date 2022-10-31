@@ -1,19 +1,19 @@
 import Image from 'next/future/image';
 import { memo } from 'react';
 import { useDispatch } from 'react-redux';
-import {
-  decrementQuantity,
-  incrementQuantity,
-  removeProduct,
-} from '../basketSlice';
 import usePrice from '../../../lib/hooks/usePrice';
 import { Plus, Minus } from '../../../components/icons';
 import {
   PartNumber,
   Price,
   PreviousPrice,
-  StockIndicator,
-} from '../../../components/common';
+  StockDisplay,
+} from '../../../components/product';
+import {
+  decrementQuantity,
+  incrementQuantity,
+  removeProduct,
+} from '../basketSlice';
 import * as Styled from './styles';
 
 function BasketItem({ product }) {
@@ -30,37 +30,36 @@ function BasketItem({ product }) {
     dispatch(incrementQuantity(product.sku));
   const handleDecrementQuantity = () =>
     dispatch(decrementQuantity(product.sku));
+
   const handleRemoveProduct = () => dispatch(removeProduct(product.sku));
 
   return (
-    <Styled.ListItem as="li">
+    <Styled.ListItem>
       <Image
         src={product.imageUrl}
+        alt=""
         width={200}
         height={200}
-        alt=""
-        quality={85}
+        quality={80}
         priority="true"
       />
       <div>
-        <PartNumber fontSize="var(--font-size-13)" sku={product.sku} />
+        <PartNumber fontSize={13}>{product.sku}</PartNumber>
         <Styled.ProductDescription>
           {product.name}, {product.description}
         </Styled.ProductDescription>
         <Styled.Container>
-          <Price
-            price={price}
-            fontSize="var(--font-size-24)"
-            fontWeight="var(--font-weight-medium)"
-          />
+          <Price fontSize={24} fontWeight="medium">
+            {price}
+          </Price>
           <Styled.RemoveProduct type="button" onClick={handleRemoveProduct}>
             Remove Item
           </Styled.RemoveProduct>
         </Styled.Container>
         {product.isOnSale && (
-          <PreviousPrice price={previousPrice} fontSize="var(--font-size-14)" />
+          <PreviousPrice fontSize={14}>{previousPrice}</PreviousPrice>
         )}
-        <StockIndicator stockStatus={product.stockStatus} marginTop="5px" />
+        <StockDisplay stockStatus={product.stockStatus} marginTop="5px" />
         <Styled.QuantitySelector>
           <Styled.DecreaseButton
             type="button"

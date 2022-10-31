@@ -8,4 +8,6 @@ export default function BasketQuantity() {
   if (quantity) {
     return <Styled.Quantity>{quantity}</Styled.Quantity>;
   }
+
+  return null;
 }

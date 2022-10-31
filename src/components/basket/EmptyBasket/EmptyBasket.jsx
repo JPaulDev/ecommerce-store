@@ -8,7 +8,9 @@ export default function EmptyBasket() {
       <Basket width={65} height={57} fill="var(--color-orange-1)" />
       <Styled.Heading>Your Basket</Styled.Heading>
       <p>Your basket is empty, please add some products.</p>
-      <LinkButton href="/" padding="12px 14px" linkText="Continue Shopping" />
+      <LinkButton href="/" padding="12px 14px">
+        Continue Shopping
+      </LinkButton>
     </Styled.Container>
   );
 }

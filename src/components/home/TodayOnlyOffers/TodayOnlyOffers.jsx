@@ -39,6 +39,7 @@ const categories = [
 ];
 
 const MotionProductCard = motion(ProductCard);
+
 const motionProps = {
   variants: {
     visible: {
@@ -85,6 +86,7 @@ export default function TodayOnlyOffers({ products = [] }) {
           {filteredProducts.map((product) => (
             <MotionProductCard
               key={product.sku}
+              variant="vertical"
               product={product}
               initial="hidden"
               animate="visible"

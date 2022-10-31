@@ -1,18 +1,18 @@
 import styled, { css } from 'styled-components';
 
-const transition = css`
+const transitionMixin = css`
   transform: ${({ isOpen }) => (isOpen ? 'rotate(-90deg)' : 'rotate(90deg)')};
   transition-delay: 500ms;
   transition-property: transform;
 `;
 
-const containerStyles = css`
+const containerMixin = css`
   align-items: center;
   display: flex;
   justify-content: space-between;
 `;
 
-const buttonStyles = css`
+const buttonMixin = css`
   cursor: pointer;
   font-size: 0;
 `;
@@ -20,7 +20,7 @@ const buttonStyles = css`
 export const TopContainer = styled.div`
   border-bottom: 3px solid var(--color-grey-12);
   padding-bottom: 20px;
-  ${containerStyles}
+  ${containerMixin}
 `;
 
 export const Heading = styled.h1`
@@ -31,8 +31,8 @@ export const Heading = styled.h1`
 
 export const TopButton = styled.button`
   display: flex;
-  ${transition}
-  ${buttonStyles}
+  ${transitionMixin}
+  ${buttonMixin}
 
   @media screen and (min-width: 650px) {
     display: none;
@@ -43,7 +43,7 @@ export const BottomContainer = styled.div`
   margin-top: 15px;
 
   @media screen and (max-width: 649px) {
-    ${containerStyles}
+    ${containerMixin}
   }
 `;
 
@@ -62,12 +62,12 @@ export const BottomButton = styled.button`
   display: inline-flex;
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  ${buttonStyles}
+  ${buttonMixin}
 
   svg {
     height: auto;
     width: 15px;
-    ${transition}
+    ${transitionMixin}
   }
 
   @media screen and (min-width: 650px) {

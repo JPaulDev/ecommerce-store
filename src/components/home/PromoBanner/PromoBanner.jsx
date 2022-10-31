@@ -10,20 +10,19 @@ export default function PromoBanner() {
 
   return (
     <Styled.Container background={nvidiaImage.src}>
-      <Styled.Title>RTX Studio</Styled.Title>
+      <Styled.Heading>RTX Studio</Styled.Heading>
       <Styled.Text>
         The best laptops and desktops for creating anywhere.
       </Styled.Text>
       <ResponsiveBox sx={{ display: { 0: 'none', 530: 'block' } }}>
-        <LinkButton href="/" linkText={linkText} padding="12px 14px" />
+        <LinkButton href="/" padding="12px 14px">
+          {linkText}
+        </LinkButton>
       </ResponsiveBox>
       <ResponsiveBox sx={{ display: { 0: 'block', 530: 'none' } }}>
-        <LinkChevron
-          href="/"
-          linkText={linkText}
-          fontSize="var(--font-size-13)"
-          iconSize={18}
-        />
+        <LinkChevron href="/" fontSize={13} iconSize={18}>
+          {linkText}
+        </LinkChevron>
       </ResponsiveBox>
       <Styled.LogoWrapper>
         <Image src={nvidiaLogo} alt="" />

@@ -7,13 +7,17 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   font-weight: var(--font-weight-medium);
 }
 
-.c6 {
+.c4 span {
+  font-size: 0.7em;
+}
+
+.c5 {
   color: var(--color-blue-4);
   font-size: var(--font-size-26);
   font-weight: var(--font-weight-medium);
 }
 
-.c5 {
+.c5 span {
   font-size: 0.7em;
 }
 
@@ -66,13 +70,13 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   font-size: var(--font-size-14);
 }
 
-.c7 {
+.c6 {
   border-top: 1px solid var(--color-grey-9);
   margin-top: 15px;
   padding: 20px 0 10px;
 }
 
-.c8 {
+.c7 {
   background-image: linear-gradient( to top, var(--color-green-2), var(--color-green-5) );
   border-radius: 6px;
   box-shadow: var(--box-shadow-md);
@@ -100,12 +104,12 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   text-transform: uppercase;
 }
 
-.c8:hover {
+.c7:hover {
   background-image: linear-gradient( to top, var(--color-green-1), var(--color-green-4) );
   box-shadow: var(--box-shadow-hover);
 }
 
-.c9 {
+.c8 {
   color: var(--color-blue-4);
   display: block;
   font-size: var(--font-size-11);
@@ -116,12 +120,12 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   text-transform: uppercase;
 }
 
-.c9:hover {
+.c8:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c10 {
+.c9 {
   background-color: var(--color-green-6);
   border-bottom: 1px solid var(--color-grey-12);
   border-bottom-left-radius: 10px;
@@ -142,11 +146,11 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   display: flex;
 }
 
-.c10 img {
+.c9 img {
   margin-top: 5px;
 }
 
-.c11 {
+.c10 {
   background-color: var(--color-orange-2);
   border-radius: 100px;
   display: -webkit-box;
@@ -157,7 +161,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   padding: 10px 25px;
 }
 
-.c11:hover {
+.c10:hover {
   box-shadow: inset 0 0 100px 100px rgb(0 0 0 / 5%);
 }
 
@@ -187,15 +191,11 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
       <span
         className="c4"
       >
-        <span
-          className="c5"
-        >
+        <span>
           £
         </span>
         4
-        <span
-          className="c5"
-        >
+        <span>
           .99
         </span>
       </span>
@@ -210,17 +210,13 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
         (including VAT)
       </span>
       <span
-        className="c6"
+        className="c5"
       >
-        <span
-          className="c5"
-        >
+        <span>
           £
         </span>
         4
-        <span
-          className="c5"
-        >
+        <span>
           .99
         </span>
       </span>
@@ -231,10 +227,10 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
       Finance options available at checkout
     </span>
     <div
-      className="c7"
+      className="c6"
     >
       <a
-        className="c8"
+        className="c7"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -254,7 +250,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
         </svg>
       </a>
       <a
-        className="c9"
+        className="c8"
         href="/account"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -265,7 +261,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
     </div>
   </div>
   <div
-    className="c10"
+    className="c9"
   >
     <span
       className="c3"
@@ -274,7 +270,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
     </span>
     <a
       aria-label="Pay with PayPal"
-      className="c11"
+      className="c10"
       href="https://www.paypal.co.uk"
       onClick={[Function]}
       onMouseEnter={[Function]}

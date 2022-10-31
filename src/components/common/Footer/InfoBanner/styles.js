@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const flexStyles = css`
+const flexMixin = css`
   align-items: center;
   display: flex;
 `;
@@ -10,7 +10,7 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 20px 0;
   row-gap: 15px;
-  ${flexStyles}
+  ${flexMixin}
 
   @media screen and (min-width: 910px) {
     padding-left: 30px;
@@ -38,7 +38,7 @@ export const InnerContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 8px;
-  ${flexStyles}
+  ${flexMixin}
 
   & :last-child {
     border: 0;
@@ -52,7 +52,7 @@ export const LinkContainer = styled.div`
   font-size: var(--font-size-18);
   font-weight: var(--font-weight-semibold);
   padding: 0 15px;
-  ${flexStyles}
+  ${flexMixin}
 `;
 
 export const Link = styled.a`
@@ -60,7 +60,7 @@ export const Link = styled.a`
   column-gap: 8px;
   font-family: inherit;
   text-decoration: none;
-  ${flexStyles}
+  ${flexMixin}
 
   &:hover {
     color: var(--color-blue-3);

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import usePrice from '../../../lib/hooks/usePrice';
 import { selectBasketSubtotal } from '../basketSlice';
-import { Price } from '../../../components/common';
+import { Price } from '../../../components/product';
 
 export default function BasketTotal() {
   const subtotal = useSelector(selectBasketSubtotal);
@@ -18,11 +18,9 @@ export default function BasketTotal() {
         <strong>Total</strong>
         (including VAT)
       </span>
-      <Price
-        price={price}
-        fontSize="var(--font-size-26)"
-        fontWeight="var(--font-weight-medium)"
-      />
+      <Price fontSize={26} fontWeight="medium">
+        {price}
+      </Price>
     </>
   );
 }

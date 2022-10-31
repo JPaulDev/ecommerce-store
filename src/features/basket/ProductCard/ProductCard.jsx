@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic';
 import Image from 'next/future/image';
 import { useState, forwardRef } from 'react';
 import { useDispatch } from 'react-redux';
@@ -7,13 +8,20 @@ import {
   Price,
   PreviousPrice,
   PartNumber,
-  QuantityDropdown,
-  StockIndicator,
+  Quantity,
+  StockDisplay,
   AddToBasket,
-} from '../../../components/common';
+} from '../../../components/product';
 import * as Styled from './styles';
 
-function ProductCard({ product }, ref) {
+const DeliveryDate = dynamic(
+  () => import('../../../components/product/DeliveryDate'),
+  {
+    ssr: false,
+  }
+);
+
+function ProductCard({ product, variant = 'horizontal' }, ref) {
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
 
@@ -24,45 +32,105 @@ function ProductCard({ product }, ref) {
     currencyCode: product.currencyCode,
   });
 
-  const handleChangeQuantity = (e) => setQuantity(parseInt(e.target.value, 10));
+  const handleChangeQuantity = (e) => setQuantity(Number(e.target.value));
+
   const handleAddProduct = () => {
     dispatch(addProduct(product, quantity));
     setQuantity(1);
   };
 
   return (
-    <Styled.ListItem ref={ref}>
-      <Image
-        src={product.imageUrl}
-        width={200}
-        height={200}
-        alt=""
-        quality={85}
-      />
-      <Styled.ProductName>{product.name}</Styled.ProductName>
-      <Styled.ProductDescription>
-        {product.description}
-      </Styled.ProductDescription>
-      <Styled.Wrapper>
-        <PartNumber fontSize="var(--font-size-12)" sku={product.sku} />
-      </Styled.Wrapper>
-      <Price price={price} fontSize="var(--font-size-30)" />
-      {product.isOnSale && (
-        <PreviousPrice price={previousPrice} fontSize="var(--font-size-16)" />
+    <>
+      {variant === 'horizontal' && (
+        <Styled.ListItem ref={ref} variant={variant}>
+          <Styled.ImageWrapper>
+            <Image
+              src={product.imageUrl}
+              alt=""
+              width={200}
+              height={200}
+              quality={90}
+              priority="true"
+            />
+          </Styled.ImageWrapper>
+          <Styled.LeftContainer>
+            <Styled.LogoWrapper>
+              <Image
+                src={product.brand}
+                alt=""
+                width={110}
+                height={24}
+                quality={90}
+              />
+            </Styled.LogoWrapper>
+            {product.isOnSale && <Styled.SaleTag>SALE</Styled.SaleTag>}
+            <Styled.ProductDescription variant={variant}>
+              {product.name}, {product.description}
+            </Styled.ProductDescription>
+            <PartNumber fontSize={13}>{product.sku}</PartNumber>
+          </Styled.LeftContainer>
+          <Styled.RightContainer>
+            <Styled.PriceContainer>
+              <Price fontSize={32}>{price}</Price>
+              {product.isOnSale && (
+                <PreviousPrice>{previousPrice}</PreviousPrice>
+              )}
+              <Styled.QuantityWrapper>
+                <Quantity
+                  quantity={quantity}
+                  onChangeQuantity={handleChangeQuantity}
+                />
+              </Styled.QuantityWrapper>
+            </Styled.PriceContainer>
+            <Styled.ButtonContainer>
+              <AddToBasket
+                type="button"
+                width="100%"
+                fontSize={14}
+                onAddProduct={handleAddProduct}
+              />
+              <Styled.InnerContainer>
+                <StockDisplay stockStatus={product.stockStatus} />
+                <DeliveryDate stockStatus={product.stockStatus} />
+              </Styled.InnerContainer>
+            </Styled.ButtonContainer>
+          </Styled.RightContainer>
+        </Styled.ListItem>
       )}
-      <QuantityDropdown
-        quantity={quantity}
-        isDisabled={product.stockStatus === 0}
-        onChangeQuantity={handleChangeQuantity}
-      />
-      <StockIndicator stockStatus={product.stockStatus} marginTop="8px" />
-      <AddToBasket
-        isDisabled={product.stockStatus === 0}
-        width="180px"
-        fontSize="var(--font-size-12)"
-        onAddProduct={handleAddProduct}
-      />
-    </Styled.ListItem>
+
+      {variant === 'vertical' && (
+        <Styled.ListItem ref={ref} variant={variant}>
+          <Image
+            src={product.imageUrl}
+            alt=""
+            width={200}
+            height={200}
+            quality={90}
+          />
+          <Styled.ProductName>{product.name}</Styled.ProductName>
+          <Styled.ProductDescription variant={variant}>
+            {product.description}
+          </Styled.ProductDescription>
+          <Styled.PartNumberWrapper>
+            <PartNumber fontSize={12}>{product.sku}</PartNumber>
+          </Styled.PartNumberWrapper>
+          <Price fontSize={30}>{price}</Price>
+          {product.isOnSale && <PreviousPrice>{previousPrice}</PreviousPrice>}
+          <Quantity
+            quantity={quantity}
+            isDisabled={product.stockStatus === 0}
+            onChangeQuantity={handleChangeQuantity}
+          />
+          <StockDisplay stockStatus={product.stockStatus} marginTop="8px" />
+          <AddToBasket
+            isDisabled={product.stockStatus === 0}
+            width="180px"
+            fontSize={12}
+            onAddProduct={handleAddProduct}
+          />
+        </Styled.ListItem>
+      )}
+    </>
   );
 }
 

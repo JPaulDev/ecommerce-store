@@ -34,7 +34,13 @@ exports[`EmptyBasket component renders message that displays when the users bask
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 150px 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 600px;
+  padding: 30px;
+  text-align: center;
 }
 
 .c0 a {
@@ -43,7 +49,7 @@ exports[`EmptyBasket component renders message that displays when the users bask
 
 .c1 {
   font-family: 'Uni Sans',sans-serif;
-  font-size: var(--font-size-22);
+  font-size: var(--font-size-26);
   font-weight: var(--font-weight-semibold);
   padding: 10px 30px;
 }

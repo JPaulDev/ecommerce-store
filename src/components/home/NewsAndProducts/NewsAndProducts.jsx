@@ -6,6 +6,8 @@ import articles from './articles';
 import * as Styled from './styles';
 
 export default function NewsAndProducts() {
+  const linkText = 'View All';
+
   return (
     <Styled.Section>
       <Styled.LeftContainer>
@@ -21,12 +23,9 @@ export default function NewsAndProducts() {
                 <Image src={article.image} alt="" />
               </Styled.Wrapper>
               <Styled.Article>{article.text}</Styled.Article>
-              <LinkChevron
-                href={article.href}
-                linkText="Read Full Article"
-                fontSize="var(--font-size-13)"
-                iconSize={21}
-              />
+              <LinkChevron href={article.href} fontSize={13} iconSize={21}>
+                Read Full Article
+              </LinkChevron>
             </Styled.ArticleBlock>
           ))}
         </Styled.NewsContainer>
@@ -42,7 +41,9 @@ export default function NewsAndProducts() {
           <div>
             <Styled.Title>Our Hot Sellers</Styled.Title>
             <Styled.Text>See our most popular selling products.</Styled.Text>
-            <LinkButton href="/" linkText="View All" padding="12px 14px" />
+            <LinkButton href="/" padding="12px 14px">
+              {linkText}
+            </LinkButton>
           </div>
         </Styled.Container>
         <Styled.Container>
@@ -56,7 +57,9 @@ export default function NewsAndProducts() {
               When the competition wants to see what&lsquo;s new they check our
               website!
             </Styled.Text>
-            <LinkButton href="/" linkText="View All" padding="12px 14px" />
+            <LinkButton href="/" padding="12px 14px">
+              {linkText}
+            </LinkButton>
           </div>
         </Styled.Container>
       </Styled.RightContainer>

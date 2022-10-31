@@ -1,20 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin-top: 8px;
+  margin-top: 10px;
   position: relative;
+  width: 55px;
 `;
 
 export const Select = styled.select`
   appearance: none;
   background-color: var(--color-grey-14);
   border: 1px solid var(--color-grey-10);
-  border-radius: 4px;
+  border-radius: 6px;
   box-shadow: 0 2px 3px rgb(17 17 17 / 10%);
   font-size: var(--font-size-14);
   font-weight: var(--font-weight-medium);
-  padding: 5px 25px 5px 10px;
-  width: 55px;
+  padding: 6px 25px 6px 10px;
+  width: 100%;
 
   &:not(:disabled) {
     cursor: pointer;

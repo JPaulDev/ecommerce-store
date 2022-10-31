@@ -4,7 +4,7 @@ import { memo } from 'react';
 import amazonPay from '../../../../public/images/basket/amazon-pay.webp';
 import { BasketTotal } from '../../../features/basket';
 import { PayPal, Lock } from '../../icons';
-import { Price } from '../../common';
+import { Price } from '../../product';
 import * as Styled from './styles';
 
 function CheckoutPanel() {
@@ -14,11 +14,9 @@ function CheckoutPanel() {
         <Styled.Heading>Basket Summary</Styled.Heading>
         <Styled.Container>
           <Styled.Text>Delivery to UK Mainland</Styled.Text>
-          <Price
-            price="£4.99"
-            fontSize="var(--font-size-20)"
-            fontWeight="var(--font-weight-medium)"
-          />
+          <Price fontSize={20} fontWeight="medium">
+            £4.99
+          </Price>
         </Styled.Container>
         <Styled.Container>
           <BasketTotal />

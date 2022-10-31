@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const headingStyles = css`
+const headingMixin = css`
   font-family: 'Uni Sans', sans-serif;
   font-weight: var(--font-weight-semibold);
 `;
@@ -43,7 +43,7 @@ export const LeftHeading = styled.h3`
   color: white;
   font-size: var(--font-size-26);
   z-index: 10;
-  ${headingStyles}
+  ${headingMixin}
 
   @media screen and (min-width: 575px) {
     font-size: var(--font-size-30);
@@ -54,7 +54,7 @@ export const LeftHeading = styled.h3`
 export const RightHeading = styled.h3`
   font-size: clamp(20px, 3.48vw, 25px);
   margin-right: auto;
-  ${headingStyles}
+  ${headingMixin}
 
   @media screen and (min-width: 700px) {
     font-size: var(--font-size-26);

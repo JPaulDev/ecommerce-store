@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const flexStyles = css`
+const flexMixin = css`
   display: flex;
   justify-content: center;
 `;
@@ -21,7 +21,7 @@ export const List = styled.ul`
   gap: 10px;
   list-style: none;
   padding: 10px;
-  ${flexStyles}
+  ${flexMixin}
 
   @media screen and (min-width: 1050px) {
     max-width: 135px;
@@ -37,7 +37,7 @@ export const ListItem = styled.li`
   border-radius: 6px;
   height: 37px;
   width: 60px;
-  ${flexStyles}
+  ${flexMixin}
 
   @media screen and (min-width: 1050px) {
     background-color: var(--color-grey-11);

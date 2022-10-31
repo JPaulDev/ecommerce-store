@@ -22,6 +22,7 @@ const GlobalStyles = createGlobalStyle`
     --font-size-26: 2.6rem;
     --font-size-28: 2.8rem;
     --font-size-30: 3rem;
+    --font-size-32: 3.2rem;
     --font-size-34: 3.4rem;
     --font-size-38: 3.8rem;
     --color-orange-1: #ff9110;

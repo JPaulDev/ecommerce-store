@@ -13,15 +13,14 @@ export default function TodayOnlyBanner() {
         Fantastic offers, updated every weekday
       </Styled.RightHeading>
       <ResponsiveBox sx={{ display: { 0: 'none', 935: 'block' } }}>
-        <LinkChevron
-          href="/"
-          linkText={linkText}
-          fontSize="var(--font-size-13)"
-          iconSize={18}
-        />
+        <LinkChevron href="/" fontSize={13} iconSize={18}>
+          {linkText}
+        </LinkChevron>
       </ResponsiveBox>
       <ResponsiveBox sx={{ display: { 0: 'block', 935: 'none' } }}>
-        <LinkButton href="/" linkText={linkText} padding="12px 25px" />
+        <LinkButton href="/" padding="12px 25px">
+          {linkText}
+        </LinkButton>
       </ResponsiveBox>
     </Styled.Container>
   );

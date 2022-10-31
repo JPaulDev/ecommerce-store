@@ -1,8 +1,8 @@
 import { useId } from 'react';
 import * as Styled from './styles';
 
-export default function QuantityDropdown({
-  isDisabled,
+export default function Quantity({
+  isDisabled = false,
   quantity,
   onChangeQuantity,
 }) {

@@ -7,11 +7,13 @@ export default function MyApp({ Component, ...rest }) {
   const { store, props } = wrapper.useWrappedStore(rest);
 
   return (
-    <Provider store={store}>
+    <>
       <GlobalStyles />
-      <Layout pageProps={props.pageProps}>
-        <Component {...props.pageProps} />
-      </Layout>
-    </Provider>
+      <Provider store={store}>
+        <Layout pageProps={props.pageProps}>
+          <Component {...props.pageProps} />
+        </Layout>
+      </Provider>
+    </>
   );
 }

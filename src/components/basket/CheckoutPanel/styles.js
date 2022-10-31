@@ -1,16 +1,16 @@
 import styled, { css } from 'styled-components';
 
-const borderStyles = css`
+const borderMixin = css`
   border-left: 1px solid var(--color-grey-12);
   border-right: 1px solid var(--color-grey-12);
 `;
 
-const flexStyles = css`
+const flexMixin = css`
   align-items: center;
   display: flex;
 `;
 
-const linkStyles = css`
+const linkMixin = css`
   font-weight: var(--font-weight-bold);
   text-decoration: none;
   text-transform: uppercase;
@@ -22,7 +22,7 @@ export const TopContainer = styled.div`
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   padding: 20px 30px;
-  ${borderStyles}
+  ${borderMixin}
 `;
 
 export const Heading = styled.h2`
@@ -43,7 +43,7 @@ export const Container = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 5px 0;
-  ${flexStyles}
+  ${flexMixin}
 
   strong {
     font-size: var(--font-size-20);
@@ -75,8 +75,8 @@ export const CheckoutLink = styled.a`
   justify-content: center;
   margin: 0 auto 20px;
   padding: 15px;
-  ${flexStyles}
-  ${linkStyles}
+  ${flexMixin}
+  ${linkMixin}
 
   &:hover {
     background-image: linear-gradient(
@@ -93,7 +93,7 @@ export const LoginLink = styled.a`
   display: block;
   font-size: var(--font-size-11);
   text-align: center;
-  ${linkStyles}
+  ${linkMixin}
 
   &:hover {
     text-decoration: underline;
@@ -107,8 +107,8 @@ export const BottomContainer = styled.div`
   border-bottom-right-radius: 10px;
   flex-direction: column;
   padding: 20px 30px 30px;
-  ${borderStyles}
-  ${flexStyles}
+  ${borderMixin}
+  ${flexMixin}
 
   img {
     margin-top: 5px;

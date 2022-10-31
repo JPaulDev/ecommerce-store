@@ -1,13 +1,18 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+const flexMixin = css`
   align-items: center;
   display: flex;
 `;
 
-export const ListItem = styled(Container)`
+export const Container = styled.div`
+  ${flexMixin}
+`;
+
+export const ListItem = styled.li`
   border-bottom: 1px solid var(--color-grey-12);
   padding: 10px 0 30px;
+  ${flexMixin}
 
   img {
     height: auto;
@@ -93,7 +98,7 @@ export const DecreaseButton = styled(IncreaseButton)`
   }
 `;
 
-export const Quantity = styled(Container)`
+export const Quantity = styled.div`
   align-items: center;
   color: var(--color-green-3);
   display: flex;
@@ -101,4 +106,5 @@ export const Quantity = styled(Container)`
   justify-content: center;
   min-width: 35px;
   padding: 0 5px;
+  ${flexMixin}
 `;

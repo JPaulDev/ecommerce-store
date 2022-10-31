@@ -1,13 +1,13 @@
 import styled, { css } from 'styled-components';
 
-const navigationStyles = css`
+const navigationMixin = css`
   display: flex;
   list-style: none;
   position: absolute;
   z-index: 10;
 `;
 
-const buttonStyles = css`
+const buttonMixin = css`
   cursor: pointer;
   user-select: none;
 `;
@@ -26,7 +26,7 @@ export const NavigationTop = styled.ul`
   justify-content: space-around;
   top: 0;
   width: 100%;
-  ${navigationStyles}
+  ${navigationMixin}
 
   @media screen and (max-width: 714px) {
     display: none;
@@ -42,7 +42,7 @@ export const ButtonTop = styled.button`
   font-weight: var(--font-weight-semibold);
   padding: 16px 20px 12px;
   transform: ${({ isActive }) => isActive && 'scale(1.06)'};
-  ${buttonStyles}
+  ${buttonMixin}
 
   &:hover {
     color: var(--color-grey-12);
@@ -58,7 +58,7 @@ export const NavigationBottom = styled.ul`
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  ${navigationStyles}
+  ${navigationMixin}
 
   li {
     display: flex;
@@ -77,7 +77,7 @@ export const ButtonBottom = styled.button`
   margin: 0 5px;
   transition: all 100ms ease-in-out;
   width: 33px;
-  ${buttonStyles}
+  ${buttonMixin}
 `;
 
 export const Navigation = styled.ul`
@@ -86,7 +86,7 @@ export const Navigation = styled.ul`
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  ${navigationStyles}
+  ${navigationMixin}
 `;
 
 export const NavigationArrow = styled.button`
@@ -98,5 +98,5 @@ export const NavigationArrow = styled.button`
   height: 32px;
   justify-content: center;
   width: 32px;
-  ${buttonStyles}
+  ${buttonMixin}
 `;

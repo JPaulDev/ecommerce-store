@@ -16,12 +16,9 @@ export default function ProShopCards() {
             <Styled.Heading>{item.heading}</Styled.Heading>
           )}
           <Styled.Text>{item.description}</Styled.Text>
-          <LinkChevron
-            href={item.href}
-            linkText={item.linkText}
-            fontSize="var(--font-size-14)"
-            iconSize={20}
-          />
+          <LinkChevron href={item.href} fontSize={14} iconSize={20}>
+            {item.linkText}
+          </LinkChevron>
         </Styled.ProCard>
       ))}
     </Styled.Section>

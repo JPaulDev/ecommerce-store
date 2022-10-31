@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BasketItem component should render a product card with with all the product information 1`] = `
-.c2 {
+.c1 {
   color: var(--color-blue-4);
   font-size: var(--font-size-13);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
 }
 
-.c7 {
+.c6 {
   color: var(--color-grey-7);
   font-size: var(--font-size-14);
   -webkit-text-decoration: line-through;
   text-decoration: line-through;
 }
 
-.c8 {
+.c6 span {
   font-size: 0.9em;
   font-weight: var(--font-weight-semibold);
 }
@@ -26,11 +26,11 @@ exports[`BasketItem component should render a product card with with all the pro
   font-weight: var(--font-weight-medium);
 }
 
-.c5 {
+.c4 span {
   font-size: 0.7em;
 }
 
-.c9 {
+.c7 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -48,7 +48,7 @@ exports[`BasketItem component should render a product card with with all the pro
   text-transform: uppercase;
 }
 
-.c0 {
+.c3 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -59,18 +59,26 @@ exports[`BasketItem component should render a product card with with all the pro
   display: flex;
 }
 
-.c1 {
+.c0 {
   border-bottom: 1px solid var(--color-grey-12);
   padding: 10px 0 30px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.c1 img {
+.c0 img {
   height: auto;
   margin-right: 20px;
   width: 120px;
 }
 
-.c3 {
+.c2 {
   border-bottom: 3px solid var(--color-grey-12);
   font-family: 'Uni Sans',sans-serif;
   font-weight: var(--font-weight-semibold);
@@ -79,7 +87,7 @@ exports[`BasketItem component should render a product card with with all the pro
   padding-bottom: 10px;
 }
 
-.c6 {
+.c5 {
   border-left: 1px solid var(--color-grey-9);
   cursor: pointer;
   font-size: var(--font-size-14);
@@ -87,12 +95,12 @@ exports[`BasketItem component should render a product card with with all the pro
   padding-left: 20px;
 }
 
-.c6:hover {
+.c5:hover {
   -webkit-text-decoration: underline;
   text-decoration: underline;
 }
 
-.c10 {
+.c8 {
   background-color: var(--color-grey-15);
   border-radius: 5px;
   display: -webkit-inline-box;
@@ -108,7 +116,7 @@ exports[`BasketItem component should render a product card with with all the pro
   padding: 6px;
 }
 
-.c11 {
+.c9 {
   background-image: linear-gradient( to top, var(--color-green-2), var(--color-green-5) );
   border-radius: 4px;
   box-shadow: var(--box-shadow-md);
@@ -120,20 +128,20 @@ exports[`BasketItem component should render a product card with with all the pro
   width: 25px;
 }
 
-.c11:hover {
+.c9:hover {
   background-image: linear-gradient( to top, var(--color-green-1), var(--color-green-4) );
   box-shadow: var(--box-shadow-hover);
 }
 
-.c12 {
+.c10 {
   background-image: linear-gradient( to top, var(--color-red-2), var(--color-red-5) );
 }
 
-.c12:hover {
+.c10:hover {
   background-image: linear-gradient( to top, var(--color-red-1), var(--color-red-4) );
 }
 
-.c13 {
+.c11 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -150,60 +158,64 @@ exports[`BasketItem component should render a product card with with all the pro
   justify-content: center;
   min-width: 35px;
   padding: 0 5px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media screen and (min-width:900px) {
-  .c1 img {
+  .c0 img {
     width: 140px;
     height: auto;
   }
 }
 
 <li
-  className="c0 c1"
+  className="c0"
 >
   <img
     alt=""
     height={200}
     priority="true"
-    quality={85}
+    quality={80}
     src=""
     width={200}
   />
   <div>
     <span
-      className="c2"
+      className="c1"
     >
       SKU: 
       GPU-3PAQ-ASU
     </span>
     <p
-      className="c3"
+      className="c2"
     >
       ASUS ROG Strix GeForce RTX 3080 V2 OC
       , 
       1440MHz, 1905MHz Boost, 8704 CUDA Cores, 10GB GDDR6X
     </p>
     <div
-      className="c0"
+      className="c3"
     >
       <span
         className="c4"
       >
-        <span
-          className="c5"
-        >
+        <span>
           £
         </span>
         99
-        <span
-          className="c5"
-        >
+        <span>
           .99
         </span>
       </span>
       <button
-        className="c6"
+        className="c5"
         onClick={[Function]}
         type="button"
       >
@@ -211,17 +223,15 @@ exports[`BasketItem component should render a product card with with all the pro
       </button>
     </div>
     <span
-      className="c7"
+      className="c6"
     >
-      <span
-        className="c8"
-      >
+      <span>
         Was: 
       </span>
       £129.99
     </span>
     <div
-      className="c9"
+      className="c7"
       title="Item is in stock"
     >
       <svg
@@ -253,11 +263,11 @@ exports[`BasketItem component should render a product card with with all the pro
       In Stock
     </div>
     <div
-      className="c10"
+      className="c8"
     >
       <button
         aria-label="Decrease Quantity"
-        className="c11 c12"
+        className="c9 c10"
         onClick={[Function]}
         title="Decrease Quantity"
         type="button"
@@ -275,14 +285,14 @@ exports[`BasketItem component should render a product card with with all the pro
         </svg>
       </button>
       <div
-        className="c0 c13"
+        className="c11"
         data-testid="quantity"
       >
         1
       </div>
       <button
         aria-label="Increase Quantity"
-        className="c11"
+        className="c9"
         onClick={[Function]}
         title="Increase Quantity"
         type="button"

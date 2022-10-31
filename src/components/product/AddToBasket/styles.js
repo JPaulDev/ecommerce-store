@@ -10,10 +10,10 @@ export const Button = styled.button`
   box-shadow: var(--box-shadow-md);
   color: white;
   cursor: pointer;
-  font-size: ${({ $fontSize }) => $fontSize};
+  font-size: ${({ $fontSize }) => `var(--font-size-${$fontSize})`};
   font-weight: var(--font-weight-bold);
   margin-top: 8px;
-  padding: 12px 0;
+  padding: 13px;
   text-transform: uppercase;
   width: ${({ $width }) => $width};
 
@@ -28,7 +28,7 @@ export const Button = styled.button`
     background-image: linear-gradient(
       to top,
       var(--color-green-1),
-      var(--color-green-4)
+      var(--color-green-3)
     );
     box-shadow: var(--box-shadow-hover);
   }

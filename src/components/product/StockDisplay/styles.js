@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StockIndicator = styled.div`
+export const Container = styled.div`
   align-items: center;
   color: ${({ $color }) => $color};
   column-gap: 5px;

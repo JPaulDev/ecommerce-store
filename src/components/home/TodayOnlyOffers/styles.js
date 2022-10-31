@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const flexStyles = css`
+const flexMixin = css`
   align-items: center;
   display: flex;
 `;
@@ -17,14 +17,14 @@ export const List = styled.ul`
   list-style: none;
   margin: 0 auto;
   max-width: 1100px;
-  ${flexStyles}
+  ${flexMixin}
 `;
 
 export const Button = styled.button`
   cursor: pointer;
   flex-direction: column;
   min-width: 85px;
-  ${flexStyles}
+  ${flexMixin}
 
   @media screen and (min-width: 640px) {
     min-width: 95px;
@@ -39,7 +39,7 @@ export const Wrapper = styled.div`
   margin-bottom: 5px;
   position: relative;
   width: 65px;
-  ${flexStyles}
+  ${flexMixin}
 
   &::after {
     border-radius: inherit;

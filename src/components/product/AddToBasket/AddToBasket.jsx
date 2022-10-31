@@ -1,10 +1,10 @@
 import * as Styled from './styles';
 
 export default function AddToBasket({
-  isDisabled,
+  isDisabled = false,
   onAddProduct,
   width,
-  fontSize,
+  fontSize = 16,
 }) {
   return (
     <Styled.Button

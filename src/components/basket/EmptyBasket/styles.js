@@ -6,7 +6,10 @@ export const Container = styled.div`
   border: 1px solid var(--color-grey-12);
   display: flex;
   flex-direction: column;
-  padding: 150px 20px;
+  justify-content: center;
+  min-height: 600px;
+  padding: 30px;
+  text-align: center;
 
   a {
     margin-top: 20px;
@@ -15,7 +18,7 @@ export const Container = styled.div`
 
 export const Heading = styled.h2`
   font-family: 'Uni Sans', sans-serif;
-  font-size: var(--font-size-22);
+  font-size: var(--font-size-26);
   font-weight: var(--font-weight-semibold);
   padding: 10px 30px;
 `;

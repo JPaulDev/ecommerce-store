@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const headingStyles = css`
+const headingMixin = css`
   font-family: 'Uni Sans Book', sans-serif;
   text-align: center;
 `;
@@ -25,7 +25,7 @@ export const LeftContainer = styled.div`
 
 export const Heading = styled.h2`
   font-size: var(--font-size-30);
-  ${headingStyles}
+  ${headingMixin}
 
   @media screen and (min-width: 650px) {
     text-align: left;
@@ -68,7 +68,7 @@ export const ArticleBlock = styled.div`
 export const ArticleHeading = styled.h3`
   font-size: var(--font-size-18);
   margin-top: 15px;
-  ${headingStyles}
+  ${headingMixin}
 
   @media screen and (min-width: 650px) {
     min-height: 50px;
@@ -100,9 +100,14 @@ export const Date = styled.div`
 `;
 
 export const Wrapper = styled.div`
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+
   img {
-    max-width: 100%;
-    object-fit: cover;
+    position: absolute;
   }
 `;
 

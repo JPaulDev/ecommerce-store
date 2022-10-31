@@ -1,7 +1,7 @@
 import { Clipboard } from '../../icons';
 import * as Styled from './styles';
 
-export default function StockIndicator({ stockStatus, marginTop }) {
+export default function StockDisplay({ stockStatus, marginTop }) {
   let text = 'In Stock';
   let title = 'Item is in stock';
   let color = 'var(--color-green-5)';
@@ -17,9 +17,9 @@ export default function StockIndicator({ stockStatus, marginTop }) {
   }
 
   return (
-    <Styled.StockIndicator $color={color} title={title} marginTop={marginTop}>
+    <Styled.Container $color={color} title={title} marginTop={marginTop}>
       <Clipboard width={18} height={18} fill="var(--color-grey-4)" />
       {text}
-    </Styled.StockIndicator>
+    </Styled.Container>
   );
 }

@@ -15,7 +15,7 @@ const productData = {
   description: '1440MHz, 1905MHz Boost, 8704 CUDA Cores, 10GB GDDR6X',
   stockStatus: 2,
   quantity: 1,
-  brand: 'asus',
+  brand: '',
   currencyCode: 'GBP',
   isOnSale: true,
 };
