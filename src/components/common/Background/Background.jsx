@@ -5,12 +5,17 @@ import * as Styled from './styles';
 
 const backgrounds = { home, basket };
 
-export default function Background({ page }) {
+export default function Background({ backgroundImage }) {
   return (
     <Styled.Wrapper>
       <Styled.Background>
-        {page && (
-          <Image src={backgrounds[page]} alt="" quality={85} priority="true" />
+        {backgroundImage && (
+          <Image
+            src={backgrounds[backgroundImage]}
+            alt=""
+            quality={85}
+            priority="true"
+          />
         )}
       </Styled.Background>
     </Styled.Wrapper>

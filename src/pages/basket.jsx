@@ -12,7 +12,7 @@ import * as Styled from '../styles/Basket';
 
 export async function getStaticProps() {
   return {
-    props: { page: 'basket' },
+    props: { backgroundImage: 'basket' },
   };
 }
 

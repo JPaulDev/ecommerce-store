@@ -33,7 +33,7 @@ export async function getStaticProps() {
   `;
 
   return {
-    props: { page: 'home', products },
+    props: { backgroundImage: 'home', products },
   };
 }
 
