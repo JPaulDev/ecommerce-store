@@ -34,10 +34,20 @@ export default function SignInView() {
               name="email"
               type="email"
               placeholder="Email"
+              aria-required
+              aria-invalid={touched.email && errors.email ? true : null}
+              aria-describedby={
+                touched.email && errors.email ? 'email-error' : null
+              }
               isTouched={touched.email}
               isValid={!errors.email}
             />
-            <ErrorMessage component={ErrorText} name="email" role="alert" />
+            <ErrorMessage
+              id="email-error"
+              component={ErrorText}
+              name="email"
+              role="alert"
+            />
 
             <Field
               as={InputWithLabel}
@@ -46,10 +56,20 @@ export default function SignInView() {
               name="password"
               type="password"
               placeholder="Password"
+              aria-required
+              aria-invalid={touched.password && errors.password ? true : null}
+              aria-describedby={
+                touched.password && errors.password ? 'password-error' : null
+              }
               isTouched={touched.password}
               isValid={!errors.password}
             />
-            <ErrorMessage component={ErrorText} name="password" role="alert" />
+            <ErrorMessage
+              id="password-error"
+              component={ErrorText}
+              name="password"
+              role="alert"
+            />
 
             <PrimaryBtn type="submit" disabled={isSubmitting}>
               {isSubmitting ? <LoadingSpinner /> : 'Sign In'}
