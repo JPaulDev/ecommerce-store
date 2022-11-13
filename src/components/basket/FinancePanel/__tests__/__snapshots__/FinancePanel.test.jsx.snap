@@ -28,7 +28,7 @@ exports[`FinancePanel component renders a panel with finance information and rel
 }
 
 .c2 {
-  color: var(--color-blue-4);
+  color: var(--color-sky-blue-2);
   -webkit-column-gap: 5px;
   column-gap: 5px;
   font-size: var(--font-size-12);

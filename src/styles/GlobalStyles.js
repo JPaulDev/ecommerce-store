@@ -26,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     --font-size-34: 3.4rem;
     --font-size-38: 3.8rem;
     --color-orange-1: #ff9110;
-    --color-orange-2: #ffc439;
+    --color-yellow-1: #facc15;
     --color-grey-1: #2f2f2f;
     --color-grey-2: #333;
     --color-grey-3: #434343;
@@ -42,23 +42,20 @@ const GlobalStyles = createGlobalStyle`
     --color-grey-13: #eaeaea;
     --color-grey-14: #f1f1f1;
     --color-grey-15: #f7f7f7;
-    --color-blue-1: #105891;
-    --color-blue-2: #1463a2;
-    --color-blue-3: #1766a6;
-    --color-blue-4: #3d70b7;
-    --color-green-1: #008631;
-    --color-green-2: #009245;
-    --color-green-3: #0c9444;
-    --color-green-4: #00a13f;
-    --color-green-5: #02ab52;
-    --color-green-6: #c7efce;
-    --color-green-7: #d7f6db;
-    --color-red-1: #901c30;
-    --color-red-2: #993b39;
-    --color-red-3: #d72140;
-    --color-red-4: #cf3747;
-    --color-red-5: #cc5552;
-    --color-red-6: #ef4444;
+    --color-indigo-1: #6366f1;
+    --color-blue-1: #3b82f6;
+    --color-sky-blue-1: #075985;
+    --color-sky-blue-2: #0369a1;
+    --color-sky-blue-3: #0284c7;
+    --color-sky-blue-4: #0ea5e9;
+    --color-green-1: #15803d;
+    --color-green-2: #16a34a;
+    --color-green-3: #22c55e;
+    --color-green-4: #bbf7d0;
+    --color-green-5: #dcfce7;
+    --color-red-1: #b91c1c;
+    --color-red-2: #dc2626;
+    --color-red-3: #ef4444;
     --box-shadow-sm: 0 2px 1px -1px rgba(0 0 0 / 20%),
       0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
     --box-shadow-md: 0 3px 1px -2px rgb(0 0 0 / 20%),

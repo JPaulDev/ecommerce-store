@@ -28,6 +28,7 @@ function BasketItem({ product }) {
 
   const handleIncrementQuantity = () =>
     dispatch(incrementQuantity(product.sku));
+
   const handleDecrementQuantity = () =>
     dispatch(decrementQuantity(product.sku));
 

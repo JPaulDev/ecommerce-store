@@ -78,7 +78,7 @@ exports[`ProShopCards component renders 6 pro shop cards with links and shop des
 }
 
 .c8 {
-  color: var(--color-blue-4);
+  color: var(--color-sky-blue-3);
   font-family: 'Uni Sans Book',sans-serif;
   font-size: var(--font-size-26);
   font-weight: var(--font-weight-regular);

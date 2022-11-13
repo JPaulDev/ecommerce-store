@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   background-color: var(--color-grey-15);
@@ -22,7 +22,7 @@ export const Heading = styled.h2`
   }
 `;
 
-export const Input = styled.input`
+export const inputStyles = css`
   border: 1px solid var(--color-grey-5);
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
@@ -31,7 +31,11 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  background: linear-gradient(to top, var(--color-blue-3), var(--color-blue-4));
+  background: linear-gradient(
+    to bottom,
+    var(--color-sky-blue-3),
+    var(--color-sky-blue-1)
+  );
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   box-shadow: var(--box-shadow-md);
@@ -43,12 +47,7 @@ export const Button = styled.button`
   width: 30%;
 
   &:hover {
-    background: linear-gradient(
-      to top,
-      var(--color-blue-1),
-      var(--color-blue-2)
-    );
-    box-shadow: var(--box-shadow-hover);
+    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 10%), var(--box-shadow-hover);
   }
 `;
 
@@ -67,7 +66,7 @@ export const Checkbox = styled.input`
 `;
 
 export const Link = styled.a`
-  color: var(--color-blue-4);
+  color: var(--color-sky-blue-2);
   font-weight: var(--font-weight-bold);
   margin-left: 5px;
   text-decoration: none;

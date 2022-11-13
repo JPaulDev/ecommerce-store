@@ -59,9 +59,9 @@ export const QuantitySelector = styled.div`
 
 export const IncreaseButton = styled.button`
   background-image: linear-gradient(
-    to top,
-    var(--color-green-2),
-    var(--color-green-5)
+    to bottom,
+    var(--color-green-3),
+    var(--color-green-1)
   );
   border-radius: 4px;
   box-shadow: var(--box-shadow-md);
@@ -73,34 +73,25 @@ export const IncreaseButton = styled.button`
   width: 25px;
 
   &:hover {
-    background-image: linear-gradient(
-      to top,
-      var(--color-green-1),
-      var(--color-green-4)
-    );
-    box-shadow: var(--box-shadow-hover);
+    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 10%), var(--box-shadow-hover);
+  }
+
+  &:active {
+    transform: scale(0.94);
   }
 `;
 
 export const DecreaseButton = styled(IncreaseButton)`
   background-image: linear-gradient(
-    to top,
-    var(--color-red-2),
-    var(--color-red-5)
+    to bottom,
+    var(--color-red-3),
+    var(--color-red-1)
   );
-
-  &:hover {
-    background-image: linear-gradient(
-      to top,
-      var(--color-red-1),
-      var(--color-red-4)
-    );
-  }
 `;
 
 export const Quantity = styled.div`
   align-items: center;
-  color: var(--color-green-3);
+  color: var(--color-green-2);
   display: flex;
   font-weight: var(--font-weight-semibold);
   justify-content: center;

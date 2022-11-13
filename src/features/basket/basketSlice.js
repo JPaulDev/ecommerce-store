@@ -55,6 +55,7 @@ export const selectBasketSubtotal = createSelector(
       const { price, quantity } = product;
       const itemTotal = price * quantity;
 
+      // eslint-disable-next-line no-param-reassign
       subtotal += itemTotal;
 
       return subtotal;

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Form = styled.form`
   justify-self: center;
@@ -29,7 +29,7 @@ export const Form = styled.form`
   }
 `;
 
-export const Input = styled.input`
+export const Input = css`
   border-radius: 8px;
   color: var(--color-grey-2);
   font-size: var(--font-size-14);

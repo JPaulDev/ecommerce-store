@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Quantity = styled.div`
   align-items: center;
-  background-color: var(--color-blue-3);
+  background-color: var(--color-sky-blue-2);
   border: 1px solid white;
   border-radius: 50%;
   color: white;

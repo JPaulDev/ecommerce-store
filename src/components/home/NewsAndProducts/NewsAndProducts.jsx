@@ -1,7 +1,7 @@
 import Image from 'next/future/image';
 import hotSellers from '../../../../public/images/news-and-products/hot-sellers.webp';
 import newArrivals from '../../../../public/images/news-and-products/new-arrivals.webp';
-import { LinkChevron, LinkButton } from '../../common';
+import { LinkChevron, LinkButton } from '../../ui';
 import articles from './articles';
 import * as Styled from './styles';
 

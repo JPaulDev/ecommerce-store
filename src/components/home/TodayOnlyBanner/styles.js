@@ -6,7 +6,7 @@ const headingMixin = css`
 `;
 
 export const Container = styled.div`
-  background-color: var(--color-red-3);
+  background-color: var(--color-red-2);
   background-image: url(${({ background }) => background});
   background-position: 96% 60%;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@ export const Container = styled.div`
 `;
 
 export const RedOval = styled.div`
-  background: linear-gradient(to right, var(--color-red-4), var(--color-red-3));
+  background: linear-gradient(to right, var(--color-red-3), var(--color-red-2));
   border-radius: 50%;
   height: 170px;
   left: -67px;

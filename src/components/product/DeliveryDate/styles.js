@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Text = styled.div`
-  color: var(--color-blue-4);
+  color: var(--color-sky-blue-2);
   font-size: var(--font-size-11);
   margin-top: 5px;
 

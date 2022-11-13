@@ -46,7 +46,7 @@ describe('Links component dropdown menu', () => {
 
     expect(screen.getAllByRole('link')).toHaveLength(2);
 
-    // Delays the second click to prevent the menu improperly closing
+    // Delays the second click to prevent the menu improperly closing.
     setTimeout(() => userEvent.click(button), 600);
 
     await waitForElementToBeRemoved(screen.queryAllByRole('link'), {

@@ -5,7 +5,7 @@ export default function Price({
   fontSize = 16,
   fontWeight = 'regular',
 }) {
-  // Splits a price eg £1,100.99 into three chunks £ / 1,100 / .99
+  // Splits a price eg £1,100.99 into three chunks £ / 1,100 / .99.
   const [, symbol, whole, fraction] =
     children.match(/(£)([0-9,]+)([.0-9]+)/) || [];
 

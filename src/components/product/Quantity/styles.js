@@ -6,6 +6,17 @@ export const Container = styled.div`
   width: 55px;
 `;
 
+export const Label = styled.label`
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+`;
+
 export const Select = styled.select`
   appearance: none;
   background-color: var(--color-grey-14);

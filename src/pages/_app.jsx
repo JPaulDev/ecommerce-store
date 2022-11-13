@@ -1,7 +1,8 @@
 import { Provider } from 'react-redux';
 import GlobalStyles from '../styles/GlobalStyles';
 import { wrapper } from '../app/store';
-import Layout from '../components/common/Layout/Layout';
+import { UIProvider } from '../contexts/UIContext';
+import { Layout } from '../components/common';
 
 export default function MyApp({ Component, ...rest }) {
   const { store, props } = wrapper.useWrappedStore(rest);
@@ -10,9 +11,11 @@ export default function MyApp({ Component, ...rest }) {
     <>
       <GlobalStyles />
       <Provider store={store}>
-        <Layout pageProps={props.pageProps}>
-          <Component {...props.pageProps} />
-        </Layout>
+        <UIProvider>
+          <Layout pageProps={props.pageProps}>
+            <Component {...props.pageProps} />
+          </Layout>
+        </UIProvider>
       </Provider>
     </>
   );

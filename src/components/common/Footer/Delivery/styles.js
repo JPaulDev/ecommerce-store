@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   @media screen and (min-width: 650px) {
@@ -55,7 +55,7 @@ export const Form = styled.form`
   }
 `;
 
-export const Input = styled.input`
+export const inputStyles = css`
   border: 1px solid grey;
   border-radius: 5px;
   margin-right: 8px;

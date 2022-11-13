@@ -29,7 +29,7 @@ export const Text = styled.div`
 `;
 
 export const Link = styled.a`
-  color: var(--color-blue-4);
+  color: var(--color-sky-blue-2);
   column-gap: 5px;
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-semibold);

@@ -52,7 +52,8 @@ export default function Links({ item }) {
 
   const handleOpen = () => setIsOpen(!isOpen);
 
-  // Prevents the menu being stuck closed when resizing from a smaller window width
+  // Prevents the menu being stuck closed when resizing from a smaller window
+  // width.
   useEffect(() => {
     isMatch ? setIsOpen(true) : setIsOpen(false);
   }, [isMatch]);

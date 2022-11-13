@@ -17,7 +17,7 @@ const linkMixin = css`
 `;
 
 export const TopContainer = styled.div`
-  background-color: var(--color-green-7);
+  background-color: var(--color-green-5);
   border-top: 1px solid var(--color-grey-12);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -63,9 +63,9 @@ export const InnerContainer = styled.div`
 
 export const CheckoutLink = styled.a`
   background-image: linear-gradient(
-    to top,
-    var(--color-green-2),
-    var(--color-green-5)
+    to bottom,
+    var(--color-green-3),
+    var(--color-green-1)
   );
   border-radius: 6px;
   box-shadow: var(--box-shadow-md);
@@ -79,17 +79,12 @@ export const CheckoutLink = styled.a`
   ${linkMixin}
 
   &:hover {
-    background-image: linear-gradient(
-      to top,
-      var(--color-green-1),
-      var(--color-green-4)
-    );
-    box-shadow: var(--box-shadow-hover);
+    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 10%), var(--box-shadow-hover);
   }
 `;
 
 export const LoginLink = styled.a`
-  color: var(--color-blue-4);
+  color: var(--color-sky-blue-2);
   display: block;
   font-size: var(--font-size-11);
   text-align: center;
@@ -101,10 +96,11 @@ export const LoginLink = styled.a`
 `;
 
 export const BottomContainer = styled.div`
-  background-color: var(--color-green-6);
+  background-color: var(--color-green-5);
   border-bottom: 1px solid var(--color-grey-12);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  border-top: 1px solid var(--color-grey-9);
   flex-direction: column;
   padding: 20px 30px 30px;
   ${borderMixin}
@@ -116,13 +112,13 @@ export const BottomContainer = styled.div`
 `;
 
 export const PaypalLink = styled.a`
-  background-color: var(--color-orange-2);
+  background-color: var(--color-yellow-1);
   border-radius: 100px;
   display: flex;
   margin: 5px 0;
   padding: 10px 25px;
 
   &:hover {
-    box-shadow: inset 0 0 100px 100px rgb(0 0 0 / 5%);
+    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 5%);
   }
 `;

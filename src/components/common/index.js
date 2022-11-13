@@ -2,8 +2,5 @@ export { default as Background } from './Background';
 export { default as Footer } from './Footer';
 export { default as Header } from './Header';
 export { default as Layout } from './Layout';
-export { default as LinkButton } from './LinkButton';
-export { default as LinkChevron } from './LinkChevron';
 export { default as Navbar } from './Navbar';
-export { default as ResponsiveBox } from './ResponsiveBox';
 export { default as TopBannerSmall } from './TopBannerSmall';

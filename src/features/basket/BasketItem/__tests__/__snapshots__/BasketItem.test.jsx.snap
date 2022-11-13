@@ -2,7 +2,7 @@
 
 exports[`BasketItem component should render a product card with with all the product information 1`] = `
 .c1 {
-  color: var(--color-blue-4);
+  color: var(--color-sky-blue-2);
   font-size: var(--font-size-13);
   font-weight: var(--font-weight-bold);
   text-transform: uppercase;
@@ -21,7 +21,7 @@ exports[`BasketItem component should render a product card with with all the pro
 }
 
 .c4 {
-  color: var(--color-blue-4);
+  color: var(--color-sky-blue-2);
   font-size: var(--font-size-24);
   font-weight: var(--font-weight-medium);
 }
@@ -35,7 +35,7 @@ exports[`BasketItem component should render a product card with with all the pro
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: var(--color-green-5);
+  color: var(--color-green-2);
   -webkit-column-gap: 5px;
   column-gap: 5px;
   display: -webkit-box;
@@ -117,7 +117,7 @@ exports[`BasketItem component should render a product card with with all the pro
 }
 
 .c9 {
-  background-image: linear-gradient( to top, var(--color-green-2), var(--color-green-5) );
+  background-image: linear-gradient( to bottom, var(--color-green-3), var(--color-green-1) );
   border-radius: 4px;
   box-shadow: var(--box-shadow-md);
   color: white;
@@ -129,16 +129,17 @@ exports[`BasketItem component should render a product card with with all the pro
 }
 
 .c9:hover {
-  background-image: linear-gradient( to top, var(--color-green-1), var(--color-green-4) );
-  box-shadow: var(--box-shadow-hover);
+  box-shadow: inset 0 0 0 100px rgb(0 0 0 / 10%),var(--box-shadow-hover);
+}
+
+.c9:active {
+  -webkit-transform: scale(0.94);
+  -ms-transform: scale(0.94);
+  transform: scale(0.94);
 }
 
 .c10 {
-  background-image: linear-gradient( to top, var(--color-red-2), var(--color-red-5) );
-}
-
-.c10:hover {
-  background-image: linear-gradient( to top, var(--color-red-1), var(--color-red-4) );
+  background-image: linear-gradient( to bottom, var(--color-red-3), var(--color-red-1) );
 }
 
 .c11 {
@@ -146,7 +147,7 @@ exports[`BasketItem component should render a product card with with all the pro
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  color: var(--color-green-3);
+  color: var(--color-green-2);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { renderWithProviders } from '../../test-utils';
 import Basket from '../pages/basket';
 
-// Prevents errors caused by next image component
+// Prevents errors caused by next image component.
 jest.mock('next/future/image', () => 'img');
 
 const productData = {

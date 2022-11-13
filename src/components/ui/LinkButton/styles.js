@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 
 export const Link = styled.a`
-  background: linear-gradient(to top, var(--color-grey-5), var(--color-grey-8));
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-grey-7),
+    var(--color-grey-4)
+  );
   border-radius: 6px;
   box-shadow: var(--box-shadow-md);
   color: white;
@@ -13,11 +17,6 @@ export const Link = styled.a`
   text-transform: uppercase;
 
   &:hover {
-    background: linear-gradient(
-      to top,
-      var(--color-grey-6),
-      var(--color-grey-5)
-    );
-    box-shadow: var(--box-shadow-hover);
+    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 10%), var(--box-shadow-hover);
   }
 `;

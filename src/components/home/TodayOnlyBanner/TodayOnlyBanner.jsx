@@ -1,5 +1,5 @@
 import background from '../../../../public/images/today-only-banner/gaming-pc.webp';
-import { LinkChevron, LinkButton, ResponsiveBox } from '../../common';
+import { LinkChevron, LinkButton, ResponsiveBox } from '../../ui';
 import * as Styled from './styles';
 
 export default function TodayOnlyBanner() {
@@ -18,7 +18,7 @@ export default function TodayOnlyBanner() {
         </LinkChevron>
       </ResponsiveBox>
       <ResponsiveBox sx={{ display: { 0: 'block', 935: 'none' } }}>
-        <LinkButton href="/" padding="12px 25px">
+        <LinkButton href="/" padding="14px 25px">
           {linkText}
         </LinkButton>
       </ResponsiveBox>

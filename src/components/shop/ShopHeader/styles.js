@@ -72,7 +72,7 @@ export const BottomButton = styled.button`
 
   @media screen and (min-width: 650px) {
     column-gap: 7px;
-    color: var(--color-blue-4);
+    color: var(--color-sky-blue-2);
     font-size: var(--font-size-13);
 
     svg {

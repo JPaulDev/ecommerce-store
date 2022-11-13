@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   background-image: linear-gradient(
-    to top,
-    var(--color-green-2),
-    var(--color-green-5)
+    to bottom,
+    var(--color-green-3),
+    var(--color-green-1)
   );
   border-radius: 6px;
   box-shadow: var(--box-shadow-md);
@@ -25,12 +25,7 @@ export const Button = styled.button`
   }
 
   &:not(:disabled):hover {
-    background-image: linear-gradient(
-      to top,
-      var(--color-green-1),
-      var(--color-green-3)
-    );
-    box-shadow: var(--box-shadow-hover);
+    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 10%), var(--box-shadow-hover);
   }
 
   &:not(:disabled):active {

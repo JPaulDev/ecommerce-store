@@ -5,9 +5,9 @@ import useCarousel from './useCarousel';
 import Slide from './Slide';
 import * as Styled from './styles';
 
-// Direction 1 moves slides in from the right, -1 moves slides in from the left
 const MotionSlide = motion(Slide);
 
+// Direction 1 moves slides in from the right, -1 moves slides in from the left.
 const motionProps = {
   variants: {
     enter: (direction) => ({

@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { renderWithProviders } from '../../../../../test-utils';
 import TodayOnlyOffers from '../index';
 
-// Prevents errors caused by next image component
+// Prevents errors caused by next image component.
 jest.mock('next/future/image', () => 'img');
 
 const processorsData = Array.from({ length: 8 }).map((_, index) => ({

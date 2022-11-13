@@ -10,9 +10,7 @@ export default function Quantity({
 
   return (
     <Styled.Container>
-      <label htmlFor={id} hidden>
-        Quantity
-      </label>
+      <Styled.Label htmlFor={id}>Quantity:</Styled.Label>
       <Styled.Select
         id={id}
         name="quantity"

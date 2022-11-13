@@ -41,7 +41,7 @@ export const ProLogo = styled.div`
 `;
 
 export const Heading = styled.h4`
-  color: var(--color-blue-4);
+  color: var(--color-sky-blue-3);
   font-family: 'Uni Sans Book', sans-serif;
   font-size: var(--font-size-26);
   font-weight: var(--font-weight-regular);

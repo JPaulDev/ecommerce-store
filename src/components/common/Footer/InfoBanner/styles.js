@@ -63,6 +63,6 @@ export const Link = styled.a`
   ${flexMixin}
 
   &:hover {
-    color: var(--color-blue-3);
+    color: var(--color-sky-blue-2);
   }
 `;

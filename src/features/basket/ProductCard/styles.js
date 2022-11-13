@@ -209,7 +209,7 @@ export const InnerContainer = styled.div`
 `;
 
 export const SaleTag = styled.div`
-  background-color: var(--color-red-6);
+  background-color: var(--color-red-3);
   border-radius: 5px;
   color: white;
   display: inline-block;

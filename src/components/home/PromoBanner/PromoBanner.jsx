@@ -2,7 +2,7 @@ import Image from 'next/future/image';
 import nvidiaImage from '../../../../public/images/promo-banner/rtx-studio.webp';
 import nvidiaLogo from '../../../../public/images/promo-banner/nvidia-logo.webp';
 import blueDetail from '../../../../public/images/promo-banner/blue-detail.webp';
-import { LinkButton, LinkChevron, ResponsiveBox } from '../../common';
+import { LinkButton, LinkChevron, ResponsiveBox } from '../../ui';
 import * as Styled from './styles';
 
 export default function PromoBanner() {
@@ -15,7 +15,7 @@ export default function PromoBanner() {
         The best laptops and desktops for creating anywhere.
       </Styled.Text>
       <ResponsiveBox sx={{ display: { 0: 'none', 530: 'block' } }}>
-        <LinkButton href="/" padding="12px 14px">
+        <LinkButton href="/" padding="14px 14px">
           {linkText}
         </LinkButton>
       </ResponsiveBox>

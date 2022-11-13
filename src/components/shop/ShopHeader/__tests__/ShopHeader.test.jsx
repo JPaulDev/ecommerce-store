@@ -28,7 +28,7 @@ describe('ShopHeader component description and latest arrivals', () => {
     const text = /category description/i;
     const button = screen.getByTestId('description-button');
 
-    expect(screen.getAllByText(text)).toHaveLength(1);
+    expect(screen.getByText(text)).toBeInTheDocument();
 
     userEvent.click(button);
 
@@ -37,7 +37,7 @@ describe('ShopHeader component description and latest arrivals', () => {
     userEvent.click(button);
 
     await waitFor(() => {
-      expect(screen.getAllByText(text)).toHaveLength(1);
+      expect(screen.getByText(text)).toBeInTheDocument();
     });
   });
 

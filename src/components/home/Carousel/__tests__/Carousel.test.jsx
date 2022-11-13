@@ -8,8 +8,9 @@ import userEvent from '@testing-library/user-event';
 import renderer from 'react-test-renderer';
 import Carousel from '../index';
 
-// Prevents errors caused by next image component
+// Prevents errors caused by next image component.
 jest.mock('next/future/image', () => 'img');
+
 jest.mock('../carousel-slides', () => [
   {
     topNavText: 'slide-1',
@@ -46,6 +47,7 @@ describe('Carousel component', () => {
   });
 
   it('should display only 1 slide', () => {
+    // eslint-disable-next-line jest-dom/prefer-in-document
     expect(screen.getAllByTestId(/slide/i)).toHaveLength(1);
   });
 

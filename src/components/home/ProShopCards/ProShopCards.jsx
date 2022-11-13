@@ -1,4 +1,4 @@
-import { LinkChevron } from '../../common';
+import { LinkChevron } from '../../ui';
 import cards from './pro-shop-cards';
 import * as Styled from './styles';
 

@@ -56,9 +56,11 @@ export const Link = styled.a`
   align-items: center;
   color: var(--color-grey-8);
   column-gap: 10px;
+  cursor: pointer;
   display: flex;
   font-size: var(--font-size-14);
   position: relative;
+  text-align: left;
   text-decoration: none;
   transition: color 200ms ease-in-out;
 

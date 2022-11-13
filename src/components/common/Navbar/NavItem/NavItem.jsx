@@ -9,6 +9,7 @@ export default function NavItem({ item }) {
   const ref = useRef(null);
 
   const handleClose = () => setIsOpen(false);
+
   useOnClickOutside(ref, handleClose);
 
   return (

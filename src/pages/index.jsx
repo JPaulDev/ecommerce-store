@@ -10,9 +10,8 @@ import {
 } from '../components/home';
 
 export async function getStaticProps() {
-  // Recursive queries not yet supported by Prisma
+  // Recursive queries not yet supported by Prisma.
   // https://github.com/prisma/prisma/issues/4562
-
   const products = await prisma.$queryRaw`
     WITH RECURSIVE cat_cte AS (
       SELECT id,

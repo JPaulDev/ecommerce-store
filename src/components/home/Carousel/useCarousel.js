@@ -28,13 +28,16 @@ function reducer(state, action) {
         direction: state.slideIndex < action.payload.index ? 1 : -1,
       };
     default:
-      throw new Error();
+      throw new Error(`Unhandled action type: ${action.type}`);
   }
 }
 
 export default function useCarousel({ length, interval, transitionTime }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [isMinimized, setIsMinimized] = useState(false);
+
+  // Transitioning state is stored here to prevent unnecessary rerenders caused
+  // by storing it inside the reducer.
   const isTransitioning = useRef(false);
 
   const handleChangeSlide = (type, index) => {
@@ -45,7 +48,7 @@ export default function useCarousel({ length, interval, transitionTime }) {
   };
 
   // Stops the carousel whilst the browser window is minimized to prevent
-  // animation playing incorrectly when the browser is maximized
+  // animation playing incorrectly when the browser is maximized.
   useEffect(() => {
     const handleWindowMinimized = () => setIsMinimized(!isMinimized);
 

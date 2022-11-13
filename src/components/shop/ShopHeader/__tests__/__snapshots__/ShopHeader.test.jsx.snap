@@ -143,7 +143,7 @@ exports[`ShopHeader component should render a category heading and description 1
   .c8 {
     -webkit-column-gap: 7px;
     column-gap: 7px;
-    color: var(--color-blue-4);
+    color: var(--color-sky-blue-2);
     font-size: var(--font-size-13);
   }
 

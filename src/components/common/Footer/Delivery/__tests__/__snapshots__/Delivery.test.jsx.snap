@@ -2,7 +2,28 @@
 
 exports[`Delivery component renders a return tab where returns status can be checked 1`] = `
 <DocumentFragment>
-  .c1 {
+  .c7 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.c8 {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-right: 8px;
+  max-width: 175px;
+  padding: 8px 0 8px 10px;
+  width: 40%;
+}
+
+.c1 {
   color: var(--color-grey-4);
   font-size: var(--font-size-14);
   text-transform: uppercase;
@@ -61,16 +82,7 @@ exports[`Delivery component renders a return tab where returns status can be che
   padding: 20px 15px;
 }
 
-.c7 {
-  border: 1px solid grey;
-  border-radius: 5px;
-  margin-right: 8px;
-  max-width: 175px;
-  padding: 8px 0 8px 10px;
-  width: 40%;
-}
-
-.c8 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -90,7 +102,7 @@ exports[`Delivery component renders a return tab where returns status can be che
   width: 32px;
 }
 
-.c8:active {
+.c9:active {
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
@@ -179,40 +191,48 @@ exports[`Delivery component renders a return tab where returns status can be che
         method="post"
       >
         <label
-          for=":r3:-invoice"
-          hidden=""
+          class="c7"
+          for=":r8:"
         >
-          Invoice Number
+          Invoice Number:
         </label>
         <input
+          aria-required="true"
+          autocapitalize="off"
           autocomplete="off"
-          class="c7"
-          id=":r3:-invoice"
+          autocorrect="off"
+          class="c8"
+          id=":r8:"
           maxlength="10"
           name="invoiceNumber"
           placeholder="Invoice No."
           required=""
+          spellcheck="false"
           type="text"
         />
         <label
-          for=":r3:"
-          hidden=""
+          class="c7"
+          for=":r9:"
         >
-          RMA Number
+          RMA Number:
         </label>
         <input
+          aria-required="true"
+          autocapitalize="off"
           autocomplete="off"
-          class="c7"
-          id=":r3:"
+          autocorrect="off"
+          class="c8"
+          id=":r9:"
           maxlength="10"
           name="rmaNumber"
           placeholder="RMA No."
           required=""
+          spellcheck="false"
           type="text"
         />
         <button
           aria-label="Submit"
-          class="c8"
+          class="c9"
           title="Submit"
           type="submit"
         >
@@ -236,7 +256,28 @@ exports[`Delivery component renders a return tab where returns status can be che
 
 exports[`Delivery component renders a system build tab where build progress can be checked 1`] = `
 <DocumentFragment>
-  .c1 {
+  .c7 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.c8 {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-right: 8px;
+  max-width: 175px;
+  padding: 8px 0 8px 10px;
+  width: 40%;
+}
+
+.c1 {
   color: var(--color-grey-4);
   font-size: var(--font-size-14);
   text-transform: uppercase;
@@ -295,16 +336,7 @@ exports[`Delivery component renders a system build tab where build progress can 
   padding: 20px 15px;
 }
 
-.c7 {
-  border: 1px solid grey;
-  border-radius: 5px;
-  margin-right: 8px;
-  max-width: 175px;
-  padding: 8px 0 8px 10px;
-  width: 40%;
-}
-
-.c8 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -324,7 +356,7 @@ exports[`Delivery component renders a system build tab where build progress can 
   width: 32px;
 }
 
-.c8:active {
+.c9:active {
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
@@ -413,40 +445,48 @@ exports[`Delivery component renders a system build tab where build progress can 
         method="post"
       >
         <label
-          for=":r6:-invoice"
-          hidden=""
+          class="c7"
+          for=":re:"
         >
-          Invoice Number
+          Invoice Number:
         </label>
         <input
+          aria-required="true"
+          autocapitalize="off"
           autocomplete="off"
-          class="c7"
-          id=":r6:-invoice"
+          autocorrect="off"
+          class="c8"
+          id=":re:"
           maxlength="10"
           name="invoiceNumber"
           placeholder="Invoice No."
           required=""
+          spellcheck="false"
           type="text"
         />
         <label
-          for=":r6:"
-          hidden=""
+          class="c7"
+          for=":rf:"
         >
-          Build Number
+          Build Number:
         </label>
         <input
+          aria-required="true"
+          autocapitalize="off"
           autocomplete="off"
-          class="c7"
-          id=":r6:"
+          autocorrect="off"
+          class="c8"
+          id=":rf:"
           maxlength="10"
           name="buildNumber"
           placeholder="Build No."
           required=""
+          spellcheck="false"
           type="text"
         />
         <button
           aria-label="Submit"
-          class="c8"
+          class="c9"
           title="Submit"
           type="submit"
         >
@@ -470,7 +510,28 @@ exports[`Delivery component renders a system build tab where build progress can 
 
 exports[`Delivery component renders an order tab where order tracking can be checked 1`] = `
 <DocumentFragment>
-  .c1 {
+  .c7 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.c8 {
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin-right: 8px;
+  max-width: 175px;
+  padding: 8px 0 8px 10px;
+  width: 40%;
+}
+
+.c1 {
   color: var(--color-grey-4);
   font-size: var(--font-size-14);
   text-transform: uppercase;
@@ -529,16 +590,7 @@ exports[`Delivery component renders an order tab where order tracking can be che
   padding: 20px 15px;
 }
 
-.c7 {
-  border: 1px solid grey;
-  border-radius: 5px;
-  margin-right: 8px;
-  max-width: 175px;
-  padding: 8px 0 8px 10px;
-  width: 40%;
-}
-
-.c8 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -558,7 +610,7 @@ exports[`Delivery component renders an order tab where order tracking can be che
   width: 32px;
 }
 
-.c8:active {
+.c9:active {
   -webkit-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
@@ -647,40 +699,48 @@ exports[`Delivery component renders an order tab where order tracking can be che
         method="post"
       >
         <label
-          for=":r0:-invoice"
-          hidden=""
+          class="c7"
+          for=":r2:"
         >
-          Invoice Number
+          Invoice Number:
         </label>
         <input
+          aria-required="true"
+          autocapitalize="off"
           autocomplete="off"
-          class="c7"
-          id=":r0:-invoice"
+          autocorrect="off"
+          class="c8"
+          id=":r2:"
           maxlength="10"
           name="invoiceNumber"
           placeholder="Invoice No."
           required=""
+          spellcheck="false"
           type="text"
         />
         <label
-          for=":r0:"
-          hidden=""
+          class="c7"
+          for=":r3:"
         >
-          Postcode
+          Postcode:
         </label>
         <input
+          aria-required="true"
+          autocapitalize="off"
           autocomplete="off"
-          class="c7"
-          id=":r0:"
+          autocorrect="off"
+          class="c8"
+          id=":r3:"
           maxlength="10"
           name="postcode"
           placeholder="Postcode"
           required=""
+          spellcheck="false"
           type="text"
         />
         <button
           aria-label="Submit"
-          class="c8"
+          class="c9"
           title="Submit"
           type="submit"
         >

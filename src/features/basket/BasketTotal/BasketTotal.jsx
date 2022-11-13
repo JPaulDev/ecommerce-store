@@ -5,6 +5,7 @@ import { Price } from '../../../components/product';
 
 export default function BasketTotal() {
   const subtotal = useSelector(selectBasketSubtotal);
+  // Mock delivery amount for display purposes.
   const delivery = 4.99;
 
   const { price } = usePrice({

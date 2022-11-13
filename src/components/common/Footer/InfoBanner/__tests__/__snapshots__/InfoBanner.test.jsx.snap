@@ -86,7 +86,7 @@ exports[`InfoBanner component renders a banner with the company address/informat
 }
 
 .c4:hover {
-  color: var(--color-blue-3);
+  color: var(--color-sky-blue-2);
 }
 
 @media screen and (min-width:910px) {

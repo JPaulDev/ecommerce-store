@@ -4,7 +4,7 @@ import * as Styled from './styles';
 export default function StockDisplay({ stockStatus, marginTop }) {
   let text = 'In Stock';
   let title = 'Item is in stock';
-  let color = 'var(--color-green-5)';
+  let color = 'var(--color-green-2)';
 
   if (stockStatus === 1) {
     text = 'Low Stock';
@@ -13,7 +13,7 @@ export default function StockDisplay({ stockStatus, marginTop }) {
   } else if (stockStatus === 0) {
     text = 'Out of Stock';
     title = 'Item is out of stock';
-    color = 'var(--color-red-6)';
+    color = 'var(--color-red-3)';
   }
 
   return (

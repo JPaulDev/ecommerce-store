@@ -1,6 +1,7 @@
-import { useState, useEffect, useId } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import useMediaQuery from '../../../../lib/hooks/useMediaQuery';
+import { InputWithLabel } from '../../../ui';
 import { ChevronRight } from '../../../icons';
 import { Heading, DropdownButton } from '../styles';
 import * as Styled from './styles';
@@ -46,13 +47,14 @@ export default function Delivery() {
   const [activeTab, setActiveTab] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const isMatch = useMediaQuery('(min-width: 650px)');
-  const id = useId();
   const heading = 'Delivery / Tracking Information';
 
   const handleSetActiveTab = (index) => setActiveTab(index);
+
   const handleOpen = () => setIsOpen(!isOpen);
 
-  // Prevents the menu being stuck closed when resizing from a smaller window width
+  // Prevents the menu being stuck closed when resizing from a smaller window
+  // width.
   useEffect(() => {
     isMatch ? setIsOpen(true) : setIsOpen(false);
   }, [isMatch]);
@@ -104,28 +106,26 @@ export default function Delivery() {
                     action={item.action}
                     method="post"
                   >
-                    <label htmlFor={`${id}-invoice`} hidden>
-                      Invoice Number
-                    </label>
-                    <Styled.Input
-                      id={`${id}-invoice`}
+                    <InputWithLabel
+                      label="Invoice Number:"
+                      styles={Styled.inputStyles}
                       name="invoiceNumber"
-                      autoComplete="off"
                       type="text"
-                      maxLength="10"
                       placeholder="Invoice No."
+                      autoComplete="off"
+                      maxLength="10"
+                      aria-required
                       required
                     />
-                    <label htmlFor={id} hidden>
-                      {item.placeholder.replace('No.', 'Number')}
-                    </label>
-                    <Styled.Input
-                      id={id}
+                    <InputWithLabel
+                      label={`${item.placeholder.replace('No.', 'Number')}:`}
+                      styles={Styled.inputStyles}
                       name={item.name}
-                      autoComplete="off"
                       type="text"
-                      maxLength="10"
                       placeholder={item.placeholder}
+                      autoComplete="off"
+                      maxLength="10"
+                      aria-required
                       required
                     />
                     <Styled.SubmitButton
