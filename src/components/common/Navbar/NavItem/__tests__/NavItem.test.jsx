@@ -62,4 +62,21 @@ describe('NavItem dropdown', () => {
 
     expect(screen.queryByTestId('dropdown-menu')).not.toBeInTheDocument();
   });
+
+  it('should close on pressing the escape key', () => {
+    renderWithProviders(<NavItem item={buttonItem} />);
+    const button = screen.getByRole('button', {
+      name: /components/i,
+    });
+
+    expect(screen.queryByTestId('dropdown-menu')).not.toBeInTheDocument();
+
+    userEvent.click(button);
+
+    expect(screen.getByTestId('dropdown-menu')).toBeInTheDocument();
+
+    userEvent.keyboard('{esc}');
+
+    expect(screen.queryByTestId('dropdown-menu')).not.toBeInTheDocument();
+  });
 });

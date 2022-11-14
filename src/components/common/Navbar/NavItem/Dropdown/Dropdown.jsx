@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/future/image';
-import { Fragment } from 'react';
+import { Fragment, useEffect } from 'react';
 import componentsAd1 from '../../../../../../public/images/dropdown-ads/components-ad1.webp';
 import componentsAd2 from '../../../../../../public/images/dropdown-ads/components-ad2.webp';
 import componentsAd3 from '../../../../../../public/images/dropdown-ads/components-ad3.webp';
 import accessoriesAd1 from '../../../../../../public/images/dropdown-ads/accessories-ad1.webp';
 import accessoriesAd2 from '../../../../../../public/images/dropdown-ads/accessories-ad2.webp';
+import { useUI } from '../../../../../contexts/UIContext';
 import * as Styled from './styles';
 
 const dropdowns = {
@@ -133,7 +134,22 @@ const adverts = {
 };
 
 export default function Dropdown({ menu = '' }) {
+  const { handleCloseDropdown } = useUI();
   const openMenu = menu.toLowerCase().trim();
+
+  useEffect(() => {
+    const handleEscapeKey = (e) => {
+      if (e.key === 'Escape') {
+        handleCloseDropdown();
+      }
+    };
+
+    window.addEventListener('keydown', handleEscapeKey);
+
+    return () => {
+      window.removeEventListener('keydown', handleEscapeKey);
+    };
+  });
 
   return (
     <Styled.Container data-testid="dropdown-menu" id={menu}>
