@@ -17,6 +17,10 @@ export default function SignInView() {
 
   return (
     <div>
+      <Styled.Text>
+        Tip: Use <strong>test@test.com</strong> and password{' '}
+        <strong>test123</strong> to sign in.
+      </Styled.Text>
       <Formik
         initialValues={{
           email: '',
