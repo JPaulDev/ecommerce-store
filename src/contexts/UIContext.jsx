@@ -7,9 +7,10 @@ import {
 } from 'react';
 
 const initialState = {
-  showDropdown: false,
   showModal: false,
   modalView: 'SIGN_IN_VIEW',
+  showDropdown: false,
+  dropdownMenu: null,
 };
 
 export const UIContext = createContext(initialState);
@@ -20,6 +21,8 @@ function reducer(state, action) {
       return {
         ...state,
         showModal: true,
+        dropdownMenu: null,
+        showDropdown: false,
       };
     }
     case 'CLOSE_MODAL': {
@@ -33,6 +36,22 @@ function reducer(state, action) {
       return {
         ...state,
         modalView: action.payload,
+      };
+    }
+    case 'OPEN_DROPDOWN': {
+      return {
+        ...state,
+        showDropdown: true,
+        dropdownMenu: action.payload,
+        showModal: false,
+        modalView: 'SIGN_IN_VIEW',
+      };
+    }
+    case 'CLOSE_DROPDOWN': {
+      return {
+        ...state,
+        dropdownMenu: null,
+        showDropdown: false,
       };
     }
     default: {
@@ -59,14 +78,27 @@ export function UIProvider({ children }) {
     []
   );
 
+  const handleOpenDropdown = useCallback(
+    (menu) => dispatch({ type: 'OPEN_DROPDOWN', payload: menu }),
+    []
+  );
+
+  const handleCloseDropdown = useCallback(
+    () => dispatch({ type: 'CLOSE_DROPDOWN' }),
+    []
+  );
+
   const value = useMemo(
     () => ({
       ...state,
       handleOpenModal,
       handleCloseModal,
       handleSetModalView,
+      handleOpenDropdown,
+      handleCloseDropdown,
     }),
-    [state, handleOpenModal, handleCloseModal, handleSetModalView]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [state]
   );
 
   return <UIContext.Provider value={value}>{children}</UIContext.Provider>;

@@ -155,6 +155,7 @@ export default function Dropdown({ menu = '' }) {
           ))}
         </Styled.ColumnContainer>
       ))}
+
       <Styled.AdvertsContainer>
         {adverts[openMenu]?.map((image, index) => (
           <Image key={index} src={image} alt="" />

@@ -1,16 +1,31 @@
 import Link from 'next/link';
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
+import { useUI } from '../../../../contexts/UIContext';
 import useOnClickOutside from '../../../../lib/hooks/useOnClickOutside';
 import Dropdown from './Dropdown';
 import * as Styled from './styles';
 
 export default function NavItem({ item }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const { handleOpenDropdown, handleCloseDropdown, dropdownMenu } = useUI();
   const ref = useRef(null);
 
-  const handleClose = () => setIsOpen(false);
+  const handleClickOutside = () => {
+    // Prevents handlers attached to other nav items firing and closing the
+    // dropdown when clicking inside of it.
+    if (dropdownMenu !== item.heading) return;
 
-  useOnClickOutside(ref, handleClose);
+    handleCloseDropdown();
+  };
+
+  useOnClickOutside(ref, handleClickOutside);
+
+  const handleToggleDropdown = () => {
+    if (dropdownMenu === item.heading) {
+      handleCloseDropdown();
+    } else {
+      handleOpenDropdown(item.heading);
+    }
+  };
 
   return (
     <li ref={ref}>
@@ -18,10 +33,10 @@ export default function NavItem({ item }) {
         <Styled.Link
           as="button"
           type="button"
-          isOpen={isOpen}
-          aria-expanded={isOpen}
+          isOpen={dropdownMenu === item.heading}
+          aria-expanded={dropdownMenu === item.heading}
           aria-controls={item.heading}
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={handleToggleDropdown}
         >
           {item.heading}
         </Styled.Link>
@@ -30,7 +45,7 @@ export default function NavItem({ item }) {
           <Styled.Link>{item.heading}</Styled.Link>
         </Link>
       )}
-      {isOpen && <Dropdown menu={item.heading} />}
+      {dropdownMenu === item.heading && <Dropdown menu={item.heading} />}
     </li>
   );
 }
