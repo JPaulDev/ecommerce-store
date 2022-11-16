@@ -159,7 +159,9 @@ exports[`ShopHeader component should render a category heading and description 1
   >
     <h1
       className="c1"
-    />
+    >
+      heading
+    </h1>
     <button
       aria-controls="top-text"
       aria-expanded={false}
@@ -188,7 +190,9 @@ exports[`ShopHeader component should render a category heading and description 1
   >
     <p
       className="c4"
-    />
+    >
+      category description
+    </p>
   </div>
   <div
     className="c5"
@@ -200,6 +204,7 @@ exports[`ShopHeader component should render a category heading and description 1
       className="c1 c7"
     >
       Latest Arrivals - 
+      latest arrivals
     </h2>
     <button
       aria-controls="bottom-text"

@@ -20,77 +20,78 @@ const productData = {
   isOnSale: true,
 };
 
+function setup(component, preloadedState) {
+  return {
+    user: userEvent.setup(),
+    ...renderWithProviders(component, preloadedState),
+  };
+}
+
 describe('Basket component quantity buttons', () => {
-  it('should increase the product quantity by 1 and display the correct total', () => {
-    renderWithProviders(<Basket />, {
+  it('should increase the product quantity by 1 and display the total', async () => {
+    const { user } = setup(<Basket />, {
       preloadedState: {
         basket: [productData],
       },
-    });
-    const button = screen.getByRole('button', {
-      name: /increase quantity/i,
     });
 
     expect(screen.getByText('104')).toHaveTextContent('£104.98');
     expect(screen.getByTestId('quantity')).toHaveTextContent('1');
 
-    userEvent.click(button);
+    await user.click(
+      screen.getByRole('button', { name: /increase quantity/i })
+    );
 
     expect(screen.getByText('204')).toHaveTextContent('£204.97');
     expect(screen.getByTestId('quantity')).toHaveTextContent('2');
   });
 
-  it('should decrease the product quantity by 1 display the correct total', () => {
-    renderWithProviders(<Basket />, {
+  it('should decrease the product quantity by 1 display the total', async () => {
+    const { user } = setup(<Basket />, {
       preloadedState: {
         basket: [{ ...productData, quantity: 2 }],
       },
     });
-    const button = screen.getByRole('button', {
-      name: /decrease quantity/i,
-    });
 
     expect(screen.getByText('204')).toHaveTextContent('£204.97');
     expect(screen.getByTestId('quantity')).toHaveTextContent('2');
 
-    userEvent.click(button);
+    await user.click(
+      screen.getByRole('button', { name: /decrease quantity/i })
+    );
 
     expect(screen.getByText('104')).toHaveTextContent('£104.98');
     expect(screen.getByTestId('quantity')).toHaveTextContent('1');
   });
 
-  it('should prevent decreasing the quantity below 1', () => {
-    renderWithProviders(<Basket />, {
+  it('should prevent decreasing the quantity below 1', async () => {
+    const { user } = setup(<Basket />, {
       preloadedState: {
         basket: [productData],
       },
     });
-    const button = screen.getByRole('button', {
-      name: /decrease quantity/i,
-    });
 
     expect(screen.getByTestId('quantity')).toHaveTextContent('1');
 
-    userEvent.click(button);
+    await user.click(
+      screen.getByRole('button', { name: /decrease quantity/i })
+    );
 
     expect(screen.getByTestId('quantity')).toHaveTextContent('1');
   });
 });
 
 describe('Basket component remove item button', () => {
-  it('should remove the product from the basket', () => {
-    renderWithProviders(<Basket />, {
+  it('should remove the product from the basket', async () => {
+    const { user } = setup(<Basket />, {
       preloadedState: {
         basket: [productData],
       },
     });
-    const button = screen.getByRole('button', {
-      name: /remove item/i,
-    });
 
     expect(screen.getByText(/GPU-3PAQ-ASU/i)).toBeInTheDocument();
 
-    userEvent.click(button);
+    await user.click(screen.getByRole('button', { name: /remove item/i }));
 
     expect(screen.queryByText(/GPU-3PAQ-ASU/i)).not.toBeInTheDocument();
   });
@@ -98,13 +99,13 @@ describe('Basket component remove item button', () => {
 
 describe('Basket component empty basket message', () => {
   it('should be rendered when the basket is empty', () => {
-    renderWithProviders(<Basket />);
+    setup(<Basket />);
 
     expect(screen.getByText(/your basket is empty/i)).toBeInTheDocument();
   });
 
   it('should not be rendered when the basket contains products', () => {
-    renderWithProviders(<Basket />, {
+    setup(<Basket />, {
       preloadedState: {
         basket: [productData],
       },

@@ -19,6 +19,13 @@ const graphicsCardsData = Array.from({ length: 8 }).map((_, index) => ({
   parentCategoryId: 4,
 }));
 
+function setup(component, preloadedState) {
+  return {
+    user: userEvent.setup(),
+    ...renderWithProviders(component, preloadedState),
+  };
+}
+
 describe('TodayOnlyOffers component', () => {
   it('should render with a category selector', () => {
     const tree = renderer.create(<TodayOnlyOffers />).toJSON();
@@ -27,24 +34,21 @@ describe('TodayOnlyOffers component', () => {
 });
 
 describe('TodayOnlyOffers component selecting different categories', () => {
-  beforeEach(() => {
-    renderWithProviders(
+  it('initially renders the processors category and 8 products', () => {
+    setup(
       <TodayOnlyOffers products={[...processorsData, ...graphicsCardsData]} />
     );
-  });
-
-  it('initially renders the processors category and 8 products', () => {
     expect(screen.getAllByText('processor')).toHaveLength(8);
   });
 
   it('changes to graphics cards category and renders 8 products', async () => {
-    const button = screen.getByRole('button', {
-      name: /graphics cards/i,
-    });
+    const { user } = setup(
+      <TodayOnlyOffers products={[...processorsData, ...graphicsCardsData]} />
+    );
 
     expect(screen.queryByText('graphics card')).not.toBeInTheDocument();
 
-    userEvent.click(button);
+    await user.click(screen.getByRole('button', { name: /graphics cards/i }));
 
     expect(await screen.findAllByText('graphics card')).toHaveLength(8);
   });

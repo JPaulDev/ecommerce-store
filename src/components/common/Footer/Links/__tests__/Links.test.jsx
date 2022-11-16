@@ -20,9 +20,16 @@ const item = {
   ],
 };
 
+function setup(component) {
+  return {
+    user: userEvent.setup(),
+    ...render(component),
+  };
+}
+
 describe('Links component', () => {
   it('renders a heading along with related links', () => {
-    const { asFragment } = render(<Links item={item} />);
+    const { asFragment } = setup(<Links item={item} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
@@ -33,24 +40,24 @@ describe('Links component dropdown menu', () => {
   });
 
   it('should initially be closed', () => {
-    render(<Links item={item} />);
+    setup(<Links item={item} />);
 
     expect(screen.queryByRole('link')).not.toBeInTheDocument();
   });
 
   it('opens and closes the links dropdown on clicking the button', async () => {
-    render(<Links item={item} />);
+    const { user } = setup(<Links item={item} />);
     const button = screen.getByRole('button');
 
-    userEvent.click(button);
+    await user.click(button);
 
     expect(screen.getAllByRole('link')).toHaveLength(2);
 
     // Delays the second click to prevent the menu improperly closing.
-    setTimeout(() => userEvent.click(button), 600);
+    setTimeout(() => user.click(button), 1000);
 
     await waitForElementToBeRemoved(screen.queryAllByRole('link'), {
-      timeout: 2000,
+      timeout: 3000,
     });
   });
 });

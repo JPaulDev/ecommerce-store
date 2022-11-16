@@ -15,26 +15,33 @@ const categoryData = {
   latestArrivalsDescription: 'latest arrivals description',
 };
 
+function setup(component) {
+  return {
+    user: userEvent.setup(),
+    ...render(component),
+  };
+}
+
 describe('ShopHeader component', () => {
   it('should render a category heading and description', () => {
-    const tree = renderer.create(<ShopHeader />).toJSON();
+    const tree = renderer.create(<ShopHeader {...categoryData} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
 
 describe('ShopHeader component description and latest arrivals', () => {
   it('should open and close the category description', async () => {
-    render(<ShopHeader {...categoryData} />);
+    const { user } = setup(<ShopHeader {...categoryData} />);
     const text = /category description/i;
     const button = screen.getByTestId('description-button');
 
     expect(screen.getByText(text)).toBeInTheDocument();
 
-    userEvent.click(button);
+    await user.click(button);
 
     expect(screen.getAllByText(text)).toHaveLength(2);
 
-    userEvent.click(button);
+    await user.click(button);
 
     await waitFor(() => {
       expect(screen.getByText(text)).toBeInTheDocument();
@@ -42,17 +49,17 @@ describe('ShopHeader component description and latest arrivals', () => {
   });
 
   it('should open and close the latest arrivals description', async () => {
-    render(<ShopHeader {...categoryData} />);
+    const { user } = setup(<ShopHeader {...categoryData} />);
     const text = /latest arrivals description/i;
     const button = screen.getByTestId('latest-arrivals-button');
 
     expect(screen.queryByText(text)).not.toBeInTheDocument();
 
-    userEvent.click(button);
+    await user.click(button);
 
     expect(screen.getByText(text)).toBeInTheDocument();
 
-    userEvent.click(button);
+    await user.click(button);
 
     await waitForElementToBeRemoved(screen.queryByText(text));
   });
