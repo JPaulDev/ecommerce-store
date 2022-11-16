@@ -5,6 +5,7 @@ import useOnClickOutside from '../../../lib/hooks/useOnClickOutside';
 import { useUI } from '../../../contexts/UIContext';
 import { Cross } from '../../icons';
 import SignInView from './SignInView';
+import SignUpView from './SignUpView';
 import * as Styled from './styles';
 
 function ModalView({ handleCloseModal, modalView }) {
@@ -39,6 +40,7 @@ function ModalView({ handleCloseModal, modalView }) {
         </Styled.CloseButton>
         <Image src={logo} alt="" />
         {modalView === 'SIGN_IN_VIEW' && <SignInView />}
+        {modalView === 'SIGN_UP_VIEW' && <SignUpView />}
       </Styled.Container>
     </Styled.Backdrop>
   );

@@ -49,6 +49,10 @@ export const CloseButton = styled.button`
   }
 `;
 
+export const Text = styled.p`
+  margin-bottom: 10px;
+`;
+
 export const inputStyles = css`
   border: 1px solid var(--color-grey-10);
   margin: 5px 0;
@@ -112,6 +116,7 @@ export const SecondaryBtn = styled.button`
   cursor: pointer;
   font-size: inherit;
   font-weight: var(--font-weight-semibold);
+  margin-left: 5px;
 
   &:hover {
     text-decoration: underline;

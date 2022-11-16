@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const Text = styled.p`
-  margin-bottom: 10px;
-`;
-
 export const ForgotPasswordBtn = styled.button`
   cursor: pointer;
   font-size: inherit;

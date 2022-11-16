@@ -2,25 +2,34 @@ import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useUI } from '../../../../contexts/UIContext';
 import { InputWithLabel, LoadingSpinner } from '../../../ui';
-import { inputStyles, ErrorText, PrimaryBtn, SecondaryBtn } from '../styles';
+import {
+  Text,
+  inputStyles,
+  ErrorText,
+  PrimaryBtn,
+  SecondaryBtn,
+} from '../styles';
 import * as Styled from './styles';
 
 const validationSchema = Yup.object({
   email: Yup.string()
     .required('Please enter your email.')
-    .email('Please enter a valid email address.'),
-  password: Yup.string().required('Please enter your password.'),
+    .email('Please enter a valid email address.')
+    .max(50, 'Email must be less than 50 characters.'),
+  password: Yup.string()
+    .required('Please enter your password.')
+    .max(50, 'Password must be less than 50 characters.'),
 });
 
 export default function SignInView() {
   const { handleSetModalView } = useUI();
 
   return (
-    <div>
-      <Styled.Text>
+    <>
+      <Text>
         Tip: Use <strong>test@test.com</strong> and password{' '}
         <strong>test123</strong> to sign in.
-      </Styled.Text>
+      </Text>
       <Formik
         initialValues={{
           email: '',
@@ -89,7 +98,7 @@ export default function SignInView() {
         <span>OR</span>
       </Styled.Divider>
       <div>
-        Don&lsquo;t have an account?{' '}
+        Don&lsquo;t have an account?
         <SecondaryBtn
           type="button"
           onClick={() => handleSetModalView('SIGN_UP_VIEW')}
@@ -97,6 +106,6 @@ export default function SignInView() {
           Sign up
         </SecondaryBtn>
       </div>
-    </div>
+    </>
   );
 }
