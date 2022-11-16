@@ -60,7 +60,7 @@ function reducer(state, action) {
   }
 }
 
-export function UIProvider({ children }) {
+export function UIProvider(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleOpenModal = useCallback(
@@ -101,7 +101,7 @@ export function UIProvider({ children }) {
     [state]
   );
 
-  return <UIContext.Provider value={value}>{children}</UIContext.Provider>;
+  return <UIContext.Provider value={value} {...props} />;
 }
 
 export function useUI() {
