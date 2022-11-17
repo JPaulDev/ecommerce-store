@@ -13,12 +13,12 @@ import * as Styled from './styles';
 
 const validationSchema = Yup.object({
   email: Yup.string()
-    .required('Please enter your email.')
-    .email('Please enter a valid email address.')
-    .max(50, 'Email must be less than 50 characters.'),
-  fullName: Yup.string()
-    .required('Please enter your full name.')
     .trim()
+    .required('Please enter your email.')
+    .email('Please enter a valid email address.'),
+  fullName: Yup.string()
+    .trim()
+    .required('Please enter your full name.')
     .test('fullName', 'Full name must include a space.', (value) =>
       value?.includes(' ')
     )
@@ -27,15 +27,14 @@ const validationSchema = Yup.object({
       'Please enter only your first and last name.',
       (value) => value?.split(' ').length === 2
     )
-    .max(50, 'Full name must be less than 50 characters.'),
+    .max(50, 'Full name must be no more than 50 characters.'),
   password: Yup.string()
     .required('Please enter a password.')
     .min(6, 'Password must be at least 6 characters.')
-    .max(50, 'Password must be less than 50 characters.'),
+    .max(64, 'Password must be no more than 64 characters.'),
   confirmPassword: Yup.string()
-    .required('Please confirm your password.')
-    .equals([Yup.ref('password')], 'Passwords must match.')
-    .max(50, 'Password must be less than 50 characters.'),
+    .required('Please type your password again.')
+    .equals([Yup.ref('password')], 'Passwords must match.'),
 });
 
 export default function SignUpView() {
