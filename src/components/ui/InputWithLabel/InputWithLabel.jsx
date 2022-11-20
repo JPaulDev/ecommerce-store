@@ -3,7 +3,8 @@ import * as Styled from './styles';
 
 /**
  * Label is hidden using bootstraps screen reader only styles, the label is
- * still read out to sight impaired users via screenreaders.
+ * still read out to sight impaired users via screen readers.
+ *
  * https://getbootstrap.com/docs/4.0/utilities/screenreaders/
  */
 export default function InputWithLabel({
