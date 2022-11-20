@@ -9,9 +9,14 @@ import SignUpView from './SignUpView';
 import * as Styled from './styles';
 
 function ModalView({ handleCloseModal, modalView }) {
-  const ref = useRef(null);
+  const containerRef = useRef(null);
+  const closeButtonRef = useRef(null);
 
-  useOnClickOutside(ref, handleCloseModal);
+  useOnClickOutside(containerRef, handleCloseModal);
+
+  useEffect(() => {
+    closeButtonRef.current.focus();
+  }, []);
 
   useEffect(() => {
     const handleEscapeKey = (e) => {
@@ -29,8 +34,9 @@ function ModalView({ handleCloseModal, modalView }) {
 
   return (
     <Styled.Backdrop>
-      <Styled.Container ref={ref} role="dialog" aria-modal="true">
+      <Styled.Container ref={containerRef} role="dialog" aria-modal="true">
         <Styled.CloseButton
+          ref={closeButtonRef}
           onClick={handleCloseModal}
           type="button"
           title="Close"
