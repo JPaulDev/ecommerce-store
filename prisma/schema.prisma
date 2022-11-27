@@ -38,3 +38,21 @@ model Product {
   category         Category @relation(fields: [categoryId], references: [id])
   categoryId       Int
 }
+
+model User {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  fullName  String
+  email     String   @unique
+  password  String
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  expiresAt DateTime
+  sid       String   @unique
+  data      String
+}
