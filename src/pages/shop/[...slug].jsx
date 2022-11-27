@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import prisma from '../../lib/utils/prisma-client';
+import prisma from '../../lib/database/prisma-client';
 import ShopHeader from '../../components/shop/ShopHeader';
 import { ProductCard } from '../../features/basket';
 import * as Styled from '../../styles/Shop';

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import prisma from '../lib/utils/prisma-client';
+import prisma from '../lib/database/prisma-client';
 import {
   Carousel,
   ProShopCards,

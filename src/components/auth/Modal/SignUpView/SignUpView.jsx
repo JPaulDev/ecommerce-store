@@ -1,50 +1,54 @@
-import * as Yup from 'yup';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { motion, useAnimationControls } from 'framer-motion';
+import { useDispatch } from 'react-redux';
 import { useUI } from '../../../../contexts/UIContext';
+import { signIn } from '../../../../features/auth/authSlice';
+import { useSignUpMutation } from '../../../../services/auth';
+import formErrorHandler from '../../../../utils/form-error-handler';
+import { signUpSchema } from '../../../../validations/schemas';
+import { Warning } from '../../../icons';
 import { InputWithLabel, LoadingSpinner } from '../../../ui';
 import {
-  Text,
-  inputStyles,
   ErrorText,
+  inputStyles,
   PrimaryBtn,
   SecondaryBtn,
+  ServerError,
+  Text,
 } from '../styles';
 import * as Styled from './styles';
 
-const validationSchema = Yup.object({
-  email: Yup.string()
-    .trim()
-    .required('Please enter your email.')
-    .email('Please enter a valid email address.'),
-  fullName: Yup.string()
-    .trim()
-    .required('Please enter your full name.')
-    .test('fullName', 'Full name must include a space.', (value) =>
-      value?.includes(' ')
-    )
-    .test(
-      'fullName',
-      'Please enter only your first and last name.',
-      (value) => value?.split(' ').length === 2
-    )
-    .max(50, 'Full name must be no more than 50 characters.'),
-  password: Yup.string()
-    .required('Please enter a password.')
-    .min(6, 'Password must be at least 6 characters.')
-    .max(64, 'Password must be no more than 64 characters.'),
-  confirmPassword: Yup.string()
-    .required('Please type your password again.')
-    .equals([Yup.ref('password')], 'Passwords must match.'),
-});
-
 export default function SignUpView() {
-  const { handleSetModalView } = useUI();
+  const { handleSetModalView, handleCloseModal } = useUI();
+  const [signUp] = useSignUpMutation();
+  const dispatch = useDispatch();
+
+  const controls = useAnimationControls();
+
+  const flashStatusError = () => {
+    controls.set({ opacity: 0 });
+    controls.start({ opacity: 1, transition: { duration: 0.6 } });
+  };
+
+  const handleSubmit = async (data, { setErrors, setStatus }) => {
+    try {
+      const user = await signUp(data).unwrap();
+
+      dispatch(signIn(user));
+      handleCloseModal();
+    } catch (err) {
+      formErrorHandler(err, setErrors, setStatus);
+      // If there is already a status error and another occurs, cause it to flash.
+      flashStatusError();
+    }
+  };
 
   return (
     <>
       <Text>
-        Tip: You will be able to sign in immediately once you create an account.
+        Tip: You will be signed in immediately when you create an account.
       </Text>
+
       <Formik
         initialValues={{
           email: '',
@@ -52,11 +56,18 @@ export default function SignUpView() {
           password: '',
           confirmPassword: '',
         }}
-        validationSchema={validationSchema}
-        onSubmit={() => {}}
+        validationSchema={signUpSchema}
+        onSubmit={handleSubmit}
       >
-        {({ isSubmitting, touched, errors }) => (
+        {({ touched, errors, status, isSubmitting }) => (
           <Form noValidate>
+            {status && (
+              <ServerError as={motion.div} animate={controls}>
+                <Warning width={21} height={21} />
+                <ErrorText role="alert">{status}</ErrorText>
+              </ServerError>
+            )}
+
             <Field
               as={InputWithLabel}
               label="Email:"
@@ -86,6 +97,7 @@ export default function SignUpView() {
               name="fullName"
               type="text"
               placeholder="Full Name"
+              autoComplete="off"
               aria-required
               aria-invalid={touched.fullName && errors.fullName ? true : null}
               aria-describedby={
@@ -161,6 +173,7 @@ export default function SignUpView() {
         and share your data in our Privacy Policy and how we use cookies and
         similar technology in our Cookies Policy.
       </Styled.Text>
+
       <div>
         Have an account?
         <SecondaryBtn

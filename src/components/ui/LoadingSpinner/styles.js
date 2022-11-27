@@ -14,6 +14,7 @@ export const Container = styled.div`
   align-items: center;
   display: inline-flex;
   font-size: inherit;
+  position: relative;
 `;
 
 export const Spinner = styled.div`
@@ -22,6 +23,8 @@ export const Spinner = styled.div`
   border-radius: 50%;
   border-right-color: transparent;
   height: 1.125em;
-  margin-right: 5px;
+  margin-right: 7px;
+  position: absolute;
+  right: 100%;
   width: 1.125em;
 `;

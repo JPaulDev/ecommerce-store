@@ -1,25 +1,15 @@
-import * as Yup from 'yup';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useUI } from '../../../../contexts/UIContext';
+import { signInSchema } from '../../../../validations/schemas';
 import { InputWithLabel, LoadingSpinner } from '../../../ui';
 import {
-  Text,
-  inputStyles,
   ErrorText,
+  inputStyles,
   PrimaryBtn,
   SecondaryBtn,
+  Text,
 } from '../styles';
 import * as Styled from './styles';
-
-const validationSchema = Yup.object({
-  email: Yup.string()
-    .required('Please enter your email.')
-    .email('Please enter a valid email address.')
-    .max(50, 'Email must be less than 50 characters.'),
-  password: Yup.string()
-    .required('Please enter your password.')
-    .max(50, 'Password must be less than 50 characters.'),
-});
 
 export default function SignInView() {
   const { handleSetModalView } = useUI();
@@ -28,14 +18,14 @@ export default function SignInView() {
     <>
       <Text>
         Tip: Use <strong>test@test.com</strong> and password{' '}
-        <strong>test123</strong> to sign in.
+        <strong>test123</strong> to sign in or create an account.
       </Text>
       <Formik
         initialValues={{
           email: '',
           password: '',
         }}
-        validationSchema={validationSchema}
+        validationSchema={signInSchema}
         onSubmit={() => {}}
       >
         {({ isSubmitting, touched, errors }) => (

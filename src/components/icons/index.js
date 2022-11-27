@@ -31,4 +31,5 @@ export { default as Search } from './Search';
 export { default as Twitter } from './Twitter';
 export { default as Visa } from './Visa';
 export { default as Warehouse } from './Warehouse';
+export { default as Warning } from './Warning';
 export { default as Youtube } from './Youtube';

@@ -53,6 +53,20 @@ export const Text = styled.p`
   margin-bottom: 10px;
 `;
 
+export const ServerError = styled.div`
+  align-items: center;
+  border: 1px solid var(--color-red-2);
+  display: flex;
+  margin: 15px 0 10px;
+  padding: 10px;
+
+  svg {
+    fill: var(--color-red-2);
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+`;
+
 export const inputStyles = css`
   border: 1px solid var(--color-grey-10);
   margin: 5px 0;
@@ -94,7 +108,11 @@ export const PrimaryBtn = styled.button`
   padding: 13px;
   ${inputMixin}
 
-  &:hover {
+  &:disabled {
+    cursor: initial;
+  }
+
+  &:not(:disabled):hover {
     box-shadow: inset 0 0 0 100px rgb(0 0 0 / 10%), var(--box-shadow-hover);
   }
 

@@ -1,4 +1,4 @@
-import getTomorrowsDate from '../../../lib/utils/get-tomorrows-date';
+import getTomorrowsDate from '../../../utils/get-tomorrows-date';
 import * as Styled from './styles';
 
 const date = getTomorrowsDate();
