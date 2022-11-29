@@ -1,10 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { motion, useAnimationControls } from 'framer-motion';
-import { useDispatch } from 'react-redux';
-import { useUI } from '../../../../contexts/UIContext';
-import { signIn } from '../../../../features/auth/authSlice';
+import { motion } from 'framer-motion';
 import { useSignUpMutation } from '../../../../services/auth';
-import formErrorHandler from '../../../../utils/form-error-handler';
 import { signUpSchema } from '../../../../validations/schemas';
 import { Warning } from '../../../icons';
 import { InputWithLabel, LoadingSpinner } from '../../../ui';
@@ -18,30 +14,14 @@ import {
 } from '../styles';
 import * as Styled from './styles';
 
-export default function SignUpView() {
-  const { handleSetModalView, handleCloseModal } = useUI();
+export default function SignUpView({
+  onSubmit,
+  animationControls,
+  handleSetModalView,
+}) {
   const [signUp] = useSignUpMutation();
-  const dispatch = useDispatch();
 
-  const controls = useAnimationControls();
-
-  const flashStatusError = () => {
-    controls.set({ opacity: 0 });
-    controls.start({ opacity: 1, transition: { duration: 0.6 } });
-  };
-
-  const handleSubmit = async (data, { setErrors, setStatus }) => {
-    try {
-      const user = await signUp(data).unwrap();
-
-      dispatch(signIn(user));
-      handleCloseModal();
-    } catch (err) {
-      formErrorHandler(err, setErrors, setStatus);
-      // If there is already a status error and another occurs, cause it to flash.
-      flashStatusError();
-    }
-  };
+  const handleSubmitWithMutation = onSubmit(signUp);
 
   return (
     <>
@@ -57,12 +37,12 @@ export default function SignUpView() {
           confirmPassword: '',
         }}
         validationSchema={signUpSchema}
-        onSubmit={handleSubmit}
+        onSubmit={handleSubmitWithMutation}
       >
         {({ touched, errors, status, isSubmitting }) => (
           <Form noValidate>
             {status && (
-              <ServerError as={motion.div} animate={controls}>
+              <ServerError as={motion.div} animate={animationControls}>
                 <Warning width={21} height={21} />
                 <ErrorText role="alert">{status}</ErrorText>
               </ServerError>

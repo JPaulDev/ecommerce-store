@@ -1,78 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component renders a header with an image, search input and links 1`] = `
-.c4 {
-  border: 0;
-  -webkit-clip: rect(0 0 0 0);
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.c5 {
-  border-radius: 8px;
-  color: var(--color-grey-2);
-  font-size: var(--font-size-14);
-  font-weight: var(--font-weight-medium);
-  min-height: 44px;
-  outline: none;
-  padding-left: 10px;
-  padding-right: 65px;
-  width: 100%;
-}
-
-.c5::-webkit-search-cancel-button {
-  display: none;
-}
-
-.c3 {
-  justify-self: center;
-  position: relative;
-  width: 100%;
-}
-
-.c3::after {
-  border-radius: 9px;
-  box-shadow: 0 0 0 3px var(--color-orange-1);
-  content: '';
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  -webkit-transition: opacity 150ms ease-in-out;
-  transition: opacity 150ms ease-in-out;
-  width: 100%;
-}
-
-.c6 {
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: var(--color-orange-1);
-  border-radius: 8px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding-left: 3px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 55px;
-}
-
 .c0 {
   background-color: var(--color-grey-3);
   box-shadow: var(--box-shadow-lg);
@@ -145,18 +73,83 @@ exports[`Header component renders a header with an image, search input and links
   margin-bottom: 5px;
 }
 
-@media screen and (min-width:545px) {
-  .c3 {
-    max-width: 420px;
-  }
+.c11 {
+  max-width: 115px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-@media screen and (max-width:934px) {
-  .c3 {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    margin-top: 15px;
-  }
+.c4 {
+  border: 0;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.c5 {
+  border-radius: 8px;
+  color: var(--color-grey-2);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  min-height: 44px;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 65px;
+  width: 100%;
+}
+
+.c5::-webkit-search-cancel-button {
+  display: none;
+}
+
+.c3 {
+  justify-self: center;
+  position: relative;
+  width: 100%;
+}
+
+.c3::after {
+  border-radius: 9px;
+  box-shadow: 0 0 0 3px var(--color-orange-1);
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+  width: 100%;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--color-orange-1);
+  border-radius: 8px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 3px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55px;
 }
 
 @media screen and (min-width:590px) {
@@ -184,16 +177,23 @@ exports[`Header component renders a header with an image, search input and links
   }
 }
 
-@media screen and (min-width:1280px) {
-  .c7 {
-    -webkit-column-gap: 40px;
-    column-gap: 40px;
-  }
-}
-
 @media screen and (max-width:589px) {
   .c9 {
     display: none;
+  }
+}
+
+@media screen and (min-width:545px) {
+  .c3 {
+    max-width: 420px;
+  }
+}
+
+@media screen and (max-width:934px) {
+  .c3 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top: 15px;
   }
 }
 
@@ -276,7 +276,7 @@ exports[`Header component renders a header with an image, search input and links
       className="c7"
     >
       <button
-        aria-labelledby="account"
+        aria-labelledby="account-link"
         className="c8"
         title="Account"
       >
@@ -298,20 +298,22 @@ exports[`Header component renders a header with an image, search input and links
         </svg>
         <div
           className="c9"
+          id="account-link"
         >
           <div
             className="c10"
-            id="account"
           >
             Account
           </div>
-          <div>
+          <div
+            className="c11"
+          >
             Sign in | Register
           </div>
         </div>
       </button>
       <a
-        aria-labelledby="basket"
+        aria-labelledby="basket-link"
         className="c8"
         href="/basket"
         onClick={[Function]}
@@ -332,10 +334,10 @@ exports[`Header component renders a header with an image, search input and links
         </svg>
         <div
           className="c9"
+          id="basket-link"
         >
           <div
             className="c10"
-            id="basket"
           >
             Basket
           </div>

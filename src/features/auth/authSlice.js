@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { authApi } from '../../services/auth';
 
 export const authSlice = createSlice({
   name: 'auth',
@@ -6,24 +7,28 @@ export const authSlice = createSlice({
     user: null,
     isAuthenticated: false,
   },
-  reducers: {
-    signIn(state, action) {
-      const { user } = action.payload;
-
-      state.user = user;
-      state.isAuthenticated = true;
-    },
-    signOut(state) {
-      state.user = null;
-      state.isAuthenticated = false;
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addMatcher(
+        authApi.endpoints.signIn.matchFulfilled,
+        (state, { payload }) => {
+          state.isAuthenticated = true;
+          state.user = payload.user;
+        }
+      )
+      .addMatcher(
+        authApi.endpoints.signUp.matchFulfilled,
+        (state, { payload }) => {
+          state.isAuthenticated = true;
+          state.user = payload.user;
+        }
+      );
   },
 });
 
 export function selectAuth(state) {
   return state.auth;
 }
-
-export const { signIn, signOut } = authSlice.actions;
 
 export default authSlice.reducer;

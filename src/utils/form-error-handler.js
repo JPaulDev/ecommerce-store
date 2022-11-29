@@ -1,4 +1,4 @@
-export default function formErrorHandler(err, setErrors, setStatus) {
+export default function formErrorHandler({ err, setErrors, setStatus }) {
   const { message, code, data } = err;
 
   switch (code) {

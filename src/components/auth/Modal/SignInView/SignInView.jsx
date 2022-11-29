@@ -1,35 +1,51 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { useUI } from '../../../../contexts/UIContext';
+import { motion } from 'framer-motion';
+import { useSignInMutation } from '../../../../services/auth';
 import { signInSchema } from '../../../../validations/schemas';
+import { Warning } from '../../../icons';
 import { InputWithLabel, LoadingSpinner } from '../../../ui';
 import {
   ErrorText,
   inputStyles,
   PrimaryBtn,
   SecondaryBtn,
+  ServerError,
   Text,
 } from '../styles';
 import * as Styled from './styles';
 
-export default function SignInView() {
-  const { handleSetModalView } = useUI();
+export default function SignInView({
+  onSubmit,
+  animationControls,
+  handleSetModalView,
+}) {
+  const [signInMutation] = useSignInMutation();
+
+  const handleSubmitWithMutation = onSubmit(signInMutation);
 
   return (
     <>
       <Text>
         Tip: Use <strong>test@test.com</strong> and password{' '}
-        <strong>test123</strong> to sign in or create an account.
+        <strong>test123!</strong> to sign in or create an account.
       </Text>
       <Formik
         initialValues={{
-          email: '',
-          password: '',
+          email: 'test@test.com',
+          password: 'test123!',
         }}
         validationSchema={signInSchema}
-        onSubmit={() => {}}
+        onSubmit={handleSubmitWithMutation}
       >
-        {({ isSubmitting, touched, errors }) => (
+        {({ touched, errors, status, isSubmitting }) => (
           <Form noValidate>
+            {status && (
+              <ServerError as={motion.div} animate={animationControls}>
+                <Warning width={21} height={21} />
+                <ErrorText role="alert">{status}</ErrorText>
+              </ServerError>
+            )}
+
             <Field
               as={InputWithLabel}
               label="Email:"
@@ -84,9 +100,11 @@ export default function SignInView() {
       <Styled.ForgotPasswordBtn type="button">
         Forgotten Password?
       </Styled.ForgotPasswordBtn>
+
       <Styled.Divider>
         <span>OR</span>
       </Styled.Divider>
+
       <div>
         Don&lsquo;t have an account?
         <SecondaryBtn

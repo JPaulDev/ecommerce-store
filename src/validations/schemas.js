@@ -9,7 +9,9 @@ const email = Yup.string()
 
 export const signInSchema = Yup.object({
   email,
-  password: Yup.string().required('Please enter your password.'),
+  password: Yup.string()
+    .required('Please enter your password.')
+    .max(64, 'Password must be no more than 64 characters.'),
 });
 
 export const signUpSchema = Yup.object({

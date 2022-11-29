@@ -7,6 +7,17 @@ export default function errorHandler(err, req, res, next) {
     return next(err);
   }
 
+  if (err instanceof AppError) {
+    return res.status(err.status).json({
+      error: {
+        status: err.status,
+        message: err.message,
+        code: err.code,
+        data: err.data,
+      },
+    });
+  }
+
   if (NODE_ENVIRONMENT !== 'production') {
     console.error(err);
 
@@ -15,17 +26,6 @@ export default function errorHandler(err, req, res, next) {
         message: err.message,
         stack: err.stack,
         code: err.code,
-      },
-    });
-  }
-
-  if (err instanceof AppError) {
-    return res.status(err.status).json({
-      error: {
-        status: err.status,
-        message: err.message,
-        code: err.code,
-        data: err.data,
       },
     });
   }

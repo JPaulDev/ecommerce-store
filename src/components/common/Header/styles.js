@@ -46,10 +46,6 @@ export const LinksContainer = styled.div`
   @media screen and (min-width: 935px) {
     margin-left: 40px;
   }
-
-  @media screen and (min-width: 1280px) {
-    column-gap: 40px;
-  }
 `;
 
 export const Link = styled.a`
@@ -80,4 +76,11 @@ export const TopText = styled.div`
   font-size: var(--font-size-16);
   line-height: 1;
   margin-bottom: 5px;
+`;
+
+export const Text = styled.div`
+  max-width: 115px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
