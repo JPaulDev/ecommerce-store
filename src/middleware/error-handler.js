@@ -13,7 +13,7 @@ export default function errorHandler(err, req, res, next) {
         status: err.status,
         message: err.message,
         code: err.code,
-        data: err.data,
+        errors: err.errors,
       },
     });
   }
