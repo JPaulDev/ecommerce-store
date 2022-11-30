@@ -1,7 +1,17 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import { UIProvider } from '../../../../../contexts/UIContext';
 import NavItem from '../index';
+
+// Prevents TypeError: Cannot use 'in' operator to search for 'beforePopState' in null
+// when clicking a next link with userEvent.click.
+jest.mock(
+  'next/link',
+  () =>
+    ({ children, ...rest }) =>
+      React.cloneElement(children, { ...rest })
+);
 
 const linkItem = { heading: 'Home', href: 'href' };
 const buttonItem = { heading: 'Components', hasDropdown: true };
@@ -67,6 +77,18 @@ describe('NavItem dropdown', () => {
     expect(screen.getByTestId('dropdown-menu')).toBeInTheDocument();
 
     await user.keyboard('{Escape}');
+
+    expect(screen.queryByTestId('dropdown-menu')).not.toBeInTheDocument();
+  });
+
+  it('should close on clicking a link', async () => {
+    const { user } = setup(<NavItem item={buttonItem} />);
+
+    await user.click(screen.getByRole('button', { name: /components/i }));
+
+    expect(screen.getByTestId('dropdown-menu')).toBeInTheDocument();
+
+    await user.click(screen.getByRole('link', { name: /amd motherboards/i }));
 
     expect(screen.queryByTestId('dropdown-menu')).not.toBeInTheDocument();
   });

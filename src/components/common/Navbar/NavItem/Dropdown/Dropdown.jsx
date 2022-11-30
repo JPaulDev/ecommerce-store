@@ -162,7 +162,9 @@ export default function Dropdown({ menu = '' }) {
                 {item.links.map((link) => (
                   <li key={link.text}>
                     <Link href={link.href} passHref>
-                      <Styled.Link>{link.text}</Styled.Link>
+                      <Styled.Link onClick={handleCloseDropdown}>
+                        {link.text}
+                      </Styled.Link>
                     </Link>
                   </li>
                 ))}
