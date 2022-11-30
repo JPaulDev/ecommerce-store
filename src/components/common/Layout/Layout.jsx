@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic';
-import { Header, Navbar, Background, TopBannerSmall, Footer } from '../index';
+import { Background, Footer, Header, Navbar, TopBannerSmall } from '../index';
 import * as Styled from './styles';
 
-const Modal = dynamic(() => import('../../auth/Modal'), {
+const Modal = dynamic(() => import('../../../features/auth/Modal'), {
   ssr: false,
 });
 

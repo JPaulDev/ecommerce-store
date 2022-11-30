@@ -1,9 +1,9 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { motion } from 'framer-motion';
+import { Warning } from '../../../../components/icons';
+import { InputWithLabel, LoadingSpinner } from '../../../../components/ui';
 import { useSignUpMutation } from '../../../../services/auth';
 import { signUpSchema } from '../../../../validations/schemas';
-import { Warning } from '../../../icons';
-import { InputWithLabel, LoadingSpinner } from '../../../ui';
 import {
   ErrorText,
   inputStyles,
