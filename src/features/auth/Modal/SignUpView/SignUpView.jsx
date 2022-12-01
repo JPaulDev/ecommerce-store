@@ -142,7 +142,11 @@ export default function SignUpView({
             />
 
             <PrimaryBtn type="submit" disabled={isSubmitting}>
-              {isSubmitting ? <LoadingSpinner /> : 'Sign Up'}
+              {isSubmitting ? (
+                <LoadingSpinner size={30} color="white" />
+              ) : (
+                'Sign Up'
+              )}
             </PrimaryBtn>
           </Form>
         )}

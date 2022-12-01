@@ -67,7 +67,11 @@ export default function ForgotPasswordView({
             />
 
             <PrimaryBtn type="submit" disabled={isSubmitting}>
-              {isSubmitting ? <LoadingSpinner /> : 'Reset Password'}
+              {isSubmitting ? (
+                <LoadingSpinner size={30} color="white" />
+              ) : (
+                'Reset Password'
+              )}
             </PrimaryBtn>
           </Form>
         )}

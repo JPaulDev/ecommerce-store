@@ -10,21 +10,14 @@ const rotate = keyframes`
   }
 `;
 
-export const Container = styled.div`
-  align-items: center;
-  display: inline-flex;
-  font-size: inherit;
-  position: relative;
-`;
-
 export const Spinner = styled.div`
-  animation: 0.75s linear infinite ${rotate};
-  border: 0.2em solid currentColor;
-  border-radius: 50%;
-  border-right-color: transparent;
-  height: 1.125em;
-  margin-right: 7px;
+  left: 50%;
   position: absolute;
-  right: 100%;
-  width: 1.125em;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  svg {
+    animation: ${rotate} 1s steps(12) infinite;
+    display: block;
+  }
 `;

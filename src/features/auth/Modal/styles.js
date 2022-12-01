@@ -105,7 +105,9 @@ export const PrimaryBtn = styled.button`
   cursor: pointer;
   font-weight: var(--font-weight-semibold);
   margin: 15px 0;
+  min-height: 45px;
   padding: 13px;
+  position: relative;
   ${inputMixin}
 
   &:disabled {
