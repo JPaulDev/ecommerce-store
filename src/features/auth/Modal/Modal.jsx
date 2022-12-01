@@ -6,6 +6,7 @@ import { Cross } from '../../../components/icons';
 import { useUI } from '../../../contexts/UIContext';
 import useOnClickOutside from '../../../lib/hooks/useOnClickOutside';
 import formErrorHandler from '../../../utils/form-error-handler';
+import ForgotPasswordView from './ForgotPasswordView';
 import SignInView from './SignInView';
 import SignUpView from './SignUpView';
 import * as Styled from './styles';
@@ -18,7 +19,7 @@ function ModalView({ handleCloseModal, modalView, handleSetModalView }) {
 
   useEffect(() => {
     closeButtonRef.current.focus();
-  }, []);
+  });
 
   useEffect(() => {
     const handleEscapeKey = (e) => {
@@ -83,6 +84,14 @@ function ModalView({ handleCloseModal, modalView, handleSetModalView }) {
 
         {modalView === 'SIGN_UP_VIEW' && (
           <SignUpView
+            onSubmit={handleSubmit}
+            animationControls={animationControls}
+            handleSetModalView={handleSetModalView}
+          />
+        )}
+
+        {modalView === 'FORGOT_PASSWORD_VIEW' && (
+          <ForgotPasswordView
             onSubmit={handleSubmit}
             animationControls={animationControls}
             handleSetModalView={handleSetModalView}

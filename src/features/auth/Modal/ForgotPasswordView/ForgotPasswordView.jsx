@@ -2,8 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { motion } from 'framer-motion';
 import { Warning } from '../../../../components/icons';
 import { InputWithLabel, LoadingSpinner } from '../../../../components/ui';
-import { useSignInMutation } from '../../../../services/auth';
-import { signInSchema } from '../../../../validations/schemas';
+import { forgotPasswordSchema } from '../../../../validations/schemas';
 import {
   ErrorText,
   inputStyles,
@@ -14,27 +13,26 @@ import {
 } from '../styles';
 import * as Styled from './styles';
 
-export default function SignInView({
+export default function ForgotPasswordView({
   onSubmit,
   animationControls,
   handleSetModalView,
 }) {
-  const [signInMutation] = useSignInMutation();
-
-  const handleSubmitWithMutation = onSubmit(signInMutation);
+  // TODO: Implement reset password functionality
+  const handleSubmitWithMutation = onSubmit(() => {});
 
   return (
     <>
+      <Styled.Heading>Trouble logging in?</Styled.Heading>
       <Text>
-        Tip: Use <strong>test@test.com</strong> and password{' '}
-        <strong>test123!</strong> to sign in or create an account.
+        Enter your email address and we&lsquo;ll send you a link to reset your
+        password.
       </Text>
       <Formik
         initialValues={{
-          email: 'test@test.com',
-          password: 'test123!',
+          email: '',
         }}
-        validationSchema={signInSchema}
+        validationSchema={forgotPasswordSchema}
         onSubmit={handleSubmitWithMutation}
       >
         {({ touched, errors, status, isSubmitting }) => (
@@ -68,55 +66,22 @@ export default function SignInView({
               role="alert"
             />
 
-            <Field
-              as={InputWithLabel}
-              label="Password:"
-              styles={inputStyles}
-              name="password"
-              type="password"
-              placeholder="Password"
-              aria-required
-              aria-invalid={touched.password && errors.password ? true : null}
-              aria-describedby={
-                touched.password && errors.password ? 'password-error' : null
-              }
-              isTouched={touched.password}
-              isValid={!errors.password}
-            />
-            <ErrorMessage
-              id="password-error"
-              component={ErrorText}
-              name="password"
-              role="alert"
-            />
-
             <PrimaryBtn type="submit" disabled={isSubmitting}>
-              {isSubmitting ? <LoadingSpinner /> : 'Sign In'}
+              {isSubmitting ? <LoadingSpinner /> : 'Reset Password'}
             </PrimaryBtn>
           </Form>
         )}
       </Formik>
 
-      <Styled.ForgotPasswordBtn
-        type="button"
-        onClick={() => handleSetModalView('FORGOT_PASSWORD_VIEW')}
-      >
-        Forgotten Password?
-      </Styled.ForgotPasswordBtn>
-
-      <Styled.Divider>
-        <span>OR</span>
-      </Styled.Divider>
-
-      <div>
-        Don&lsquo;t have an account?
+      <Styled.Container>
+        Want to go back?
         <SecondaryBtn
           type="button"
-          onClick={() => handleSetModalView('SIGN_UP_VIEW')}
+          onClick={() => handleSetModalView('SIGN_IN_VIEW')}
         >
-          Sign up
+          Sign in
         </SecondaryBtn>
-      </div>
+      </Styled.Container>
     </>
   );
 }

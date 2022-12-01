@@ -36,3 +36,7 @@ export const signUpSchema = Yup.object({
     .required('Please type your password again.')
     .equals([Yup.ref('password')], 'Passwords must match.'),
 });
+
+export const forgotPasswordSchema = Yup.object({
+  email,
+});
