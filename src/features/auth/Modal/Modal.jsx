@@ -36,7 +36,7 @@ function ModalView({ handleCloseModal, modalView, handleSetModalView }) {
 
   const animationControls = useAnimationControls();
 
-  const flashStatusError = () => {
+  const flashStatusMessage = () => {
     animationControls.set({ opacity: 0 });
     animationControls.start({ opacity: 1, transition: { duration: 0.6 } });
   };
@@ -46,13 +46,14 @@ function ModalView({ handleCloseModal, modalView, handleSetModalView }) {
     return async (formData, { setErrors, setStatus }) => {
       try {
         await mutationFn(formData).unwrap();
-
-        // Close the modal on successful account creation or sign in.
         handleCloseModal();
       } catch (err) {
         formErrorHandler({ err, setErrors, setStatus });
-        // If there is already a status error and another occurs, cause it to flash.
-        flashStatusError();
+
+        // If there is already a status message visible and another error occurs,
+        // cause it to flash. For example, If the user attempts to repeatedly
+        // submit invalid credentials.
+        flashStatusMessage();
       }
     };
   };

@@ -53,7 +53,7 @@ export const Text = styled.p`
   margin-bottom: 10px;
 `;
 
-export const ServerError = styled.div`
+export const StatusMessage = styled.div`
   align-items: center;
   border: 1px solid var(--color-red-2);
   display: flex;

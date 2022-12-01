@@ -9,7 +9,7 @@ import {
   inputStyles,
   PrimaryBtn,
   SecondaryBtn,
-  ServerError,
+  StatusMessage,
   Text,
 } from '../styles';
 import * as Styled from './styles';
@@ -42,10 +42,10 @@ export default function SignUpView({
         {({ touched, errors, status, isSubmitting }) => (
           <Form noValidate>
             {status && (
-              <ServerError as={motion.div} animate={animationControls}>
+              <StatusMessage as={motion.div} animate={animationControls}>
                 <Warning width={21} height={21} />
                 <ErrorText role="alert">{status}</ErrorText>
-              </ServerError>
+              </StatusMessage>
             )}
 
             <Field
