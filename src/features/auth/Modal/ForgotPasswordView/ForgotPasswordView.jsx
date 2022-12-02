@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { motion } from 'framer-motion';
 import { Warning } from '../../../../components/icons';
-import { InputWithLabel, LoadingSpinner } from '../../../../components/ui';
+import { LabelledInput, LoadingSpinner } from '../../../../components/ui';
 import { forgotPasswordSchema } from '../../../../validations/schemas';
 import {
   ErrorText,
@@ -45,7 +45,7 @@ export default function ForgotPasswordView({
             )}
 
             <Field
-              as={InputWithLabel}
+              as={LabelledInput}
               label="Email:"
               styles={inputStyles}
               name="email"

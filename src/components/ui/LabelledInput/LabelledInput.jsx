@@ -7,7 +7,7 @@ import * as Styled from './styles';
  *
  * https://getbootstrap.com/docs/4.0/utilities/screenreaders/
  */
-export default function InputWithLabel({
+export default function LabelledInput({
   label,
   styles,
   onChange,

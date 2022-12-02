@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { motion } from 'framer-motion';
 import { Warning } from '../../../../components/icons';
-import { InputWithLabel, LoadingSpinner } from '../../../../components/ui';
+import { LabelledInput, LoadingSpinner } from '../../../../components/ui';
 import { useSignInMutation } from '../../../../services/auth';
 import { signInSchema } from '../../../../validations/schemas';
 import {
@@ -47,7 +47,7 @@ export default function SignInView({
             )}
 
             <Field
-              as={InputWithLabel}
+              as={LabelledInput}
               label="Email:"
               styles={inputStyles}
               name="email"
@@ -69,7 +69,7 @@ export default function SignInView({
             />
 
             <Field
-              as={InputWithLabel}
+              as={LabelledInput}
               label="Password:"
               styles={inputStyles}
               name="password"

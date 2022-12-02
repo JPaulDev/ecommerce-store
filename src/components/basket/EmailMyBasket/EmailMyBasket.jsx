@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useId, useState, memo } from 'react';
-import { InputWithLabel } from '../../ui';
+import { LabelledInput } from '../../ui';
 import * as Styled from './styles';
 
 function EmailMyBasket() {
@@ -16,7 +16,7 @@ function EmailMyBasket() {
     <Styled.Container>
       <Styled.Heading>Email my basket</Styled.Heading>
       <form action="https://pc-connect.co.uk/subscribe" method="post">
-        <InputWithLabel
+        <LabelledInput
           label="Email:"
           styles={Styled.inputStyles}
           name="email"

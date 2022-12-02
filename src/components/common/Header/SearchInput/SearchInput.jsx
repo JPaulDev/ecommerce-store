@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { InputWithLabel } from '../../../ui';
+import { LabelledInput } from '../../../ui';
 import { Search } from '../../../icons';
 import * as Styled from './styles';
 
@@ -18,7 +18,7 @@ export default function SearchInput() {
       method="get"
       isFocused={isFocused}
     >
-      <InputWithLabel
+      <LabelledInput
         label="Search:"
         styles={Styled.Input}
         name="searchQuery"

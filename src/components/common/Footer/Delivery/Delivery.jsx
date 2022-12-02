@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import useMediaQuery from '../../../../lib/hooks/useMediaQuery';
-import { InputWithLabel } from '../../../ui';
+import { LabelledInput } from '../../../ui';
 import { ChevronRight } from '../../../icons';
 import { Heading, DropdownButton } from '../styles';
 import * as Styled from './styles';
@@ -106,7 +106,7 @@ export default function Delivery() {
                     action={item.action}
                     method="post"
                   >
-                    <InputWithLabel
+                    <LabelledInput
                       label="Invoice Number:"
                       styles={Styled.inputStyles}
                       name="invoiceNumber"
@@ -117,7 +117,7 @@ export default function Delivery() {
                       aria-required
                       required
                     />
-                    <InputWithLabel
+                    <LabelledInput
                       label={`${item.placeholder.replace('No.', 'Number')}:`}
                       styles={Styled.inputStyles}
                       name={item.name}
