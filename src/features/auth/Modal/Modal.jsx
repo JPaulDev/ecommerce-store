@@ -4,7 +4,7 @@ import { useEffect, useRef } from 'react';
 import logo from '../../../../public/images/footer/pc-logo.webp';
 import { Cross } from '../../../components/icons';
 import { useUI } from '../../../contexts/UIContext';
-import useOnClickOutside from '../../../lib/hooks/useOnClickOutside';
+import { useOnClickOutside } from '../../../hooks';
 import formErrorHandler from '../../../utils/form-error-handler';
 import ForgotPasswordView from './ForgotPasswordView';
 import SignInView from './SignInView';

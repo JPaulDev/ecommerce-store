@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRef } from 'react';
 import { useUI } from '../../../../contexts/UIContext';
-import useOnClickOutside from '../../../../lib/hooks/useOnClickOutside';
+import { useOnClickOutside } from '../../../../hooks';
 import Dropdown from './Dropdown';
 import * as Styled from './styles';
 

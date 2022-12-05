@@ -1,7 +1,7 @@
 import Image from 'next/future/image';
 import { memo } from 'react';
 import { useDispatch } from 'react-redux';
-import usePrice from '../../../lib/hooks/usePrice';
+import { usePrice } from '../../../hooks';
 import { Plus, Minus } from '../../../components/icons';
 import {
   PartNumber,

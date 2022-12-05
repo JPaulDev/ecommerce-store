@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import useMediaQuery from '../../../../lib/hooks/useMediaQuery';
+import { useMediaQuery } from '../../../../hooks';
 import { LabelledInput } from '../../../ui';
 import { ChevronRight } from '../../../icons';
 import { Heading, DropdownButton } from '../styles';

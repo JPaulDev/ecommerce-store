@@ -3,7 +3,7 @@ import Image from 'next/future/image';
 import { useState, forwardRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../basketSlice';
-import usePrice from '../../../lib/hooks/usePrice';
+import { usePrice } from '../../../hooks';
 import {
   Price,
   PreviousPrice,
