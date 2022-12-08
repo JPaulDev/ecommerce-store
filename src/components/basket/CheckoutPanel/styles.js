@@ -74,6 +74,7 @@ export const CheckoutLink = styled.a`
   font-size: var(--font-size-14);
   justify-content: center;
   margin: 0 auto 20px;
+  max-width: 450px;
   padding: 15px;
   ${flexMixin}
   ${linkMixin}

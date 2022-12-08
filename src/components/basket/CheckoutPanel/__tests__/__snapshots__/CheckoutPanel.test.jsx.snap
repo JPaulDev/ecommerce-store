@@ -89,6 +89,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   -ms-flex-pack: center;
   justify-content: center;
   margin: 0 auto 20px;
+  max-width: 450px;
   padding: 15px;
   -webkit-align-items: center;
   -webkit-box-align: center;
