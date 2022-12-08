@@ -65,7 +65,7 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
 }
 
 .c5 img {
-  border-radius: 8px;
+  border-radius: var(--border-radius-xl);
   box-shadow: var(--box-shadow-lg);
 }
 
@@ -344,7 +344,7 @@ exports[`Dropdown component renders the components menu with all links/advertise
 }
 
 .c5 img {
-  border-radius: 8px;
+  border-radius: var(--border-radius-xl);
   box-shadow: var(--box-shadow-lg);
 }
 

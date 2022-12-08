@@ -67,7 +67,7 @@ export const CheckoutLink = styled.a`
     var(--color-green-3),
     var(--color-green-1)
   );
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow-md);
   color: white;
   column-gap: 10px;
@@ -113,7 +113,7 @@ export const BottomContainer = styled.div`
 
 export const PaypalLink = styled.a`
   background-color: var(--color-yellow-1);
-  border-radius: 100px;
+  border-radius: var(--border-radius-full);
   display: flex;
   margin: 5px 0;
   padding: 10px 25px;

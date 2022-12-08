@@ -3,7 +3,7 @@
 exports[`ProductCard component horizontal variant should render a product card with with all the product information 1`] = `
 .c17 {
   background-image: linear-gradient( to bottom, var(--color-green-3), var(--color-green-1) );
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow-md);
   color: white;
   cursor: pointer;
@@ -85,7 +85,7 @@ exports[`ProductCard component horizontal variant should render a product card w
   appearance: none;
   background-color: var(--color-grey-14);
   border: 1px solid var(--color-grey-10);
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   box-shadow: 0 2px 3px rgb(17 17 17 / 10%);
   font-size: var(--font-size-14);
   font-weight: var(--font-weight-medium);
@@ -190,7 +190,7 @@ exports[`ProductCard component horizontal variant should render a product card w
 
 .c7 {
   border-top: 2px solid var(--color-grey-9);
-  grid-column: 1/3;
+  grid-column: 1 / 3;
   padding-top: 10px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -239,7 +239,7 @@ exports[`ProductCard component horizontal variant should render a product card w
 
 .c4 {
   background-color: var(--color-red-3);
-  border-radius: 5px;
+  border-radius: var(--border-radius-lg);
   color: white;
   display: inline-block;
   font-size: var(--font-size-14);
@@ -285,7 +285,7 @@ exports[`ProductCard component horizontal variant should render a product card w
 @media screen and (min-width:650px) {
   .c7 {
     margin-left: 25px;
-    grid-column: 2/3;
+    grid-column: 2 / 3;
   }
 }
 
@@ -519,7 +519,7 @@ exports[`ProductCard component horizontal variant should render a product card w
 exports[`ProductCard component vertical variant should render a product card with with all the product information 1`] = `
 .c12 {
   background-image: linear-gradient( to bottom, var(--color-green-3), var(--color-green-1) );
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow-md);
   color: white;
   cursor: pointer;
@@ -601,7 +601,7 @@ exports[`ProductCard component vertical variant should render a product card wit
   appearance: none;
   background-color: var(--color-grey-14);
   border: 1px solid var(--color-grey-10);
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   box-shadow: 0 2px 3px rgb(17 17 17 / 10%);
   font-size: var(--font-size-14);
   font-weight: var(--font-weight-medium);
@@ -670,7 +670,7 @@ exports[`ProductCard component vertical variant should render a product card wit
 .c0 {
   background-color: white;
   border: 1px solid var(--color-grey-12);
-  border-radius: 10px;
+  border-radius: var(--border-radius-2xl);
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;

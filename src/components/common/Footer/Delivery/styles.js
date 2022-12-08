@@ -57,7 +57,7 @@ export const Form = styled.form`
 
 export const inputStyles = css`
   border: 1px solid grey;
-  border-radius: 5px;
+  border-radius: var(--border-radius-lg);
   margin-right: 8px;
   max-width: 175px;
   padding: 8px 0 8px 10px;
@@ -65,14 +65,16 @@ export const inputStyles = css`
 `;
 
 export const SubmitButton = styled.button`
+  --size: 32px;
+
   align-items: center;
   background: var(--color-grey-3);
-  border-radius: 50%;
+  border-radius: var(--border-radius-full);
   cursor: pointer;
   display: flex;
-  height: 32px;
+  height: var(--size);
   justify-content: center;
-  width: 32px;
+  width: var(--size);
 
   &:active {
     transform: scale(0.9);

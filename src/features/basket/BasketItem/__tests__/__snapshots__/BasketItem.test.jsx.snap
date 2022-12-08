@@ -102,7 +102,7 @@ exports[`BasketItem component should render a product card with with all the pro
 
 .c8 {
   background-color: var(--color-grey-15);
-  border-radius: 5px;
+  border-radius: var(--border-radius-lg);
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -117,15 +117,16 @@ exports[`BasketItem component should render a product card with with all the pro
 }
 
 .c9 {
+  --size: 27px;
   background-image: linear-gradient( to bottom, var(--color-green-3), var(--color-green-1) );
-  border-radius: 4px;
+  border-radius: var(--border-radius-full);
   box-shadow: var(--box-shadow-md);
   color: white;
   cursor: pointer;
   display: grid;
-  height: 25px;
+  height: var(--size);
   place-items: center;
-  width: 25px;
+  width: var(--size);
 }
 
 .c9:hover {

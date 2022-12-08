@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const inputMixin = css`
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   font-size: inherit;
   width: 100%;
 `;
@@ -20,7 +20,7 @@ export const Backdrop = styled.div`
 
 export const Container = styled.div`
   background-color: white;
-  border-radius: 12px;
+  border-radius: var(--border-radius-2xl);
   font-size: var(--font-size-14);
   padding: 30px 40px;
   position: relative;
@@ -34,15 +34,17 @@ export const Container = styled.div`
 `;
 
 export const CloseButton = styled.button`
-  border-radius: 100%;
+  --size: 30px;
+
+  border-radius: var(--border-radius-full);
   cursor: pointer;
   display: grid;
-  height: 30px;
+  height: var(--size);
   place-items: center;
   position: absolute;
   right: 15px;
   top: 15px;
-  width: 30px;
+  width: var(--size);
 
   &:hover {
     background-color: var(--color-grey-13);

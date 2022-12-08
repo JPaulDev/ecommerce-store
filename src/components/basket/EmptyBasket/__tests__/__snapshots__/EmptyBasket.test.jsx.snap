@@ -3,7 +3,7 @@
 exports[`EmptyBasket component renders message that displays when the users basket is empty 1`] = `
 .c2 {
   background-image: linear-gradient( to bottom, var(--color-grey-7), var(--color-grey-4) );
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow-md);
   color: white;
   display: inline-block;

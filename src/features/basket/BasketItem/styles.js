@@ -49,7 +49,7 @@ export const RemoveProduct = styled.button`
 
 export const QuantitySelector = styled.div`
   background-color: var(--color-grey-15);
-  border-radius: 5px;
+  border-radius: var(--border-radius-lg);
   display: inline-flex;
   justify-content: space-between;
   margin-top: 10px;
@@ -58,19 +58,21 @@ export const QuantitySelector = styled.div`
 `;
 
 export const IncreaseButton = styled.button`
+  --size: 27px;
+
   background-image: linear-gradient(
     to bottom,
     var(--color-green-3),
     var(--color-green-1)
   );
-  border-radius: 4px;
+  border-radius: var(--border-radius-full);
   box-shadow: var(--box-shadow-md);
   color: white;
   cursor: pointer;
   display: grid;
-  height: 25px;
+  height: var(--size);
   place-items: center;
-  width: 25px;
+  width: var(--size);
 
   &:hover {
     box-shadow: inset 0 0 0 100px rgb(0 0 0 / 10%), var(--box-shadow-hover);

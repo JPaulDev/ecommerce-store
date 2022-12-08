@@ -6,7 +6,7 @@ export const Form = styled.form`
   width: 100%;
 
   &::after {
-    border-radius: 9px;
+    border-radius: var(--border-radius-xl);
     box-shadow: 0 0 0 3px var(--color-orange-1);
     content: '';
     height: 100%;
@@ -23,14 +23,14 @@ export const Form = styled.form`
   }
 
   @media screen and (max-width: 934px) {
-    grid-column: 1/3;
-    grid-row: 2/3;
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
     margin-top: 15px;
   }
 `;
 
 export const Input = css`
-  border-radius: 8px;
+  border-radius: var(--border-radius-xl);
   color: var(--color-grey-2);
   font-size: var(--font-size-14);
   font-weight: var(--font-weight-medium);
@@ -48,7 +48,7 @@ export const Input = css`
 export const Button = styled.button`
   align-items: center;
   background-color: var(--color-orange-1);
-  border-radius: 8px;
+  border-radius: var(--border-radius-xl);
   cursor: pointer;
   display: flex;
   height: 100%;

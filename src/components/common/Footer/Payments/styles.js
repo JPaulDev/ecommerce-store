@@ -34,7 +34,7 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   align-items: center;
   background-color: var(--color-grey-15);
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   height: 37px;
   width: 60px;
   ${flexMixin}

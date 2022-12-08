@@ -72,7 +72,7 @@ export const NavigationBottom = styled.ul`
 export const ButtonBottom = styled.button`
   background: ${({ isActive }) =>
     isActive ? 'var(--color-orange-1)' : 'white'};
-  border-radius: 2px;
+  border-radius: var(--border-radius-sm);
   height: ${({ isActive }) => (isActive ? '7px' : '5px')};
   margin: 0 5px;
   transition: all 100ms ease-in-out;
@@ -90,13 +90,15 @@ export const Navigation = styled.ul`
 `;
 
 export const NavigationArrow = styled.button`
+  --size: 32px;
+
   align-items: center;
   background-color: white;
-  border-radius: 50%;
+  border-radius: var(--border-radius-full);
   box-shadow: var(--box-shadow-xl);
   display: flex;
-  height: 32px;
+  height: var(--size);
   justify-content: center;
-  width: 32px;
+  width: var(--size);
   ${buttonMixin}
 `;

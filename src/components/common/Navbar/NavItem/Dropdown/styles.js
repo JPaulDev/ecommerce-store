@@ -49,7 +49,7 @@ export const AdvertsContainer = styled.div`
   row-gap: 15px;
 
   img {
-    border-radius: 8px;
+    border-radius: var(--border-radius-xl);
     box-shadow: var(--box-shadow-lg);
   }
 

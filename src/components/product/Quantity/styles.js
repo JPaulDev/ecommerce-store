@@ -21,7 +21,7 @@ export const Select = styled.select`
   appearance: none;
   background-color: var(--color-grey-14);
   border: 1px solid var(--color-grey-10);
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   box-shadow: 0 2px 3px rgb(17 17 17 / 10%);
   font-size: var(--font-size-14);
   font-weight: var(--font-weight-medium);

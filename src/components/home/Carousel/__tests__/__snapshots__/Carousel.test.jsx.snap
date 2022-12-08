@@ -187,7 +187,7 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
 
 .c17 {
   background: var(--color-orange-1);
-  border-radius: 2px;
+  border-radius: var(--border-radius-sm);
   height: 7px;
   margin: 0 5px;
   -webkit-transition: all 100ms ease-in-out;
@@ -202,7 +202,7 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
 
 .c18 {
   background: white;
-  border-radius: 2px;
+  border-radius: var(--border-radius-sm);
   height: 5px;
   margin: 0 5px;
   -webkit-transition: all 100ms ease-in-out;
@@ -236,23 +236,24 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
 }
 
 .c5 {
+  --size: 32px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   background-color: white;
-  border-radius: 50%;
+  border-radius: var(--border-radius-full);
   box-shadow: var(--box-shadow-xl);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 32px;
+  height: var(--size);
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 32px;
+  width: var(--size);
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;

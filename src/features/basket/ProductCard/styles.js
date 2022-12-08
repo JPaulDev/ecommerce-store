@@ -43,7 +43,7 @@ export const ListItem = styled.li`
     return css`
       background-color: white;
       border: 1px solid var(--color-grey-12);
-      border-radius: 10px;
+      border-radius: var(--border-radius-2xl);
       flex-direction: column;
       height: 100%;
       padding: 20px;
@@ -150,13 +150,13 @@ export const LogoWrapper = styled.div`
 
 export const RightContainer = styled.div`
   border-top: 2px solid var(--color-grey-9);
-  grid-column: 1/3;
+  grid-column: 1 / 3;
   padding-top: 10px;
   ${containerMixin}
 
   @media screen and (min-width: 650px) {
     margin-left: 25px;
-    grid-column: 2/3;
+    grid-column: 2 / 3;
   }
 
   @media screen and (min-width: 800px) {
@@ -210,7 +210,7 @@ export const InnerContainer = styled.div`
 
 export const SaleTag = styled.div`
   background-color: var(--color-red-3);
-  border-radius: 5px;
+  border-radius: var(--border-radius-lg);
   color: white;
   display: inline-block;
   font-size: var(--font-size-14);

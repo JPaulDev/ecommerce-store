@@ -78,7 +78,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
 
 .c7 {
   background-image: linear-gradient( to bottom, var(--color-green-3), var(--color-green-1) );
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow-md);
   color: white;
   -webkit-column-gap: 10px;
@@ -152,7 +152,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
 
 .c10 {
   background-color: var(--color-yellow-1);
-  border-radius: 100px;
+  border-radius: var(--border-radius-full);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

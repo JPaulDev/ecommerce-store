@@ -3,7 +3,7 @@
 exports[`NewsAndProducts component renders a news section with 3 articles and latest products links 1`] = `
 .c15 {
   background-image: linear-gradient( to bottom, var(--color-grey-7), var(--color-grey-4) );
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow-md);
   color: white;
   display: inline-block;

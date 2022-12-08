@@ -28,7 +28,7 @@ export const Container = styled.div`
 
 export const RedOval = styled.div`
   background: linear-gradient(to right, var(--color-red-3), var(--color-red-2));
-  border-radius: 50%;
+  border-radius: var(--border-radius-full);
   height: 170px;
   left: -67px;
   position: absolute;

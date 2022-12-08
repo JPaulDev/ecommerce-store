@@ -6,7 +6,7 @@ export const Link = styled.a`
     var(--color-grey-7),
     var(--color-grey-4)
   );
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow-md);
   color: white;
   display: inline-block;

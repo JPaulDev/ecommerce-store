@@ -6,7 +6,7 @@ export const Button = styled.button`
     var(--color-green-3),
     var(--color-green-1)
   );
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   box-shadow: var(--box-shadow-md);
   color: white;
   cursor: pointer;

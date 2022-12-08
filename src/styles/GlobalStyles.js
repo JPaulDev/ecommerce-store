@@ -56,6 +56,13 @@ const GlobalStyles = createGlobalStyle`
     --color-red-1: #b91c1c;
     --color-red-2: #dc2626;
     --color-red-3: #ef4444;
+    --border-radius-sm: 0.2rem;
+    --border-radius-md: 0.4rem;
+    --border-radius-lg: 0.6rem;
+    --border-radius-xl: 0.8rem;
+    --border-radius-2xl: 1.2rem;
+    --border-radius-3xl: 1.6rem;
+    --border-radius-full: 9999px;
     --box-shadow-sm: 0 2px 1px -1px rgba(0 0 0 / 20%),
       0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
     --box-shadow-md: 0 3px 1px -2px rgb(0 0 0 / 20%),

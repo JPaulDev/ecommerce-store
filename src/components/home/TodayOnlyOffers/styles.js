@@ -32,7 +32,7 @@ export const Button = styled.button`
 `;
 
 export const Wrapper = styled.div`
-  border-radius: 50%;
+  border-radius: var(--border-radius-full);
   box-shadow: 0 0 0 1px var(--color-orange-1);
   height: 65px;
   justify-content: center;

@@ -30,7 +30,7 @@ exports[`Payments component renders a list of accepted payment methods 1`] = `
   -ms-flex-align: center;
   align-items: center;
   background-color: var(--color-grey-15);
-  border-radius: 6px;
+  border-radius: var(--border-radius-lg);
   height: 37px;
   width: 60px;
   display: -webkit-box;
