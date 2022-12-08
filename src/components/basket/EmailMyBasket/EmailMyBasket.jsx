@@ -18,7 +18,7 @@ function EmailMyBasket() {
       <form action="https://pc-connect.co.uk/subscribe" method="post">
         <LabelledInput
           label="Email:"
-          styles={Styled.inputStyles}
+          inputStyles={Styled.inputStyles}
           name="email"
           type="email"
           placeholder="Email"

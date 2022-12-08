@@ -2,14 +2,19 @@ import { useId } from 'react';
 import * as Styled from './styles';
 
 /**
- * Label is hidden using bootstraps screen reader only styles, the label is
- * still read out to sight impaired users via screen readers.
+ * A component that renders a label and an input. The label can be hidden using
+ * bootstraps screen reader only styles, the label is still read out to sight
+ * impaired users via screen readers.
  *
- * https://getbootstrap.com/docs/4.0/utilities/screenreaders/
+ * @link https://getbootstrap.com/docs/4.0/utilities/screenreaders/
  */
 export default function LabelledInput({
   label,
-  styles,
+  inputStyles,
+  name,
+  type,
+  placeholder,
+  value,
   onChange,
   onFocus,
   onBlur,
@@ -22,13 +27,17 @@ export default function LabelledInput({
       <Styled.Label htmlFor={id}>{label}</Styled.Label>
       <Styled.Input
         id={id}
-        styles={styles}
+        inputStyles={inputStyles}
+        name={name}
+        type={type}
+        placeholder={placeholder}
         autoCapitalize="off"
         spellCheck="false"
         autoCorrect="off"
         onChange={onChange}
         onFocus={onFocus}
         onBlur={onBlur}
+        value={value}
         {...rest}
       />
     </>

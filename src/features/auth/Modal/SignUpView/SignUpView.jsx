@@ -51,7 +51,7 @@ export default function SignUpView({
             <Field
               as={LabelledInput}
               label="Email:"
-              styles={inputStyles}
+              inputStyles={inputStyles}
               name="email"
               type="email"
               placeholder="Email"
@@ -73,7 +73,7 @@ export default function SignUpView({
             <Field
               as={LabelledInput}
               label="Full Name:"
-              styles={inputStyles}
+              inputStyles={inputStyles}
               name="fullName"
               type="text"
               placeholder="Full Name"
@@ -96,7 +96,7 @@ export default function SignUpView({
             <Field
               as={LabelledInput}
               label="Password:"
-              styles={inputStyles}
+              inputStyles={inputStyles}
               name="password"
               type="password"
               placeholder="Password"
@@ -118,7 +118,7 @@ export default function SignUpView({
             <Field
               as={LabelledInput}
               label="Confirm Password:"
-              styles={inputStyles}
+              inputStyles={inputStyles}
               name="confirmPassword"
               type="password"
               placeholder="Confirm Password"

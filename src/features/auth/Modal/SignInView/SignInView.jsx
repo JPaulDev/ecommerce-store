@@ -49,7 +49,7 @@ export default function SignInView({
             <Field
               as={LabelledInput}
               label="Email:"
-              styles={inputStyles}
+              inputStyles={inputStyles}
               name="email"
               type="email"
               placeholder="Email"
@@ -71,7 +71,7 @@ export default function SignInView({
             <Field
               as={LabelledInput}
               label="Password:"
-              styles={inputStyles}
+              inputStyles={inputStyles}
               name="password"
               type="password"
               placeholder="Password"

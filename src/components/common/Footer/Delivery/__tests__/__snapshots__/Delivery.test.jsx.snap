@@ -210,6 +210,7 @@ exports[`Delivery component renders a return tab where returns status can be che
           required=""
           spellcheck="false"
           type="text"
+          value=""
         />
         <label
           class="c7"
@@ -230,6 +231,7 @@ exports[`Delivery component renders a return tab where returns status can be che
           required=""
           spellcheck="false"
           type="text"
+          value=""
         />
         <button
           aria-label="Submit"
@@ -465,6 +467,7 @@ exports[`Delivery component renders a system build tab where build progress can 
           required=""
           spellcheck="false"
           type="text"
+          value=""
         />
         <label
           class="c7"
@@ -485,6 +488,7 @@ exports[`Delivery component renders a system build tab where build progress can 
           required=""
           spellcheck="false"
           type="text"
+          value=""
         />
         <button
           aria-label="Submit"
@@ -720,6 +724,7 @@ exports[`Delivery component renders an order tab where order tracking can be che
           required=""
           spellcheck="false"
           type="text"
+          value=""
         />
         <label
           class="c7"
@@ -740,6 +745,7 @@ exports[`Delivery component renders an order tab where order tracking can be che
           required=""
           spellcheck="false"
           type="text"
+          value=""
         />
         <button
           aria-label="Submit"
