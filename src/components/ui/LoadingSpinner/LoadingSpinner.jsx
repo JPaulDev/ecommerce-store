@@ -1,6 +1,6 @@
 import * as Styled from './styles';
 
-export default function LoadingSpinner({ size, color }) {
+export default function LoadingSpinner({ size = 20, color = 'currentColor' }) {
   return (
     <Styled.Spinner>
       <svg
