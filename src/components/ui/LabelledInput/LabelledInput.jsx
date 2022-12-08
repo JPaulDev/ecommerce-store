@@ -10,6 +10,8 @@ import * as Styled from './styles';
  */
 export default function LabelledInput({
   label,
+  hideLabel = false,
+  labelStyles,
   inputStyles,
   name,
   type,
@@ -24,7 +26,13 @@ export default function LabelledInput({
 
   return (
     <>
-      <Styled.Label htmlFor={id}>{label}</Styled.Label>
+      <Styled.Label
+        htmlFor={id}
+        hideLabel={hideLabel}
+        labelStyles={labelStyles}
+      >
+        {label}
+      </Styled.Label>
       <Styled.Input
         id={id}
         inputStyles={inputStyles}

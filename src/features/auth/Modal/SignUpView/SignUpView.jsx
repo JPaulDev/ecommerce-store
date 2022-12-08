@@ -51,6 +51,7 @@ export default function SignUpView({
             <Field
               as={LabelledInput}
               label="Email:"
+              hideLabel
               inputStyles={inputStyles}
               name="email"
               type="email"
@@ -73,6 +74,7 @@ export default function SignUpView({
             <Field
               as={LabelledInput}
               label="Full Name:"
+              hideLabel
               inputStyles={inputStyles}
               name="fullName"
               type="text"
@@ -96,6 +98,7 @@ export default function SignUpView({
             <Field
               as={LabelledInput}
               label="Password:"
+              hideLabel
               inputStyles={inputStyles}
               name="password"
               type="password"
@@ -118,6 +121,7 @@ export default function SignUpView({
             <Field
               as={LabelledInput}
               label="Confirm Password:"
+              hideLabel
               inputStyles={inputStyles}
               name="confirmPassword"
               type="password"

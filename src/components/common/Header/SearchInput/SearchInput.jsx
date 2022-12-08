@@ -20,6 +20,7 @@ export default function SearchInput() {
     >
       <LabelledInput
         label="Search:"
+        hideLabel
         inputStyles={Styled.inputStyles}
         name="searchQuery"
         type="search"

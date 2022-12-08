@@ -47,6 +47,7 @@ export default function ForgotPasswordView({
             <Field
               as={LabelledInput}
               label="Email:"
+              hideLabel
               inputStyles={inputStyles}
               name="email"
               type="email"

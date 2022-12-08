@@ -49,6 +49,7 @@ export default function SignInView({
             <Field
               as={LabelledInput}
               label="Email:"
+              hideLabel
               inputStyles={inputStyles}
               name="email"
               type="email"
@@ -71,6 +72,7 @@ export default function SignInView({
             <Field
               as={LabelledInput}
               label="Password:"
+              hideLabel
               inputStyles={inputStyles}
               name="password"
               type="password"

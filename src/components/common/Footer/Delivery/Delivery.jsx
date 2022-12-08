@@ -108,6 +108,7 @@ export default function Delivery() {
                   >
                     <LabelledInput
                       label="Invoice Number:"
+                      hideLabel
                       inputStyles={Styled.inputStyles}
                       name="invoiceNumber"
                       type="text"
@@ -119,6 +120,7 @@ export default function Delivery() {
                     />
                     <LabelledInput
                       label={`${item.placeholder.replace('No.', 'Number')}:`}
+                      hideLabel
                       inputStyles={Styled.inputStyles}
                       name={item.name}
                       type="text"
