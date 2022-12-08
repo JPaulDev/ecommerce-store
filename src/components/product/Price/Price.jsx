@@ -10,7 +10,12 @@ export default function Price({
     children.match(/(£)([0-9,]+)([.0-9]+)/) || [];
 
   return (
-    <Styled.Text $fontSize={fontSize} $fontWeight={fontWeight}>
+    <Styled.Text
+      $fontSize={
+        typeof fontSize === 'number' ? `var(--font-size-${fontSize})` : fontSize
+      }
+      $fontWeight={fontWeight}
+    >
       <span>{symbol}</span>
       {whole}
       <span>{fraction}</span>

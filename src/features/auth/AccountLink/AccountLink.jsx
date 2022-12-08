@@ -24,7 +24,7 @@ export default function AccountLink() {
   );
 
   return isAuthenticated ? (
-    <Link href="/account" passHref>
+    <Link href="/user/account" passHref>
       <Styled.Link title="Account" aria-labelledby="account-link">
         {content}
       </Styled.Link>

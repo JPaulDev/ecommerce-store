@@ -11,7 +11,9 @@ export default function AddToBasket({
       type="button"
       disabled={isDisabled}
       $width={width}
-      $fontSize={fontSize}
+      $fontSize={
+        typeof fontSize === 'number' ? `var(--font-size-${fontSize})` : fontSize
+      }
       onClick={onAddProduct}
     >
       Add To Basket

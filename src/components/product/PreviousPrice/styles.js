@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Text = styled.span`
   color: var(--color-grey-7);
-  font-size: ${({ $fontSize }) => `var(--font-size-${$fontSize})`};
+  font-size: ${({ $fontSize }) => $fontSize};
   text-decoration: line-through;
 
   span {

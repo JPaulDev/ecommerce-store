@@ -10,7 +10,13 @@ export default function LinkChevron({
 }) {
   return (
     <Link href={href} passHref>
-      <Styled.Link $fontSize={fontSize}>
+      <Styled.Link
+        $fontSize={
+          typeof fontSize === 'number'
+            ? `var(--font-size-${fontSize})`
+            : fontSize
+        }
+      >
         {children}
         <CircleChevronRight width={iconSize} height={iconSize} />
       </Styled.Link>

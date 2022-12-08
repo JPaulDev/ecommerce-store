@@ -14,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --font-size-12: 1.2rem;
     --font-size-13: 1.3rem;
     --font-size-14: 1.4rem;
+    --font-size-15: 1.5rem;
     --font-size-16: 1.6rem;
     --font-size-18: 1.8rem;
     --font-size-20: 2rem;
@@ -42,6 +43,7 @@ const GlobalStyles = createGlobalStyle`
     --color-grey-13: #eaeaea;
     --color-grey-14: #f1f1f1;
     --color-grey-15: #f7f7f7;
+    --color-grey-16: #fafafa;
     --color-indigo-1: #6366f1;
     --color-blue-1: #3b82f6;
     --color-sky-blue-1: #075985;

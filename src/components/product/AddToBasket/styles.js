@@ -10,7 +10,7 @@ export const Button = styled.button`
   box-shadow: var(--box-shadow-md);
   color: white;
   cursor: pointer;
-  font-size: ${({ $fontSize }) => `var(--font-size-${$fontSize})`};
+  font-size: ${({ $fontSize }) => $fontSize};
   font-weight: var(--font-weight-bold);
   margin-top: 8px;
   padding: 13px;
