@@ -8,7 +8,7 @@ import session from './session';
  * be mutated by middleware leading to undefined behaviour. See the common
  * errors section.
  *
- * https://www.npmjs.com/package/next-connect
+ * @link https://www.npmjs.com/package/next-connect
  */
 export default function createHandler() {
   const handler = nextConnect({
