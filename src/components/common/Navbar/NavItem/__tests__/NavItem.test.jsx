@@ -10,7 +10,7 @@ jest.mock(
   'next/link',
   () =>
     ({ children, ...rest }) =>
-      React.cloneElement(children, { ...rest })
+      React.cloneElement(children, { ...rest, href: '' })
 );
 
 const linkItem = { heading: 'Home', href: 'href' };
