@@ -1,5 +1,5 @@
 export default function formErrorHandler({ err, setErrors, setStatus }) {
-  const { message, code, errors = [] } = err;
+  const { message, code, errors } = err;
 
   switch (code) {
     case 'email_is_taken':
@@ -12,16 +12,7 @@ export default function formErrorHandler({ err, setErrors, setStatus }) {
       setStatus(message);
       break;
     case 'validation_error': {
-      const fieldErrors = errors.reduce((acc, next) => {
-        if (!acc[next.path]) {
-          // eslint-disable-next-line no-param-reassign
-          acc[next.path] = next.message;
-        }
-
-        return acc;
-      }, {});
-
-      setErrors(fieldErrors);
+      setErrors(errors);
       break;
     }
     default:

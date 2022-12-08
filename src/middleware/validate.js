@@ -11,10 +11,19 @@ export default function validate(schema) {
 
       return next();
     } catch (err) {
+      const errors = err.inner.reduce((acc, error) => {
+        if (!acc[error.path]) {
+          // eslint-disable-next-line no-param-reassign
+          acc[error.path] = error.message;
+        }
+
+        return acc;
+      }, {});
+
       const appError = AppError.unprocessableEntity(
         err.message,
         'validation_error',
-        err.inner
+        errors
       );
 
       return next(appError);
