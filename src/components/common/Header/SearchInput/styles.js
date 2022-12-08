@@ -29,7 +29,7 @@ export const Form = styled.form`
   }
 `;
 
-export const Input = css`
+export const inputStyles = css`
   border-radius: var(--border-radius-xl);
   color: var(--color-grey-2);
   font-size: var(--font-size-14);

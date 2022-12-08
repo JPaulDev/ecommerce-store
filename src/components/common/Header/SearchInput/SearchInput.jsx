@@ -20,7 +20,7 @@ export default function SearchInput() {
     >
       <LabelledInput
         label="Search:"
-        styles={Styled.Input}
+        styles={Styled.inputStyles}
         name="searchQuery"
         type="search"
         placeholder="Search PC-Connect.co.uk..."
