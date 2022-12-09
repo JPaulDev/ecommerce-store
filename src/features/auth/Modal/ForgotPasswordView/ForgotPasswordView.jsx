@@ -2,6 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { motion } from 'framer-motion';
 import { Warning } from '../../../../components/icons';
 import { LabelledInput, LoadingSpinner } from '../../../../components/ui';
+import { useSubmit } from '../../../../hooks';
 import { forgotPasswordSchema } from '../../../../validations/schemas';
 import {
   ErrorText,
@@ -14,12 +15,11 @@ import {
 import * as Styled from './styles';
 
 export default function ForgotPasswordView({
-  onSubmit,
-  animationControls,
   handleSetModalView,
+  handleCloseModal,
 }) {
   // TODO: Implement reset password functionality
-  const handleSubmitWithMutation = onSubmit(() => {});
+  const { handleSubmit, animationControls } = useSubmit(() => {});
 
   return (
     <>
@@ -33,7 +33,7 @@ export default function ForgotPasswordView({
           email: '',
         }}
         validationSchema={forgotPasswordSchema}
-        onSubmit={handleSubmitWithMutation}
+        onSubmit={handleSubmit}
       >
         {({ touched, errors, status, isSubmitting }) => (
           <Form noValidate>

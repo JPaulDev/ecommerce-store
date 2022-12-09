@@ -2,6 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { motion } from 'framer-motion';
 import { Warning } from '../../../../components/icons';
 import { LabelledInput, LoadingSpinner } from '../../../../components/ui';
+import { useSubmit } from '../../../../hooks';
 import { useSignUpMutation } from '../../../../services/auth';
 import { signUpSchema } from '../../../../validations/schemas';
 import {
@@ -14,14 +15,12 @@ import {
 } from '../styles';
 import * as Styled from './styles';
 
-export default function SignUpView({
-  onSubmit,
-  animationControls,
-  handleSetModalView,
-}) {
+export default function SignUpView({ handleSetModalView, handleCloseModal }) {
   const [signUp] = useSignUpMutation();
-
-  const handleSubmitWithMutation = onSubmit(signUp);
+  const { handleSubmit, animationControls } = useSubmit(
+    signUp,
+    handleCloseModal
+  );
 
   return (
     <>
@@ -37,7 +36,7 @@ export default function SignUpView({
           confirmPassword: '',
         }}
         validationSchema={signUpSchema}
-        onSubmit={handleSubmitWithMutation}
+        onSubmit={handleSubmit}
       >
         {({ touched, errors, status, isSubmitting }) => (
           <Form noValidate>
