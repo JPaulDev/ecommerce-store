@@ -90,7 +90,7 @@ export const inputStyles = css`
 
   &:focus {
     border: 1px solid var(--color-blue-1);
-    box-shadow: 0 0 0 1px var(--color-blue-1);
+    box-shadow: 0 0 0 0.6px var(--color-blue-1);
   }
 `;
 
