@@ -127,7 +127,6 @@ export const PrimaryBtn = styled.button`
 
 export const ErrorText = styled.p`
   color: var(--color-red-2);
-  display: block;
   font-size: var(--font-size-13);
   font-weight: var(--font-weight-semibold);
   text-align: left;
