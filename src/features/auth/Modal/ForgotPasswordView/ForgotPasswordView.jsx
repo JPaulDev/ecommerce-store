@@ -23,7 +23,7 @@ export default function ForgotPasswordView({
 
   return (
     <>
-      <Styled.Heading>Trouble logging in?</Styled.Heading>
+      <Styled.Heading>Forgot your password?</Styled.Heading>
       <Text>
         Enter your email address and we&lsquo;ll send you a link to reset your
         password.
