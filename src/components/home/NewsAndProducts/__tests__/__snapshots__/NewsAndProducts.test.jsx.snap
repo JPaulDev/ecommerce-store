@@ -9,7 +9,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
   display: inline-block;
   font-size: var(--font-size-13);
   font-weight: var(--font-weight-bold);
-  padding: 12px 14px;
+  padding: 14px;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -98,6 +98,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
 
 .c6 {
   color: var(--color-grey-4);
+  display: block;
   font-size: var(--font-size-13);
   margin-bottom: 15px;
 }
@@ -235,7 +236,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
 <section
   className="c0"
 >
-  <div
+  <article
     className="c1"
   >
     <h2
@@ -246,7 +247,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
     <div
       className="c3"
     >
-      <div
+      <article
         className="c4"
       >
         <h3
@@ -254,11 +255,12 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
         >
           NVIDIA 4000 Series Details Leaked
         </h3>
-        <div
+        <time
           className="c6"
+          dateTime="2022-06-29 13:00"
         >
           29 Jun 2022
-        </div>
+        </time>
         <div
           className="c7"
         >
@@ -280,7 +282,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
             width={24}
           />
         </div>
-        <article
+        <p
           className="c8"
         >
           NVIDIA's next-generation GeForce RTX 4090 "Ada" flagship graphics
@@ -288,7 +290,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
     synthetic benchmark, according to kopite7kimi, a reliable source with NVIDIA
     leaks. This would put its score around 66 percent above that of the current
     RTX 3090 Ti flagship.
-        </article>
+        </p>
         <a
           className="c9"
           href="/"
@@ -309,8 +311,8 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
             />
           </svg>
         </a>
-      </div>
-      <div
+      </article>
+      <article
         className="c4"
       >
         <h3
@@ -318,11 +320,12 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
         >
           Intel Misses Quarterly Targets
         </h3>
-        <div
+        <time
           className="c6"
+          dateTime="2022-06-14 13:00"
         >
           14 Jun 2022
-        </div>
+        </time>
         <div
           className="c7"
         >
@@ -344,7 +347,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
             width={24}
           />
         </div>
-        <article
+        <p
           className="c8"
         >
           Intel Corporation today reported second-quarter 2022 financial
@@ -353,7 +356,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
       and rapid decline in economic activity was the largest driver, but the
       shortfall also reflects our own execution issues," said Pat Gelsinger,
       Intel CEO.
-        </article>
+        </p>
         <a
           className="c9"
           href="/"
@@ -374,8 +377,8 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
             />
           </svg>
         </a>
-      </div>
-      <div
+      </article>
+      <article
         className="c4"
       >
         <h3
@@ -383,11 +386,12 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
         >
           Alleged Ryzen 7000 Series Benchmarks
         </h3>
-        <div
+        <time
           className="c6"
+          dateTime="2022-06-23 13:00"
         >
           23 Jun 2022
-        </div>
+        </time>
         <div
           className="c7"
         >
@@ -409,7 +413,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
             width={24}
           />
         </div>
-        <article
+        <p
           className="c8"
         >
           An AMD engineering sample CPU with the model number
@@ -417,7 +421,7 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
       paired with an NVIDIA RTX A4000 GPU. The CPU appears to be a 6-core Ryzen
       7000-series chip that was fitted to a Gigabyte X670E Aorus Master
       motherboard.
-        </article>
+        </p>
         <a
           className="c9"
           href="/"
@@ -438,9 +442,9 @@ exports[`NewsAndProducts component renders a news section with 3 articles and la
             />
           </svg>
         </a>
-      </div>
+      </article>
     </div>
-  </div>
+  </article>
   <div
     className="c10"
   >

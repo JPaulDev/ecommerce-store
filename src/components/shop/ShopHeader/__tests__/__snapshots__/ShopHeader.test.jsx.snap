@@ -153,7 +153,7 @@ exports[`ShopHeader component should render a category heading and description 1
   }
 }
 
-<section>
+<div>
   <div
     className="c0"
   >
@@ -227,5 +227,5 @@ exports[`ShopHeader component should render a category heading and description 1
       </svg>
     </button>
   </div>
-</section>
+</div>
 `;

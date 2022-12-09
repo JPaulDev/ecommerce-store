@@ -30,7 +30,7 @@ export default function Basket() {
       ) : (
         <Styled.Container>
           <div>
-            <Styled.Heading>Your Basket</Styled.Heading>
+            <Styled.Heading as="h1">Your Basket</Styled.Heading>
             <Styled.List>
               {basket.map((product) => (
                 <BasketItem key={product.sku} product={product} />

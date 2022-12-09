@@ -38,13 +38,13 @@ export const LinksContainer = styled.div`
   }
 `;
 
-export const Heading = styled.h3`
+export const Title = styled.strong`
   color: var(--color-grey-4);
   font-size: var(--font-size-14);
   text-transform: uppercase;
 `;
 
-export const DropdownButton = styled(Heading)`
+export const DropdownButton = styled(Title)`
   align-items: center;
   border-bottom: 1px solid var(--color-grey-9);
   cursor: pointer;

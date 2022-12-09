@@ -36,25 +36,24 @@ export default function Slug({ data }) {
       <Head>
         <title>{data.title}</title>
       </Head>
-      <Styled.Container>
+      <Styled.Section>
         <ShopHeader
           heading={data.heading}
           description={data.description}
           latestArrivals={data.latestArrivals}
           latestArrivalsDescription={data.latestArrivalsDescription}
         />
-        <Styled.Section>
-          <ul>
-            {data.products?.map((product) => (
-              <ProductCard
-                key={product.sku}
-                variant="horizontal"
-                product={product}
-              />
-            ))}
-          </ul>
-        </Styled.Section>
-      </Styled.Container>
+
+        <ul style={{ marginTop: '20px' }}>
+          {data.products?.map((product) => (
+            <ProductCard
+              key={product.sku}
+              variant="horizontal"
+              product={product}
+            />
+          ))}
+        </ul>
+      </Styled.Section>
     </>
   );
 }

@@ -81,7 +81,7 @@ export const LeftLogoWrapper = styled.div`
   }
 `;
 
-export const LeftHeading = styled.h4`
+export const LeftHeading = styled.h2`
   font-family: 'Uni Sans', sans-serif;
   font-size: var(--font-size-30);
   margin-bottom: 10px;
@@ -146,7 +146,7 @@ export const RightContainer = styled.div`
   }
 `;
 
-export const RightHeading = styled.h4`
+export const RightHeading = styled.h2`
   font-family: 'Uni Sans', sans-serif;
   font-size: var(--font-size-20);
   font-weight: var(--font-weight-semibold);

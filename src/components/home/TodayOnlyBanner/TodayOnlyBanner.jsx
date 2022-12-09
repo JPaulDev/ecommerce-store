@@ -8,19 +8,19 @@ export default function TodayOnlyBanner() {
   return (
     <Styled.Container background={background.src}>
       <Styled.RedOval />
-      <Styled.LeftHeading>TODAY ONLY</Styled.LeftHeading>
-      <Styled.RightHeading>
-        Fantastic offers, updated every weekday
-      </Styled.RightHeading>
+      <Styled.Heading>
+        TODAY ONLY
+        <Styled.InnerText>
+          Fantastic offers, updated every weekday
+        </Styled.InnerText>
+      </Styled.Heading>
       <ResponsiveBox sx={{ display: { 0: 'none', 935: 'block' } }}>
         <LinkChevron href="/" fontSize={13} iconSize={18}>
           {linkText}
         </LinkChevron>
       </ResponsiveBox>
       <ResponsiveBox sx={{ display: { 0: 'block', 935: 'none' } }}>
-        <LinkButton href="/" padding="14px 25px">
-          {linkText}
-        </LinkButton>
+        <LinkButton href="/">{linkText}</LinkButton>
       </ResponsiveBox>
     </Styled.Container>
   );

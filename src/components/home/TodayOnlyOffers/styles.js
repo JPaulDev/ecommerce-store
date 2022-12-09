@@ -31,7 +31,7 @@ export const Button = styled.button`
   }
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.span`
   border-radius: var(--border-radius-full);
   box-shadow: 0 0 0 1px var(--color-orange-1);
   height: 65px;
@@ -67,7 +67,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Heading = styled.h3`
+export const Category = styled.span`
   color: var(--color-grey-5);
   font-size: var(--font-size-12);
   font-weight: var(--font-weight-semibold);

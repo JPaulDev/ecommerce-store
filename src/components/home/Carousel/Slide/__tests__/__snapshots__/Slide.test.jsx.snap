@@ -247,11 +247,11 @@ exports[`Slide component renders a slide with all content present 1`] = `
         }
       />
     </div>
-    <h4
+    <h2
       className="c4"
     >
       RTX™ 30 Series PCs
-    </h4>
+    </h2>
     <p
       className="c5"
     >
@@ -280,7 +280,7 @@ exports[`Slide component renders a slide with all content present 1`] = `
   <div
     className="c7"
   >
-    <h4
+    <h2
       className="c8"
     >
       Powered by
@@ -298,7 +298,7 @@ exports[`Slide component renders a slide with all content present 1`] = `
           }
         }
       />
-    </h4>
+    </h2>
     <ul
       className="c9"
     >

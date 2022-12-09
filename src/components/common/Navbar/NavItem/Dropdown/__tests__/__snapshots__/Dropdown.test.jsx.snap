@@ -78,7 +78,6 @@ exports[`Dropdown component renders the accessories menu with all links/advertis
 <div
   className="c0"
   data-testid="dropdown-menu"
-  id="Accessories"
 >
   <div
     className="c1"
@@ -357,7 +356,6 @@ exports[`Dropdown component renders the components menu with all links/advertise
 <div
   className="c0"
   data-testid="dropdown-menu"
-  id="Components"
 >
   <div
     className="c1"

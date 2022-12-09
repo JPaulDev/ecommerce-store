@@ -34,7 +34,7 @@ export default function ShopHeader({
   const [isArrivalsOpen, toggleArrivalsOpen] = useCycle(false, true);
 
   return (
-    <section>
+    <div>
       <Styled.TopContainer>
         <Styled.Heading>{heading}</Styled.Heading>
         <Styled.TopButton
@@ -86,6 +86,6 @@ export default function ShopHeader({
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </div>
   );
 }

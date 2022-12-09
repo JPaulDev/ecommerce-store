@@ -150,11 +150,11 @@ exports[`Delivery component renders a return tab where returns status can be che
 <div
     class="c0"
   >
-    <h3
+    <strong
       class="c1"
     >
       Delivery / Tracking Information
-    </h3>
+    </strong>
     <div
       id="delivery"
       style="overflow: hidden; height: auto;"
@@ -201,7 +201,6 @@ exports[`Delivery component renders a return tab where returns status can be che
           aria-required="true"
           autocapitalize="off"
           autocomplete="off"
-          autocorrect="off"
           class="c8"
           id=":r8:"
           maxlength="10"
@@ -222,7 +221,6 @@ exports[`Delivery component renders a return tab where returns status can be che
           aria-required="true"
           autocapitalize="off"
           autocomplete="off"
-          autocorrect="off"
           class="c8"
           id=":r9:"
           maxlength="10"
@@ -407,11 +405,11 @@ exports[`Delivery component renders a system build tab where build progress can 
 <div
     class="c0"
   >
-    <h3
+    <strong
       class="c1"
     >
       Delivery / Tracking Information
-    </h3>
+    </strong>
     <div
       id="delivery"
       style="overflow: hidden; height: auto;"
@@ -458,7 +456,6 @@ exports[`Delivery component renders a system build tab where build progress can 
           aria-required="true"
           autocapitalize="off"
           autocomplete="off"
-          autocorrect="off"
           class="c8"
           id=":re:"
           maxlength="10"
@@ -479,7 +476,6 @@ exports[`Delivery component renders a system build tab where build progress can 
           aria-required="true"
           autocapitalize="off"
           autocomplete="off"
-          autocorrect="off"
           class="c8"
           id=":rf:"
           maxlength="10"
@@ -664,11 +660,11 @@ exports[`Delivery component renders an order tab where order tracking can be che
 <div
     class="c0"
   >
-    <h3
+    <strong
       class="c1"
     >
       Delivery / Tracking Information
-    </h3>
+    </strong>
     <div
       id="delivery"
       style="overflow: hidden; height: auto;"
@@ -715,7 +711,6 @@ exports[`Delivery component renders an order tab where order tracking can be che
           aria-required="true"
           autocapitalize="off"
           autocomplete="off"
-          autocorrect="off"
           class="c8"
           id=":r2:"
           maxlength="10"
@@ -736,7 +731,6 @@ exports[`Delivery component renders an order tab where order tracking can be che
           aria-required="true"
           autocapitalize="off"
           autocomplete="off"
-          autocorrect="off"
           class="c8"
           id=":r3:"
           maxlength="10"

@@ -75,7 +75,7 @@ export default function TodayOnlyOffers({ products = [] }) {
                 onClick={() => handleChangeCategory(category.id)}
               >
                 <Styled.Wrapper>{category.icon}</Styled.Wrapper>
-                <Styled.Heading>{category.heading}</Styled.Heading>
+                <Styled.Category>{category.heading}</Styled.Category>
               </Styled.Button>
             </li>
           ))}

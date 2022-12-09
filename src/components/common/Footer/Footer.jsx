@@ -7,7 +7,8 @@ import * as Styled from './styles';
 
 const links = [
   {
-    heading: 'Information',
+    id: 'information-links',
+    title: 'Information',
     links: [
       {
         text: 'COVID-19',
@@ -32,7 +33,8 @@ const links = [
     ],
   },
   {
-    heading: 'My Account',
+    id: 'my-account-links',
+    title: 'My Account',
     links: [
       {
         text: 'Login',
@@ -53,7 +55,8 @@ const links = [
     ],
   },
   {
-    heading: 'Support',
+    id: 'support-links',
+    title: 'Support',
     links: [
       {
         text: 'Help Center',
@@ -85,7 +88,7 @@ export default function Footer() {
       <Styled.Container>
         <Styled.LinksContainer>
           {links.map((item) => (
-            <Links key={item.heading} item={item} />
+            <Links key={item.id} item={item} />
           ))}
         </Styled.LinksContainer>
         <Delivery />

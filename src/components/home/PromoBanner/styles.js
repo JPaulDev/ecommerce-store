@@ -14,7 +14,7 @@ export const Container = styled.div`
   position: relative;
 
   @media screen and (min-width: 550px) {
-    padding: 15px 25px;
+    padding: 15px 20px;
   }
 
   @media screen and (min-width: 750px) {
@@ -29,9 +29,9 @@ export const Container = styled.div`
   }
 `;
 
-export const Heading = styled.h4`
+export const Title = styled.strong`
   font-family: 'Uni Sans', sans-serif;
-  font-size: var(--font-size-28);
+  font-size: var(--font-size-30);
 
   @media screen and (min-width: 750px) {
     font-size: var(--font-size-38);
@@ -41,7 +41,7 @@ export const Heading = styled.h4`
 export const Text = styled.p`
   font-family: 'Uni Sans Book', sans-serif;
   line-height: 1.3;
-  margin: 4px 0 10px;
+  margin: 10px 0;
   width: 45%;
 
   @media screen and (min-width: 750px) {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Section = styled.section`
   align-items: center;
   background-color: white;
   border: 1px solid var(--color-grey-12);
@@ -11,14 +11,14 @@ export const Container = styled.div`
   padding: 30px;
   text-align: center;
 
-  a {
-    margin-top: 20px;
+  p {
+    margin-bottom: 20px;
   }
 `;
 
-export const Heading = styled.h2`
+export const Heading = styled.h1`
   font-family: 'Uni Sans', sans-serif;
-  font-size: var(--font-size-26);
+  font-size: var(--font-size-32);
   font-weight: var(--font-weight-semibold);
-  padding: 10px 30px;
+  margin: 10px 0;
 `;

@@ -133,7 +133,7 @@ const adverts = {
   accessories: [accessoriesAd1, accessoriesAd2],
 };
 
-export default function Dropdown({ menu = '' }) {
+export default function Dropdown({ menu, id }) {
   const { handleCloseDropdown } = useUI();
   const openMenu = menu.toLowerCase().trim();
 
@@ -152,7 +152,7 @@ export default function Dropdown({ menu = '' }) {
   });
 
   return (
-    <Styled.Container data-testid="dropdown-menu" id={menu}>
+    <Styled.Container data-testid="dropdown-menu" id={id}>
       {dropdowns[openMenu]?.map((column, index) => (
         <Styled.ColumnContainer key={index}>
           {column.map((item) => (

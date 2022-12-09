@@ -6,6 +6,7 @@ const articles = [
   {
     title: 'NVIDIA 4000 Series Details Leaked',
     date: '29 Jun 2022',
+    dateTime: '2022-06-29 13:00',
     image: lovelace,
     text: `NVIDIA's next-generation GeForce RTX 4090 "Ada" flagship graphics
     card allegedly scores over 19000 points in the 3DMark Time Spy Extreme
@@ -17,6 +18,7 @@ const articles = [
   {
     title: 'Intel Misses Quarterly Targets',
     date: '14 Jun 2022',
+    dateTime: '2022-06-14 13:00',
     image: intel,
     text: `Intel Corporation today reported second-quarter 2022 financial
       results. "This quarter's results were below the standards we have set for
@@ -29,6 +31,7 @@ const articles = [
   {
     title: 'Alleged Ryzen 7000 Series Benchmarks',
     date: '23 Jun 2022',
+    dateTime: '2022-06-23 13:00',
     image: ryzen,
     text: `An AMD engineering sample CPU with the model number
       "100-000000593-20_Y" has appeared in a couple of graphics rendering tests,

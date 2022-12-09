@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMediaQuery } from '../../../../hooks';
 import { ChevronRight } from '../../../icons';
-import { Heading, DropdownButton } from '../styles';
+import { Title, DropdownButton } from '../styles';
 import * as Styled from './styles';
 
 const parentVariants = {
@@ -61,17 +61,17 @@ export default function Links({ item }) {
   return (
     <div>
       {isMatch ? (
-        <Heading>{item.heading}</Heading>
+        <Title>{item.title}</Title>
       ) : (
         <DropdownButton
           as="button"
           type="button"
           isOpen={isOpen}
           aria-expanded={isOpen}
-          aria-controls={item.heading}
+          aria-controls={item.id}
           onClick={handleOpen}
         >
-          {item.heading}
+          {item.title}
           <ChevronRight width={15} height={20} />
         </DropdownButton>
       )}
@@ -79,7 +79,7 @@ export default function Links({ item }) {
         {isOpen && (
           <Styled.List
             as={motion.ul}
-            id={item.heading}
+            id={item.id}
             variants={parentVariants}
             initial="closed"
             animate="open"

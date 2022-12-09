@@ -35,7 +35,7 @@ export default function NavItem({ item }) {
           type="button"
           isOpen={dropdownMenu === item.heading}
           aria-expanded={dropdownMenu === item.heading}
-          aria-controls={item.heading}
+          aria-controls={item.id}
           onClick={handleToggleDropdown}
         >
           {item.heading}
@@ -45,7 +45,9 @@ export default function NavItem({ item }) {
           <Styled.Link>{item.heading}</Styled.Link>
         </Link>
       )}
-      {dropdownMenu === item.heading && <Dropdown menu={item.heading} />}
+      {dropdownMenu === item.heading && (
+        <Dropdown menu={item.heading} id={item.id} />
+      )}
     </li>
   );
 }

@@ -118,7 +118,6 @@ exports[`EmailMyBasket component renders a widget that allows users to enter the
     <input
       aria-required={true}
       autoCapitalize="off"
-      autoCorrect="off"
       className="c3"
       id=":r1:"
       name="email"

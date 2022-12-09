@@ -159,7 +159,7 @@ exports[`TodayOnlyOffers component should render with a category selector 1`] = 
           onClick={[Function]}
           type="button"
         >
-          <div
+          <span
             className="c4 c5"
           >
             <svg
@@ -175,12 +175,12 @@ exports[`TodayOnlyOffers component should render with a category selector 1`] = 
                 d="M18,10.4V0H0V4.6H13.3V20.9H7V47h6.4v62.1H18V88.2H42.9v7H54.5v-7h5.8v7h77.7v-7H170V10.4ZM130,78.9a29.6,29.6,0,1,1,29.6-29.6A29.6,29.6,0,0,1,130,78.9Z"
               />
             </svg>
-          </div>
-          <h3
+          </span>
+          <span
             className="c6 c7"
           >
             Graphics Cards
-          </h3>
+          </span>
         </button>
       </li>
       <li>
@@ -189,7 +189,7 @@ exports[`TodayOnlyOffers component should render with a category selector 1`] = 
           onClick={[Function]}
           type="button"
         >
-          <div
+          <span
             className="c4 c5"
           >
             <svg
@@ -202,12 +202,12 @@ exports[`TodayOnlyOffers component should render with a category selector 1`] = 
                 d="M0 448h80v-32c0-8.838 7.164-16 16-16c8.838 0 16 7.162 16 16v32h96v-32c0-8.838 7.164-16 16-16c8.838 0 16 7.162 16 16v32h96v-32c0-8.838 7.164-16 16-16c8.838 0 16 7.162 16 16v32h96v-32c0-8.838 7.164-16 16-16c8.838 0 16 7.162 16 16v32H576v-96H0V448zM576 146.9V112C576 85.49 554.5 64 528 64h-480C21.49 64 0 85.49 0 112v34.94C18.6 153.5 32 171.1 32 192S18.6 230.5 0 237.1V320h576V237.1C557.4 230.5 544 212.9 544 192S557.4 153.5 576 146.9zM192 240C192 248.8 184.8 256 176 256h-32C135.2 256 128 248.8 128 240v-96C128 135.2 135.2 128 144 128h32C184.8 128 192 135.2 192 144V240zM320 240C320 248.8 312.8 256 304 256h-32C263.2 256 256 248.8 256 240v-96C256 135.2 263.2 128 272 128h32C312.8 128 320 135.2 320 144V240zM448 240C448 248.8 440.8 256 432 256h-32C391.2 256 384 248.8 384 240v-96C384 135.2 391.2 128 400 128h32C440.8 128 448 135.2 448 144V240z"
               />
             </svg>
-          </div>
-          <h3
+          </span>
+          <span
             className="c6 c7"
           >
             Memory
-          </h3>
+          </span>
         </button>
       </li>
       <li>
@@ -216,7 +216,7 @@ exports[`TodayOnlyOffers component should render with a category selector 1`] = 
           onClick={[Function]}
           type="button"
         >
-          <div
+          <span
             className="c4 c5"
           >
             <svg
@@ -240,12 +240,12 @@ exports[`TodayOnlyOffers component should render with a category selector 1`] = 
                 d="M0,0V112.7H169V0ZM139.2,80.8a15.1,15.1,0,0,1-10.4,5.3h-1.2a15.1,15.1,0,0,1-9.8-3.6,81.5,81.5,0,0,1-8.1-7.5,45.1,45.1,0,1,1,1.9-32.5,163.1,163.1,0,0,1,25.8,16.7,15.2,15.2,0,0,1,1.7,21.5Z"
               />
             </svg>
-          </div>
-          <h3
+          </span>
+          <span
             className="c6 c7"
           >
             Storage
-          </h3>
+          </span>
         </button>
       </li>
       <li>
@@ -254,7 +254,7 @@ exports[`TodayOnlyOffers component should render with a category selector 1`] = 
           onClick={[Function]}
           type="button"
         >
-          <div
+          <span
             className="c4 c5"
           >
             <svg
@@ -270,12 +270,12 @@ exports[`TodayOnlyOffers component should render with a category selector 1`] = 
                 points="75.6 44.2 102.7 44.2 85 79.6 105.1 74.9 72 130.3 80.3 94.9 65 98.5 75.6 44.2"
               />
             </svg>
-          </div>
-          <h3
+          </span>
+          <span
             className="c6 c7"
           >
             Processors
-          </h3>
+          </span>
         </button>
       </li>
       <li>
@@ -284,7 +284,7 @@ exports[`TodayOnlyOffers component should render with a category selector 1`] = 
           onClick={[Function]}
           type="button"
         >
-          <div
+          <span
             className="c4 c5"
           >
             <svg
@@ -297,12 +297,12 @@ exports[`TodayOnlyOffers component should render with a category selector 1`] = 
                 d="M 18 4 L 18 6 L 7 6 C 5.346 6 4 7.346 4 9 L 4 43 C 4 44.654 5.346 46 7 46 L 43 46 C 44.654 46 46 44.654 46 43 L 46 9 C 46 7.346 44.654 6 43 6 L 39 6 L 39 4 L 26 4 L 26 6 L 24 6 L 24 4 L 18 4 z M 20 6 L 22 6 L 22 11 L 20 11 L 20 6 z M 28 6 L 37 6 L 37 11 L 28 11 L 28 6 z M 8 9 C 8.552 9 9 9.448 9 10 C 9 10.552 8.552 11 8 11 C 7.448 11 7 10.552 7 10 C 7 9.448 7.448 9 8 9 z M 42 9 C 42.552 9 43 9.448 43 10 C 43 10.552 42.552 11 42 11 C 41.448 11 41 10.552 41 10 C 41 9.448 41.448 9 42 9 z M 12 17 L 15 17 L 15 28 L 12 28 L 12 17 z M 17 17 L 20 17 L 20 28 L 17 28 L 17 17 z M 28 17 L 39 17 L 39 28 L 28 28 L 28 17 z M 31 20 L 31 25 L 36 25 L 36 20 L 31 20 z M 11 33 L 31 33 L 31 35 L 11 35 L 11 33 z M 37 34 C 38.103 34 39 34.897 39 36 C 39 37.103 38.103 38 37 38 C 35.897 38 35 37.103 35 36 C 35 34.897 35.897 34 37 34 z M 11 37 L 31 37 L 31 39 L 11 39 L 11 37 z M 8 41 C 8.552 41 9 41.448 9 42 C 9 42.552 8.552 43 8 43 C 7.448 43 7 42.552 7 42 C 7 41.448 7.448 41 8 41 z M 42 41 C 42.552 41 43 41.448 43 42 C 43 42.552 42.552 43 42 43 C 41.448 43 41 42.552 41 42 C 41 41.448 41.448 41 42 41 z"
               />
             </svg>
-          </div>
-          <h3
+          </span>
+          <span
             className="c6 c7"
           >
             Motherboards
-          </h3>
+          </span>
         </button>
       </li>
     </ul>

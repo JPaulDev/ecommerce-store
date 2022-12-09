@@ -65,20 +65,21 @@ export const Link = styled.a`
   }
 `;
 
-export const TextContainer = styled.div`
+export const TextContainer = styled.span`
   @media screen and (max-width: 589px) {
     display: none;
   }
 `;
 
-export const TopText = styled.div`
+export const TopText = styled.span`
   color: white;
+  display: block;
   font-size: var(--font-size-16);
   line-height: 1;
   margin-bottom: 5px;
 `;
 
-export const Text = styled.div`
+export const Text = styled.span`
   max-width: 115px;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
   background-color: white;
   border: 1px solid var(--color-grey-12);
   padding: 25px 15px;

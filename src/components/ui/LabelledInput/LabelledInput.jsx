@@ -41,7 +41,6 @@ export default function LabelledInput({
         placeholder={placeholder}
         autoCapitalize="off"
         spellCheck="false"
-        autoCorrect="off"
         onChange={onChange}
         onFocus={onFocus}
         onBlur={onBlur}

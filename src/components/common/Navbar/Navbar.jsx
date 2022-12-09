@@ -7,10 +7,12 @@ const navItems = [
     href: '/',
   },
   {
+    id: 'components-dropdown',
     heading: 'Components',
     hasDropdown: true,
   },
   {
+    id: 'accessories-dropdown',
     heading: 'Accessories',
     hasDropdown: true,
   },

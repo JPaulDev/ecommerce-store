@@ -46,14 +46,11 @@ exports[`Links component renders a heading along with related links 1`] = `
 }
 
 <div>
-    <h3
+    <strong
       class="c0"
-    >
-      Information
-    </h3>
+    />
     <ul
       class="c1"
-      id="Information"
       style="height: 0px;"
     >
       <li

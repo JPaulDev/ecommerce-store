@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useMediaQuery } from '../../../../hooks';
 import { LabelledInput } from '../../../ui';
 import { ChevronRight } from '../../../icons';
-import { Heading, DropdownButton } from '../styles';
+import { Title, DropdownButton } from '../styles';
 import * as Styled from './styles';
 
 const forms = [
@@ -47,7 +47,7 @@ export default function Delivery() {
   const [activeTab, setActiveTab] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const isMatch = useMediaQuery('(min-width: 650px)');
-  const heading = 'Delivery / Tracking Information';
+  const title = 'Delivery / Tracking Information';
 
   const handleSetActiveTab = (index) => setActiveTab(index);
 
@@ -62,7 +62,7 @@ export default function Delivery() {
   return (
     <Styled.Container>
       {isMatch ? (
-        <Heading>{heading}</Heading>
+        <Title>{title}</Title>
       ) : (
         <DropdownButton
           as="button"
@@ -72,7 +72,7 @@ export default function Delivery() {
           aria-controls="delivery"
           onClick={handleOpen}
         >
-          {heading}
+          {title}
           <ChevronRight width={15} height={20} />
         </DropdownButton>
       )}

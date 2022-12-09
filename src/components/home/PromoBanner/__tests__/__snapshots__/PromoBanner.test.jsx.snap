@@ -9,7 +9,7 @@ exports[`PromoBanner component renders a promotional banner about RTX studio 1`]
   display: inline-block;
   font-size: var(--font-size-13);
   font-weight: var(--font-weight-bold);
-  padding: 14px 14px;
+  padding: 14px;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -56,13 +56,13 @@ exports[`PromoBanner component renders a promotional banner about RTX studio 1`]
 
 .c1 {
   font-family: 'Uni Sans',sans-serif;
-  font-size: var(--font-size-28);
+  font-size: var(--font-size-30);
 }
 
 .c2 {
   font-family: 'Uni Sans Book',sans-serif;
   line-height: 1.3;
-  margin: 4px 0 10px;
+  margin: 10px 0;
   width: 45%;
 }
 
@@ -84,7 +84,7 @@ exports[`PromoBanner component renders a promotional banner about RTX studio 1`]
   }
 }
 
-@media screen and (min-width:530px) {
+@media screen and (min-width:750px) {
   .c3 {
     display: block;
   }
@@ -96,7 +96,7 @@ exports[`PromoBanner component renders a promotional banner about RTX studio 1`]
   }
 }
 
-@media screen and (min-width:530px) {
+@media screen and (min-width:750px) {
   .c5 {
     display: none;
   }
@@ -104,7 +104,7 @@ exports[`PromoBanner component renders a promotional banner about RTX studio 1`]
 
 @media screen and (min-width:550px) {
   .c0 {
-    padding: 15px 25px;
+    padding: 15px 20px;
   }
 }
 
@@ -151,11 +151,11 @@ exports[`PromoBanner component renders a promotional banner about RTX studio 1`]
 <div
   className="c0"
 >
-  <h4
+  <strong
     className="c1"
   >
     RTX Studio
-  </h4>
+  </strong>
   <p
     className="c2"
   >

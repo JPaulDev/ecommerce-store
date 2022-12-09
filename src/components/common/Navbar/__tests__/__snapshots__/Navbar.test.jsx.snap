@@ -61,7 +61,7 @@ exports[`Navbar component renders all links and buttons 1`] = `
     </li>
     <li>
       <button
-        aria-controls="Components"
+        aria-controls="components-dropdown"
         aria-expanded={false}
         className="c2"
         onClick={[Function]}
@@ -72,7 +72,7 @@ exports[`Navbar component renders all links and buttons 1`] = `
     </li>
     <li>
       <button
-        aria-controls="Accessories"
+        aria-controls="accessories-dropdown"
         aria-expanded={false}
         className="c2"
         onClick={[Function]}

@@ -10,26 +10,28 @@ export default function NewsAndProducts() {
 
   return (
     <Styled.Section>
-      <Styled.LeftContainer>
+      <Styled.Articles>
         <Styled.Heading marginBottom="20px" marginLeft="23px">
           Tech news & articles
         </Styled.Heading>
-        <Styled.NewsContainer>
+        <Styled.FlexContainer>
           {articles.map((article) => (
-            <Styled.ArticleBlock key={article.title}>
+            <Styled.Article key={article.title}>
               <Styled.ArticleHeading>{article.title}</Styled.ArticleHeading>
-              <Styled.Date>{article.date}</Styled.Date>
+              <Styled.Date dateTime={article.dateTime}>
+                {article.date}
+              </Styled.Date>
               <Styled.Wrapper>
                 <Image src={article.image} alt="" />
               </Styled.Wrapper>
-              <Styled.Article>{article.text}</Styled.Article>
+              <Styled.ArticleText>{article.text}</Styled.ArticleText>
               <LinkChevron href={article.href} fontSize={13} iconSize={21}>
                 Read Full Article
               </LinkChevron>
-            </Styled.ArticleBlock>
+            </Styled.Article>
           ))}
-        </Styled.NewsContainer>
-      </Styled.LeftContainer>
+        </Styled.FlexContainer>
+      </Styled.Articles>
       <Styled.RightContainer>
         <Styled.Heading>Hot & New products</Styled.Heading>
         <Styled.Text>Check out our latest and greatest.</Styled.Text>
@@ -41,7 +43,7 @@ export default function NewsAndProducts() {
           <div>
             <Styled.Title>Our Hot Sellers</Styled.Title>
             <Styled.Text>See our most popular selling products.</Styled.Text>
-            <LinkButton href="/" padding="12px 14px">
+            <LinkButton href="/">
               {linkText}
             </LinkButton>
           </div>
@@ -57,7 +59,7 @@ export default function NewsAndProducts() {
               When the competition wants to see what&lsquo;s new they check our
               website!
             </Styled.Text>
-            <LinkButton href="/" padding="12px 14px">
+            <LinkButton href="/">
               {linkText}
             </LinkButton>
           </div>

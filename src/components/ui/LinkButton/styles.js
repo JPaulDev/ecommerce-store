@@ -12,7 +12,7 @@ export const Link = styled.a`
   display: inline-block;
   font-size: var(--font-size-13);
   font-weight: var(--font-weight-bold);
-  padding: ${({ padding }) => padding};
+  padding: 14px;
   text-decoration: none;
   text-transform: uppercase;
 

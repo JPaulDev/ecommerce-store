@@ -9,9 +9,9 @@ export const Section = styled.section`
 
 export const Heading = styled.h1`
   font-family: 'Uni Sans', sans-serif;
-  font-size: var(--font-size-34);
-  font-weight: var(--font-weight-medium);
-  margin-bottom: 15px;
+  font-size: var(--font-size-32);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 10px;
 `;
 
 export const Container = styled.div`

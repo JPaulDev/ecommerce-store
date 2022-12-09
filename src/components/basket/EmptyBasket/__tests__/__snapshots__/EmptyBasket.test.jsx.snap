@@ -9,7 +9,7 @@ exports[`EmptyBasket component renders message that displays when the users bask
   display: inline-block;
   font-size: var(--font-size-13);
   font-weight: var(--font-weight-bold);
-  padding: 14px 14px;
+  padding: 14px;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -42,18 +42,18 @@ exports[`EmptyBasket component renders message that displays when the users bask
   text-align: center;
 }
 
-.c0 a {
-  margin-top: 20px;
+.c0 p {
+  margin-bottom: 20px;
 }
 
 .c1 {
   font-family: 'Uni Sans',sans-serif;
-  font-size: var(--font-size-26);
+  font-size: var(--font-size-32);
   font-weight: var(--font-weight-semibold);
-  padding: 10px 30px;
+  margin: 10px 0;
 }
 
-<div
+<section
   className="c0"
 >
   <svg
@@ -67,11 +67,11 @@ exports[`EmptyBasket component renders message that displays when the users bask
       d="M1920,768q52.9,0,90.5,37.5T2048,896q0,52.9-37.5,90.5T1920,1024h-15l-115,662q-7.9,46.1-44,76t-82,30H384q-46,0-82-30t-44-76L143,1024H128q-52.9,0-90.5-37.5T0,896q0-52.9,37.5-90.5T128,768ZM485,1568q26-1.9,43.5-22.5c11.7-13.7,16.8-29.2,15.5-46.5l-32-416q-2-25.9-22.5-43.5c-13.7-11.7-29.2-16.8-46.5-15.5s-31.8,8.8-43.5,22.5-16.8,29.2-15.5,46.5l32,416a64.3,64.3,0,0,0,64,59Zm411-64V1088q0-25.9-19-45t-45-19q-25.9,0-45,19t-19,45v416q0,25.9,19,45t45,19q25.9,0,45-19T896,1504Zm384,0V1088q0-25.9-19-45t-45-19q-25.9,0-45,19t-19,45v416q0,25.9,19,45t45,19q25.9,0,45-19T1280,1504Zm352,5,32-416c1.3-17.3-3.8-32.8-15.5-46.5s-26.2-21.2-43.5-22.5-32.8,3.8-46.5,15.5-21.2,26.2-22.5,43.5l-32,416c-1.3,17.3,3.8,32.8,15.5,46.5s26.2,21.2,43.5,22.5h5a64.3,64.3,0,0,0,64-59ZM476,292,383,704H251L352,263q19-88,89-143.5T601,64H768q0-25.9,19-45T832,0h384q25.9,0,45,19t19,45h167q90,0,160,55.5T1696,263l101,441H1665l-93-412q-10.9-44-45.5-72T1447,192H1280q0,26-19,45t-45,19H832q-25.9,0-45-19t-19-45H601q-45,0-79.5,28T476,292Z"
     />
   </svg>
-  <h2
+  <h1
     className="c1"
   >
     Your Basket
-  </h2>
+  </h1>
   <p>
     Your basket is empty, please add some products.
   </p>
@@ -84,5 +84,5 @@ exports[`EmptyBasket component renders message that displays when the users bask
   >
     Continue Shopping
   </a>
-</div>
+</section>
 `;

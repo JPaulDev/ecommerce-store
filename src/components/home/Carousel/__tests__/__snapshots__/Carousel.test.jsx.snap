@@ -491,7 +491,7 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
       >
         <img />
       </div>
-      <h4
+      <h2
         className="c10"
       />
       <p
@@ -508,11 +508,11 @@ exports[`Carousel component renders a carousel and all of its navigation buttons
     <div
       className="c13"
     >
-      <h4
+      <h2
         className="c14"
       >
         <img />
-      </h4>
+      </h2>
       <ul
         className="c15"
       />

@@ -17,7 +17,7 @@ export const Section = styled.section`
   }
 `;
 
-export const LeftContainer = styled.div`
+export const Articles = styled.article`
   @media screen and (min-width: 1050px) {
     width: 68%;
   }
@@ -34,7 +34,7 @@ export const Heading = styled.h2`
   }
 `;
 
-export const NewsContainer = styled.div`
+export const FlexContainer = styled.div`
   display: flex;
 
   & :last-child {
@@ -47,7 +47,7 @@ export const NewsContainer = styled.div`
   }
 `;
 
-export const ArticleBlock = styled.div`
+export const Article = styled.article`
   border-bottom: 1px solid var(--color-grey-11);
   flex: 1 1 250px;
   padding-bottom: 20px;
@@ -77,7 +77,7 @@ export const ArticleHeading = styled.h3`
   }
 `;
 
-export const Article = styled.article`
+export const ArticleText = styled.p`
   font-size: var(--font-size-14);
   line-height: 1.7;
   margin: 10px 0;
@@ -88,8 +88,9 @@ export const Article = styled.article`
   }
 `;
 
-export const Date = styled.div`
+export const Date = styled.time`
   color: var(--color-grey-4);
+  display: block;
   font-size: var(--font-size-13);
   margin-bottom: 15px;
 

@@ -9,7 +9,7 @@ import {
   AmericanExpress,
   Bitcoin,
 } from '../../../icons';
-import { Heading } from '../styles';
+import { Title } from '../styles';
 import * as Styled from './styles';
 
 const logos = [
@@ -54,7 +54,7 @@ export default function Payments() {
 
   return (
     <Styled.Container>
-      {isMatch && <Heading>Secure Payments</Heading>}
+      {isMatch && <Title>Secure Payments</Title>}
       <Styled.List>
         {logos.map((item) => (
           <Styled.ListItem key={item.title} title={item.title}>
