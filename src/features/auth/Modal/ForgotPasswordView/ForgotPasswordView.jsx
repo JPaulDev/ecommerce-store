@@ -58,7 +58,7 @@ export default function ForgotPasswordView({
                 touched.email && errors.email ? 'email-error' : null
               }
               isTouched={touched.email}
-              isValid={!errors.email}
+              isInvalid={errors.email}
             />
             <ErrorMessage
               id="email-error"

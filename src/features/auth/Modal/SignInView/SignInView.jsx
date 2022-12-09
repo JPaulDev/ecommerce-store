@@ -59,7 +59,7 @@ export default function SignInView({ handleSetModalView, handleCloseModal }) {
                 touched.email && errors.email ? 'email-error' : null
               }
               isTouched={touched.email}
-              isValid={!errors.email}
+              isInvalid={errors.email}
             />
             <ErrorMessage
               id="email-error"
@@ -82,7 +82,7 @@ export default function SignInView({ handleSetModalView, handleCloseModal }) {
                 touched.password && errors.password ? 'password-error' : null
               }
               isTouched={touched.password}
-              isValid={!errors.password}
+              isInvalid={errors.password}
             />
             <ErrorMessage
               id="password-error"

@@ -70,23 +70,21 @@ export const StatusMessage = styled.div`
 `;
 
 export const inputStyles = css`
-  border: 1px solid var(--color-grey-10);
+  border: 1px solid;
   margin: 5px 0;
   outline: none;
   padding: 12px;
   ${inputMixin}
 
-  ${({ isTouched, isValid }) => {
-    if (!isTouched) return undefined;
-
-    if (isValid) {
+  ${({ isTouched, isInvalid }) => {
+    if (isTouched && isInvalid) {
       return css`
-        border-color: var(--color-green-3);
+        border-color: var(--color-red-2);
       `;
     }
 
     return css`
-      border-color: var(--color-red-2);
+      border-color: var(--color-grey-10);
     `;
   }}
 
