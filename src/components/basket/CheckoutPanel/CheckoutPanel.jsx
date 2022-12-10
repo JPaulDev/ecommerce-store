@@ -9,33 +9,31 @@ import * as Styled from './styles';
 
 function CheckoutPanel() {
   return (
-    <div>
-      <Styled.TopContainer>
-        <Styled.Heading>Basket Summary</Styled.Heading>
-        <Styled.Container>
-          <Styled.Text>Delivery to UK Mainland</Styled.Text>
-          <Price fontSize={20} fontWeight="medium">
-            £4.99
-          </Price>
-        </Styled.Container>
-        <Styled.Container>
-          <BasketTotal />
-        </Styled.Container>
-        <Styled.Text>Finance options available at checkout</Styled.Text>
-        <Styled.InnerContainer>
-          <Link href="/" passHref>
-            <Styled.CheckoutLink>
-              Checkout As Guest
-              <Lock width={15} height={17} />
-            </Styled.CheckoutLink>
-          </Link>
-          <Link href="/account" passHref>
-            <Styled.LoginLink>
-              Have an account? Login and checkout now
-            </Styled.LoginLink>
-          </Link>
-        </Styled.InnerContainer>
-      </Styled.TopContainer>
+    <Styled.Container>
+      <Styled.Heading>Basket Summary</Styled.Heading>
+      <Styled.TextContainer>
+        <Styled.Text>Delivery to UK Mainland</Styled.Text>
+        <Price fontSize={20} fontWeight="medium">
+          £4.99
+        </Price>
+      </Styled.TextContainer>
+      <Styled.TextContainer>
+        <BasketTotal />
+      </Styled.TextContainer>
+      <Styled.Text>Finance options available at checkout</Styled.Text>
+      <Styled.InnerContainer>
+        <Link href="/" passHref>
+          <Styled.CheckoutLink>
+            Checkout As Guest
+            <Lock width={15} height={17} />
+          </Styled.CheckoutLink>
+        </Link>
+        <Link href="/account" passHref>
+          <Styled.LoginLink>
+            Have an account? Login and checkout now
+          </Styled.LoginLink>
+        </Link>
+      </Styled.InnerContainer>
       <Styled.BottomContainer>
         <Styled.Text>Alternatively</Styled.Text>
         <Link href="https://www.paypal.co.uk" passHref>
@@ -57,7 +55,7 @@ function CheckoutPanel() {
           </a>
         </Link>
       </Styled.BottomContainer>
-    </div>
+    </Styled.Container>
   );
 }
 

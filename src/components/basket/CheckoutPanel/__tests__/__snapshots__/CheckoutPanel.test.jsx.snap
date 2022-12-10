@@ -22,13 +22,10 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
 }
 
 .c0 {
-  background-color: var(--color-green-5);
-  border-top: 1px solid var(--color-grey-12);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  padding: 20px 30px;
-  border-left: 1px solid var(--color-grey-12);
-  border-right: 1px solid var(--color-grey-12);
+  background-color: var(--color-grey-15);
+  border: 1px solid var(--color-grey-12);
+  border-radius: var(--border-radius-2xl);
+  padding: 20px 30px 30px;
 }
 
 .c1 {
@@ -73,7 +70,7 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
 .c6 {
   border-top: 1px solid var(--color-grey-9);
   margin-top: 15px;
-  padding: 20px 0 10px;
+  padding: 25px 0;
 }
 
 .c7 {
@@ -126,17 +123,12 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
 }
 
 .c9 {
-  background-color: var(--color-green-5);
-  border-bottom: 1px solid var(--color-grey-12);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
   border-top: 1px solid var(--color-grey-9);
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 20px 30px 30px;
-  border-left: 1px solid var(--color-grey-12);
-  border-right: 1px solid var(--color-grey-12);
+  padding-top: 25px;
+  row-gap: 10px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -147,10 +139,6 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   display: flex;
 }
 
-.c9 img {
-  margin-top: 5px;
-}
-
 .c10 {
   background-color: var(--color-yellow-1);
   border-radius: var(--border-radius-full);
@@ -158,7 +146,6 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 5px 0;
   padding: 10px 25px;
 }
 
@@ -172,94 +159,92 @@ exports[`CheckoutPanel component renders a checkout panel with a checkout button
   }
 }
 
-<div>
-  <div
-    className="c0"
+<div
+  className="c0"
+>
+  <h2
+    className="c1"
   >
-    <h2
-      className="c1"
-    >
-      Basket Summary
-    </h2>
-    <div
-      className="c2"
-    >
-      <span
-        className="c3"
-      >
-        Delivery to UK Mainland
-      </span>
-      <span
-        className="c4"
-      >
-        <span>
-          £
-        </span>
-        4
-        <span>
-          .99
-        </span>
-      </span>
-    </div>
-    <div
-      className="c2"
-    >
-      <span>
-        <strong>
-          Total
-        </strong>
-        (including VAT)
-      </span>
-      <span
-        className="c5"
-      >
-        <span>
-          £
-        </span>
-        4
-        <span>
-          .99
-        </span>
-      </span>
-    </div>
+    Basket Summary
+  </h2>
+  <div
+    className="c2"
+  >
     <span
       className="c3"
     >
-      Finance options available at checkout
+      Delivery to UK Mainland
     </span>
-    <div
-      className="c6"
+    <span
+      className="c4"
     >
-      <a
-        className="c7"
-        href="/"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
+      <span>
+        £
+      </span>
+      4
+      <span>
+        .99
+      </span>
+    </span>
+  </div>
+  <div
+    className="c2"
+  >
+    <span>
+      <strong>
+        Total
+      </strong>
+      (including VAT)
+    </span>
+    <span
+      className="c5"
+    >
+      <span>
+        £
+      </span>
+      4
+      <span>
+        .99
+      </span>
+    </span>
+  </div>
+  <span
+    className="c3"
+  >
+    Finance options available at checkout
+  </span>
+  <div
+    className="c6"
+  >
+    <a
+      className="c7"
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Checkout As Guest
+      <svg
+        fill="currentColor"
+        height={17}
+        viewBox="0 0 448 512"
+        width={15}
+        xmlns="http://www.w3.org/2000/svg"
       >
-        Checkout As Guest
-        <svg
-          fill="currentColor"
-          height={17}
-          viewBox="0 0 448 512"
-          width={15}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"
-          />
-        </svg>
-      </a>
-      <a
-        className="c8"
-        href="/account"
-        onClick={[Function]}
-        onMouseEnter={[Function]}
-        onTouchStart={[Function]}
-      >
-        Have an account? Login and checkout now
-      </a>
-    </div>
+        <path
+          d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z"
+        />
+      </svg>
+    </a>
+    <a
+      className="c8"
+      href="/account"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Have an account? Login and checkout now
+    </a>
   </div>
   <div
     className="c9"
