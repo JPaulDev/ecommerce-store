@@ -1,6 +1,5 @@
-import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { renderWithProviders } from '../../test-utils';
+import { render, screen } from '../../test-utils';
 import Basket from '../pages/basket';
 
 // Prevents errors caused by next image component.
@@ -23,7 +22,7 @@ const productData = {
 function setup(component, preloadedState) {
   return {
     user: userEvent.setup(),
-    ...renderWithProviders(component, preloadedState),
+    ...render(component, preloadedState),
   };
 }
 

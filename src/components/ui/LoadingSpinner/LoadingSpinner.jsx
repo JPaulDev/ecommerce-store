@@ -1,8 +1,8 @@
-import * as Styled from './styles';
+import styled, { keyframes } from 'styled-components';
 
 export default function LoadingSpinner({ size = 20, color = 'currentColor' }) {
   return (
-    <Styled.Spinner>
+    <Spinner>
       <svg
         aria-label="Loading..."
         width={size}
@@ -132,6 +132,28 @@ export default function LoadingSpinner({ size = 20, color = 'currentColor' }) {
           y="47"
         />
       </svg>
-    </Styled.Spinner>
+    </Spinner>
   );
 }
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const Spinner = styled.div`
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  svg {
+    animation: ${rotate} 1s steps(12) infinite;
+    display: block;
+  }
+`;

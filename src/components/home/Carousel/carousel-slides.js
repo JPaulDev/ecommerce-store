@@ -1,18 +1,18 @@
 import xsLogo from '../../../../public/images/carousel/3xs-logo.webp';
-import nvidiaBackground from '../../../../public/images/carousel/nvidia-background.webp';
-import intelBackground from '../../../../public/images/carousel/intel-background.webp';
 import amdBackground from '../../../../public/images/carousel/amd-background.webp';
-import monthBackground from '../../../../public/images/carousel/month-background.webp';
-import nvidiaPc from '../../../../public/images/carousel/nvidia-pc.webp';
-import intelPc from '../../../../public/images/carousel/intel-pc.webp';
-import amdPc from '../../../../public/images/carousel/amd-pc.webp';
-import monthPc from '../../../../public/images/carousel/month-pc.webp';
-import nvidiaLogo from '../../../../public/images/carousel/nvidia-logo.webp';
-import intelLogo from '../../../../public/images/carousel/intel-logo.webp';
 import amdLogo from '../../../../public/images/carousel/amd-logo.webp';
+import amdPc from '../../../../public/images/carousel/amd-pc.webp';
+import intelBackground from '../../../../public/images/carousel/intel-background.webp';
+import intelLogo from '../../../../public/images/carousel/intel-logo.webp';
+import intelPc from '../../../../public/images/carousel/intel-pc.webp';
+import monthBackground from '../../../../public/images/carousel/month-background.webp';
 import monthLogos from '../../../../public/images/carousel/month-logos.webp';
+import monthPc from '../../../../public/images/carousel/month-pc.webp';
+import nvidiaBackground from '../../../../public/images/carousel/nvidia-background.webp';
+import nvidiaLogo from '../../../../public/images/carousel/nvidia-logo.webp';
+import nvidiaPc from '../../../../public/images/carousel/nvidia-pc.webp';
 
-const slides = [
+const SLIDES = [
   {
     topNavText: '30 SERIES 3XS PCs',
     background: nvidiaBackground,
@@ -106,4 +106,4 @@ const slides = [
   },
 ];
 
-export default slides;
+export default SLIDES;

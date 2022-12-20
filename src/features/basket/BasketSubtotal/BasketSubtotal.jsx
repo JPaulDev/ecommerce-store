@@ -6,5 +6,5 @@ export default function BasketSubtotal() {
   const subtotal = useSelector(selectBasketSubtotal);
   const { price } = usePrice({ price: subtotal, currencyCode: 'GBP' });
 
-  return <span>Subtotal {price}</span>;
+  return <span className="text">Subtotal {price}</span>;
 }

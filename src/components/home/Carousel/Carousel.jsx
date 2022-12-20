@@ -1,9 +1,9 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from '../../icons';
-import slides from './carousel-slides';
-import useCarousel from './useCarousel';
+import SLIDES from './carousel-slides';
 import Slide from './Slide';
 import * as Styled from './styles';
+import useCarousel from './useCarousel';
 
 const MotionSlide = motion(Slide);
 
@@ -28,7 +28,7 @@ const motionProps = {
 
 export default function Carousel() {
   const [slideIndex, direction, handleChangeSlide] = useCarousel({
-    length: slides.length,
+    length: SLIDES.length,
     interval: 9000,
     transitionTime: 1000,
   });
@@ -36,7 +36,7 @@ export default function Carousel() {
   return (
     <Styled.Section>
       <Styled.NavigationTop>
-        {slides.map((slide, index) => (
+        {SLIDES.map((slide, index) => (
           <li key={slide.topNavText}>
             <Styled.ButtonTop
               type="button"
@@ -48,6 +48,7 @@ export default function Carousel() {
           </li>
         ))}
       </Styled.NavigationTop>
+
       <Styled.Navigation>
         <li>
           <Styled.NavigationArrow
@@ -70,6 +71,7 @@ export default function Carousel() {
           </Styled.NavigationArrow>
         </li>
       </Styled.Navigation>
+
       <AnimatePresence initial={false} custom={direction}>
         <MotionSlide
           key={slideIndex}
@@ -78,17 +80,18 @@ export default function Carousel() {
           animate="center"
           exit="exit"
           slideIndex={slideIndex}
-          slide={slides[slideIndex]}
+          slide={SLIDES[slideIndex]}
           {...motionProps}
         />
       </AnimatePresence>
+
       <Styled.NavigationBottom>
-        {Array.from({ length: slides.length }).map((_, index) => (
+        {Array.from({ length: SLIDES.length }).map((_, index) => (
           <li key={index}>
             <Styled.ButtonBottom
               type="button"
               isActive={index === slideIndex}
-              aria-label={`Slide ${index + 1} of ${slides.length}`}
+              aria-label={`Slide ${index + 1} of ${SLIDES.length}`}
               onClick={() => handleChangeSlide('JUMP', index)}
             />
           </li>

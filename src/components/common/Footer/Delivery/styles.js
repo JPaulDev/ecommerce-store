@@ -1,80 +1,83 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
-  @media screen and (min-width: 650px) {
-    margin-bottom: 30px;
+  p {
+    color: ${({ theme }) => theme.colors.stone[600]};
+    font-size: ${({ theme }) => theme.fontSizes[13]};
+    margin: 10px 0 10px 20px;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tabletSm} {
     margin-right: 30px;
+
+    p {
+      margin: 10px 0;
+    }
   }
 
-  @media screen and (min-width: 860px) {
-    margin-right: 50px;
+  @media ${({ theme }) => theme.breakpoints.desktopXs} {
+    margin-right: 40px;
   }
 
-  @media screen and (min-width: 1050px) {
+  @media ${({ theme }) => theme.breakpoints.desktopSm} {
     margin: 0;
   }
 `;
 
-export const Text = styled.p`
-  color: var(--color-grey-4);
-  font-size: var(--font-size-13);
-  margin: 8px 0 8px 20px;
-
-  @media screen and (min-width: 650px) {
-    margin: 8px 0;
-  }
-`;
-
-export const ButtonContainer = styled.div`
-  display: flex;
-`;
-
-export const TabButton = styled.button`
-  background-color: ${({ active }) =>
-    active ? 'var(--color-grey-11)' : 'var(--color-grey-12)'};
-  border-bottom: ${({ active }) =>
-    active
-      ? '3px solid var(--color-orange-1)'
-      : '3px solid var(--color-grey-12)'};
+export const Button = styled.button`
+  background-color: ${({ theme, isActive }) =>
+    isActive ? theme.colors.neutral[300] : '#ddd'};
   cursor: pointer;
   flex: 1;
-  font-weight: var(--font-weight-semibold);
-  padding: 8px;
-  transition: all 200ms ease-in-out;
+  border-bottom: 3px solid
+    ${({ theme, isActive }) =>
+      isActive ? theme.colors.sky[600] : 'transparent'};
+  font-weight: 600;
+  padding: 10px;
 `;
 
 export const Form = styled.form`
   align-items: center;
-  background-color: var(--color-grey-11);
-  border-bottom: 1px solid var(--color-grey-9);
+  background-color: ${({ theme }) => theme.colors.neutral[300]};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.stone[400]};
   display: flex;
+  gap: 10px;
+  justify-content: center;
   padding: 20px 15px;
 
-  @media screen and (max-width: 649px) {
-    justify-content: center;
+  @media ${({ theme }) => theme.breakpoints.tabletSm} {
+    justify-content: left;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktopMd} {
+    padding: 20px 30px;
   }
 `;
 
 export const inputStyles = css`
-  border: 1px solid grey;
-  border-radius: var(--border-radius-lg);
-  margin-right: 8px;
+  border: 1px solid ${({ theme }) => theme.colors.stone[400]};
+  border-radius: ${({ theme }) => theme.borderRadius.lg};
   max-width: 175px;
-  padding: 8px 0 8px 10px;
+  outline: none;
+  padding: 8px;
   width: 40%;
+
+  &:focus {
+    border-color: ${({ theme }) => theme.colors.stone[700]};
+  }
 `;
 
 export const SubmitButton = styled.button`
   --size: 32px;
 
+  height: var(--size);
+  width: var(--size);
   align-items: center;
-  background: var(--color-grey-3);
-  border-radius: var(--border-radius-full);
+  background-color: ${({ theme }) => theme.colors.stone[700]};
+  border-radius: ${({ theme }) => theme.borderRadius.full};
   cursor: pointer;
   display: flex;
-  height: var(--size);
   justify-content: center;
-  width: var(--size);
 
   &:active {
     transform: scale(0.9);

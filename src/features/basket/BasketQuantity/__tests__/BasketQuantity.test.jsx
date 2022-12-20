@@ -1,11 +1,10 @@
-import { screen, act } from '@testing-library/react';
-import { renderWithProviders } from '../../../../../test-utils';
+import { act, render, screen } from '../../../../../test-utils';
 import { addProduct } from '../../basketSlice';
 import BasketQuantity from '../index';
 
-describe('BasketQuantity component', () => {
-  it('displays the total quantity of products in the basket', () => {
-    const { store } = renderWithProviders(<BasketQuantity />);
+describe('BasketQuantity', () => {
+  it('should display the total quantity of products in the basket', () => {
+    const { store } = render(<BasketQuantity />);
 
     expect(screen.queryByText('10')).not.toBeInTheDocument();
 

@@ -1,39 +1,50 @@
+import styled from 'styled-components';
 import NavItem from './NavItem';
-import * as Styled from './styles';
 
-const navItems = [
+const NAV_ITEMS = [
   {
-    heading: 'Home',
+    title: 'Home',
     href: '/',
   },
   {
     id: 'components-dropdown',
-    heading: 'Components',
-    hasDropdown: true,
+    title: 'Components',
   },
   {
     id: 'accessories-dropdown',
-    heading: 'Accessories',
-    hasDropdown: true,
+    title: 'Accessories',
   },
   {
-    heading: 'About',
+    title: 'About',
     href: '/about',
   },
   {
-    heading: 'Contact',
+    title: 'Contact',
     href: '/contact',
   },
 ];
 
 export default function Navbar() {
   return (
-    <Styled.Nav>
-      <Styled.NavList>
-        {navItems.map((item) => (
-          <NavItem key={item.heading} item={item} />
+    <Nav>
+      <ul>
+        {NAV_ITEMS.map((item) => (
+          <NavItem key={item.title} item={item} />
         ))}
-      </Styled.NavList>
-    </Styled.Nav>
+      </ul>
+    </Nav>
   );
 }
+
+const Nav = styled.nav`
+  background-color: ${({ theme }) => theme.colors.zinc[800]};
+  box-shadow: ${({ theme }) => theme.boxShadows.xl};
+  z-index: 90;
+  position: relative;
+
+  > ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+`;

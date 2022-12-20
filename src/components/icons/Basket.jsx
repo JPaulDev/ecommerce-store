@@ -1,7 +1,7 @@
 export default function Basket(props) {
   return (
     <svg
-      fill="var(--color-orange-1)"
+      fill="currentColor"
       viewBox="0 0 2048 1792"
       xmlns="http://www.w3.org/2000/svg"
       {...props}

@@ -1,9 +1,15 @@
 /* eslint-disable no-param-reassign */
+import theme from '../../../styles/theme';
 
-// If all the keys are numbers it's a media query object.
+// Check if the object is a media query object by checking if all the keys are
+// breakpoints.
 function checkIfMediaQueryObject(obj) {
   const breakpoints = Object.keys(obj);
-  return breakpoints.every((breakpoint) => Number.isInteger(+breakpoint));
+  const themeBreakpoints = Object.keys(theme.breakpoints);
+
+  return breakpoints.every((breakpoint) =>
+    themeBreakpoints.includes(breakpoint)
+  );
 }
 
 // Takes in the sx object and converts it into the correct format that can be
@@ -19,7 +25,7 @@ export default function formatStylesObject(sxObject) {
       const breakpoints = Object.keys(sxObject[rule]);
 
       breakpoints.forEach((breakpoint) => {
-        const mediaQuery = `@media screen and (min-width: ${breakpoint}px)`;
+        const mediaQuery = `@media ${theme.breakpoints[breakpoint]}`;
         const value = sxObject[rule][breakpoint];
 
         // Deduplicate media queries, if the media query already exists then

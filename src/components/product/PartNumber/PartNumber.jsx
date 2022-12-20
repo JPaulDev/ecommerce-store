@@ -1,13 +1,12 @@
-import * as Styled from './styles';
+import styled from 'styled-components';
 
 export default function PartNumber({ children, fontSize = 16 }) {
-  return (
-    <Styled.Text
-      $fontSize={
-        typeof fontSize === 'number' ? `var(--font-size-${fontSize})` : fontSize
-      }
-    >
-      SKU: {children}
-    </Styled.Text>
-  );
+  return <Text $fontSize={fontSize}>SKU: {children}</Text>;
 }
+
+const Text = styled.div`
+  color: ${({ theme }) => theme.colors.sky[700]};
+  font-size: ${({ theme, $fontSize }) => theme.fontSizes[$fontSize]};
+  font-weight: 700;
+  text-transform: uppercase;
+`;

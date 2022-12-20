@@ -1,5 +1,5 @@
 import { useId } from 'react';
-import * as Styled from './styles';
+import styled, { css } from 'styled-components';
 
 /**
  * A component that renders a label and an input. The label can be hidden using
@@ -26,14 +26,10 @@ export default function LabelledInput({
 
   return (
     <>
-      <Styled.Label
-        htmlFor={id}
-        hideLabel={hideLabel}
-        labelStyles={labelStyles}
-      >
+      <Label htmlFor={id} hideLabel={hideLabel} labelStyles={labelStyles}>
         {label}
-      </Styled.Label>
-      <Styled.Input
+      </Label>
+      <Input
         id={id}
         inputStyles={inputStyles}
         name={name}
@@ -50,3 +46,28 @@ export default function LabelledInput({
     </>
   );
 }
+
+const Label = styled.label`
+  ${({ hideLabel }) => {
+    if (hideLabel) {
+      return css`
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+      `;
+    }
+
+    return undefined;
+  }};
+
+  ${({ labelStyles }) => labelStyles}
+`;
+
+const Input = styled.input`
+  ${({ inputStyles }) => inputStyles}
+`;

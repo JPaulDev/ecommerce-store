@@ -1,46 +1,47 @@
-import styled, { css } from 'styled-components';
-
-const flexMixin = css`
-  align-items: center;
-  display: flex;
-`;
-
-export const Container = styled.div`
-  ${flexMixin}
-`;
+import styled from 'styled-components';
 
 export const ListItem = styled.li`
-  border-bottom: 1px solid var(--color-grey-12);
+  border-bottom: 1px solid ${({ theme }) => theme.colors.stone[300]};
   padding: 10px 0 30px;
-  ${flexMixin}
+  align-items: center;
+  display: flex;
+  column-gap: 20px;
 
-  img {
+  > img {
     height: auto;
-    margin-right: 20px;
     width: 120px;
+  }
 
-    @media screen and (min-width: 900px) {
+  @media ${({ theme }) => theme.breakpoints.desktopXs} {
+    > img {
       width: 140px;
-      height: auto;
     }
   }
 `;
 
+export const Container = styled.div`
+  align-items: center;
+  display: flex;
+`;
+
 export const ProductDescription = styled.p`
-  border-bottom: 3px solid var(--color-grey-12);
+  border-bottom: 2px solid ${({ theme }) => theme.colors.stone[300]};
   font-family: 'Uni Sans', sans-serif;
-  font-weight: var(--font-weight-semibold);
+  font-weight: 600;
   line-height: 1.5;
-  margin: 3px 0 5px;
+  letter-spacing: 0.5px;
+  margin: 5px 0;
   padding-bottom: 10px;
 `;
 
 export const RemoveProduct = styled.button`
-  border-left: 1px solid var(--color-grey-9);
+  --spacing: 20px;
+
+  margin-left: var(--spacing);
+  padding-left: var(--spacing);
+  border-left: 1px solid ${({ theme }) => theme.colors.stone[400]};
   cursor: pointer;
-  font-size: var(--font-size-14);
-  margin-left: 20px;
-  padding-left: 20px;
+  font-size: ${({ theme }) => theme.fontSizes[14]};
 
   &:hover {
     text-decoration: underline;
@@ -48,56 +49,54 @@ export const RemoveProduct = styled.button`
 `;
 
 export const QuantitySelector = styled.div`
-  background-color: var(--color-grey-15);
-  border-radius: var(--border-radius-lg);
+  background-color: ${({ theme }) => theme.colors.neutral[50]};
+  border: 1px solid ${({ theme }) => theme.colors.stone[200]};
+  border-radius: ${({ theme }) => theme.borderRadius.full};
   display: inline-flex;
   justify-content: space-between;
-  margin-top: 10px;
-  min-width: 105px;
-  padding: 6px;
+  margin-top: 15px;
+  padding: 5px;
 `;
 
 export const IncreaseButton = styled.button`
   --size: 27px;
 
+  height: var(--size);
+  width: var(--size);
   background-image: linear-gradient(
     to bottom,
-    var(--color-green-3),
-    var(--color-green-1)
+    ${({ theme }) => theme.colors.green[500]},
+    ${({ theme }) => theme.colors.green[700]}
   );
-  border-radius: var(--border-radius-full);
-  box-shadow: var(--box-shadow-md);
+  border-radius: ${({ theme }) => theme.borderRadius.full};
+  box-shadow: ${({ theme }) => theme.boxShadows.sm};
   color: white;
   cursor: pointer;
   display: grid;
-  height: var(--size);
   place-items: center;
-  width: var(--size);
 
   &:hover {
-    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 10%), var(--box-shadow-hover);
+    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 10%),
+      ${({ theme }) => theme.boxShadows.sm};
   }
 
   &:active {
-    transform: scale(0.94);
+    transform: scale(0.92);
   }
 `;
 
 export const DecreaseButton = styled(IncreaseButton)`
   background-image: linear-gradient(
     to bottom,
-    var(--color-red-3),
-    var(--color-red-1)
+    ${({ theme }) => theme.colors.red[500]},
+    ${({ theme }) => theme.colors.red[700]}
   );
 `;
 
 export const Quantity = styled.div`
   align-items: center;
-  color: var(--color-green-2);
+  color: ${({ theme }) => theme.colors.stone[600]};
   display: flex;
-  font-weight: var(--font-weight-semibold);
-  justify-content: center;
-  min-width: 35px;
-  padding: 0 5px;
-  ${flexMixin}
+  font-weight: 600;
+  padding: 0 13px;
 `;

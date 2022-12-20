@@ -1,5 +1,4 @@
-import { screen } from '@testing-library/react';
-import { renderWithProviders } from '../../../../../test-utils';
+import { render, screen } from '../../../../../test-utils';
 import BasketSubtotal from '../index';
 
 const basketData = [
@@ -30,15 +29,15 @@ const basketData = [
   },
 ];
 
-describe('BasketSubtotal component', () => {
+describe('BasketSubtotal', () => {
   it('should display £0.00 when there are no products in the basket', () => {
-    renderWithProviders(<BasketSubtotal />);
+    render(<BasketSubtotal />);
 
     expect(screen.getByText('Subtotal £0.00')).toBeInTheDocument();
   });
 
   it('should display the subtotal of all the products in the basket', () => {
-    renderWithProviders(<BasketSubtotal />, {
+    render(<BasketSubtotal />, {
       preloadedState: {
         basket: basketData,
       },

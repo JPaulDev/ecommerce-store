@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
-import * as Styled from '../../../components/common/Header/styles';
+import {
+  Link as StyledLink,
+  TextContainer,
+} from '../../../components/common/Header/styles';
 import { Account } from '../../../components/icons';
 import { useUI } from '../../../contexts/UIContext';
 import { selectAuth } from '../authSlice';
@@ -12,31 +15,32 @@ export default function AccountLink() {
   const content = (
     <>
       <Account width={32} height={30} />
-      <Styled.TextContainer id="account-link">
-        <Styled.TopText>Account</Styled.TopText>
-        <Styled.Text>
+      <TextContainer id="account-link">
+        <span className="title">Account</span>
+        <span className="text">
           {isAuthenticated
             ? `Hello, ${user.fullName.split(' ')[0]}`
             : 'Sign in | Register'}
-        </Styled.Text>
-      </Styled.TextContainer>
+        </span>
+      </TextContainer>
     </>
   );
 
   return isAuthenticated ? (
     <Link href="/user/account" passHref>
-      <Styled.Link title="Account" aria-labelledby="account-link">
+      <StyledLink title="Account" aria-labelledby="account-link">
         {content}
-      </Styled.Link>
+      </StyledLink>
     </Link>
   ) : (
-    <Styled.Link
+    <StyledLink
       as="button"
+      type="button"
       title="Account"
       aria-labelledby="account-link"
       onClick={handleOpenModal}
     >
       {content}
-    </Styled.Link>
+    </StyledLink>
   );
 }

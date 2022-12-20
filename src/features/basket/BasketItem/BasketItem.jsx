@@ -1,14 +1,14 @@
 import Image from 'next/future/image';
 import { memo } from 'react';
 import { useDispatch } from 'react-redux';
-import { usePrice } from '../../../hooks';
-import { Plus, Minus } from '../../../components/icons';
+import { Minus, Plus } from '../../../components/icons';
 import {
   PartNumber,
-  Price,
   PreviousPrice,
+  Price,
   StockDisplay,
 } from '../../../components/product';
+import { usePrice } from '../../../hooks';
 import {
   decrementQuantity,
   incrementQuantity,
@@ -50,7 +50,7 @@ function BasketItem({ product }) {
           {product.name}, {product.description}
         </Styled.ProductDescription>
         <Styled.Container>
-          <Price fontSize={24} fontWeight="medium">
+          <Price fontSize={26} fontWeight={500}>
             {price}
           </Price>
           <Styled.RemoveProduct type="button" onClick={handleRemoveProduct}>
@@ -58,7 +58,7 @@ function BasketItem({ product }) {
           </Styled.RemoveProduct>
         </Styled.Container>
         {product.isOnSale && (
-          <PreviousPrice fontSize={14}>{previousPrice}</PreviousPrice>
+          <PreviousPrice fontSize={15}>{previousPrice}</PreviousPrice>
         )}
         <StockDisplay stockStatus={product.stockStatus} marginTop="5px" />
         <Styled.QuantitySelector>
@@ -70,9 +70,11 @@ function BasketItem({ product }) {
           >
             <Minus width={15} height={17} />
           </Styled.DecreaseButton>
+
           <Styled.Quantity data-testid="quantity">
             {product.quantity}
           </Styled.Quantity>
+
           <Styled.IncreaseButton
             type="button"
             title="Increase Quantity"

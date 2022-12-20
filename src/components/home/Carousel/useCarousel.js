@@ -1,4 +1,4 @@
-import { useReducer, useEffect, useRef, useState } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 
 const initialState = {
   slideIndex: 0,
@@ -10,6 +10,7 @@ function reducer(state, action) {
     case 'PREV':
       return {
         ...state,
+        isTransitioning: true,
         slideIndex:
           (state.slideIndex - 1 + action.payload.length) %
           action.payload.length,
@@ -18,14 +19,21 @@ function reducer(state, action) {
     case 'NEXT':
       return {
         ...state,
+        isTransitioning: true,
         slideIndex: (state.slideIndex + 1) % action.payload.length,
         direction: 1,
       };
     case 'JUMP':
       return {
         ...state,
+        isTransitioning: true,
         slideIndex: action.payload.index,
         direction: state.slideIndex < action.payload.index ? 1 : -1,
+      };
+    case 'DONE':
+      return {
+        ...state,
+        isTransitioning: false,
       };
     default:
       throw new Error(`Unhandled action type: ${action.type}`);
@@ -36,14 +44,9 @@ export default function useCarousel({ length, interval, transitionTime }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [isMinimized, setIsMinimized] = useState(false);
 
-  // Transitioning state is stored here to prevent unnecessary rerenders caused
-  // by storing it inside the reducer.
-  const isTransitioning = useRef(false);
-
   const handleChangeSlide = (type, index) => {
-    if (isTransitioning.current) return;
+    if (state.isTransitioning) return;
 
-    isTransitioning.current = true;
     dispatch({ type, payload: { index, length } });
   };
 
@@ -63,7 +66,7 @@ export default function useCarousel({ length, interval, transitionTime }) {
     if (isMinimized) return undefined;
 
     const transitionTimeout = setTimeout(() => {
-      isTransitioning.current = false;
+      dispatch({ type: 'DONE' });
     }, transitionTime);
 
     const nextSlideTimeout = setTimeout(() => {

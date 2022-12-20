@@ -1,7 +1,6 @@
 import { screen } from '@testing-library/react';
-import renderer from 'react-test-renderer';
 import userEvent from '@testing-library/user-event';
-import { renderWithProviders } from '../../../../../test-utils';
+import { render } from '../../../../../test-utils';
 import TodayOnlyOffers from '../index';
 
 // Prevents errors caused by next image component.
@@ -22,18 +21,11 @@ const graphicsCardsData = Array.from({ length: 8 }).map((_, index) => ({
 function setup(component, preloadedState) {
   return {
     user: userEvent.setup(),
-    ...renderWithProviders(component, preloadedState),
+    ...render(component, preloadedState),
   };
 }
 
-describe('TodayOnlyOffers component', () => {
-  it('should render with a category selector', () => {
-    const tree = renderer.create(<TodayOnlyOffers />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
-
-describe('TodayOnlyOffers component selecting different categories', () => {
+describe('TodayOnlyOffers', () => {
   it('initially renders the processors category and 8 products', () => {
     setup(
       <TodayOnlyOffers products={[...processorsData, ...graphicsCardsData]} />

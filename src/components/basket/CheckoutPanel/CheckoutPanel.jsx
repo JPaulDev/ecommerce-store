@@ -3,24 +3,27 @@ import Link from 'next/link';
 import { memo } from 'react';
 import amazonPay from '../../../../public/images/basket/amazon-pay.webp';
 import { BasketTotal } from '../../../features/basket';
-import { PayPal, Lock } from '../../icons';
+import { Lock, PayPal } from '../../icons';
 import { Price } from '../../product';
+import { Heading } from '../styles';
 import * as Styled from './styles';
 
 function CheckoutPanel() {
   return (
     <Styled.Container>
-      <Styled.Heading>Basket Summary</Styled.Heading>
+      <Heading>Basket Summary</Heading>
+
       <Styled.TextContainer>
         <Styled.Text>Delivery to UK Mainland</Styled.Text>
-        <Price fontSize={20} fontWeight="medium">
+        <Price fontSize={22} fontWeight={500}>
           £4.99
         </Price>
       </Styled.TextContainer>
+
       <Styled.TextContainer>
         <BasketTotal />
       </Styled.TextContainer>
-      <Styled.Text>Finance options available at checkout</Styled.Text>
+
       <Styled.InnerContainer>
         <Link href="/" passHref>
           <Styled.CheckoutLink>
@@ -28,12 +31,13 @@ function CheckoutPanel() {
             <Lock width={15} height={17} />
           </Styled.CheckoutLink>
         </Link>
-        <Link href="/account" passHref>
+        <Link href="/" passHref>
           <Styled.LoginLink>
             Have an account? Login and checkout now
           </Styled.LoginLink>
         </Link>
       </Styled.InnerContainer>
+
       <Styled.BottomContainer>
         <Styled.Text>Alternatively</Styled.Text>
         <Link href="https://www.paypal.co.uk" passHref>
@@ -45,7 +49,7 @@ function CheckoutPanel() {
           </Styled.PaypalLink>
         </Link>
         <Styled.Text>Two easy ways to pay</Styled.Text>
-        <Link href="https://www.amazon.co.uk" passHref>
+        <Link href="https://www.amazon.co.uk">
           <a>
             <Image
               src={amazonPay}

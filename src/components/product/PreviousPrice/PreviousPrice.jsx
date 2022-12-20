@@ -1,14 +1,21 @@
-import * as Styled from './styles';
+import styled from 'styled-components';
 
 export default function PreviousPrice({ children, fontSize = 16 }) {
   return (
-    <Styled.Text
-      $fontSize={
-        typeof fontSize === 'number' ? `var(--font-size-${fontSize})` : fontSize
-      }
-    >
+    <Text $fontSize={fontSize}>
       <span>Was: </span>
       {children}
-    </Styled.Text>
+    </Text>
   );
 }
+
+const Text = styled.div`
+  color: ${({ theme }) => theme.colors.stone[400]};
+  font-size: ${({ theme, $fontSize }) => theme.fontSizes[$fontSize]};
+  text-decoration: line-through;
+
+  > span {
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+`;

@@ -1,6 +1,6 @@
-import { motion, useCycle, AnimatePresence } from 'framer-motion';
-import { ResponsiveBox } from '../../ui';
+import { AnimatePresence, motion, useCycle } from 'framer-motion';
 import { ChevronRight } from '../../icons';
+import { ResponsiveBox } from '../../ui';
 import * as Styled from './styles';
 
 const motionProps = {
@@ -34,9 +34,9 @@ export default function ShopHeader({
   const [isArrivalsOpen, toggleArrivalsOpen] = useCycle(false, true);
 
   return (
-    <div>
+    <>
       <Styled.TopContainer>
-        <Styled.Heading>{heading}</Styled.Heading>
+        <h1>{heading}</h1>
         <Styled.TopButton
           type="button"
           isOpen={isDescriptionOpen}
@@ -50,10 +50,12 @@ export default function ShopHeader({
           <ChevronRight width={20} height={27} />
         </Styled.TopButton>
       </Styled.TopContainer>
-      <ResponsiveBox sx={{ display: { 0: 'none', 650: 'block' } }}>
+
+      <ResponsiveBox sx={{ display: { mobileXs: 'none', tabletSm: 'block' } }}>
         <Styled.Text>{description}</Styled.Text>
       </ResponsiveBox>
-      <ResponsiveBox sx={{ display: { 0: 'block', 650: 'none' } }}>
+
+      <ResponsiveBox sx={{ display: { mobileXs: 'block', tabletSm: 'none' } }}>
         <AnimatePresence initial={false}>
           {isDescriptionOpen && (
             <motion.div id="top-text" {...motionProps}>
@@ -62,10 +64,9 @@ export default function ShopHeader({
           )}
         </AnimatePresence>
       </ResponsiveBox>
+
       <Styled.BottomContainer>
-        <Styled.Subheading as="h2">
-          Latest Arrivals - {latestArrivals}
-        </Styled.Subheading>
+        <h2>Latest Arrivals - {latestArrivals}</h2>
         <Styled.BottomButton
           type="button"
           isOpen={isArrivalsOpen}
@@ -79,6 +80,7 @@ export default function ShopHeader({
           <ChevronRight />
         </Styled.BottomButton>
       </Styled.BottomContainer>
+
       <AnimatePresence initial={false}>
         {isArrivalsOpen && (
           <motion.div id="bottom-text" {...motionProps}>
@@ -86,6 +88,6 @@ export default function ShopHeader({
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
 }

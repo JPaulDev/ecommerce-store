@@ -5,22 +5,60 @@ export const Container = styled.div`
   margin-right: -100%;
   min-height: 450px;
   overflow: hidden;
-  padding: 10px 20px 0;
+  padding: 15px 20px;
   position: relative;
   width: 100%;
 
-  @media screen and (min-width: 550px) {
-    padding: 10px 60px 0;
+  .center-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 170px;
+    width: 325px;
+    height: auto;
   }
 
-  @media screen and (min-width: 715px) {
-    padding: 90px 60px 0;
+  @media ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding: 15px 60px;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    padding: 90px 60px 30px;
     min-height: 385px;
+
+    .center-image {
+      transform: translateX(-10%);
+      top: 100px;
+    }
   }
 
-  @media screen and (min-width: 1000px) {
+  @media ${({ theme }) => theme.breakpoints.desktopXs} {
+    .center-image {
+      width: 350px;
+      top: 90px;
+      right: 110px;
+      left: auto;
+      transform: none;
+    }
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktopSm} {
     display: flex;
     justify-content: space-between;
+
+    .center-image {
+      width: 325px;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktopMd} {
+    .center-image {
+      width: 370px;
+      top: 80px;
+    }
   }
 `;
 
@@ -29,23 +67,27 @@ export const Background = styled.div`
   right: -383px;
   top: 0;
 
-  @media screen and (max-width: 714px) {
+  &::after {
+    background-image: linear-gradient(
+      to right,
+      rgb(0 0 0 / 40%),
+      rgb(0 0 0 / 15%)
+    );
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
     &::after {
-      background-image: linear-gradient(
-        to right,
-        rgb(0 0 0 / 40%),
-        rgb(0 0 0 / 15%)
-      );
-      content: '';
-      height: 100%;
-      left: 0;
-      position: absolute;
-      width: 100%;
+      display: none;
     }
   }
 
-  @media screen and (min-width: 1000px) {
-    right: initial;
+  @media ${({ theme }) => theme.breakpoints.desktopSm} {
+    right: auto;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -56,113 +98,68 @@ export const LeftContainer = styled.div`
   position: relative;
   text-align: center;
 
-  @media screen and (min-width: 715px) {
-    width: 40%;
-    text-align: left;
+  > img {
+    width: 125px;
+    height: auto;
   }
 
-  @media screen and (min-width: 1000px) {
+  > h2 {
+    font-family: 'Uni Sans', sans-serif;
+    font-size: ${({ theme }) => theme.fontSizes[30]};
+    margin: 5px 0 10px;
+  }
+
+  > p {
+    font-size: ${({ theme }) => theme.fontSizes[14]};
+    line-height: 1.7;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    width: 40%;
+    text-align: left;
+
+    > img {
+      width: auto;
+    }
+
+    > h2 {
+      margin-top: 15px;
+    }
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktopSm} {
     width: 30%;
   }
 `;
 
-export const LeftLogoWrapper = styled.div`
-  display: inline-block;
-  margin-top: 10px;
-
-  img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }
-
-  @media screen and (max-width: 714px) {
-    width: 125px;
-  }
-`;
-
-export const LeftHeading = styled.h2`
-  font-family: 'Uni Sans', sans-serif;
-  font-size: var(--font-size-30);
-  margin-bottom: 10px;
-  margin-top: 5px;
-
-  @media screen and (min-width: 715px) {
-    margin-top: 15px;
-  }
-`;
-
-export const Text = styled.p`
-  font-size: var(--font-size-14);
-  line-height: 1.6;
-`;
-
-export const CenterImageWrapper = styled.div`
-  left: 50%;
-  position: absolute;
-  top: 180px;
-  transform: translateX(-50%);
-  width: 325px;
-
-  img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }
-
-  @media screen and (min-width: 715px) {
-    transform: translateX(-10%);
-    top: 100px;
-  }
-
-  @media screen and (min-width: 850px) {
-    width: 350px;
-    top: 90px;
-    right: 110px;
-    left: initial;
-    transform: initial;
-  }
-
-  @media screen and (min-width: 1000px) {
-    width: 325px;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  @media screen and (min-width: 1100px) {
-    width: 375px;
-    top: 80px;
-  }
-`;
-
 export const RightContainer = styled.div`
+  --left-padding: 15px;
+
   color: ${({ textColor }) => textColor};
   position: relative;
   width: 30%;
+  display: none;
 
-  @media screen and (max-width: 999px) {
-    display: none;
+  > h2 {
+    padding-left: var(--left-padding);
+    font-family: 'Uni Sans', sans-serif;
+    font-size: ${({ theme }) => theme.fontSizes[20]};
+    font-weight: 600;
+
+    > img {
+      margin-left: 15px;
+    }
   }
-`;
 
-export const RightHeading = styled.h2`
-  font-family: 'Uni Sans', sans-serif;
-  font-size: var(--font-size-20);
-  font-weight: var(--font-weight-semibold);
-  margin-left: 10px;
-  text-indent: 10px;
-
-  img {
-    margin-left: 15px;
+  > ul {
+    padding: 10px 0 0 var(--left-padding);
+    font-size: ${({ theme }) => theme.fontSizes[14]};
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
   }
-`;
 
-export const List = styled.ul`
-  font-size: var(--font-size-14);
-  padding: 10px 0 0 18px;
-
-  li {
-    padding: 5px 0;
+  @media ${({ theme }) => theme.breakpoints.desktopSm} {
+    display: block;
   }
 `;

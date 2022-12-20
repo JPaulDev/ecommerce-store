@@ -1,13 +1,12 @@
 import Head from 'next/head';
-import prisma from '../lib/database/prisma-client';
 import {
   Carousel,
-  ProShopCards,
-  PromoBanner,
-  TodayOnlyBanner,
-  TodayOnlyOffers,
   NewsAndProducts,
+  PromoBanner,
+  ProShopCards,
+  TodayOnlyOffers,
 } from '../components/home';
+import prisma from '../lib/database/prisma-client';
 
 export async function getStaticProps() {
   // Recursive queries not yet supported by Prisma.
@@ -45,7 +44,6 @@ export default function Home({ products }) {
       <Carousel />
       <ProShopCards />
       <PromoBanner />
-      <TodayOnlyBanner />
       <TodayOnlyOffers products={products} />
       <NewsAndProducts />
     </>

@@ -1,10 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Header = styled.header`
-  background-color: var(--color-grey-3);
-  box-shadow: var(--box-shadow-lg);
+  background-color: ${({ theme }) => theme.colors.neutral[700]};
+  box-shadow: ${({ theme }) => theme.boxShadows.lg};
   position: relative;
-  width: 100%;
   z-index: 100;
 `;
 
@@ -13,28 +12,92 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
+  row-gap: 20px;
   max-width: 1280px;
-  padding: 20px 15px;
+  padding: 20px 10px;
 
-  @media screen and (min-width: 590px) {
-    grid-template-columns: 1fr minmax(max-content, 1fr);
-    width: 97%;
+  > img {
+    height: auto;
+    width: 150px;
   }
 
-  @media screen and (min-width: 935px) {
-    grid-template-columns: 1fr minmax(270px, 1fr) minmax(max-content, 1fr);
+  @media ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding: 20px;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktopXs} {
+    grid-template-columns: 1fr minmax(270px, 1fr) 1fr;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktopSm} {
+    > img {
+      width: auto;
+    }
   }
 `;
 
-export const Wrapper = styled.div`
-  img {
-    display: block;
-    height: auto;
-    max-width: 100%;
+export const Form = styled.form`
+  --color-main: ${({ theme }) => theme.colors.orange[500]};
+  --border-radius: ${({ theme }) => theme.borderRadius.xl};
+
+  justify-self: center;
+  position: relative;
+  width: 100%;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+
+  &::after {
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 0 3px var(--color-main);
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: ${({ isFocused }) => (isFocused ? 1 : 0)};
+    pointer-events: none;
+    position: absolute;
+    transition: opacity 200ms ease-in-out;
+    width: 100%;
   }
 
-  @media screen and (max-width: 649px) {
-    width: 155px;
+  @media ${({ theme }) => theme.breakpoints.tabletSm} {
+    max-width: 450px;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktopXs} {
+    grid-column: auto;
+    grid-row: auto;
+  }
+`;
+
+export const inputStyles = css`
+  border-radius: var(--border-radius);
+  font-size: ${({ theme }) => theme.fontSizes[15]};
+  font-weight: 500;
+  outline: none;
+  padding: 12px 65px 12px 12px;
+  width: 100%;
+
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+`;
+
+export const SearchButton = styled.button`
+  background-color: var(--color-main);
+  border-radius: var(--border-radius);
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  padding-left: 3px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55px;
+
+  &:hover {
+    box-shadow: inset 0 0 0 999px rgb(0 0 0 / 6%);
   }
 `;
 
@@ -43,45 +106,50 @@ export const LinksContainer = styled.div`
   display: flex;
   justify-content: flex-end;
 
-  @media screen and (min-width: 935px) {
-    margin-left: 40px;
+  @media ${({ theme }) => theme.breakpoints.desktopXs} {
+    margin-left: 35px;
   }
 `;
 
 export const Link = styled.a`
   align-items: center;
-  color: var(--color-grey-8);
   column-gap: 10px;
   cursor: pointer;
   display: flex;
-  font-size: var(--font-size-14);
-  position: relative;
   text-align: left;
   text-decoration: none;
-  transition: color 200ms ease-in-out;
+  position: relative;
 
-  &:hover {
-    color: white;
+  > svg {
+    fill: ${({ theme }) => theme.colors.orange[500]};
   }
 `;
 
 export const TextContainer = styled.span`
-  @media screen and (max-width: 589px) {
-    display: none;
+  display: none;
+  row-gap: 3px;
+
+  .title {
+    color: white;
+    font-size: ${({ theme }) => theme.fontSizes[18]};
   }
-`;
 
-export const TopText = styled.span`
-  color: white;
-  display: block;
-  font-size: var(--font-size-16);
-  line-height: 1;
-  margin-bottom: 5px;
-`;
+  .text {
+    max-width: 125px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: ${({ theme }) => theme.colors.neutral[300]};
+    font-size: ${({ theme }) => theme.fontSizes[15]};
+    transition: color 200ms ease-in-out;
 
-export const Text = styled.span`
-  max-width: 115px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    ${Link}:hover & {
+      color: white;
+    }
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tabletSm} {
+    display: flex;
+    flex-direction: column;
+  }
 `;

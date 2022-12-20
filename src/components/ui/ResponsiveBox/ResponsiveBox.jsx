@@ -1,11 +1,11 @@
+import styled from 'styled-components';
 import formatStylesObject from './style-functions';
-import * as Styled from './styles';
 
 /**
  * Used as a wrapper to apply individual styles to reusable components without
  * having to pass props or can be used to apply media queries and adjust styles
  * depending on the screen width. The example below adds 10px of margin and sets
- * display to none at screen widths below 530px.
+ * display to none at the specified breakpoint.
  *
  * @param {object} sx - The style object.
  * @param {string} as - The HTML element to render.
@@ -15,7 +15,7 @@ import * as Styled from './styles';
  * <ResponsiveBox
  *   as="span"
  *   sx={{
- *     display: { 0: 'none', 530: 'block' },
+ *     display: { mobile: 'none', desktop: 'block' },
  *     margin: '10px',
  *   }}
  * >
@@ -42,8 +42,12 @@ export default function ResponsiveBox({ children, as = 'div', sx = {} }) {
   const styles = formatStylesObject(sx);
 
   return (
-    <Styled.ResponsiveBox as={as} styles={styles}>
+    <Box as={as} styles={styles}>
       {children}
-    </Styled.ResponsiveBox>
+    </Box>
   );
 }
+
+const Box = styled.div`
+  ${({ styles }) => styles}
+`;

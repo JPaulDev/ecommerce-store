@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
+import styled from 'styled-components';
 import { Background, Footer, Header, Navbar, TopBannerSmall } from '../index';
-import * as Styled from './styles';
 
 const Modal = dynamic(() => import('../../../features/auth/Modal'), {
   ssr: false,
@@ -13,11 +13,16 @@ export default function Layout({ children, pageProps }) {
       <Header />
       <Navbar />
       <Background backgroundImage={pageProps.backgroundImage} />
-      <Styled.Main>
+      <Main>
         <TopBannerSmall />
         {children}
-      </Styled.Main>
+      </Main>
       <Footer />
     </>
   );
 }
+
+const Main = styled.main`
+  margin: 0 auto;
+  max-width: 1280px;
+`;

@@ -1,10 +1,11 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import styled from 'styled-components';
 import { useMediaQuery } from '../../../../hooks';
 import { ChevronRight } from '../../../icons';
-import { Title, DropdownButton } from '../styles';
-import * as Styled from './styles';
+import { ResponsiveBox } from '../../../ui';
+import { DropdownButton, Title } from '../styles';
 
 const parentVariants = {
   open: {
@@ -48,36 +49,37 @@ const childVariants = {
 
 export default function Links({ item }) {
   const [isOpen, setIsOpen] = useState(false);
-  const isMatch = useMediaQuery('(min-width: 860px)');
+  const isMatch = useMediaQuery('(min-width: 900px)');
 
-  const handleOpen = () => setIsOpen(!isOpen);
-
-  // Prevents the menu being stuck closed when resizing from a smaller window
-  // width.
+  // Open the menu if the screen is larger than 900px.
   useEffect(() => {
     isMatch ? setIsOpen(true) : setIsOpen(false);
   }, [isMatch]);
 
+  const handleToggleOpen = () => setIsOpen(!isOpen);
+
   return (
     <div>
-      {isMatch ? (
+      <ResponsiveBox sx={{ display: { mobileXs: 'none', desktopXs: 'block' } }}>
         <Title>{item.title}</Title>
-      ) : (
+      </ResponsiveBox>
+
+      <ResponsiveBox sx={{ display: { desktopXs: 'none' } }}>
         <DropdownButton
-          as="button"
           type="button"
           isOpen={isOpen}
           aria-expanded={isOpen}
           aria-controls={item.id}
-          onClick={handleOpen}
+          onClick={handleToggleOpen}
         >
           {item.title}
           <ChevronRight width={15} height={20} />
         </DropdownButton>
-      )}
+      </ResponsiveBox>
+
       <AnimatePresence>
         {isOpen && (
-          <Styled.List
+          <List
             as={motion.ul}
             id={item.id}
             variants={parentVariants}
@@ -91,14 +93,42 @@ export default function Links({ item }) {
                 custom={index}
                 variants={childVariants}
               >
-                <Link href={link.href} passHref>
-                  <Styled.Link>{link.text}</Styled.Link>
+                <Link href={link.href}>
+                  <a>{link.text}</a>
                 </Link>
               </motion.li>
             ))}
-          </Styled.List>
+          </List>
         )}
       </AnimatePresence>
     </div>
   );
 }
+
+const List = styled.ul`
+  list-style: none;
+  padding: 0 20px;
+
+  > li {
+    padding: 7px 0;
+  }
+
+  a {
+    color: ${({ theme }) => theme.colors.stone[600]};
+    font-size: ${({ theme }) => theme.fontSizes[13]};
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid ${({ theme }) => theme.colors.stone[600]};
+    }
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tabletSm} {
+    padding: 0 10px;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktopXs} {
+    padding: 0;
+  }
+`;

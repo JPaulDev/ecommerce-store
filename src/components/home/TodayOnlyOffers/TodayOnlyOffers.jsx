@@ -1,40 +1,42 @@
-import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
+import backgroundImg from '../../../../public/images/today-only-banner/gaming-pc.webp';
 import { ProductCard } from '../../../features/basket';
 import {
   GraphicsCard,
-  Memory,
   HardDrive,
-  Processor,
+  Memory,
   Motherboard,
+  Processor,
 } from '../../icons';
+import { LinkButton, LinkChevron, ResponsiveBox } from '../../ui';
 import * as Styled from './styles';
 
-const categories = [
+const CATEGORIES = [
   {
-    heading: 'Graphics Cards',
-    icon: <GraphicsCard width="60%" />,
     id: 4,
+    title: 'Graphics Cards',
+    icon: <GraphicsCard width="60%" />,
   },
   {
-    heading: 'Memory',
-    icon: <Memory width="60%" />,
     id: 2,
+    title: 'Memory',
+    icon: <Memory width="60%" />,
   },
   {
-    heading: 'Storage',
-    icon: <HardDrive width="60%" />,
     id: 7,
+    title: 'Storage',
+    icon: <HardDrive width="60%" />,
   },
   {
-    heading: 'Processors',
-    icon: <Processor width="60%" />,
     id: 1,
+    title: 'Processors',
+    icon: <Processor width="60%" />,
   },
   {
-    heading: 'Motherboards',
-    icon: <Motherboard width="60%" />,
     id: 3,
+    title: 'Motherboards',
+    icon: <Motherboard width="60%" />,
   },
 ];
 
@@ -57,6 +59,7 @@ const motionProps = {
 
 export default function TodayOnlyOffers({ products = [] }) {
   const [shopCategory, setShopCategory] = useState(1);
+  const linkText = 'View All Offers';
 
   const handleChangeCategory = (categoryId) => setShopCategory(categoryId);
 
@@ -65,22 +68,45 @@ export default function TodayOnlyOffers({ products = [] }) {
   );
 
   return (
-    <section>
-      <Styled.Container>
-        <Styled.List>
-          {categories.map((category) => (
+    <Styled.Section>
+      <Styled.Banner background={backgroundImg.src}>
+        <Styled.RedOval />
+        <Styled.Heading>
+          TODAY ONLY
+          <span>Fantastic offers, updated every weekday</span>
+        </Styled.Heading>
+        <ResponsiveBox
+          sx={{ display: { mobileXs: 'none', desktopXs: 'block' } }}
+        >
+          <LinkChevron href="/" fontSize={13} iconSize={20}>
+            {linkText}
+          </LinkChevron>
+        </ResponsiveBox>
+        <ResponsiveBox
+          sx={{ display: { mobileXs: 'block', desktopXs: 'none' } }}
+        >
+          <LinkButton href="/" color="white">
+            {linkText}
+          </LinkButton>
+        </ResponsiveBox>
+      </Styled.Banner>
+
+      <Styled.Categories>
+        <ul>
+          {CATEGORIES.map((category) => (
             <li key={category.id}>
               <Styled.Button
                 type="button"
                 onClick={() => handleChangeCategory(category.id)}
               >
                 <Styled.Wrapper>{category.icon}</Styled.Wrapper>
-                <Styled.Category>{category.heading}</Styled.Category>
+                <Styled.Category>{category.title}</Styled.Category>
               </Styled.Button>
             </li>
           ))}
-        </Styled.List>
-      </Styled.Container>
+        </ul>
+      </Styled.Categories>
+
       <Styled.ProductList>
         <AnimatePresence initial={false} mode="wait">
           {filteredProducts.map((product) => (
@@ -96,6 +122,6 @@ export default function TodayOnlyOffers({ products = [] }) {
           ))}
         </AnimatePresence>
       </Styled.ProductList>
-    </section>
+    </Styled.Section>
   );
 }

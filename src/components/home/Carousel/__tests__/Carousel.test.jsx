@@ -1,11 +1,10 @@
+import userEvent from '@testing-library/user-event';
 import {
+  act,
   render,
   screen,
-  act,
   waitForElementToBeRemoved,
-} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import renderer from 'react-test-renderer';
+} from '../../../../../test-utils';
 import Carousel from '../index';
 
 // Prevents errors caused by next image component.
@@ -33,15 +32,20 @@ function setup(component) {
   };
 }
 
-describe('Carousel component', () => {
-  it('renders a carousel and all of its navigation buttons', () => {
-    const tree = renderer.create(<Carousel />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
+describe('Carousel', () => {
+  it('should display the first slide on load', () => {
+    setup(<Carousel />);
 
-describe('Carousel component side navigation arrows', () => {
-  it('navigates to the next slide on clicking the button', async () => {
+    expect(screen.getByTestId('slide-1')).toBeInTheDocument();
+  });
+
+  it('should display only 1 slide', () => {
+    setup(<Carousel />);
+
+    expect(screen.getByTestId(/slide/i)).toBeInTheDocument();
+  });
+
+  it('should navigate to the next slide on clicking the next button', async () => {
     const { user } = setup(<Carousel />);
 
     expect(screen.queryByTestId('slide-2')).not.toBeInTheDocument();
@@ -51,7 +55,7 @@ describe('Carousel component side navigation arrows', () => {
     expect(screen.getByTestId('slide-2')).toBeInTheDocument();
   });
 
-  it('navigates to the last slide on clicking the previous button', async () => {
+  it('should navigate to the last slide on clicking the previous button', async () => {
     const { user } = setup(<Carousel />);
 
     expect(screen.queryByTestId('slide-3')).not.toBeInTheDocument();
@@ -61,7 +65,7 @@ describe('Carousel component side navigation arrows', () => {
     expect(screen.getByTestId('slide-3')).toBeInTheDocument();
   });
 
-  it('goes back to the first slide on clicking the next button', async () => {
+  it('should go back to the first slide on clicking the next button', async () => {
     const { user } = setup(<Carousel />);
 
     await user.click(screen.getByRole('button', { name: /previous slide/i }));
@@ -84,22 +88,8 @@ describe('Carousel component side navigation arrows', () => {
 
     expect(screen.queryByTestId('slide-3')).not.toBeInTheDocument();
   });
-});
 
-describe('Carousel component', () => {
-  it('displays the first slide on load', () => {
-    setup(<Carousel />);
-    expect(screen.getByTestId('slide-1')).toBeInTheDocument();
-  });
-
-  it('should display only 1 slide', () => {
-    setup(<Carousel />);
-
-    // eslint-disable-next-line jest-dom/prefer-in-document
-    expect(screen.getAllByTestId(/slide/i)).toHaveLength(1);
-  });
-
-  it('changes to the next slide after 9 seconds', () => {
+  it('should change to the next slide after 9 seconds', () => {
     jest.useFakeTimers();
     setup(<Carousel />);
     expect(screen.queryByTestId('slide-2')).not.toBeInTheDocument();
@@ -113,20 +103,22 @@ describe('Carousel component', () => {
   });
 });
 
-describe('Carousel component top navigation buttons', () => {
-  it('changes to the correct slide on clicking the 3rd button', async () => {
+describe('Carousel top navigation buttons', () => {
+  it('should change to the correct slide on clicking the 3rd button', async () => {
     const { user } = setup(<Carousel />);
 
     expect(screen.queryByTestId('slide-3')).not.toBeInTheDocument();
 
-    await user.click(screen.getByRole('button', { name: /slide-3/i }));
+    await user.click(
+      screen.getByRole('button', { name: /slide-3/i, hidden: true })
+    );
 
     expect(screen.getByTestId('slide-3')).toBeInTheDocument();
   });
 });
 
-describe('Carousel component bottom navigation buttons', () => {
-  it('navigates to the correct slide on clicking the 3rd button', async () => {
+describe('Carousel bottom navigation buttons', () => {
+  it('should navigate to the correct slide on clicking the 3rd button', async () => {
     const { user } = setup(<Carousel />);
 
     expect(screen.queryByTestId('slide-3')).not.toBeInTheDocument();

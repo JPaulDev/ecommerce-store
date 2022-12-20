@@ -1,11 +1,10 @@
+import userEvent from '@testing-library/user-event';
 import {
   render,
   screen,
   waitFor,
   waitForElementToBeRemoved,
-} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import renderer from 'react-test-renderer';
+} from '../../../../../test-utils';
 import ShopHeader from '../index';
 
 const categoryData = {
@@ -22,14 +21,7 @@ function setup(component) {
   };
 }
 
-describe('ShopHeader component', () => {
-  it('should render a category heading and description', () => {
-    const tree = renderer.create(<ShopHeader {...categoryData} />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
-
-describe('ShopHeader component description and latest arrivals', () => {
+describe('ShopHeader', () => {
   it('should open and close the category description', async () => {
     const { user } = setup(<ShopHeader {...categoryData} />);
     const text = /category description/i;

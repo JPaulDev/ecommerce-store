@@ -1,49 +1,125 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-const flexMixin = css`
-  align-items: center;
+export const Section = styled.section`
   display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-top: 15px;
 `;
 
-export const Container = styled.div`
+export const Banner = styled.div`
+  background-color: ${({ theme }) => theme.colors.red[600]};
+  background-image: url(${({ background }) => background});
+  background-position: 96% 60%;
+  background-repeat: no-repeat;
+  border: 1px solid ${({ theme }) => theme.colors.stone[200]};
+  overflow: hidden;
+  padding: 20px 220px 30px 15px;
+  position: relative;
+
+  @media ${({ theme }) => theme.breakpoints.mobileLg} {
+    padding: 20px 220px 30px 20px;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktopXs} {
+    display: flex;
+    align-items: center;
+    background-image: none;
+    background-color: white;
+    padding: 30px;
+  }
+`;
+
+export const RedOval = styled.div`
+  background-color: ${({ theme }) => theme.colors.red[600]};
+  border-radius: ${({ theme }) => theme.borderRadius.full};
+  left: -67px;
+  position: absolute;
+  height: 130px;
+  width: 300px;
+  display: none;
+
+  @media ${({ theme }) => theme.breakpoints.desktopXs} {
+    display: block;
+  }
+`;
+
+export const Heading = styled.h2`
+  color: white;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  font-family: 'Uni Sans', sans-serif;
+  font-size: ${({ theme }) => theme.fontSizes[30]};
+  font-weight: 600;
+  z-index: 10;
+  line-height: 1;
+
+  > span {
+    color: black;
+    font-size: ${({ theme }) => theme.fontSizes[20]};
+    margin: 10px 0 15px;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.tablet} {
+    > span {
+      font-size: ${({ theme }) => theme.fontSizes[24]};
+    }
+  }
+
+  @media ${({ theme }) => theme.breakpoints.desktopXs} {
+    align-items: center;
+    flex-direction: row;
+    column-gap: 70px;
+
+    > span {
+      margin: 0;
+    }
+  }
+`;
+
+export const Categories = styled.div`
   background-color: white;
-  border: 1px solid var(--color-grey-12);
-  margin-bottom: 15px;
-  padding: 15px 5px;
-`;
+  border: 1px solid ${({ theme }) => theme.colors.stone[200]};
+  padding: 20px 5px;
 
-export const List = styled.ul`
-  justify-content: space-around;
-  list-style: none;
-  margin: 0 auto;
-  max-width: 1100px;
-  ${flexMixin}
+  > ul {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+
+    > li {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
 `;
 
 export const Button = styled.button`
   cursor: pointer;
   flex-direction: column;
-  min-width: 85px;
-  ${flexMixin}
-
-  @media screen and (min-width: 640px) {
-    min-width: 95px;
-  }
+  align-items: center;
+  display: flex;
 `;
 
 export const Wrapper = styled.span`
-  border-radius: var(--border-radius-full);
-  box-shadow: 0 0 0 1px var(--color-orange-1);
-  height: 65px;
+  --size: 65px;
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: ${({ theme }) => theme.borderRadius.full};
+  box-shadow: 0 0 0 1px ${({ theme }) => theme.colors.orange[500]};
   justify-content: center;
   margin-bottom: 5px;
   position: relative;
-  width: 65px;
-  ${flexMixin}
+  align-items: center;
+  display: flex;
 
   &::after {
     border-radius: inherit;
-    box-shadow: 0 0 0 2px var(--color-orange-1);
+    box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.orange[500]};
     content: '';
     height: 100%;
     opacity: 0;
@@ -56,49 +132,60 @@ export const Wrapper = styled.span`
     }
   }
 
-  @media screen and (min-width: 550px) {
-    width: 70px;
-    height: 70px;
+  @media ${({ theme }) => theme.breakpoints.mobileLg} {
+    --size: 70px;
+
+    width: var(--size);
+    height: var(--size);
   }
 
-  @media screen and (min-width: 640px) {
-    width: 80px;
-    height: 80px;
+  @media ${({ theme }) => theme.breakpoints.tabletSm} {
+    --size: 80px;
+
+    width: var(--size);
+    height: var(--size);
   }
 `;
 
 export const Category = styled.span`
-  color: var(--color-grey-5);
-  font-size: var(--font-size-12);
-  font-weight: var(--font-weight-semibold);
+  color: ${({ theme }) => theme.colors.stone[500]};
+  font-size: ${({ theme }) => theme.fontSizes[12]};
+  font-weight: 600;
   transition: color 200ms ease-in-out;
 
   ${Button}:hover & {
-    color: var(--color-grey-2);
+    color: ${({ theme }) => theme.colors.stone[800]};
   }
 
-  @media screen and (min-width: 640px) {
-    font-size: var(--font-size-14);
+  @media ${({ theme }) => theme.breakpoints.tabletSm} {
+    font-size: ${({ theme }) => theme.fontSizes[14]};
   }
 `;
 
 export const ProductList = styled.ul`
-  display: grid;
-  gap: 10px;
+  --spacing: 10px;
 
-  @media screen and (min-width: 570px) {
+  gap: var(--spacing);
+  padding: 0 var(--spacing);
+  display: grid;
+
+  > :nth-child(4n) {
+    display: none;
+  }
+
+  @media ${({ theme }) => theme.breakpoints.mobileLg} {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media screen and (min-width: 840px) {
+  @media ${({ theme }) => theme.breakpoints.desktopXs} {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media screen and (min-width: 1110px) {
+  @media ${({ theme }) => theme.breakpoints.desktopMd} {
     grid-template-columns: repeat(4, 1fr);
-  }
 
-  @media screen and (max-width: 1310px) {
-    padding: 0 10px;
+    > :nth-child(4n) {
+      display: flex;
+    }
   }
 `;

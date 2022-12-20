@@ -1,5 +1,4 @@
-import { screen } from '@testing-library/react';
-import { renderWithProviders } from '../../../../../test-utils';
+import { render, screen } from '../../../../../test-utils';
 import BasketTotal from '../index';
 
 const basketData = [
@@ -30,9 +29,9 @@ const basketData = [
   },
 ];
 
-describe('BasketTotal component', () => {
+describe('BasketTotal', () => {
   it('should display the basket total including £4.99 delivery', () => {
-    renderWithProviders(<BasketTotal />, {
+    render(<BasketTotal />, {
       preloadedState: {
         basket: basketData,
       },

@@ -1,9 +1,9 @@
+import userEvent from '@testing-library/user-event';
 import {
   render,
   screen,
   waitForElementToBeRemoved,
-} from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+} from '../../../../../../test-utils';
 import Links from '../index';
 
 const item = {
@@ -11,11 +11,11 @@ const item = {
   links: [
     {
       text: 'About Us',
-      href: 'Link',
+      href: '/',
     },
     {
       text: 'Contact',
-      href: 'Link',
+      href: '/',
     },
   ],
 };
@@ -27,27 +27,22 @@ function setup(component) {
   };
 }
 
-describe('Links component', () => {
-  it('renders a heading along with related links', () => {
-    const { asFragment } = setup(<Links item={item} />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
-
-describe('Links component dropdown menu', () => {
+describe('Links', () => {
   beforeAll(() => {
     window.resizeTo(500, 768);
   });
 
-  it('should initially be closed', () => {
+  it('the dropdown should initially be closed', () => {
     setup(<Links item={item} />);
 
     expect(screen.queryByRole('link')).not.toBeInTheDocument();
   });
 
-  it('opens and closes the links dropdown on clicking the button', async () => {
+  it('should open and close the dropdown on clicking the button', async () => {
     const { user } = setup(<Links item={item} />);
     const button = screen.getByRole('button');
+
+    expect(screen.queryByRole('link')).not.toBeInTheDocument();
 
     await user.click(button);
 

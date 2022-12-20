@@ -1,4 +1,3 @@
-export { default as AddToBasket } from './AddToBasket';
 export { default as DeliveryDate } from './DeliveryDate';
 export { default as PartNumber } from './PartNumber';
 export { default as PreviousPrice } from './PreviousPrice';

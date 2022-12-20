@@ -1,101 +1,125 @@
-import Links from './Links';
+import Image from 'next/future/image';
+import Link from 'next/link';
+import logo from '../../../../public/images/footer/pc-logo.webp';
+import {
+  Directions,
+  Facebook,
+  Headset,
+  Instagram,
+  MobilePhone,
+  Reddit,
+  Twitter,
+  Warehouse,
+  Youtube,
+} from '../../icons';
+import { ResponsiveBox } from '../../ui';
 import Delivery from './Delivery';
-import Payments from './Payments';
-import ContactBanner from './ContactBanner';
-import InfoBanner from './InfoBanner';
+import Links from './Links';
+import LINKS_DATA from './links-data';
+import PAYMENT_LOGOS from './payment-logos';
 import * as Styled from './styles';
-
-const links = [
-  {
-    id: 'information-links',
-    title: 'Information',
-    links: [
-      {
-        text: 'COVID-19',
-        href: '',
-      },
-      {
-        text: 'About Us',
-        href: '',
-      },
-      {
-        text: 'Contact',
-        href: '',
-      },
-      {
-        text: 'Affiliate Program',
-        href: '',
-      },
-      {
-        text: 'Careers',
-        href: '',
-      },
-    ],
-  },
-  {
-    id: 'my-account-links',
-    title: 'My Account',
-    links: [
-      {
-        text: 'Login',
-        href: '',
-      },
-      {
-        text: 'Create Account',
-        href: '',
-      },
-      {
-        text: 'Account Overview',
-        href: '',
-      },
-      {
-        text: 'Order History',
-        href: '',
-      },
-    ],
-  },
-  {
-    id: 'support-links',
-    title: 'Support',
-    links: [
-      {
-        text: 'Help Center',
-        href: '',
-      },
-      {
-        text: 'Customer Reviews',
-        href: '',
-      },
-      {
-        text: 'Returns',
-        href: '',
-      },
-      {
-        text: 'Sales',
-        href: '',
-      },
-      {
-        text: 'Technical Support',
-        href: '',
-      },
-    ],
-  },
-];
 
 export default function Footer() {
   return (
     <Styled.Footer>
       <Styled.Container>
-        <Styled.LinksContainer>
-          {links.map((item) => (
+        <div className="site-links">
+          {LINKS_DATA.map((item) => (
             <Links key={item.id} item={item} />
           ))}
-        </Styled.LinksContainer>
+        </div>
         <Delivery />
-        <Payments />
+
+        <Styled.PaymentsContainer>
+          <ResponsiveBox
+            sx={{ display: { mobileXs: 'none', desktopSm: 'block' } }}
+          >
+            <Styled.Title>Secure Payments</Styled.Title>
+          </ResponsiveBox>
+          <ul>
+            {PAYMENT_LOGOS.map((item) => (
+              <li key={item.title} title={item.title}>
+                {item.icon}
+              </li>
+            ))}
+          </ul>
+        </Styled.PaymentsContainer>
       </Styled.Container>
-      <ContactBanner />
-      <InfoBanner />
+
+      <Styled.ContactBanner>
+        <Link href="/contact">
+          <a>
+            <MobilePhone width={20} height={27} />
+            01782-444455
+          </a>
+        </Link>
+        <Link href="/contact">
+          <a>
+            <Headset width={25} height={25} />
+            Live Chat
+          </a>
+        </Link>
+      </Styled.ContactBanner>
+
+      <Styled.InfoBanner>
+        <Image src={logo} alt="" />
+        <p>
+          PC Connect International Ltd, Unit 5, Lower Milehouse Ln,
+          Newcastle-under-Lyme, Newcastle ST5 9EN
+        </p>
+        <Styled.InnerContainer>
+          <Styled.InfoBannerLinks>
+            <Link href="/about">
+              <a>
+                <Directions width={25} height={25} />
+                How To Find Us
+              </a>
+            </Link>
+          </Styled.InfoBannerLinks>
+          <Styled.InfoBannerLinks>
+            <Link href="/about">
+              <a>
+                <Warehouse width={25} height={20} />
+                Opening Times
+              </a>
+            </Link>
+          </Styled.InfoBannerLinks>
+          <Styled.InfoBannerLinks>
+            Follow Us
+            <a
+              href="https://www.twitter.com"
+              title="Twitter"
+              aria-label="Twitter"
+            >
+              <Twitter width={20} height={20} />
+            </a>
+            <a
+              href="https://www.facebook.com"
+              title="Facebook"
+              aria-label="Facebook"
+            >
+              <Facebook width={12} height={19} />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              title="Instagram"
+              aria-label="Instagram"
+            >
+              <Instagram width={20} height={23} />
+            </a>
+            <a href="https://www.reddit.com" title="Reddit" aria-label="Reddit">
+              <Reddit width={23} height={23} />
+            </a>
+            <a
+              href="https://www.youtube.com"
+              title="YouTube"
+              aria-label="YouTube"
+            >
+              <Youtube width={25} height={22} />
+            </a>
+          </Styled.InfoBannerLinks>
+        </Styled.InnerContainer>
+      </Styled.InfoBanner>
     </Styled.Footer>
   );
 }

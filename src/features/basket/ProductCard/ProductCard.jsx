@@ -1,18 +1,17 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/future/image';
-import { useState, forwardRef } from 'react';
+import { forwardRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addProduct } from '../basketSlice';
-import { usePrice } from '../../../hooks';
 import {
-  Price,
-  PreviousPrice,
   PartNumber,
+  PreviousPrice,
+  Price,
   Quantity,
   StockDisplay,
-  AddToBasket,
 } from '../../../components/product';
-import * as Styled from './styles';
+import { usePrice } from '../../../hooks';
+import { addProduct } from '../basketSlice';
+import * as Styled from './style';
 
 const DeliveryDate = dynamic(
   () => import('../../../components/product/DeliveryDate'),
@@ -21,7 +20,7 @@ const DeliveryDate = dynamic(
   }
 );
 
-function ProductCard({ product, variant = 'horizontal' }, ref) {
+function ProductCard({ product, variant }, ref) {
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
 
@@ -42,64 +41,57 @@ function ProductCard({ product, variant = 'horizontal' }, ref) {
   return (
     <>
       {variant === 'horizontal' && (
-        <Styled.ListItem ref={ref} variant={variant}>
-          <Styled.ImageWrapper>
-            <Image
-              src={product.imageUrl}
-              alt=""
-              width={200}
-              height={200}
-              quality={90}
-              priority="true"
-            />
-          </Styled.ImageWrapper>
+        <Styled.HorizontalCard ref={ref} data-testid="horizontal-card">
+          <Image
+            src={product.imageUrl}
+            alt=""
+            width={200}
+            height={200}
+            quality={90}
+            priority="true"
+          />
           <Styled.LeftContainer>
-            <Styled.LogoWrapper>
-              <Image
-                src={product.brand}
-                alt=""
-                width={110}
-                height={24}
-                quality={90}
-              />
-            </Styled.LogoWrapper>
-            {product.isOnSale && <Styled.SaleTag>SALE</Styled.SaleTag>}
-            <Styled.ProductDescription variant={variant}>
+            <Image
+              src={product.brand}
+              alt=""
+              width={110}
+              height={24}
+              quality={90}
+            />
+            {product.isOnSale && <div className="sale-tag">SALE</div>}
+            <p>
               {product.name}, {product.description}
-            </Styled.ProductDescription>
-            <PartNumber fontSize={13}>{product.sku}</PartNumber>
+            </p>
+            <PartNumber fontSize={12}>{product.sku}</PartNumber>
           </Styled.LeftContainer>
           <Styled.RightContainer>
-            <Styled.PriceContainer>
+            <div className="price-container">
               <Price fontSize={32}>{price}</Price>
               {product.isOnSale && (
                 <PreviousPrice>{previousPrice}</PreviousPrice>
               )}
-              <Styled.QuantityWrapper>
+              <div className="quantity-wrapper">
                 <Quantity
                   quantity={quantity}
                   onChangeQuantity={handleChangeQuantity}
                 />
-              </Styled.QuantityWrapper>
-            </Styled.PriceContainer>
-            <Styled.ButtonContainer>
-              <AddToBasket
-                type="button"
-                width="100%"
-                fontSize={14}
-                onAddProduct={handleAddProduct}
-              />
-              <Styled.InnerContainer>
+              </div>
+            </div>
+            <div>
+              <button type="button" onClick={handleAddProduct}>
+                Add To Basket
+              </button>
+              <div className="container">
                 <StockDisplay stockStatus={product.stockStatus} />
                 <DeliveryDate stockStatus={product.stockStatus} />
-              </Styled.InnerContainer>
-            </Styled.ButtonContainer>
+              </div>
+            </div>
           </Styled.RightContainer>
-        </Styled.ListItem>
+        </Styled.HorizontalCard>
       )}
 
       {variant === 'vertical' && (
-        <Styled.ListItem ref={ref} variant={variant}>
+        <Styled.VerticalCard ref={ref} data-testid="vertical-card">
           <Image
             src={product.imageUrl}
             alt=""
@@ -107,13 +99,10 @@ function ProductCard({ product, variant = 'horizontal' }, ref) {
             height={200}
             quality={90}
           />
-          <Styled.ProductName>{product.name}</Styled.ProductName>
-          <Styled.ProductDescription variant={variant}>
-            {product.description}
-          </Styled.ProductDescription>
-          <Styled.PartNumberWrapper>
-            <PartNumber fontSize={12}>{product.sku}</PartNumber>
-          </Styled.PartNumberWrapper>
+          <p className="product-name">{product.name}</p>
+          <p className="product-description">{product.description}</p>
+          <PartNumber fontSize={12}>{product.sku}</PartNumber>
+          <div className="divider" />
           <Price fontSize={30}>{price}</Price>
           {product.isOnSale && <PreviousPrice>{previousPrice}</PreviousPrice>}
           <Quantity
@@ -121,14 +110,15 @@ function ProductCard({ product, variant = 'horizontal' }, ref) {
             isDisabled={product.stockStatus === 0}
             onChangeQuantity={handleChangeQuantity}
           />
-          <StockDisplay stockStatus={product.stockStatus} marginTop="8px" />
-          <AddToBasket
-            isDisabled={product.stockStatus === 0}
-            width="180px"
-            fontSize={12}
-            onAddProduct={handleAddProduct}
-          />
-        </Styled.ListItem>
+          <StockDisplay stockStatus={product.stockStatus} marginTop="10px" />
+          <button
+            type="button"
+            disabled={product.stockStatus === 0}
+            onClick={handleAddProduct}
+          >
+            Add To Basket
+          </button>
+        </Styled.VerticalCard>
       )}
     </>
   );

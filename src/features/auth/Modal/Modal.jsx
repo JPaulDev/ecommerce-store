@@ -4,9 +4,9 @@ import logo from '../../../../public/images/footer/pc-logo.webp';
 import { Cross } from '../../../components/icons';
 import { useUI } from '../../../contexts/UIContext';
 import { useOnClickOutside, useSetFocus } from '../../../hooks';
-import ForgotPasswordView from './ForgotPasswordView';
-import SignInView from './SignInView';
-import SignUpView from './SignUpView';
+import ForgotPassword from './ForgotPassword';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 import * as Styled from './styles';
 
 function ModalView({ handleCloseModal, modalView, handleSetModalView }) {
@@ -43,25 +43,24 @@ function ModalView({ handleCloseModal, modalView, handleSetModalView }) {
         >
           <Cross width={28} height={28} />
         </Styled.CloseButton>
-
         <Image src={logo} alt="" />
 
         {modalView === 'SIGN_IN_VIEW' && (
-          <SignInView
+          <SignIn
             handleSetModalView={handleSetModalView}
             handleCloseModal={handleCloseModal}
           />
         )}
 
         {modalView === 'SIGN_UP_VIEW' && (
-          <SignUpView
+          <SignUp
             handleSetModalView={handleSetModalView}
             handleCloseModal={handleCloseModal}
           />
         )}
 
         {modalView === 'FORGOT_PASSWORD_VIEW' && (
-          <ForgotPasswordView
+          <ForgotPassword
             handleSetModalView={handleSetModalView}
             handleCloseModal={handleCloseModal}
           />
