@@ -22,7 +22,7 @@ export const Container = styled.div`
   width: min(400px, 90%);
 
   > img {
-    margin: 0 auto 20px;
+    margin-bottom: 15px;
   }
 `;
 
