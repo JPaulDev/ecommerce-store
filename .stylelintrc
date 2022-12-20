@@ -15,6 +15,6 @@
     "value-keyword-case": ["lower", { "ignoreKeywords": ["dummyValue"] }],
     "declaration-colon-newline-after": null,
     "string-quotes": "single",
-    "value-list-comma-newline-after": "always"
+    "value-list-comma-newline-after": null
   }
 }

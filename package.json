@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:css": "stylelint \"./src/**/*.js\"",
+    "lint:css": "stylelint \"./src/**/*.{jsx,js}\"",
     "test": "jest --watch",
     "test:ci": "jest --ci"
   },
