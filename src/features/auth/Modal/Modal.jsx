@@ -1,9 +1,13 @@
 import Image from 'next/future/image';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import logo from '../../../../public/images/footer/pc-logo.webp';
 import { Cross } from '../../../components/icons';
 import { useUI } from '../../../contexts/UIContext';
-import { useOnClickOutside, useSetFocus } from '../../../hooks';
+import {
+  useCloseOnEscape,
+  useOnClickOutside,
+  useSetFocus,
+} from '../../../hooks';
 import ForgotPassword from './ForgotPassword';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
@@ -14,22 +18,8 @@ function ModalView({ handleCloseModal, modalView, handleSetModalView }) {
   const closeButtonRef = useRef(null);
 
   useOnClickOutside(containerRef, handleCloseModal);
-
   useSetFocus(closeButtonRef);
-
-  useEffect(() => {
-    const handleEscapeKey = (e) => {
-      if (e.key === 'Escape') {
-        handleCloseModal();
-      }
-    };
-
-    window.addEventListener('keydown', handleEscapeKey);
-
-    return () => {
-      window.removeEventListener('keydown', handleEscapeKey);
-    };
-  }, [handleCloseModal]);
+  useCloseOnEscape(handleCloseModal);
 
   return (
     <Styled.Backdrop>

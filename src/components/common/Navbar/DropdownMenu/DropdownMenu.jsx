@@ -2,9 +2,10 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import Image from 'next/future/image';
 import Link from 'next/link';
-import { forwardRef, Fragment, useEffect } from 'react';
+import { forwardRef, Fragment } from 'react';
 import styled from 'styled-components';
 import { useUI } from '../../../../contexts/UIContext';
+import { useCloseOnEscape } from '../../../../hooks';
 import { ADVERTS, DROPDOWN_MENUS } from './dropdown-data';
 
 function DropdownMenu({ menu, id }, ref) {
@@ -14,19 +15,7 @@ function DropdownMenu({ menu, id }, ref) {
   const dropdown = DROPDOWN_MENUS[openMenu];
   const dropdownAdverts = ADVERTS[openMenu];
 
-  useEffect(() => {
-    const handleEscapeKey = (e) => {
-      if (e.key === 'Escape') {
-        handleCloseDropdown();
-      }
-    };
-
-    window.addEventListener('keydown', handleEscapeKey);
-
-    return () => {
-      window.removeEventListener('keydown', handleEscapeKey);
-    };
-  });
+  useCloseOnEscape(handleCloseDropdown);
 
   return (
     <Container data-testid="dropdown-menu" id={id} ref={ref}>
