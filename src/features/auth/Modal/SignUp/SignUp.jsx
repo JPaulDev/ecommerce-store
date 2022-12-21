@@ -145,11 +145,8 @@ export default function SignUp({ handleSetModalView, handleCloseModal }) {
             />
 
             <SubmitButton type="submit" disabled={isSubmitting}>
-              {isSubmitting ? (
-                <LoadingSpinner size={30} color="white" />
-              ) : (
-                'Sign Up'
-              )}
+              {isSubmitting && <LoadingSpinner size={30} color="white" />}
+              <span>Sign Up</span>
             </SubmitButton>
           </Form>
         )}

@@ -68,12 +68,13 @@ export default function ForgotPassword({
               role="alert"
             />
 
-            <SubmitButton type="submit" disabled={isSubmitting}>
-              {isSubmitting ? (
-                <LoadingSpinner size={30} color="white" />
-              ) : (
-                'Reset Password'
-              )}
+            <SubmitButton
+              type="submit"
+              disabled={isSubmitting}
+              isSubmitting={isSubmitting}
+            >
+              {isSubmitting && <LoadingSpinner size={30} color="white" />}
+              <span>Reset Password</span>
             </SubmitButton>
           </Form>
         )}

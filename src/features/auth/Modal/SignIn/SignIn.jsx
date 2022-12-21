@@ -91,12 +91,13 @@ export default function SignIn({ handleSetModalView, handleCloseModal }) {
               role="alert"
             />
 
-            <SubmitButton type="submit" disabled={isSubmitting}>
-              {isSubmitting ? (
-                <LoadingSpinner size={30} color="white" />
-              ) : (
-                'Sign In'
-              )}
+            <SubmitButton
+              type="submit"
+              disabled={isSubmitting}
+              isSubmitting={isSubmitting}
+            >
+              {isSubmitting && <LoadingSpinner size={30} color="white" />}
+              <span>Sign In</span>
             </SubmitButton>
           </Form>
         )}

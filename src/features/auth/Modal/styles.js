@@ -99,12 +99,15 @@ export const SubmitButton = styled.button`
   color: white;
   font-weight: 600;
   margin: 15px 0;
-  min-height: 45px;
   padding: 13px;
   position: relative;
   border-radius: ${({ theme }) => theme.borderRadius.lg};
   font-size: inherit;
   width: 100%;
+
+  > span {
+    visibility: ${({ isSubmitting }) => isSubmitting && 'hidden'};
+  }
 
   &:not(:disabled) {
     cursor: pointer;
