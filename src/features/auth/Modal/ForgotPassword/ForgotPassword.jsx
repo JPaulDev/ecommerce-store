@@ -9,8 +9,8 @@ import {
   ChangeViewButton,
   ErrorText,
   inputStyles,
-  PrimaryBtn,
   StatusMessage,
+  SubmitButton,
   Text,
 } from '../styles';
 
@@ -68,13 +68,13 @@ export default function ForgotPassword({
               role="alert"
             />
 
-            <PrimaryBtn type="submit" disabled={isSubmitting}>
+            <SubmitButton type="submit" disabled={isSubmitting}>
               {isSubmitting ? (
                 <LoadingSpinner size={30} color="white" />
               ) : (
                 'Reset Password'
               )}
-            </PrimaryBtn>
+            </SubmitButton>
           </Form>
         )}
       </Formik>

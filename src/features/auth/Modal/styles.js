@@ -89,7 +89,7 @@ export const inputStyles = css`
   }
 `;
 
-export const PrimaryBtn = styled.button`
+export const SubmitButton = styled.button`
   background-image: linear-gradient(
     to right,
     ${({ theme }) => theme.colors.blue[500]},
