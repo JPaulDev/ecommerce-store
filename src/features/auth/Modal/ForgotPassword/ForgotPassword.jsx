@@ -6,10 +6,10 @@ import { LabelledInput, LoadingSpinner } from '../../../../components/ui';
 import { useSubmit } from '../../../../hooks';
 import { forgotPasswordSchema } from '../../../../validations/schemas';
 import {
+  ChangeViewButton,
   ErrorText,
   inputStyles,
   PrimaryBtn,
-  SecondaryBtn,
   StatusMessage,
   Text,
 } from '../styles';
@@ -81,12 +81,12 @@ export default function ForgotPassword({
 
       <div style={{ marginTop: '10px' }}>
         Want to go back?
-        <SecondaryBtn
+        <ChangeViewButton
           type="button"
           onClick={() => handleSetModalView('SIGN_IN_VIEW')}
         >
           Sign in
-        </SecondaryBtn>
+        </ChangeViewButton>
       </div>
     </>
   );

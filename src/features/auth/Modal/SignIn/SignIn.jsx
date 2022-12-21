@@ -7,10 +7,10 @@ import { useSubmit } from '../../../../hooks';
 import { useSignInMutation } from '../../../../services/auth';
 import { signInSchema } from '../../../../validations/schemas';
 import {
+  ChangeViewButton,
   ErrorText,
   inputStyles,
   PrimaryBtn,
-  SecondaryBtn,
   StatusMessage,
   Text,
 } from '../styles';
@@ -115,12 +115,12 @@ export default function SignIn({ handleSetModalView, handleCloseModal }) {
 
       <div>
         Don&lsquo;t have an account?
-        <SecondaryBtn
+        <ChangeViewButton
           type="button"
           onClick={() => handleSetModalView('SIGN_UP_VIEW')}
         >
           Sign up
-        </SecondaryBtn>
+        </ChangeViewButton>
       </div>
     </>
   );

@@ -127,7 +127,7 @@ export const ErrorText = styled.p`
   text-align: left;
 `;
 
-export const SecondaryBtn = styled.button`
+export const ChangeViewButton = styled.button`
   color: ${({ theme }) => theme.colors.sky[500]};
   cursor: pointer;
   font-size: inherit;
