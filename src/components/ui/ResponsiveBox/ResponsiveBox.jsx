@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import formatStylesObject from './style-functions';
 
 /**
@@ -39,15 +38,11 @@ import formatStylesObject from './style-functions';
  * </ResponsiveBox>
  */
 export default function ResponsiveBox({ children, as = 'div', sx = {} }) {
-  const styles = formatStylesObject(sx);
+  const css = formatStylesObject(sx);
 
   return (
-    <Box as={as} styles={styles}>
+    <div as={as} css={css}>
       {children}
-    </Box>
+    </div>
   );
 }
-
-const Box = styled.div`
-  ${({ styles }) => styles}
-`;
