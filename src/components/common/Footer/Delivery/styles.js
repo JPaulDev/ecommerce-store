@@ -59,7 +59,7 @@ export const inputStyles = css`
   border-radius: ${({ theme }) => theme.borderRadius.lg};
   max-width: 175px;
   outline: none;
-  padding: 8px;
+  padding: 10px;
   width: 40%;
 
   &:focus {
