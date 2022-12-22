@@ -124,7 +124,6 @@ export default function Delivery() {
                       placeholder="Invoice No."
                       autoComplete="off"
                       maxLength="10"
-                      aria-required
                       required
                       onChange={handleChangeInvoiceNumber}
                       value={invoiceNumber}
@@ -139,7 +138,6 @@ export default function Delivery() {
                       placeholder={form.placeholder}
                       autoComplete="off"
                       maxLength="10"
-                      aria-required
                       required
                       onChange={handleChangeSecondInput}
                       value={secondInput}

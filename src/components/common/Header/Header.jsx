@@ -35,7 +35,6 @@ export default function Header() {
             placeholder="Search PC-Connect.co.uk..."
             maxLength="50"
             required
-            aria-required
             onChange={handleChangeQuery}
             onFocus={handleChangeFocus}
             onBlur={handleChangeFocus}

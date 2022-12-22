@@ -23,7 +23,6 @@ function EmailMyBasket() {
           name="email"
           type="email"
           placeholder="Email"
-          aria-required
           required
           onChange={handleChangeEmail}
           value={email}
