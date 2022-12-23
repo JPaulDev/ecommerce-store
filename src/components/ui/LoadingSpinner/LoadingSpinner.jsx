@@ -1,6 +1,10 @@
 import styled, { keyframes } from 'styled-components';
 
-export default function LoadingSpinner({ size = 20, color = 'currentColor' }) {
+export default function LoadingSpinner({
+  size = 20,
+  color = 'currentColor',
+  ...rest
+}) {
   return (
     <Spinner>
       <svg
@@ -10,6 +14,7 @@ export default function LoadingSpinner({ size = 20, color = 'currentColor' }) {
         fill={color}
         viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"
+        {...rest}
       >
         <rect
           height="6"
@@ -152,7 +157,7 @@ const Spinner = styled.div`
   top: 50%;
   transform: translate(-50%, -50%);
 
-  svg {
+  > svg {
     animation: ${rotate} 1s steps(12) infinite;
     display: block;
   }

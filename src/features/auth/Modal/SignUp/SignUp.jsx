@@ -1,32 +1,22 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { motion } from 'framer-motion';
-import styled from 'styled-components';
-import { Warning } from '../../../../components/icons';
-import { LabelledInput, LoadingSpinner } from '../../../../components/ui';
+import { ErrorMessage as Error, Field, Form, Formik } from 'formik';
+import {
+  ErrorMessage,
+  LabelledInput,
+  StatusMessage,
+  SubmitButton,
+} from '../../../../components/ui';
 import { useSubmit } from '../../../../hooks';
 import { useSignUpMutation } from '../../../../services/auth';
 import { signUpSchema } from '../../../../validations/schemas';
-import {
-  ChangeViewButton,
-  ErrorText,
-  inputStyles,
-  StatusMessage,
-  SubmitButton,
-  Text,
-} from '../styles';
+import { ChangeViewButton, inputStyles } from '../styles';
 
 export default function SignUp({ handleSetModalView, handleCloseModal }) {
   const [signUp] = useSignUpMutation();
-  const { handleSubmit, animationControls } = useSubmit(
-    signUp,
-    handleCloseModal
-  );
+  const handleSubmit = useSubmit(signUp, handleCloseModal);
 
   return (
     <>
-      <Text>
-        Tip: You will be signed in immediately when you create an account.
-      </Text>
+      <p>Tip: You will be signed in immediately when you create an account.</p>
 
       <Formik
         initialValues={{
@@ -38,127 +28,135 @@ export default function SignUp({ handleSetModalView, handleCloseModal }) {
         validationSchema={signUpSchema}
         onSubmit={handleSubmit}
       >
-        {({ touched, errors, status, isSubmitting }) => (
-          <Form noValidate>
-            {status && (
-              <StatusMessage as={motion.div} animate={animationControls}>
-                <Warning width={21} height={21} />
-                <ErrorText role="alert">{status}</ErrorText>
-              </StatusMessage>
-            )}
+        {({
+          touched,
+          errors,
+          handleChange: formikHandleChange,
+          isSubmitting,
+          status,
+          setStatus,
+        }) => {
+          const handleChange = (e) => {
+            formikHandleChange(e);
+            setStatus(null);
+          };
 
-            <Field
-              as={LabelledInput}
-              label="Email:"
-              hideLabel
-              inputStyles={inputStyles}
-              name="email"
-              type="email"
-              placeholder="Email"
-              aria-required
-              aria-invalid={touched.email && errors.email ? true : null}
-              aria-describedby={
-                touched.email && errors.email ? 'email-error' : null
-              }
-              isTouched={touched.email}
-              isInvalid={errors.email}
-            />
-            <ErrorMessage
-              id="email-error"
-              component={ErrorText}
-              name="email"
-              role="alert"
-            />
+          return (
+            <Form noValidate>
+              {status && <StatusMessage>{status}</StatusMessage>}
 
-            <Field
-              as={LabelledInput}
-              label="Full Name:"
-              hideLabel
-              inputStyles={inputStyles}
-              name="fullName"
-              type="text"
-              placeholder="Full Name"
-              autoComplete="off"
-              aria-required
-              aria-invalid={touched.fullName && errors.fullName ? true : null}
-              aria-describedby={
-                touched.fullName && errors.fullName ? 'name-error' : null
-              }
-              isTouched={touched.fullName}
-              isInvalid={errors.fullName}
-            />
-            <ErrorMessage
-              id="name-error"
-              component={ErrorText}
-              name="fullName"
-              role="alert"
-            />
+              <Field
+                as={LabelledInput}
+                label="Email:"
+                hideLabel
+                inputStyles={inputStyles}
+                name="email"
+                type="email"
+                placeholder="Email"
+                onChange={handleChange}
+                aria-required
+                aria-invalid={touched.email && errors.email ? true : null}
+                aria-describedby={
+                  touched.email && errors.email ? 'email-error' : null
+                }
+                isInvalid={touched.email && errors.email}
+              />
+              <Error id="email-error" name="email" component={ErrorMessage} />
 
-            <Field
-              as={LabelledInput}
-              label="Password:"
-              hideLabel
-              inputStyles={inputStyles}
-              name="password"
-              type="password"
-              placeholder="Password"
-              aria-required
-              aria-invalid={touched.password && errors.password ? true : null}
-              aria-describedby={
-                touched.password && errors.password ? 'password-error' : null
-              }
-              isTouched={touched.password}
-              isInvalid={errors.password}
-            />
-            <ErrorMessage
-              id="password-error"
-              component={ErrorText}
-              name="password"
-              role="alert"
-            />
+              <Field
+                as={LabelledInput}
+                label="Full Name:"
+                hideLabel
+                inputStyles={inputStyles}
+                name="fullName"
+                type="text"
+                placeholder="Full Name"
+                onChange={handleChange}
+                autoComplete="off"
+                aria-required
+                aria-invalid={touched.fullName && errors.fullName ? true : null}
+                aria-describedby={
+                  touched.fullName && errors.fullName ? 'fullName-error' : null
+                }
+                isInvalid={touched.fullName && errors.fullName}
+              />
+              <Error
+                id="fullName-error"
+                name="fullName"
+                component={ErrorMessage}
+              />
 
-            <Field
-              as={LabelledInput}
-              label="Confirm Password:"
-              hideLabel
-              inputStyles={inputStyles}
-              name="confirmPassword"
-              type="password"
-              placeholder="Confirm Password"
-              aria-required
-              aria-invalid={
-                touched.confirmPassword && errors.confirmPassword ? true : null
-              }
-              aria-describedby={
-                touched.confirmPassword && errors.confirmPassword
-                  ? 'confirm-password-error'
-                  : null
-              }
-              isTouched={touched.confirmPassword}
-              isInvalid={errors.confirmPassword}
-            />
-            <ErrorMessage
-              id="confirm-password-error"
-              component={ErrorText}
-              name="confirmPassword"
-              role="alert"
-            />
+              <Field
+                as={LabelledInput}
+                label="Password:"
+                hideLabel
+                inputStyles={inputStyles}
+                name="password"
+                type="password"
+                placeholder="Password"
+                onChange={handleChange}
+                aria-required
+                aria-invalid={touched.password && errors.password ? true : null}
+                aria-describedby={
+                  touched.password && errors.password ? 'password-error' : null
+                }
+                isInvalid={touched.password && errors.password}
+              />
+              <Error
+                id="password-error"
+                name="password"
+                component={ErrorMessage}
+              />
 
-            <SubmitButton type="submit" disabled={isSubmitting}>
-              {isSubmitting && <LoadingSpinner size={30} color="white" />}
-              <span>Sign Up</span>
-            </SubmitButton>
-          </Form>
-        )}
+              <Field
+                as={LabelledInput}
+                label="Confirm Password:"
+                hideLabel
+                inputStyles={inputStyles}
+                name="confirmPassword"
+                type="password"
+                placeholder="Confirm Password"
+                onChange={handleChange}
+                aria-required
+                aria-invalid={
+                  touched.confirmPassword && errors.confirmPassword
+                    ? true
+                    : null
+                }
+                aria-describedby={
+                  touched.confirmPassword && errors.confirmPassword
+                    ? 'confirmPassword-error'
+                    : null
+                }
+                isInvalid={touched.confirmPassword && errors.confirmPassword}
+              />
+              <Error
+                id="confirmPassword-error"
+                name="confirmPassword"
+                component={ErrorMessage}
+              />
+
+              <SubmitButton isSubmitting={isSubmitting}>Sign Up</SubmitButton>
+            </Form>
+          );
+        }}
       </Formik>
 
-      <SmallText>
+      <p
+        css={`
+          font-size: ${({ theme }) => theme.fontSizes[11]};
+        `}
+      >
         By clicking Sign Up, you agree to our Terms. Learn how we collect, use
         and share your data in our Privacy Policy and how we use cookies and
         similar technology in our Cookies Policy.
-      </SmallText>
+      </p>
 
-      <div>
+      <div
+        css={`
+          margin-top: 5px;
+        `}
+      >
         Have an account?
         <ChangeViewButton
           type="button"
@@ -170,8 +168,3 @@ export default function SignUp({ handleSetModalView, handleCloseModal }) {
     </>
   );
 }
-
-const SmallText = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes[11]};
-  margin-bottom: 20px;
-`;

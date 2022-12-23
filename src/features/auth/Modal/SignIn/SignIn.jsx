@@ -1,33 +1,27 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { motion } from 'framer-motion';
+import { ErrorMessage as Error, Field, Form, Formik } from 'formik';
 import styled from 'styled-components';
-import { Warning } from '../../../../components/icons';
-import { LabelledInput, LoadingSpinner } from '../../../../components/ui';
+import {
+  ErrorMessage,
+  LabelledInput,
+  StatusMessage,
+  SubmitButton,
+} from '../../../../components/ui';
 import { useSubmit } from '../../../../hooks';
 import { useSignInMutation } from '../../../../services/auth';
 import { signInSchema } from '../../../../validations/schemas';
-import {
-  ChangeViewButton,
-  ErrorText,
-  inputStyles,
-  StatusMessage,
-  SubmitButton,
-  Text,
-} from '../styles';
+import { ChangeViewButton, inputStyles } from '../styles';
 
 export default function SignIn({ handleSetModalView, handleCloseModal }) {
   const [signInMutation] = useSignInMutation();
-  const { handleSubmit, animationControls } = useSubmit(
-    signInMutation,
-    handleCloseModal
-  );
+  const handleSubmit = useSubmit(signInMutation, handleCloseModal);
 
   return (
     <>
-      <Text>
+      <p>
         Tip: Use <strong>test@test.com</strong> and password{' '}
         <strong>test123!</strong> to sign in or create an account.
-      </Text>
+      </p>
+
       <Formik
         initialValues={{
           email: 'test@test.com',
@@ -36,78 +30,74 @@ export default function SignIn({ handleSetModalView, handleCloseModal }) {
         validationSchema={signInSchema}
         onSubmit={handleSubmit}
       >
-        {({ touched, errors, status, isSubmitting }) => (
-          <Form noValidate>
-            {status && (
-              <StatusMessage as={motion.div} animate={animationControls}>
-                <Warning width={21} height={21} />
-                <ErrorText role="alert">{status}</ErrorText>
-              </StatusMessage>
-            )}
+        {({
+          touched,
+          errors,
+          handleChange: formikHandleChange,
+          isSubmitting,
+          status,
+          setStatus,
+        }) => {
+          const handleChange = (e) => {
+            formikHandleChange(e);
+            setStatus(null);
+          };
 
-            <Field
-              as={LabelledInput}
-              label="Email:"
-              hideLabel
-              inputStyles={inputStyles}
-              name="email"
-              type="email"
-              placeholder="Email"
-              aria-required
-              aria-invalid={touched.email && errors.email ? true : null}
-              aria-describedby={
-                touched.email && errors.email ? 'email-error' : null
-              }
-              isTouched={touched.email}
-              isInvalid={errors.email}
-            />
-            <ErrorMessage
-              id="email-error"
-              component={ErrorText}
-              name="email"
-              role="alert"
-            />
+          return (
+            <Form noValidate>
+              {status && <StatusMessage>{status}</StatusMessage>}
 
-            <Field
-              as={LabelledInput}
-              label="Password:"
-              hideLabel
-              inputStyles={inputStyles}
-              name="password"
-              type="password"
-              placeholder="Password"
-              aria-required
-              aria-invalid={touched.password && errors.password ? true : null}
-              aria-describedby={
-                touched.password && errors.password ? 'password-error' : null
-              }
-              isTouched={touched.password}
-              isInvalid={errors.password}
-            />
-            <ErrorMessage
-              id="password-error"
-              component={ErrorText}
-              name="password"
-              role="alert"
-            />
+              <Field
+                as={LabelledInput}
+                label="Email:"
+                hideLabel
+                inputStyles={inputStyles}
+                name="email"
+                type="email"
+                placeholder="Email"
+                onChange={handleChange}
+                aria-required
+                aria-invalid={touched.email && errors.email ? true : null}
+                aria-describedby={
+                  touched.email && errors.email ? 'email-error' : null
+                }
+                isInvalid={touched.email && errors.email}
+              />
+              <Error id="email-error" name="email" component={ErrorMessage} />
 
-            <SubmitButton
-              type="submit"
-              disabled={isSubmitting}
-              isSubmitting={isSubmitting}
-            >
-              {isSubmitting && <LoadingSpinner size={30} color="white" />}
-              <span>Sign In</span>
-            </SubmitButton>
-          </Form>
-        )}
+              <Field
+                as={LabelledInput}
+                label="Password:"
+                hideLabel
+                inputStyles={inputStyles}
+                name="password"
+                type="password"
+                placeholder="Password"
+                onChange={handleChange}
+                aria-required
+                aria-invalid={touched.password && errors.password ? true : null}
+                aria-describedby={
+                  touched.password && errors.password ? 'password-error' : null
+                }
+                isInvalid={touched.password && errors.password}
+              />
+              <Error
+                id="password-error"
+                name="password"
+                component={ErrorMessage}
+              />
+
+              <SubmitButton isSubmitting={isSubmitting}>Sign In</SubmitButton>
+            </Form>
+          );
+        }}
       </Formik>
 
       <ForgotPasswordBtn
         type="button"
         onClick={() => handleSetModalView('FORGOT_PASSWORD_VIEW')}
       >
-        Forgotten Password?
+        Forgot Password?
       </ForgotPasswordBtn>
 
       <Divider>
@@ -139,14 +129,13 @@ const ForgotPasswordBtn = styled.button`
 const Divider = styled.div`
   align-items: center;
   display: flex;
-  font-size: ${({ theme }) => theme.fontSizes[13]};
   justify-content: center;
-  margin: 10px 0 20px;
   position: relative;
+  width: 100%;
 
   > span {
     background-color: white;
-    color: ${({ theme }) => theme.colors.stone[500]};
+    color: ${({ theme }) => theme.colors.stone[600]};
     font-weight: 600;
     padding: 0 10px;
     z-index: 10;
