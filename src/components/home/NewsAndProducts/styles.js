@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Section = styled.section`
   background-color: white;
   border: 1px solid ${({ theme }) => theme.colors.stone[200]};
-  display: flex;
+  display: grid;
   margin-top: 15px;
   padding: 20px 25px;
 
@@ -12,9 +12,7 @@ export const Section = styled.section`
   }
 
   @media ${({ theme }) => theme.breakpoints.desktopSm} {
-    > article {
-      flex: 1;
-    }
+    grid-template-columns: 1fr 30%;
   }
 `;
 
@@ -31,9 +29,8 @@ export const Heading = styled.h2`
 `;
 
 export const ArticlesContainer = styled.div`
-  display: flex;
+  display: grid;
   row-gap: 15px;
-  flex-direction: column;
 
   > :last-child {
     border: 0;
@@ -41,12 +38,11 @@ export const ArticlesContainer = styled.div`
   }
 
   @media ${({ theme }) => theme.breakpoints.tabletSm} {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 
 export const Article = styled.article`
-  flex: 1 1 250px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -102,7 +98,6 @@ export const Wrapper = styled.div`
 export const Container = styled.div`
   border-left: 1px solid ${({ theme }) => theme.colors.stone[300]};
   padding: 0 25px;
-  width: 30%;
   display: none;
 
   strong {
