@@ -1,10 +1,10 @@
 import { api } from './api';
 
-export const authApi = api.injectEndpoints({
+export const accountsApi = api.injectEndpoints({
   endpoints: (builder) => ({
     signUp: builder.mutation({
       query: (formData) => ({
-        url: '/auth/signup',
+        url: '/accounts/sign-up',
         method: 'POST',
         body: formData,
       }),
@@ -12,7 +12,7 @@ export const authApi = api.injectEndpoints({
     }),
     signIn: builder.mutation({
       query: (formData) => ({
-        url: '/auth/signin',
+        url: 'accounts/sign-in',
         method: 'POST',
         body: formData,
       }),
@@ -21,4 +21,4 @@ export const authApi = api.injectEndpoints({
   }),
 });
 
-export const { useSignUpMutation, useSignInMutation } = authApi;
+export const { useSignUpMutation, useSignInMutation } = accountsApi;

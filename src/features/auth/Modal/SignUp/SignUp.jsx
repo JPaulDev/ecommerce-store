@@ -6,7 +6,7 @@ import {
   SubmitButton,
 } from '../../../../components/ui';
 import { useSubmit } from '../../../../hooks';
-import { useSignUpMutation } from '../../../../services/auth';
+import { useSignUpMutation } from '../../../../services/accounts';
 import { signUpSchema } from '../../../../validations/schemas';
 import { ChangeViewButton, inputStyles } from '../styles';
 
