@@ -30,8 +30,7 @@ passport.use(
 
         if (isMatch) {
           // Password removed from user object for security.
-          delete user.password;
-          return done(null, user);
+          return done(null, { ...user, password: null });
         }
 
         return done(null, false);
