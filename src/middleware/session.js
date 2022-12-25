@@ -24,7 +24,6 @@ const getSession = nextSession({
     httpOnly: true,
     path: '/',
   },
-  touchAfter: 1 * 7 * 24 * 60 * 60, // 7 days
 });
 
 export default async function session(req, res, next) {
