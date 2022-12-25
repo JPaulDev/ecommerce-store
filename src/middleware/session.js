@@ -19,7 +19,7 @@ const getSession = nextSession({
   decode: (raw) => cookie.unsign(raw.slice(2), secret),
   cookie: {
     secure: process.env.NODE_ENV === 'production',
-    maxAge: 2 * 7 * 24 * 60 * 60, // 14 days
+    maxAge: 4 * 7 * 24 * 60 * 60, // 28 days
     sameSite: 'strict',
     httpOnly: true,
     path: '/',
