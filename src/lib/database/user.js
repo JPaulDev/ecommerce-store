@@ -7,6 +7,11 @@ export async function signUpUser(email, fullName, hashedPassword) {
       fullName,
       password: hashedPassword,
     },
+    select: {
+      id: true,
+      email: true,
+      fullName: true,
+    },
   });
 }
 

@@ -28,13 +28,7 @@ handler.post(validate(signUpSchema), async (req, res, next) => {
       return next(err);
     }
 
-    return res.status(200).json({
-      user: {
-        id: user.id,
-        email: user.email,
-        fullName: user.fullName,
-      },
-    });
+    return res.status(200).json({ user });
   });
 
   return undefined;
