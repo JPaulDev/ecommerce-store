@@ -23,6 +23,12 @@ export const authSlice = createSlice({
           state.isAuthenticated = true;
           state.user = payload.user;
         }
+      )
+      .addMatcher(
+        accountsApi.endpoints.editDetails.matchFulfilled,
+        (state, { payload }) => {
+          state.user = payload.user;
+        }
       );
   },
 });

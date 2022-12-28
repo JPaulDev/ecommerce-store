@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import styled from 'styled-components';
-import { ChangePassword } from '../../components/account';
+import { ChangePassword, EditDetails } from '../../components/account';
 
 const MENU_TABS = ['Account Details', 'Change Password', 'Edit Details'];
 
@@ -39,7 +39,7 @@ export default function Account() {
             ) : activeTab === 'Change Password' ? (
               <ChangePassword />
             ) : (
-              <div>Edit Details</div>
+              <EditDetails />
             )}
           </div>
         </Container>

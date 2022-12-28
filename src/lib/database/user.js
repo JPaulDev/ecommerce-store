@@ -54,3 +54,20 @@ export function updateUserPassword(id, hashedPassword) {
     },
   });
 }
+
+export function updateUserDetails(id, email, fullName) {
+  return prisma.user.update({
+    where: {
+      id,
+    },
+    data: {
+      email,
+      fullName,
+    },
+    select: {
+      id: true,
+      email: true,
+      fullName: true,
+    },
+  });
+}

@@ -23,6 +23,13 @@ export const accountsApi = api.injectEndpoints({
         body: formData,
       }),
     }),
+    editDetails: builder.mutation({
+      query: (formData) => ({
+        url: 'accounts/edit-details',
+        method: 'POST',
+        body: formData,
+      }),
+    }),
   }),
 });
 
@@ -30,4 +37,5 @@ export const {
   useSignUpMutation,
   useSignInMutation,
   useChangePasswordMutation,
+  useEditDetailsMutation,
 } = accountsApi;

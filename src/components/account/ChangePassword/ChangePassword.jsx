@@ -128,12 +128,9 @@ export default function ChangePassword() {
               />
 
               <Container>
-                {status?.error && (
-                  <StatusMessage variant="error">{status.error}</StatusMessage>
-                )}
-                {status?.success && (
-                  <StatusMessage variant="success">
-                    {status.success}
+                {status && (
+                  <StatusMessage variant={status.error ? 'error' : 'success'}>
+                    {status.error || status.success}
                   </StatusMessage>
                 )}
 
