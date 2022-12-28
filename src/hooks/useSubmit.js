@@ -1,35 +1,30 @@
-function formErrorHandler({ err, setErrors, setStatus }) {
-  const { message, code, errors } = err;
+function formErrorHandler(err, setErrors, setStatus) {
+  const { message, code, errors } = err.data.error;
 
-  switch (code) {
-    case 'email_is_taken':
-      setStatus(message);
-      break;
-    case 'invalid_credentials':
-      setStatus(message);
-      break;
-    case 'internal_server_error':
-      setStatus(message);
-      break;
-    case 'validation_error': {
-      setErrors(errors);
-      break;
-    }
-    default:
-      setStatus('Something went wrong. Please try again.');
+  if (code === 'validation_error') {
+    setErrors(errors);
+    return;
   }
+
+  setStatus({ error: message });
 }
 
 export default function useSubmit(reduxMutationFn, successCallback) {
   const handleSubmit = async (formData, { setErrors, setStatus }) => {
     try {
-      await reduxMutationFn(formData).unwrap();
+      const data = await reduxMutationFn(formData).unwrap();
+      setStatus({ success: data?.message });
 
       if (successCallback) {
         successCallback();
       }
     } catch (err) {
-      formErrorHandler({ err, setErrors, setStatus });
+      if ('data' in err) {
+        formErrorHandler(err, setErrors, setStatus);
+        return;
+      }
+
+      setStatus({ error: 'Something went wrong. Please try again later.' });
     }
   };
 

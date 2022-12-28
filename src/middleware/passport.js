@@ -1,13 +1,13 @@
 import argon2 from 'argon2';
 import passport from 'passport';
 import LocalStrategy from 'passport-local';
-import { getUserByEmail, getUserById } from '../lib/database/user';
+import { findSanitizedUserById, findUserByEmail } from '../lib/database/user';
 
 passport.serializeUser((user, done) => done(null, user.id));
 
 passport.deserializeUser(async (id, done) => {
   try {
-    const user = await getUserById(id);
+    const user = await findSanitizedUserById(id);
 
     return done(null, user);
   } catch (err) {
@@ -20,7 +20,7 @@ passport.use(
     { usernameField: 'email' },
     async (email, password, done) => {
       try {
-        const user = await getUserByEmail(email);
+        const user = await findUserByEmail(email);
 
         if (!user) {
           return done(null, false);

@@ -1,16 +1,24 @@
 import prisma from './prisma-client';
 
-export function createUser(email, fullName, password) {
+export async function signUpUser(email, fullName, hashedPassword) {
   return prisma.user.create({
     data: {
       email,
-      password,
       fullName,
+      password: hashedPassword,
     },
   });
 }
 
-export function getUserByEmail(email) {
+export function findUserById(id) {
+  return prisma.user.findUnique({
+    where: {
+      id,
+    },
+  });
+}
+
+export function findUserByEmail(email) {
   return prisma.user.findUnique({
     where: {
       email,
@@ -18,7 +26,7 @@ export function getUserByEmail(email) {
   });
 }
 
-export function getUserById(id) {
+export function findSanitizedUserById(id) {
   return prisma.user.findUnique({
     where: {
       id,
@@ -27,6 +35,17 @@ export function getUserById(id) {
       id: true,
       email: true,
       fullName: true,
+    },
+  });
+}
+
+export function updateUserPassword(id, hashedPassword) {
+  return prisma.user.update({
+    where: {
+      id,
+    },
+    data: {
+      password: hashedPassword,
     },
   });
 }

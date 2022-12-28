@@ -40,3 +40,16 @@ export const signUpSchema = Yup.object({
 export const forgotPasswordSchema = Yup.object({
   email,
 });
+
+export const changePasswordSchema = Yup.object({
+  currentPassword: Yup.string()
+    .required('Please enter your current password.')
+    .max(64, 'Password must be no more than 64 characters.'),
+  newPassword: Yup.string()
+    .required('Please enter a new password.')
+    .min(6, 'Your password must be at least 6 characters.')
+    .max(64, 'Your password must be no more than 64 characters.'),
+  confirmNewPassword: Yup.string()
+    .required('Please type your new password again.')
+    .equals([Yup.ref('newPassword')], 'Passwords must match.'),
+});

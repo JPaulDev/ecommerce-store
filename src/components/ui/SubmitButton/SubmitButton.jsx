@@ -3,14 +3,8 @@ import LoadingSpinner from '../LoadingSpinner';
 
 export default function SubmitButton({ children, isSubmitting, ...rest }) {
   return (
-    <Button
-      type="submit"
-      isSubmitting={isSubmitting}
-      disabled={isSubmitting}
-      {...rest}
-    >
+    <Button type="submit" disabled={isSubmitting} {...rest}>
       {isSubmitting && <LoadingSpinner size={28} />}
-
       <span>{children}</span>
     </Button>
   );
@@ -25,13 +19,18 @@ const Button = styled.button`
   box-shadow: ${({ theme }) => theme.boxShadows.md};
   color: white;
   font-weight: 600;
-  padding: 13px;
+  padding: 12px 25px;
   position: relative;
   border-radius: ${({ theme }) => theme.borderRadius.lg};
 
   > span {
     font-size: ${({ theme }) => theme.fontSizes[14]};
-    visibility: ${({ isSubmitting }) => isSubmitting && 'hidden'};
+  }
+
+  &:disabled {
+    > span {
+      visibility: hidden;
+    }
   }
 
   &:not(:disabled) {

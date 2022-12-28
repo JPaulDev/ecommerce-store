@@ -1,33 +1,47 @@
-import styled from 'styled-components';
-import { Warning } from '../../icons';
+import styled, { css } from 'styled-components';
+import { CircleCheck, Warning } from '../../icons';
 
-export default function StatusMessage({ children, ...rest }) {
+export default function StatusMessage({ children, variant, ...rest }) {
   return (
-    <Container role="alert" {...rest}>
-      <Warning width={21} height={21} />
-      <Text>{children}</Text>
+    <Container role="alert" variant={variant} {...rest}>
+      {variant === 'error' ? (
+        <Warning width={21} height={21} />
+      ) : (
+        <CircleCheck width={21} height={21} />
+      )}
+      <p>{children}</p>
     </Container>
   );
 }
 
 export const Container = styled.div`
-  --spacing: 10px;
-
-  column-gap: var(--spacing);
-  padding: var(--spacing);
+  width: 100%;
+  column-gap: 10px;
+  padding: 10px;
   align-items: center;
-  border: 1px solid ${({ theme }) => theme.colors.red[600]};
   display: flex;
 
+  ${({ theme, variant }) => {
+    if (variant === 'error') {
+      return css`
+        border: 1px solid ${theme.colors.red[600]};
+        color: ${theme.colors.red[600]};
+      `;
+    }
+
+    return css`
+      border: 1px solid ${theme.colors.green[600]};
+      color: ${theme.colors.green[600]};
+    `;
+  }}
+
   > svg {
-    fill: ${({ theme }) => theme.colors.red[600]};
     flex-shrink: 0;
   }
-`;
 
-const Text = styled.p`
-  color: ${({ theme }) => theme.colors.red[600]};
-  font-size: ${({ theme }) => theme.fontSizes[13]};
-  font-weight: 600;
-  text-align: left;
+  > p {
+    font-size: ${({ theme }) => theme.fontSizes[13]};
+    font-weight: 600;
+    text-align: left;
+  }
 `;

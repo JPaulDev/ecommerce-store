@@ -45,7 +45,9 @@ export default function SignIn({ handleSetModalView, handleCloseModal }) {
 
           return (
             <Form noValidate>
-              {status && <StatusMessage>{status}</StatusMessage>}
+              {status?.error && (
+                <StatusMessage variant="error">{status.error}</StatusMessage>
+              )}
 
               <Field
                 as={LabelledInput}

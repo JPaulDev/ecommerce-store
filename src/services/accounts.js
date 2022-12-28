@@ -8,7 +8,6 @@ export const accountsApi = api.injectEndpoints({
         method: 'POST',
         body: formData,
       }),
-      transformErrorResponse: (response) => response.data?.error,
     }),
     signIn: builder.mutation({
       query: (formData) => ({
@@ -16,9 +15,19 @@ export const accountsApi = api.injectEndpoints({
         method: 'POST',
         body: formData,
       }),
-      transformErrorResponse: (response) => response.data?.error,
+    }),
+    changePassword: builder.mutation({
+      query: (formData) => ({
+        url: 'accounts/change-password',
+        method: 'POST',
+        body: formData,
+      }),
     }),
   }),
 });
 
-export const { useSignUpMutation, useSignInMutation } = accountsApi;
+export const {
+  useSignUpMutation,
+  useSignInMutation,
+  useChangePasswordMutation,
+} = accountsApi;

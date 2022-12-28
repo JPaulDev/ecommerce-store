@@ -1,11 +1,16 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import styled from 'styled-components';
+import { ChangePassword } from '../../components/account';
 
 const MENU_TABS = ['Account Details', 'Change Password', 'Edit Details'];
 
 export default function Account() {
   const [activeTab, setActiveTab] = useState('Account Details');
+
+  const handleSetActiveTab = (tab) => {
+    setActiveTab(tab);
+  };
 
   return (
     <>
@@ -20,14 +25,23 @@ export default function Account() {
               <li key={tab}>
                 <Button
                   isActive={tab === activeTab}
-                  onClick={() => setActiveTab(tab)}
+                  onClick={() => handleSetActiveTab(tab)}
                 >
                   {tab}
                 </Button>
               </li>
             ))}
           </List>
-          <div>Account Tab</div>
+
+          <div className="menu-tab">
+            {activeTab === 'Account Details' ? (
+              <div>Account Details</div>
+            ) : activeTab === 'Change Password' ? (
+              <ChangePassword />
+            ) : (
+              <div>Edit Details</div>
+            )}
+          </div>
         </Container>
       </Section>
     </>
@@ -58,7 +72,7 @@ const Container = styled.div`
   min-height: 600px;
   width: min(800px, 100%);
 
-  > div {
+  .menu-tab {
     padding: 40px;
     flex: 1;
   }

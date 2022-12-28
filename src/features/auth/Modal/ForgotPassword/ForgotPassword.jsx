@@ -47,7 +47,9 @@ export default function ForgotPassword({
 
           return (
             <Form noValidate>
-              {status && <StatusMessage>{status}</StatusMessage>}
+              {status?.error && (
+                <StatusMessage variant="error">{status.error}</StatusMessage>
+              )}
 
               <Field
                 as={LabelledInput}
