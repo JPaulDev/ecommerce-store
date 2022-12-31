@@ -10,7 +10,7 @@ import {
 } from '../../ui';
 import { Container, GridContainer, inputStyles } from '../styles';
 
-export default function EditDetails() {
+export default function EditDetails({ user }) {
   const [editDetailsMutation] = useEditDetailsMutation();
 
   const handleSubmit = useSubmit(editDetailsMutation);
@@ -18,8 +18,8 @@ export default function EditDetails() {
   return (
     <Formik
       initialValues={{
-        email: '',
-        fullName: '',
+        email: user.email,
+        fullName: user.fullName,
       }}
       onSubmit={handleSubmit}
       validationSchema={editDetailsSchema}

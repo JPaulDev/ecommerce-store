@@ -48,7 +48,7 @@ export default function Account() {
                 ) : activeTab === 'Change Password' ? (
                   <ChangePassword />
                 ) : (
-                  <EditDetails />
+                  <EditDetails user={user} />
                 )}
               </div>
             </>
