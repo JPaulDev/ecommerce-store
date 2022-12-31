@@ -2,11 +2,16 @@ import Head from 'next/head';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { ChangePassword, EditDetails } from '../../components/account';
+import { LoadingSpinner } from '../../components/ui';
+import { useSession } from '../../hooks';
 
 const MENU_TABS = ['Account Details', 'Change Password', 'Edit Details'];
 
 export default function Account() {
   const [activeTab, setActiveTab] = useState('Account Details');
+  const { user, isLoading } = useSession({
+    redirectTo: '/',
+  });
 
   const handleSetActiveTab = (tab) => {
     setActiveTab(tab);
@@ -20,28 +25,34 @@ export default function Account() {
       <Section>
         <h1>Your Account</h1>
         <Container>
-          <List>
-            {MENU_TABS.map((tab) => (
-              <li key={tab}>
-                <Button
-                  isActive={tab === activeTab}
-                  onClick={() => handleSetActiveTab(tab)}
-                >
-                  {tab}
-                </Button>
-              </li>
-            ))}
-          </List>
+          {isLoading || !user ? (
+            <LoadingSpinner size={40} color="black" />
+          ) : (
+            <>
+              <List>
+                {MENU_TABS.map((tab) => (
+                  <li key={tab}>
+                    <Button
+                      isActive={tab === activeTab}
+                      onClick={() => handleSetActiveTab(tab)}
+                    >
+                      {tab}
+                    </Button>
+                  </li>
+                ))}
+              </List>
 
-          <div className="menu-tab">
-            {activeTab === 'Account Details' ? (
-              <div>Account Details</div>
-            ) : activeTab === 'Change Password' ? (
-              <ChangePassword />
-            ) : (
-              <EditDetails />
-            )}
-          </div>
+              <div className="menu-tab">
+                {activeTab === 'Account Details' ? (
+                  <div>Account Details</div>
+                ) : activeTab === 'Change Password' ? (
+                  <ChangePassword />
+                ) : (
+                  <EditDetails />
+                )}
+              </div>
+            </>
+          )}
         </Container>
       </Section>
     </>
@@ -71,6 +82,7 @@ const Container = styled.div`
   flex-direction: column;
   min-height: 600px;
   width: min(800px, 100%);
+  position: relative;
 
   .menu-tab {
     padding: 40px;
