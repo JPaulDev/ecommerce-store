@@ -7,7 +7,7 @@ import {
   SubmitButton,
 } from '../../../../components/ui';
 import { useSubmit } from '../../../../hooks';
-import { useSignInMutation } from '../../../../services/accounts';
+import { useSignInMutation } from '../../../../services/auth';
 import { signInSchema } from '../../../../validations/schemas';
 import { ChangeViewButton, inputStyles } from '../styles';
 

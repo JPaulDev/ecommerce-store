@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { accountsApi } from '../../services/accounts';
+import { authApi } from '../../services/auth';
 import { userApi } from '../../services/user';
 
 export const authSlice = createSlice({
@@ -19,14 +20,14 @@ export const authSlice = createSlice({
         }
       )
       .addMatcher(
-        accountsApi.endpoints.signIn.matchFulfilled,
+        authApi.endpoints.signIn.matchFulfilled,
         (state, { payload }) => {
           state.isAuthenticated = true;
           state.user = payload.user;
         }
       )
       .addMatcher(
-        accountsApi.endpoints.signUp.matchFulfilled,
+        authApi.endpoints.signUp.matchFulfilled,
         (state, { payload }) => {
           state.isAuthenticated = true;
           state.user = payload.user;
