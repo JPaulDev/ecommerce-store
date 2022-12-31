@@ -11,6 +11,8 @@ export async function signUpUser(email, fullName, hashedPassword) {
       id: true,
       email: true,
       fullName: true,
+      createdAt: true,
+      updatedAt: true,
     },
   });
 }
@@ -40,6 +42,8 @@ export function findSanitizedUserById(id) {
       id: true,
       email: true,
       fullName: true,
+      createdAt: true,
+      updatedAt: true,
     },
   });
 }
@@ -68,6 +72,8 @@ export function updateUserDetails(id, email, fullName) {
       id: true,
       email: true,
       fullName: true,
+      createdAt: true,
+      updatedAt: true,
     },
   });
 }

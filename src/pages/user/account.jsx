@@ -44,7 +44,18 @@ export default function Account() {
 
               <div className="menu-tab">
                 {activeTab === 'Account Details' ? (
-                  <div>Account Details</div>
+                  <AccountDetails>
+                    <strong>Account ID</strong>
+                    <p>{user.id}</p>
+                    <strong>Email</strong>
+                    <p>{user.email}</p>
+                    <strong>Full Name</strong>
+                    <p>{user.fullName}</p>
+                    <strong>Created</strong>
+                    <p>{new Date(user.createdAt).toDateString()}</p>
+                    <strong>Last Updated</strong>
+                    <p>{new Date(user.updatedAt).toDateString()}</p>
+                  </AccountDetails>
                 ) : activeTab === 'Change Password' ? (
                   <ChangePassword />
                 ) : (
@@ -148,5 +159,15 @@ const Button = styled.button`
     border-left: 3px solid transparent;
     text-align: left;
     min-width: 220px;
+  }
+`;
+
+const AccountDetails = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > p {
+    margin-bottom: 15px;
   }
 `;
