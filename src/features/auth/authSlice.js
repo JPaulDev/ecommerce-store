@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { accountsApi } from '../../services/accounts';
+import { userApi } from '../../services/user';
 
 export const authSlice = createSlice({
   name: 'auth',
@@ -10,6 +11,13 @@ export const authSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+      .addMatcher(
+        userApi.endpoints.getUser.matchFulfilled,
+        (state, { payload }) => {
+          state.isAuthenticated = true;
+          state.user = payload.user;
+        }
+      )
       .addMatcher(
         accountsApi.endpoints.signIn.matchFulfilled,
         (state, { payload }) => {

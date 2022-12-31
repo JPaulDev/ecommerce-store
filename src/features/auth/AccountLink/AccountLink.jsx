@@ -1,16 +1,15 @@
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
 import {
   Link as StyledLink,
   TextContainer,
 } from '../../../components/common/Header/styles';
 import { Account } from '../../../components/icons';
 import { useUI } from '../../../contexts/UIContext';
-import { selectAuth } from '../authSlice';
+import useSession from '../../../hooks/useSession';
 
 export default function AccountLink() {
   const { handleOpenModal } = useUI();
-  const { user, isAuthenticated } = useSelector(selectAuth);
+  const { user, isAuthenticated } = useSession();
 
   const content = (
     <>
