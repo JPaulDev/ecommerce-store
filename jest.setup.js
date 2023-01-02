@@ -1,6 +1,12 @@
+import 'whatwg-fetch';
 import '@testing-library/jest-dom/extend-expect';
-import 'jest-styled-components';
 import mediaQuery from 'css-mediaquery';
+import 'jest-styled-components';
+import { server } from './src/__mocks__/server';
+
+beforeAll(() => server.listen({ onUnhandledRequest: 'error' }));
+afterEach(() => server.resetHandlers());
+afterAll(() => server.close());
 
 // Prevents scrollTo not implemented error caused by framer motion.
 window.scrollTo = jest.fn();
