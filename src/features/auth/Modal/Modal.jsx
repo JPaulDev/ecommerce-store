@@ -1,5 +1,6 @@
+import { clearAllBodyScrollLocks, disableBodyScroll } from 'body-scroll-lock';
 import Image from 'next/future/image';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import logo from '../../../../public/images/footer/pc-logo.webp';
 import { Cross } from '../../../components/icons';
 import { useUI } from '../../../contexts/UIContext';
@@ -14,16 +15,26 @@ import SignUp from './SignUp';
 import * as Styled from './styles';
 
 function ModalView({ handleCloseModal, modalView, handleSetModalView }) {
-  const containerRef = useRef(null);
+  const modalRef = useRef(null);
   const closeButtonRef = useRef(null);
 
-  useOnClickOutside(containerRef, handleCloseModal);
+  useOnClickOutside(modalRef, handleCloseModal);
   useSetFocus(closeButtonRef);
   useCloseOnEscape(handleCloseModal);
 
+  useEffect(() => {
+    if (modalRef.current) {
+      disableBodyScroll(modalRef.current, { reserveScrollBarGap: true });
+    }
+
+    return () => {
+      clearAllBodyScrollLocks();
+    };
+  }, []);
+
   return (
     <Styled.Backdrop>
-      <Styled.Container ref={containerRef} role="dialog" aria-modal="true">
+      <Styled.Container ref={modalRef} role="dialog" aria-modal="true">
         <Styled.CloseButton
           ref={closeButtonRef}
           onClick={handleCloseModal}
