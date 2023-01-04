@@ -16,7 +16,14 @@ export const authApi = api.injectEndpoints({
         body: formData,
       }),
     }),
+    signOut: builder.mutation({
+      query: () => ({
+        url: 'auth/sign-out',
+        method: 'POST',
+      }),
+    }),
   }),
 });
 
-export const { useSignUpMutation, useSignInMutation } = authApi;
+export const { useSignUpMutation, useSignInMutation, useSignOutMutation } =
+  authApi;

@@ -8,9 +8,11 @@ export default function useSession({
   redirectTo = '',
   redirectIfFound = false,
 } = {}) {
-  const { user, isAuthenticated } = useSelector(selectAuth);
-  const { isLoading } = useGetUserQuery(undefined, { skip: !!user });
+  const { user, isAuthenticated, isLoading } = useSelector(selectAuth);
   const router = useRouter();
+
+  // Attempt to fetch user data only once on page load.
+  useGetUserQuery(undefined, { skip: !isLoading });
 
   useEffect(() => {
     if (!redirectTo || isLoading) return;

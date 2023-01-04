@@ -4,17 +4,24 @@ import styled from 'styled-components';
 import { ChangePassword, EditDetails } from '../../components/account';
 import { LoadingSpinner } from '../../components/ui';
 import { useSession } from '../../hooks';
+import { useSignOutMutation } from '../../services/auth';
 
 const MENU_TABS = ['Account Details', 'Change Password', 'Edit Details'];
 
 export default function Account() {
   const [activeTab, setActiveTab] = useState('Account Details');
+  const [signOutMutation] = useSignOutMutation();
   const { user, isLoading } = useSession({
     redirectTo: '/',
   });
 
   const handleSetActiveTab = (tab) => {
     setActiveTab(tab);
+  };
+
+  const handleSignOut = async (e) => {
+    e.preventDefault();
+    await signOutMutation();
   };
 
   return (
@@ -24,6 +31,9 @@ export default function Account() {
       </Head>
       <Section>
         <h1>Your Account</h1>
+        <SignOut href="/api/auth/sign-out" onClick={handleSignOut}>
+          Sign Out
+        </SignOut>
         <Container>
           {isLoading || !user ? (
             <LoadingSpinner size={40} color="black" />
@@ -81,6 +91,19 @@ const Section = styled.section`
     font-family: 'Uni Sans', sans-serif;
     font-size: ${({ theme }) => theme.fontSizes[32]};
     font-weight: 600;
+  }
+`;
+
+const SignOut = styled.a`
+  padding: 15px 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  background-color: ${({ theme }) => theme.colors.red[500]};
+  border-radius: ${({ theme }) => theme.borderRadius.lg};
+
+  &:hover {
+    box-shadow: inset 0 0 0 100px rgb(0 0 0 / 7%);
   }
 `;
 
